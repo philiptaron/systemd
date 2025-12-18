@@ -7,7 +7,7 @@ title: systemd v258 Release Notes
 
 ## Incompatible changes:
 
-- Support for cgroup v1 ('legacy' and 'hybrid' hierarchies) has been removed. cgroup v2 ('unified' hierarchy) will always be mounted during system bootup and [`systemd-nspawn`][systemd-nspawn] container initialization.
+- Support for cgroup v1 ('legacy' and 'hybrid' hierarchies) has been removed. cgroup v2 ('unified' hierarchy) will always be mounted during system bootup and [`systemd-nspawn`][systemd-nspawn] container initialization. (See [Lennart's commentary on cgroupv1 removal](/systemd-258/posts/45-cgroupv1-removal/) for more context.)
 
 - The minimum kernel baseline version has been bumped to v5.4 (released in 2019), with the recommended version now going up to v5.7. Consult the README file for a list of required kernel APIs.
 
@@ -98,63 +98,63 @@ title: systemd v258 Release Notes
 
 ## Service manager/PID1:
 
-- The PrivateUsers= unit setting now accepts a new value "full", which is similar to "identity", but maps the whole 32bit UID range instead of just the first 2¹⁶.
+- The PrivateUsers= unit setting now accepts a new value "full", which is similar to "identity", but maps the whole 32bit UID range instead of just the first 2¹⁶. (See [Lennart's commentary on PrivateUsers sandboxing](/systemd-258/posts/52-privateusers/) for more details.)
 
-- The ProtectHostname= unit setting now accepts a new value "private", which is similar to "yes", but allows the unit's processes to modify the hostname. Since a UTC namespace is allocated for the unit this hostname change remains local to the unit, and does not affect the system as a whole. Optionally, the "private" string may be suffixed by a colon and a literal hostname specification, which is then used to initialize the hostname of the namespace to.
+- The ProtectHostname= unit setting now accepts a new value "private", which is similar to "yes", but allows the unit's processes to modify the hostname. Since a UTC namespace is allocated for the unit this hostname change remains local to the unit, and does not affect the system as a whole. Optionally, the "private" string may be suffixed by a colon and a literal hostname specification, which is then used to initialize the hostname of the namespace to. (See [Lennart's commentary on ProtectHostname sandboxing](/systemd-258/posts/46-protect-hostname/) for more details.)
 
-- .mount units now also support systemd credentials (i.e. SetCredential=/LoadCredential=/ImportCredential= and related settings). Previously this was available for service units only.
+- .mount units now also support systemd credentials (i.e. SetCredential=/LoadCredential=/ImportCredential= and related settings). Previously this was available for service units only. (See [Lennart's commentary on user credentials and mount units](/systemd-258/posts/53-service-credentials/) for more details.)
 
-- A new unit file condition ConditionKernelModuleLoaded= has been added that may be used to check if a certain kernel module is already loaded (or built into the kernel). This is used to shortcut modprobe@.service instances, reducing redundant explicit modprobe invocations at boot to cover for kernels that have various subsystems built-in, while still providing support for kernels that have those subsystems built as loadable modules.
+- A new unit file condition ConditionKernelModuleLoaded= has been added that may be used to check if a certain kernel module is already loaded (or built into the kernel). This is used to shortcut modprobe@.service instances, reducing redundant explicit modprobe invocations at boot to cover for kernels that have various subsystems built-in, while still providing support for kernels that have those subsystems built as loadable modules. (See [Lennart's commentary on kernel module conditions](/systemd-258/posts/36-modprobe-conditions/) for more details.)
 
-- Encrypted systemd service credentials are now available for user services too, including if locked to TPM. Previously, they could only be used for system services.
+- Encrypted systemd service credentials are now available for user services too, including if locked to TPM. Previously, they could only be used for system services. (See [Lennart's commentary on user credentials and mount units](/systemd-258/posts/53-service-credentials/) for more details.)
 
 - Services instantiated for Accept=yes socket units will now include the Linux socket cookie (SO_COOKIE) in the instance name, as well as the PIDFD inode ID for the peer (the latter is only available for AF_UNIX sockets). This should make it easier to match specific service instances to the connections and peers they are associated with.
 
 - The security rules enforced by the per-unit AttachProcesses() bus API call have been relaxed a bit: unprivileged clients may now use the call on arbitrary processes which run in any user namespace owned by the client's UID. Previously, a stricter rule applied that required the UIDs of the process to move and of the client to match exactly.
 
-- A new per-unit RemoveSubgroup() D-Bus API call has been added that makes the service manager attempt to remove a sub-cgroup of units with cgroup delegation enabled. This is useful for unprivileged user namespace operation, where subgroups might be owned by user IDs that do not match the user ID the unit was delegated to, as is typical in user namespace scenarios. Per-user service managers will use this new call provided by the per-system service manager to clean up user units that contain cgroups owned by user namespace UIDs.
+- A new per-unit RemoveSubgroup() D-Bus API call has been added that makes the service manager attempt to remove a sub-cgroup of units with cgroup delegation enabled. This is useful for unprivileged user namespace operation, where subgroups might be owned by user IDs that do not match the user ID the unit was delegated to, as is typical in user namespace scenarios. Per-user service managers will use this new call provided by the per-system service manager to clean up user units that contain cgroups owned by user namespace UIDs. (See [Lennart's commentary on user namespaces and cgroups](/systemd-258/posts/50-user-namespaces/) for more details.)
 
-- .mount units gained support for a special x-systemd.graceful-option= pseudo-mount option, which may be used to list additional mount options that shall be used for the mount when it is established, under the condition the local kernel supports them. If the local kernel does not, they are automatically removed from the option string. This only works for kernel-level mount options, not for those implemented in userspace. This is useful for various purposes, for example to include "usrquota" for tmpfs mount options where that's supported.
+- .mount units gained support for a special x-systemd.graceful-option= pseudo-mount option, which may be used to list additional mount options that shall be used for the mount when it is established, under the condition the local kernel supports them. If the local kernel does not, they are automatically removed from the option string. This only works for kernel-level mount options, not for those implemented in userspace. This is useful for various purposes, for example to include "usrquota" for tmpfs mount options where that's supported. (See [Lennart's commentary on graceful mount options](/systemd-258/posts/20-mount-options/) for more details.)
 
-- Per-user quota is now enabled on /dev/shm/ and /tmp/ (the latter only if backed by tmpfs).
+- Per-user quota is now enabled on /dev/shm/ and /tmp/ (the latter only if backed by tmpfs). (See [Lennart's commentary on /tmp/ security hardening](/systemd-258/posts/06-tmp-security/) for more details.)
 
-- If PAMName= is used for a service and the PAM session prompts for a password, it will now be queried via the [`systemd-ask-password`][systemd-ask-password] logic. Previously the prompt would simply be denied, typically causing the PAM session (and thus service activation) to fail. One effect of this change is that when lingering is enabled for a [`systemd-homed`][systemd-homed] user the user's password will now be prompted at boot to unlock the user's home directory in order to be able to start the per-user service manager early, as requested.
+- If PAMName= is used for a service and the PAM session prompts for a password, it will now be queried via the [`systemd-ask-password`][systemd-ask-password] logic. Previously the prompt would simply be denied, typically causing the PAM session (and thus service activation) to fail. One effect of this change is that when lingering is enabled for a [`systemd-homed`][systemd-homed] user the user's password will now be prompted at boot to unlock the user's home directory in order to be able to start the per-user service manager early, as requested. (See [Lennart's commentary on PAM service prompts](/systemd-258/posts/19-pam-prompts/) for more details.)
 
-- The $MAINPID and $MANAGERPID environment variables we pass to processes executed for service units are now paired with new environment variables $MAINPIDFDID and $MANAGERPIDFDID. These new environment variables contain the numeric inode ID of the pidfd for the relevant process. As these 64bit IDs are unique for all processes of a specific Linux boot they can be used to race-freely reference a process, unlike the PID which is subject to races by recycling.
+- The $MAINPID and $MANAGERPID environment variables we pass to processes executed for service units are now paired with new environment variables $MAINPIDFDID and $MANAGERPIDFDID. These new environment variables contain the numeric inode ID of the pidfd for the relevant process. As these 64bit IDs are unique for all processes of a specific Linux boot they can be used to race-freely reference a process, unlike the PID which is subject to races by recycling. (See [Lennart's commentary on PID file descriptor identifiers](/systemd-258/posts/42-pidfd-identifiers/) for more details.)
 
-- So far the ConditionHost= condition matched against the local host name and machine UUID. It now also matches against the local product ID of the system (as provided by SMBIOS/DMI) and the boot ID.
+- So far the ConditionHost= condition matched against the local host name and machine UUID. It now also matches against the local product ID of the system (as provided by SMBIOS/DMI) and the boot ID. (See [Lennart's commentary on ConditionHost matching enhancements](/systemd-258/posts/08-condition-host/) for more details.)
 
 - A new setting DelegateNamespaces= for units has been added, which controls which type of Linux namespaces to delegate to the invoked unit processes. This primarily controls if the listed namespace types shall be owned by the host user namespace, or by the private user namespace of the unit. In the former case services cannot modify the relevant namespaces since they don't own it, in the latter case they can.
 
 - If the service manager receives a RESTART_RESET=1 sd_notify() message from a service, it will now reset the automatic restart counter it maintains for the service. This is useful to give services control over RestartMaxDelaySec=/RestartSteps= progress.
 
-- The /etc/hostname file may now include question mark characters ("?"), which when read will be initialized by hexadecimal digits hashed from the machine ID. This is useful when managing a fleet of devices that each shall have a valid and distinct hostname, generated in a predictable fashion. Example: if /etc/hostname contains "foobar-????-????" each booted system will end up with a hostname such as "foobar-7aaf-846c" or similar.
+- The /etc/hostname file may now include question mark characters ("?"), which when read will be initialized by hexadecimal digits hashed from the machine ID. This is useful when managing a fleet of devices that each shall have a valid and distinct hostname, generated in a predictable fashion. Example: if /etc/hostname contains "foobar-????-????" each booted system will end up with a hostname such as "foobar-7aaf-846c" or similar. (See [Lennart's commentary on hostname pattern matching](/systemd-258/posts/05-hostname-pattern/) for more details.)
 
 - ConditionKernelVersion= has been replaced by a more generic ConditionVersion= setting, that can check the versions of more key components of the OS, besides the kernel. Initially, that's systemd's and glibc's versions. The older setting remains supported for compatibility.
 
-- Slice units gained new ConcurrencySoftMax= and ConcurrencyHardMax= settings which control how many concurrent units may be active and queued for the slice at the same time. If more services are queued for a slice than the soft limit, they won't be dispatched until the concurrency falls below the limit again, but they remain in the job queue. If more services are queued than the hard limit the jobs will fail. This introduces a powerful job execution mechanism to systemd, with strong resource management, and support for hierarchial job pools (by means of slices).
+- Slice units gained new ConcurrencySoftMax= and ConcurrencyHardMax= settings which control how many concurrent units may be active and queued for the slice at the same time. If more services are queued for a slice than the soft limit, they won't be dispatched until the concurrency falls below the limit again, but they remain in the job queue. If more services are queued than the hard limit the jobs will fail. This introduces a powerful job execution mechanism to systemd, with strong resource management, and support for hierarchial job pools (by means of slices). (See [Lennart's commentary on service workload management](/systemd-258/posts/07-service-workload/) for more details.)
 
-- ExecStart= lines (and the other ExecXYZ= lines) now support a new '|' prefix that causes the command line to be invoked via a shell.
+- ExecStart= lines (and the other ExecXYZ= lines) now support a new '|' prefix that causes the command line to be invoked via a shell. (See [Lennart's commentary on the ExecStart pipe flag](/systemd-258/posts/26-execstart-pipe/) for more details.)
 
 - A basic Varlink API is now implemented in the service manager that can be used to determine its current state, and list units and their states.
 
 - Processes invoked via the .socket Accept=yes logic will now get an environment variable $SO_COOKIE that contains the Linux socket cookie (which otherwise can be acquired via getsockopt()) of the connection socket, formatted in decimal.
 
-- When a service's configuration is reloaded (via "[`systemctl`][systemctl] reload" or an equivalent operation), any confext images for the services are also reloaded.
+- When a service's configuration is reloaded (via "[`systemctl`][systemctl] reload" or an equivalent operation), any confext images for the services are also reloaded. (See [Lennart's commentary on confext immutable configuration](/systemd-258/posts/27-confext-immutable/) for more details.)
 
 - A new RandomizedOffsetSec= setting has been added to .timer units which allows configured of a randomized but stable time offset for when the timer shall elapse.
 
-- Whenever a TTY is initialized by the service manager, an attempt is made to read the terminfo identifier from it via DCS sequences, as part of the regular ANSI sequence initialization scheme. The identifier is used to initialize $TERM. This is not done if $TERM is already set from some other sources. Note that the DCS sequence for this is widely supported, but not universal (at this point VTE-based terminal emulators lack the necessary support). This functionality should be particularly useful on serial TTYs as $TERM information will likely be initialized to a useful value instead of a badly guessed default of vt220.
+- Whenever a TTY is initialized by the service manager, an attempt is made to read the terminfo identifier from it via DCS sequences, as part of the regular ANSI sequence initialization scheme. The identifier is used to initialize $TERM. This is not done if $TERM is already set from some other sources. Note that the DCS sequence for this is widely supported, but not universal (at this point VTE-based terminal emulators lack the necessary support). This functionality should be particularly useful on serial TTYs as $TERM information will likely be initialized to a useful value instead of a badly guessed default of vt220. (See [Lennart's commentary on terminal context sequences](/systemd-258/posts/09-terminal-context/) for more details.)
 
-- .socket units gained a new PassPIDFD= setting that controls the new SO_PASSPIDFD socket option for AF_UNIX socket. There's also a new setting AcceptFileDescriptors= that controls the new SO_PASSRIGHTS.
+- .socket units gained a new PassPIDFD= setting that controls the new SO_PASSPIDFD socket option for AF_UNIX socket. There's also a new setting AcceptFileDescriptors= that controls the new SO_PASSRIGHTS. (See [Lennart's commentary on socket credentials](/systemd-258/posts/33-socket-credentials/) for more details.)
 
 - A new job type "lenient" has been added, that is similar to the existing "fail" job mode, and which will fail the submitted transaction immediately if it would stop any currently running unit.
 
-- .socket units gained a new pair of settings DeferTrigger= and DeferTriggerMaxSec= which modify triggering behaviour of the socket. When used this will cause the triggered unit to be enqueued with the new "lenient" job mode, and if the submission of the transaction fails it is later retried to be submitted (up to a configurable timeout), whenever a unit is stopped.
+- .socket units gained a new pair of settings DeferTrigger= and DeferTriggerMaxSec= which modify triggering behaviour of the socket. When used this will cause the triggered unit to be enqueued with the new "lenient" job mode, and if the submission of the transaction fails it is later retried to be submitted (up to a configurable timeout), whenever a unit is stopped. (See [Lennart's detailed commentary on soft-reboot and socket activation](/systemd-258/posts/49-soft-reboot-sockets/) for more details.)
 
 - The "preset" logic has been extended so that there are now three preset directories: one that declares the default enablement state for per-system services run on the host, one for per-user services, and – now new – one for per-system services that are run in the initrd. This reflects the fact that in many cases services that shall be enabled by default on the host should not be enabled by default in the initrd, or vice versa. Note that while the regular per-system preset policy defaults to enabled, the one for the initrd defaults to disabled.
 
-- There are now new per-service settings StateDirectoryQuota=/StateDirectoryAccounting=, CacheDirectoryQuota=/CacheDirectoryAccounting=, LogsDirectoryQuota=/LogsDirectoryAccounting= which allow doing per-unit quota of the indicated per-unit directories. This is implemented via project quota, as supported by xfs and ext4. This does not support btrfs, currently. If quota accounting is enabled this information is shown in the usual "systemctl status" output.
+- There are now new per-service settings StateDirectoryQuota=/StateDirectoryAccounting=, CacheDirectoryQuota=/CacheDirectoryAccounting=, LogsDirectoryQuota=/LogsDirectoryAccounting= which allow doing per-unit quota of the indicated per-unit directories. This is implemented via project quota, as supported by xfs and ext4. This does not support btrfs, currently. If quota accounting is enabled this information is shown in the usual "systemctl status" output. (See [Lennart's commentary on service disk quotas](/systemd-258/posts/29-sandboxing-quotas/) for more details.)
 
 - The service manager gained a new KillUnitSubgroup() syscall which may be used to send a signal to a sub-control group of the unit's control group. systemctl kill gained a new --kill-subgroup= switch to make this available from the shell.
 
@@ -163,6 +163,7 @@ title: systemd v258 Release Notes
 - Four new options added to mount the bpffs with the delegate options: BPFDelegateCommands=, BPFDelegateMaps=, BPFDelegatePrograms=, BPFDelegateAttachments=.
   These allow an unprivileged container to use some BPF functionalities.
   See also <https://lwn.net/Articles/947173/>
+  (See [Lennart's commentary on eBPF delegation](/systemd-258/posts/55-ebpf-delegation/) for more details.)
 
 - New user manager services systemd-nspawn@.service and [`systemd-vmspawn`][systemd-vmspawn]@.service and a machines.target unit to manage them have been added.
 
@@ -212,13 +213,13 @@ title: systemd v258 Release Notes
 
 - udevadm test gained a new --json= switch for generating JSON output.
 
-- A new udev builtin "factory_reset" has been added that simply reports if the system is currently booted in factory reset mode. This can be used by udev rules that determine the location of the root file system, in order to decide whether to expect that a root file already exists or still needs to be created/formatted/encrypted.
+- A new udev builtin "factory_reset" has been added that simply reports if the system is currently booted in factory reset mode. This can be used by udev rules that determine the location of the root file system, in order to decide whether to expect that a root file already exists or still needs to be created/formatted/encrypted. (See [Lennart's commentary on factory reset support](/systemd-258/posts/12-factory-reset/) for more details.)
 
 - The "blkid" builtin of udev has been changed to determine the host root file system by looking for the used ESP/XBOOTLDR only while running in the initrd. When running after the initrd→host transition it now just uses the root file system already mounted to /. Of course, usually this should have the same results, but there are situations thinkable where the ESP is on one disk and the root fs on another, and we better not second guess this once we transitioned onto the root file system.
 
-- A new udev builtin "dissect_image" has been added that uses the usual DDI image dissection code to identify partitions and their use and relationships. This is used by new udev rules to generate a set of symlinks in /dev/disk/by-designator/ that point to the various discovered partitions by their designator.
+- A new udev builtin "dissect_image" has been added that uses the usual DDI image dissection code to identify partitions and their use and relationships. This is used by new udev rules to generate a set of symlinks in /dev/disk/by-designator/ that point to the various discovered partitions by their designator. (See [Lennart's commentary on DDI designators](/systemd-258/posts/54-ddi-designators/) for more details.)
 
-- Android debug USB interfaces (ADB DbC, ADB, Fastboot) are now automatically marked for unprivileged access, generically via a new ID_DEBUG_APPLIANCE= udev property. Or in other words, running "adb" again your Android phone connected via USB, set to debug mode should just work without any additional rules.
+- Android debug USB interfaces (ADB DbC, ADB, Fastboot) are now automatically marked for unprivileged access, generically via a new ID_DEBUG_APPLIANCE= udev property. Or in other words, running "adb" again your Android phone connected via USB, set to debug mode should just work without any additional rules. (See [Lennart's commentary on Android USB debugging support](/systemd-258/posts/40-android-usb/) for more details.)
 
 - A new standard group "clock" has been introduced that is now used by default for PTP and RTC device nodes in /dev/.
 
@@ -294,19 +295,19 @@ title: systemd v258 Release Notes
 
 - Two new session classes "user-light"/"user-early-light" have been added, that are just like the regular "user"/"user-early" session classes, but differ in one way: they do not cause activation of the per-user service manager. These new session classes are now used for logins of non-regular users which are used in a non-interactive way.
 
-- The pidfd inode ID of a session's leader process is now exposed as D-Bus property for session objects, in addition to the PID. The inode ID is a 64bit unique identifier for a process that is not vulnerable to recycling issues.
+- The pidfd inode ID of a session's leader process is now exposed as D-Bus property for session objects, in addition to the PID. The inode ID is a 64bit unique identifier for a process that is not vulnerable to recycling issues. (See [Lennart's commentary on PID file descriptor identifiers](/systemd-258/posts/42-pidfd-identifiers/) for more details.)
 
 ## systemd-resolved:
 
 - When issuing parallel A and AAAA lookups for the same domain name, and one succeeds quickly, we'll now shorten the timeout for the other. This should improve behaviour with DNS servers whose IPv6 support is flaky and reply to A quickly but not at all to AAAA.
 
-- The "Monitor" Varlink IPC API of systemd-resolved now gained support for a new SubscribeDNSConfiguration() call that enables subscription to any DNS configuration changes, as they happen.
+- The "Monitor" Varlink IPC API of systemd-resolved now gained support for a new SubscribeDNSConfiguration() call that enables subscription to any DNS configuration changes, as they happen. (See [Lennart's commentary on DNS monitoring and configuration subscriptions](/systemd-258/posts/13-dns-monitoring/) for more details.)
 
 - [`systemd-networkd-wait-online`][systemd-networkd-wait-online] gained a new --dns switch that ensures that not only network connectivity is available, but also DNS configuration is established in systemd-resolved, making use of the new, aforementioned Varlink interface.
 
 - resolved.conf gained a new setting RefuseRecordTypes= which takes a list of RR types for which to refuse lookup attempts. This may be used to for example block A or AAAA lookups on IPv4- or IPv6-only hosts.
 
-- A new DNS "delegate zone" concept has been introduced, which are additional lookup scopes (on top of the existing per-interface and the one global scope so far supported in resolved), which carry one or more DNS server addresses and a DNS search/routing domain. It allows routing requests to specific domains to specific servers. Delegate zones can be configured via drop-ins below /etc/systemd/dns-delegate.d/*.dns-delegate.
+- A new DNS "delegate zone" concept has been introduced, which are additional lookup scopes (on top of the existing per-interface and the one global scope so far supported in resolved), which carry one or more DNS server addresses and a DNS search/routing domain. It allows routing requests to specific domains to specific servers. Delegate zones can be configured via drop-ins below /etc/systemd/dns-delegate.d/*.dns-delegate. (See [Lennart's commentary on systemd-resolved delegate zones](/systemd-258/posts/03-resolved-delegate/) for more details.)
 
 - "[`resolvectl`][resolvectl] query -t sshfp" will now decode the returned RR information, and show the cryptographic algorithms by name instead of number.
 
@@ -322,13 +323,13 @@ title: systemd v258 Release Notes
 
 ## systemd-stub, [`systemd-boot`][systemd-boot] & [`bootctl`][bootctl]:
 
-- UEFI firmware images may now be embedded in UKIs (in an ".efifw" PE section), for use in bring-your-own-firmware scenarios in Confidential Computing. The firmware is matched via CHIDs to the local invoking VM, in a fashion conceptually close to the DeviceTree selection already available since v257. If a suitable firmware image is found at boot, and the system's firmware version does not match it, the update is applied and the system is rebooted. If the firmware matches, boot proceeds as usual.
+- UEFI firmware images may now be embedded in UKIs (in an ".efifw" PE section), for use in bring-your-own-firmware scenarios in Confidential Computing. The firmware is matched via CHIDs to the local invoking VM, in a fashion conceptually close to the DeviceTree selection already available since v257. If a suitable firmware image is found at boot, and the system's firmware version does not match it, the update is applied and the system is rebooted. If the firmware matches, boot proceeds as usual. (See [Lennart's commentary on UKI addons support](/systemd-258/posts/15-uki-addons/) for more details.)
 
 - When systemd-stub is invoked through a network boot provided UKI, it will now query the source URL and write it to the LoaderDeviceURL EFI variable. This may then be used by Linux userspace to look for further resources (such as a root disk image) at the same location.
 
-- systemd-boot now understands two new Boot Loader Specification Type #1 stanzas: "uki" and "uki-url", which is very similar to "efi" and "linux", and references an UKI, the latter on a remote HTTP/HTTPS server. The latter is particularly relevant for implementing a fully UKI based boot process, but with network provided UKI images.
+- systemd-boot now understands two new Boot Loader Specification Type #1 stanzas: "uki" and "uki-url", which is very similar to "efi" and "linux", and references an UKI, the latter on a remote HTTP/HTTPS server. The latter is particularly relevant for implementing a fully UKI based boot process, but with network provided UKI images. (See Lennart's commentary on [HTTP boot with systemd-boot](/systemd-258/posts/10-http-boot/) and [UKI HTTP boot](/systemd-258/posts/44-uki-http-boot/) for more details.)
 
-- systemd-boot now looks for the special SMBIOS Type #11 vendor strings io.systemd.boot.entries-extra=, and synthesizes additional boot menu entries from the provided data. This is useful with systemd-vmspawn's --smbios11= switch, see below.
+- systemd-boot now looks for the special SMBIOS Type #11 vendor strings io.systemd.boot.entries-extra=, and synthesizes additional boot menu entries from the provided data. This is useful with systemd-vmspawn's --smbios11= switch, see below. (See Lennart's commentary on [stub credentials and boot entries](/systemd-258/posts/14-stub-credentials/) and [vmspawn SMBIOS Type 11](/systemd-258/posts/41-vmspawn-smbios/) for more details.)
 
 - systemd-stub now defaults to a minimum of 120 available PE sections, instead of the previous default of 30. This reflects the fact that multi-profile UKI typically require a lot more sections than traditional single-profile UKIs. Note that this is just a compile-time default, downstream distributions might choose to raise this further – in particular on ARM systems where many Devicetree blobs shall be embedded into an UKI.
 
@@ -338,7 +339,7 @@ title: systemd v258 Release Notes
 
 - bootctl's --graceful is now implicitly enabled when running in a chroot, to ease integration in packaging scriptlets.
 
-- systemd-stub gained support for a couple of "extension" CHIDs, that are not part of the Microsoft's original spec, and which include EDID display identification information in the hash. This may be used to match Devicetree blobs in UKIs. "[`systemd-analyze`][systemd-analyze] chid" has been updated to support these extension CHIDs, too. (They are clearly marked as extensions CHIDs, to emphasize they are systemd's own invention, and not based on the Windows CHID spec.)
+- systemd-stub gained support for a couple of "extension" CHIDs, that are not part of the Microsoft's original spec, and which include EDID display identification information in the hash. This may be used to match Devicetree blobs in UKIs. "[`systemd-analyze`][systemd-analyze] chid" has been updated to support these extension CHIDs, too. (They are clearly marked as extensions CHIDs, to emphasize they are systemd's own invention, and not based on the Windows CHID spec.) (See [Lennart's commentary on the CHID lookup tool](/systemd-258/posts/37-chid-lookup/) for more details.)
 
 - systemd-boot's loader.conf configuration file gained a new secure-boot-enroll-action setting which controls the action to take once automatic Secure Boot keys have been enrolled, i.e. whether to reboot or whether to shut down the system.
 
@@ -370,7 +371,7 @@ title: systemd v258 Release Notes
 
 - systemd-nspawn's --private-users= switch now supports a new value "managed", which will ensure allocation of a userns via systemd-nsresourced, even if run privileged.
 
-- If systemd-nspawn is used interactively, two new special key sequences can be used to trigger an immediate clean shutdown or reboot of the container with systemd running as PID 1: '^]^]p' for shutdown and '^]^]r' for reboot. This is in addition to the previously supported '^]^]^]' which triggers immediate shutdown without going through the usual shutdown logic.
+- If systemd-nspawn is used interactively, two new special key sequences can be used to trigger an immediate clean shutdown or reboot of the container with systemd running as PID 1: '^]^]p' for shutdown and '^]^]r' for reboot. This is in addition to the previously supported '^]^]^]' which triggers immediate shutdown without going through the usual shutdown logic. (See [Lennart's commentary on systemd-nspawn hotkeys](/systemd-258/posts/25-nspawn-hotkeys/) for more details.)
 
 - systemd-nspawn will now invoke the TTY password agent if invoked interactively and without privileges. This makes sure unprivileged containers start to work even when no other polkit agent is currently running for the user. The usual --no-ask-password switch is now also available in systemd-nspawn to disable this.
 
@@ -384,7 +385,9 @@ title: systemd v258 Release Notes
 
       --smbios11=io.systemd.boot.entries-extra:particleos-current.conf=$'title ParticleOS Current\nuki-url http://example.com/somedir/uki.efi'
 
-- A new switch --grow-image= has been added taking a size in bytes. If specified, the image booted into is grown to the specified size if found to be smaller.
+  (See [Lennart's commentary on vmspawn SMBIOS Type 11](/systemd-258/posts/41-vmspawn-smbios/) for more details.)
+
+- A new switch --grow-image= has been added taking a size in bytes. If specified, the image booted into is grown to the specified size if found to be smaller. (See [Lennart's commentary on systemd-repart image growth](/systemd-258/posts/22-repart-grow/) for more details.)
 
 - systemd-vmspawn supports unprivileged networking now, using systemd-nsresourced's new API to acquire a TAP network device unprivileged.
 
@@ -396,9 +399,9 @@ title: systemd v258 Release Notes
 
 ## [`systemd-machined`][systemd-machined]:
 
-- systemd-machined now provides a comprehensive Varlink IPC API.
+- systemd-machined now provides a comprehensive Varlink IPC API. (See [Lennart's commentary on systemd-machined Varlink APIs](/systemd-258/posts/48-machined-varlink/) for more details.)
 
-- The pidfd inode ID of a machine's leader process is now exposed as D-Bus property for machine objects, in addition to the PID. The inode ID is a 64bit unique identifier for a process that is not vulnerable to recycling issues.
+- The pidfd inode ID of a machine's leader process is now exposed as D-Bus property for machine objects, in addition to the PID. The inode ID is a 64bit unique identifier for a process that is not vulnerable to recycling issues. (See [Lennart's commentary on PID file descriptor identifiers](/systemd-258/posts/42-pidfd-identifiers/) for more details.)
 
 - A new "org.freedesktop.machine1.register-machine" polkit action is used when checking for privileges to register a machine. Previously, "org.freedesktop.machine1.create-machine" was used for creation and registration operations.
 
@@ -410,7 +413,7 @@ title: systemd v258 Release Notes
 
 - ukify gained a new --sign-profile= switch for signing a specific UKI profile (to support multi-profile UKIs).
 
-- ukify gained a pair of --join-pcrsig= and --pcrsig= options which is useful for offline signing TPM PCR policies, as it allows inserting pre-prepared PCR signature blobs into a UKI.
+- ukify gained a pair of --join-pcrsig= and --pcrsig= options which is useful for offline signing TPM PCR policies, as it allows inserting pre-prepared PCR signature blobs into a UKI. (See [Lennart's commentary on TPM policy signing](/systemd-258/posts/18-tpm-signing/) for more details.)
 
 - ukify gained a new --pcr-certificate= switch that takes the path to an X.509 certificate to use in place of a PEM public key, as provided via the existing --pcr-public=.
 
@@ -432,15 +435,15 @@ title: systemd v258 Release Notes
 
 ## [`systemd-userdbd`][systemd-userdbd] & systemd-homed:
 
-- User records now support a new field "aliases" that may list additional names the user record shall be accessible under. Any string listed in the "aliases" array may be used wherever and whenever the primary name may be used too, for example when logging in. systemd-homed and in particular [`homectl`][homectl] have been updated to support configuration of such alias names.
+- User records now support a new field "aliases" that may list additional names the user record shall be accessible under. Any string listed in the "aliases" array may be used wherever and whenever the primary name may be used too, for example when logging in. systemd-homed and in particular [`homectl`][homectl] have been updated to support configuration of such alias names. (See [Lennart's commentary on userdb aliases](/systemd-258/posts/16-userdb-aliases/) for more details.)
 
 - If a user record has an initialized "realm" field, then the record may now be referenced via the primary user name or any alias name, suffixed with "@" and the realm, too.
 
 - User records gained new fields tmpLimit, tmpLimitScale, devShmLimit, devShmLimitScale which enforce quota on /tmp/ and /dev/shm/ at login time, either in absolute or in relative values. These values default to 80% for regular users, ensuring that a single user cannot easily DoS a local system by taking away all disk space in /tmp/. The homectl tool has been updated to make these new fields configurable.
 
-- The userdb Varlink interface has been extended to support server-side filtering by UID/GID min/max, fuzzy name matching and user disposition. Previously this was supported by the [`userdbctl`][userdbctl] client-side only. With this, userdb providers may now optionally implement this server-side too in order to optimize the lookups.
+- The userdb Varlink interface has been extended to support server-side filtering by UID/GID min/max, fuzzy name matching and user disposition. Previously this was supported by the [`userdbctl`][userdbctl] client-side only. With this, userdb providers may now optionally implement this server-side too in order to optimize the lookups. (See [Lennart's commentary on userdb filtering improvements](/systemd-258/posts/28-userdb-filter/) for more details.)
 
-- User records now support a concept of home "areas", i.e. subdirectories of the primary $HOME directory that a user can log into. This is useful to maintain separate development environments or configuration contexts, but within the ownership of the same user. Support for this is implemented in systemd-homed, but is conceptually open to other backends, too.
+- User records now support a concept of home "areas", i.e. subdirectories of the primary $HOME directory that a user can log into. This is useful to maintain separate development environments or configuration contexts, but within the ownership of the same user. Support for this is implemented in systemd-homed, but is conceptually open to other backends, too. (See [Lennart's commentary on systemd-homed areas](/systemd-258/posts/02-homed-areas/) for more details.)
 
 New home areas can be created via "mkdir -p ~/Areas/ && cp /etc/skel
 ~/Areas/foo", or removed by "rm -rf ~/Areas/foo". Whenever prompted
@@ -461,13 +464,13 @@ which is configurable with homectl's --default-area= switch.
 
 - systemd-homed gained D-Bus API calls for listing, adding, removing and showing use record signing keys.
 
-- homectl gained the verbs "list-signing-keys", "get-signing-key", "add-signing-key", "remove-signing-key" and a switch --key-name=. These may be used to easily make a single home directory usable on multiple systems. A system credential home.add-signing-key.* has been added that allows provisioning such user record signing keys at boot.
+- homectl gained the verbs "list-signing-keys", "get-signing-key", "add-signing-key", "remove-signing-key" and a switch --key-name=. These may be used to easily make a single home directory usable on multiple systems. A system credential home.add-signing-key.* has been added that allows provisioning such user record signing keys at boot. (See [Lennart's commentary on systemd-homed signing keys](/systemd-258/posts/38-homed-signing/) for more details.)
 
 - homectl gained a new switch "--dry-run" which can be used when registering/creating users, and which will show the user record data before it's submitted to systemd-homed. The tool will then terminate before the submission.
 
 - User/group records' perMachine section now support negative matches too (i.e. for settings that apply to all systems but some selected few).
 
-- systemd-homed gained a bus API call AdoptHome() for "adopting" a .home file or .homedir directory from a foreign system locally. homectl added a verb "adopt" exposing the new call. Together with the signing key management functionality described above it makes it very easy to migrate homes between systems.
+- systemd-homed gained a bus API call AdoptHome() for "adopting" a .home file or .homedir directory from a foreign system locally. homectl added a verb "adopt" exposing the new call. Together with the signing key management functionality described above it makes it very easy to migrate homes between systems. (See [Lennart's commentary on homectl adopt and register](/systemd-258/posts/47-homectl-adopt/) for more details.)
 
 - systemd-homed gained two new bus API calls RegisterHome() and UnregisterHome() for registering a home locally by providing just the user record, without any logic to actually create the home directory.
   homectl gained "register" and "unregister" verbs exposing this.
@@ -488,7 +491,7 @@ which is configurable with homectl's --default-area= switch.
 
 - homectl gained a new --match= switch which allows to generate accounts with perMachine matching sections.
 
-- userdbctl gained a new verb "load-credentials", with a service unit systemd-userdb-load-credentials.service which invokes it. When invoked this command will look for any passed credentials named userdb.user.* or userdb.group.*. These credentials may contain user/group records in JSON format. They will be copied into /run/userdb/ (where static userdb JSON records can be placed), with the appropriate symlink from the UID/GID added in, as any membership relationships between user/groups replicated as .membership files. Or in other words: it's very easy to provision a complete user/group record in an invoked system, by providing the user/group JSON record as system credential. Note that these credentials are unrelated to similar credentials supported by systemd-homed. "userdb load-credentials" creates "static" user records via drop-in files in /run/userdb/ (and thus covers system users and suchlike) while systemd-homed creates only systemd-homed managed use (i.e. only regular users).
+- userdbctl gained a new verb "load-credentials", with a service unit systemd-userdb-load-credentials.service which invokes it. When invoked this command will look for any passed credentials named userdb.user.* or userdb.group.*. These credentials may contain user/group records in JSON format. They will be copied into /run/userdb/ (where static userdb JSON records can be placed), with the appropriate symlink from the UID/GID added in, as any membership relationships between user/groups replicated as .membership files. Or in other words: it's very easy to provision a complete user/group record in an invoked system, by providing the user/group JSON record as system credential. Note that these credentials are unrelated to similar credentials supported by systemd-homed. "userdb load-credentials" creates "static" user records via drop-in files in /run/userdb/ (and thus covers system users and suchlike) while systemd-homed creates only systemd-homed managed use (i.e. only regular users). (See [Lennart's commentary on userdb drop-in directories](/systemd-258/posts/21-userdb-dropins/) for more details.)
 
 - User/group records gained a new "uuid" field that may be used to place an identifying UUID in the record.
 
@@ -526,7 +529,7 @@ which is configurable with homectl's --default-area= switch.
 
 - [`systemd-gpt-auto-generator`][systemd-gpt-auto-generator] now understands root=dissect and mount.usr=dissect as kernel command line options that explicitly request the full blown DDI dissector to be used to discover the root and /usr/ file system, including automatic Verity root hash and signature discovery, automatic handling of versioning, image policy enforcement and filtering and so on.
 
-- The DDI dissection logic now understands a concept of partition "filtering". A partition filter is simply a per-designator globbing pattern to match the partition labels against. This may be used support parallel installations of multiple operating systems on the same disk, where each OS names its partitions with a specific prefix or similar. systemd-dissect gained a new --image-filter= switch to configure this filter. The new "dissect_image" udev plugin and systemd-gpt-auto-generator now understand the new systemd.image_filter= kernel command line switch configuring this filter for the system.
+- The DDI dissection logic now understands a concept of partition "filtering". A partition filter is simply a per-designator globbing pattern to match the partition labels against. This may be used support parallel installations of multiple operating systems on the same disk, where each OS names its partitions with a specific prefix or similar. systemd-dissect gained a new --image-filter= switch to configure this filter. The new "dissect_image" udev plugin and systemd-gpt-auto-generator now understand the new systemd.image_filter= kernel command line switch configuring this filter for the system. (See [Lennart's commentary on DDI partition filtering](/systemd-258/posts/39-ddi-filter/) for more details.)
 
 ##      systemd-importd & [`importctl`][importctl]:
 
@@ -538,6 +541,8 @@ which is configurable with homectl's --default-area= switch.
 
       rd.systemd.pull=raw,machine,verify=no,blockdev:image:https://192.168.100.1:8081/image.raw \
           root=/dev/disk/by-loop-ref/image.raw-part2
+
+  (See [Lennart's commentary on stateless booting via rd.systemd.pull](/systemd-258/posts/35-pull-stateless/) for more details.)
 
 - systemd.pull=/rd.systemd.pull= also gained support for a new flag "bootorigin".
   If specified and if the system was network booted through systemd-stub (which now sets the LoaderDeviceURL EFI variable, see above), the URL to boot from is now automatically formed from the UKI network boot URL with a new suffix.
@@ -554,7 +559,7 @@ which is configurable with homectl's --default-area= switch.
 
 ## Factory Reset:
 
-- A new tool systemd-factory-reset has been added that may be used to request or cancel a factory reset request for the next reboot. It is also accessible via its own Varlink API.
+- A new tool systemd-factory-reset has been added that may be used to request or cancel a factory reset request for the next reboot. It is also accessible via its own Varlink API. (See [Lennart's commentary on factory reset support](/systemd-258/posts/12-factory-reset/) for more details.)
 
 - A new target unit factory-reset-now.target has been added that executes an immediate factory reset. (Previously factory-reset.target existed already that requested it for next reboot).
 
@@ -569,7 +574,7 @@ which is configurable with homectl's --default-area= switch.
 
 - systemd-repart gained a new switch --append-fstab= for controlling how to write or append automatically generated /etc/fstab entries.
 
-- CopyFiles= lines can now contain an "fsverity=copy" flag to preserve the fs-verity status of the source files when populating the filesystem.
+- CopyFiles= lines can now contain an "fsverity=copy" flag to preserve the fs-verity status of the source files when populating the filesystem. (See [Lennart's commentary on systemd-repart fs-verity support](/systemd-258/posts/32-repart-fsverity/) for more details.)
 
 - systemd-repart has been updated to automatically generate the extended attributes systemd-validatefs@.service understands (see below), for all partitions it recognizes. Controllable via the AddValidateFS= partition setting (which defaults to true).
 
@@ -585,19 +590,19 @@ which is configurable with homectl's --default-area= switch.
 
 - systemd-analyze gained a new "transient-settings" verb, which shows all unit settings one can configure dynamically via the "--property="/"-p" switch when invoking transient units.
 
-- systemd-analyze gained a new "unit-shell" verb that invokes an interactive shell inside the namespaces of the main process of a specified unit. This is useful for debugging unit sandboxes, and getting an idea how things look like from the "inside" of a service.
+- systemd-analyze gained a new "unit-shell" verb that invokes an interactive shell inside the namespaces of the main process of a specified unit. This is useful for debugging unit sandboxes, and getting an idea how things look like from the "inside" of a service. (See [Lennart's commentary on service sandbox debugging](/systemd-258/posts/30-unit-shell/) for more details.)
 
 - systemd-analyze gained a new "unit-gdb" verb to attach a debugger to a unit.
 
 ## Other:
 
-- systemd-ask-password now provides a small Varlink API to interactively query the user for a password using the usual agent logic. This makes it easier for external programs (for example daemons) to query for boot-time passwords and similar, using systemd's infrastructure.
+- systemd-ask-password now provides a small Varlink API to interactively query the user for a password using the usual agent logic. This makes it easier for external programs (for example daemons) to query for boot-time passwords and similar, using systemd's infrastructure. (See [Lennart's commentary on the Varlink password agent interface](/systemd-258/posts/51-varlink-passwords/) for more details.)
 
-- The logging logic in systemd's codebase now implements the DEBUG_INVOCATION= interface added to service management in v257. Or in other words: the RestartMode=debug setting may now be added for any of systemd's own service and has the intended effect of enabling debug logging if it gets automatically restarted.
+- The logging logic in systemd's codebase now implements the DEBUG_INVOCATION= interface added to service management in v257. Or in other words: the RestartMode=debug setting may now be added for any of systemd's own service and has the intended effect of enabling debug logging if it gets automatically restarted. (See [Lennart's commentary on RestartMode=debug for debug logging](/systemd-258/posts/43-restart-debug/) for more details.)
 
 - The "package note" specification ELF binaries has been extended to cover PE binaries (i.e. UEFI binaries), too.
 
-- New kernel command line parameters systemd.break= and rd.systemd.break= have been introduced that insert interactive (as in: shell prompt) "breakpoints" into the boot process at various locations, in order to simplify debugging. For now four breakpoints are defined: "pre-udev", "pre-basic", "pre-mount", "pre-switch-root". Similar functionality has previously existed in the Dracut initrd generator, but is generalized with this new concept, and extended to the post-switch-root boot phases.
+- New kernel command line parameters systemd.break= and rd.systemd.break= have been introduced that insert interactive (as in: shell prompt) "breakpoints" into the boot process at various locations, in order to simplify debugging. For now four breakpoints are defined: "pre-udev", "pre-basic", "pre-mount", "pre-switch-root". Similar functionality has previously existed in the Dracut initrd generator, but is generalized with this new concept, and extended to the post-switch-root boot phases. (See [Lennart's commentary on boot debug breakpoints](/systemd-258/posts/11-boot-debug/) for more details.)
 
 - The [`systemd-path`][systemd-path] tool now learnt new paths for the per-system and per-user credential store.
 
@@ -611,7 +616,7 @@ which is configurable with homectl's --default-area= switch.
 
 - [`systemd-sysusers`][systemd-sysusers] now generates Linux audit records when it adds system users.
 
-- [`systemd-firstboot`][systemd-firstboot]'s interactive prompts for locale or keymaps now support tab completion.
+- [`systemd-firstboot`][systemd-firstboot]'s interactive prompts for locale or keymaps now support tab completion. (See [Lennart's commentary on systemd-firstboot tab completion](/systemd-258/posts/34-firstboot-complete/) for more details.)
 
 - [`systemd-mount`][systemd-mount] gained support for a new --canonicalize= switch that may be used to turn off client-side path canonicalization before trying to unmount some path.
 
@@ -635,20 +640,21 @@ which is configurable with homectl's --default-area= switch.
   The OSC sequence is specified in this document: <https://systemd.io/OSC_CONTEXT>
   Contexts are generated for systemd-nspawn/systemd-vmspawn boots, for run0 or systemd-run sessions, whenever PAM TTY sessions start or end, and when shell command executions start and end.
   Metadata sent along contains hostname, machine ID, boot ID, exit status, unit information and more.
+  (See [Lennart's commentary on terminal feature negotiation](/systemd-258/posts/23-terminal-features/) for more details.)
 
 - If PID 1 makes up a suitable $TERM for a TTY it activates a service on (in case there are no other hints on how to choose it) it will now also set $COLORTERM=truecolor. Moreover, if $COLORTERM or $NO_COLOR are set on the kernel cmdline we'll now import them into PID1's environment block, just like $TERM itself. Moreover, systemd-nspawn and run0 will now propagate $COLORTERM and $NO_COLOR from the calling to the target environment, if set, just like $TERM is already handled. Or to say this with different words: the triplet of $TERM, $COLORTERM, $NO_COLOR is now processed jointly and in similar ways, wherever appropriate.
 
 - [`systemd-update-done`][systemd-update-done] gained a new --root= switch to operate in "offline" mode on a specific file system tree.
 
-- A new template service systemd-validatefs@.service has been added that can validate usage of file systems. Specifically, it will look for certain extended attributes stored on the top-level directory inode of the mount, which may encode various constraints on use of the file system. For example, it may encode a directory path the file system must be mounted to, a GPT type UUID that must be used for the partition the file system is located in and more. This provides protection in case GPT auto-discovery is used to discover the mounts, but essential metadata outside of the file system itself has been tampered with. This operates under the assumption that the extended attributes on the root inode of the file system are protected by dm-verity or dm-crypt/dm-integrity, even if the GPT metadata has no equivalent cryptographic protection. If a file system carries these extended attributes but they do not match the current use and location of the file system an immediate reboot is triggered.
+- A new template service systemd-validatefs@.service has been added that can validate usage of file systems. Specifically, it will look for certain extended attributes stored on the top-level directory inode of the mount, which may encode various constraints on use of the file system. For example, it may encode a directory path the file system must be mounted to, a GPT type UUID that must be used for the partition the file system is located in and more. This provides protection in case GPT auto-discovery is used to discover the mounts, but essential metadata outside of the file system itself has been tampered with. This operates under the assumption that the extended attributes on the root inode of the file system are protected by dm-verity or dm-crypt/dm-integrity, even if the GPT metadata has no equivalent cryptographic protection. If a file system carries these extended attributes but they do not match the current use and location of the file system an immediate reboot is triggered. (See [Lennart's commentary on file system integrity checks](/systemd-258/posts/17-integrity-checks/) for more details.)
 
 - systemd-gpt-auto-generator now understands a new mount option x-systemd.validatefs for /etc/fstab entries. If specified an instance of systemd-validatefs@.service is automatically pulled in by the relevant mount.
 
 - systemd-fstab-auto-generator and systemd-gpt-auto-generator now understand root=off on the kernel command line which may be used to turn off any automatic or non-automatic mounting of the root file system. This is useful in scenarios where a boot process shall never transition from initrd context into host context.
 
-- [`systemd-ssh-proxy`][systemd-ssh-proxy] now supports an alternative syntax for connecting to SSH-over-AF_VSOCK, in order to support scp and rsync better: "scp foo.txt vsock%4711:" should work now. (The pre-existing syntax used "/" instead of "%" as separator, which is ambiguous in scp/rsync context even if not for ssh itself.)
+- [`systemd-ssh-proxy`][systemd-ssh-proxy] now supports an alternative syntax for connecting to SSH-over-AF_VSOCK, in order to support scp and rsync better: "scp foo.txt vsock%4711:" should work now. (The pre-existing syntax used "/" instead of "%" as separator, which is ambiguous in scp/rsync context even if not for ssh itself.) (See [Lennart's commentary on SSH over AF_VSOCK](/systemd-258/posts/31-ssh-vsock/) for more details.)
 
-- "systemctl start" and related verbs now support a new --verbose mode. If specified the live log output of the units operated on is shown as long as the operation lasts.
+- "systemctl start" and related verbs now support a new --verbose mode. If specified the live log output of the units operated on is shown as long as the operation lasts. (See [Lennart's commentary on systemctl --verbose mode](/systemd-258/posts/01-systemctl-verbose/) for more details.)
 
 - [`sd-bus`][sd-bus]: a new API call sd_bus_message_dump_json() returns a JSON representation of a D-Bus message.
 
