@@ -71,7 +71,7 @@ title: systemd v259 Release Notes
 
 - The log message made when a service exits will now show the wallclock time the service took in addition to the previously shown CPU time.
 
-- A new pair of properties `OOMKills` and `ManagedOOMKills` are now exposed on service units (and other unit types that spawn processes) that count the number of process kills made by the kernel or `systemd-oomd`.
+- A new pair of properties `OOMKills` and `ManagedOOMKills` are now exposed on service units (and other unit types that spawn processes) that count the number of process kills made by the kernel or [`systemd-oomd`][systemd-oomd].
 
 - The service manager gained support for a new `RootDirectoryFileDescriptor=` setting when creating transient service units.
   It is similar to `RootDirectory=` but takes a file descriptor rather than a path to the new root directory to use.
@@ -133,7 +133,7 @@ title: systemd v259 Release Notes
 ## systemd-udevd:
 
 - [`systemd-udevd`][systemd-udevd] rules gained support for `OPTIONS="dump-json"` to dump the current event status in JSON format.
-  This generates output similar to `udevadm test --json=short`.
+  This generates output similar to [`udevadm`][udevadm] `test --json=short`.
 
 - The net_id builtin for [`systemd-udevd`][systemd-udevd] now can generate predictable interface names for Wifi devices on DeviceTree systems.
 
@@ -182,7 +182,7 @@ title: systemd v259 Release Notes
 - Linux audit support is now implemented via `dlopen()` rather than regular dynamic library linking.
   This means the dependency is now weak, which is useful to reduce footprint inside of containers and such, where Linux audit doesn't really work anyway.
 
-- Similarly PAM support is now implemented via `dlopen()` too (except for the PAM modules `pam_systemd` + `pam_systemd_home` + `pam_systemd_loadkey`, which are loaded by PAM and hence need PAM anyway to operate).
+- Similarly PAM support is now implemented via `dlopen()` too (except for the PAM modules [`pam_systemd`][pam_systemd] + [`pam_systemd_home`][pam_systemd_home] + [`pam_systemd_loadkey`][pam_systemd_loadkey], which are loaded by PAM and hence need PAM anyway to operate).
 
 - Similarly, libacl support is now implemented via `dlopen()`.
 
@@ -334,7 +334,7 @@ title: systemd v259 Release Notes
 - `system-alloc-{uid,gid}-min` are now exported in `systemd.pc`.
 
 - Incomplete support for musl libc is now available by setting the `libc` meson option to `musl`.
-  Note that systemd compiled with musl has various limitations: since NSS or equivalent functionality is not available, `nss-systemd`, `nss-resolve`, `DynamicUser=`, [`systemd-homed`][systemd-homed], [`systemd-userdbd`][systemd-userdbd], the foreign UID ID, unprivileged [`systemd-nspawn`][systemd-nspawn], [`systemd-nsresourced`][systemd-nsresourced], and so on will not work.
+  Note that systemd compiled with musl has various limitations: since NSS or equivalent functionality is not available, [`nss-systemd`][nss-systemd], [`nss-resolve`][nss-resolve], `DynamicUser=`, [`systemd-homed`][systemd-homed], [`systemd-userdbd`][systemd-userdbd], the foreign UID ID, unprivileged [`systemd-nspawn`][systemd-nspawn], [`systemd-nsresourced`][systemd-nsresourced], and so on will not work.
   Also, the usual memory pressure behaviour of long-running systemd services has no effect on musl.
   We also implemented a bunch of shims and workarounds to support compiling and running with musl.
   Caveat emptor.
@@ -356,6 +356,11 @@ Serrador, Felix Pehla, Fletcher Woodruff, Florian, Francesco Valla, Franck Bui, 
 [importctl]: https://www.freedesktop.org/software/systemd/man/259/importctl.html
 [journalctl]: https://www.freedesktop.org/software/systemd/man/259/journalctl.html
 [machinectl]: https://www.freedesktop.org/software/systemd/man/259/machinectl.html
+[nss-resolve]: https://www.freedesktop.org/software/systemd/man/259/nss-resolve.html
+[nss-systemd]: https://www.freedesktop.org/software/systemd/man/259/nss-systemd.html
+[pam_systemd]: https://www.freedesktop.org/software/systemd/man/259/pam_systemd.html
+[pam_systemd_home]: https://www.freedesktop.org/software/systemd/man/259/pam_systemd_home.html
+[pam_systemd_loadkey]: https://www.freedesktop.org/software/systemd/man/259/pam_systemd_loadkey.html
 [resolvectl]: https://www.freedesktop.org/software/systemd/man/259/resolvectl.html
 [run0]: https://www.freedesktop.org/software/systemd/man/259/run0.html
 [sd-event]: https://www.freedesktop.org/software/systemd/man/259/sd-event.html
@@ -376,6 +381,7 @@ Serrador, Felix Pehla, Fletcher Woodruff, Florian, Francesco Valla, Franck Bui, 
 [systemd-networkd]: https://www.freedesktop.org/software/systemd/man/259/systemd-networkd.service.html
 [systemd-nspawn]: https://www.freedesktop.org/software/systemd/man/259/systemd-nspawn.html
 [systemd-nsresourced]: https://www.freedesktop.org/software/systemd/man/259/systemd-nsresourced.service.html
+[systemd-oomd]: https://www.freedesktop.org/software/systemd/man/259/systemd-oomd.html
 [systemd-pcrextend]: https://www.freedesktop.org/software/systemd/man/259/systemd-pcrextend.html
 [systemd-pcrlock]: https://www.freedesktop.org/software/systemd/man/259/systemd-pcrlock.html
 [systemd-rc-local-generator]: https://www.freedesktop.org/software/systemd/man/259/systemd-rc-local-generator.html
@@ -393,6 +399,7 @@ Serrador, Felix Pehla, Fletcher Woodruff, Florian, Francesco Valla, Franck Bui, 
 [systemd-udevd]: https://www.freedesktop.org/software/systemd/man/259/systemd-udevd.service.html
 [systemd-userdbd]: https://www.freedesktop.org/software/systemd/man/259/systemd-userdbd.service.html
 [systemd-vmspawn]: https://www.freedesktop.org/software/systemd/man/259/systemd-vmspawn.html
+[udevadm]: https://www.freedesktop.org/software/systemd/man/259/udevadm.html
 [userdbctl]: https://www.freedesktop.org/software/systemd/man/259/userdbctl.html
 [varlinkctl]: https://www.freedesktop.org/software/systemd/man/259/varlinkctl.html
 
