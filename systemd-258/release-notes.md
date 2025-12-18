@@ -11,7 +11,7 @@ title: systemd v258 Release Notes
 
 - The minimum kernel baseline version has been bumped to v5.4 (released in 2019), with the recommended version now going up to v5.7. Consult the README file for a list of required kernel APIs.
 
-- The default access mode of tty/pts device nodes has been changed to 0600, which was 0620 in the older releases, due to general security concerns about terminals being written to by other users. To restore the old default access mode, use the '-Dtty-mode=0620' meson build option. (This effectively means "mesg n" is now the default, rather than "mesg y", see mesg(1) man page for help.)
+- The default access mode of tty/pts device nodes has been changed to 0600, which was 0620 in the older releases, due to general security concerns about terminals being written to by other users. To restore the old default access mode, use the `-Dtty-mode=0620` meson build option. (This effectively means "mesg n" is now the default, rather than "mesg y", see mesg(1) man page for help.)
 
 - ACLs for device nodes requested by "uaccess" udev tag are now always applied/updated by [`systemd-udevd`][systemd-udevd] through "uaccess" udev builtin, and [`systemd-logind`][systemd-logind] no longer applies/updates ACLs but triggers "change" uevents to make systemd-udevd apply/update ACLs.
   Hence, the "uaccess" udev tag should be set not only on "add" action but also on "change" action, and it is highly recommended that the rule is applied all actions except for "remove" action.
@@ -23,49 +23,49 @@ title: systemd v258 Release Notes
 
       ACTION=="add", SUBSYSTEM=="hidraw", TAG+="uaccess"
 
-- [`systemd-run`][systemd-run]'s --expand-environment= switch, which was disabled by default when combined with --scope, has been changed to be enabled by default. This brings cmdline expansion of transient scopes on par with services.
+- [`systemd-run`][systemd-run]'s `--expand-environment=` switch, which was disabled by default when combined with `--scope`, has been changed to be enabled by default. This brings cmdline expansion of transient scopes on par with services.
 
-- systemd-logind PAM sessions that previously were automatically determined to be of class "background", and which are owned by root or system accounts, will now automatically be set to class "background-light" instead. PAM sessions that previously were automatically determined to be of class "user", and which are owned by non-root system users, will now automatically be set to class "user-light" instead. This effectively means that cron jobs or FTP sessions (i.e. all PAM sessions that have no TTY assigned and neither are graphical) for system users no longer pull in a service manager by default. This behaviour can be changed by explicitly setting the session class (for example via the class= parameter to pam_systemd.so, or by setting the XDG_SESSION_CLASS environment variable as input for the service's PAM stack). This change does not affect graphical sessions, nor does it affect regular users. This is an incompatible change of sorts, since per-user services will typically not be available for such PAM sessions of system users.
+- systemd-logind PAM sessions that previously were automatically determined to be of class "background", and which are owned by root or system accounts, will now automatically be set to class "background-light" instead. PAM sessions that previously were automatically determined to be of class "user", and which are owned by non-root system users, will now automatically be set to class "user-light" instead. This effectively means that cron jobs or FTP sessions (i.e. all PAM sessions that have no TTY assigned and neither are graphical) for system users no longer pull in a service manager by default. This behaviour can be changed by explicitly setting the session class (for example via the `class=` parameter to `pam_systemd.so`, or by setting the `$XDG_SESSION_CLASS` environment variable as input for the service's PAM stack). This change does not affect graphical sessions, nor does it affect regular users. This is an incompatible change of sorts, since per-user services will typically not be available for such PAM sessions of system users.
 
-- systemd-udevd ignores OWNER=/GROUP= settings with a non-system user/group specified in udev rules files, to avoid device nodes being owned by a non-system user/group. It is recommended to check udev rules files with '[`udevadm`][udevadm] verify' and/or 'udevadm test' commands if the specified user/group in OWNER=/GROUP= are valid. Similarly, [`systemd-networkd`][systemd-networkd] refuses User=/Group= settings with a non-system user/group specified in .netdev files for Tun/Tap interfaces.
+- systemd-udevd ignores `OWNER=`/`GROUP=` settings with a non-system user/group specified in udev rules files, to avoid device nodes being owned by a non-system user/group. It is recommended to check udev rules files with '[`udevadm`][udevadm] verify' and/or `udevadm test` commands if the specified user/group in `OWNER=`/`GROUP=` are valid. Similarly, [`systemd-networkd`][systemd-networkd] refuses `User=`/`Group=` settings with a non-system user/group specified in `.netdev` files for Tun/Tap interfaces.
 
-- [`systemd-cryptenroll`][systemd-cryptenroll], [`systemd-repart`][systemd-repart] and [`systemd-creds`][systemd-creds] no longer default to locking TPM2 enrollments to the current, literal value of PCR 7, i.e. the PCR the SecureBoot policy is measured into by the firmware. This change reflects the fact that nowadays SecureBoot policies are updated (at least) as frequently as firmware code (simply because SecureBoot policy updates are typically managed by fwupd these days). The new default PCR mask for new TPM2 enrollments is thus empty by default. It is recommended to use managed [`systemd-pcrlock`][systemd-pcrlock] policies for binding to PCR 7 instead (as well as combining such policies with signed policies for PCR 11). Or in other words, it's recommended to make more use of the logic behind the --tpm2-public-key=, --tpm2-public-key-pcrs= and --tpm2-pcrlock= switches of the mentioned tools in place of --tpm2-pcrs=.
+- [`systemd-cryptenroll`][systemd-cryptenroll], [`systemd-repart`][systemd-repart] and [`systemd-creds`][systemd-creds] no longer default to locking TPM2 enrollments to the current, literal value of PCR 7, i.e. the PCR the SecureBoot policy is measured into by the firmware. This change reflects the fact that nowadays SecureBoot policies are updated (at least) as frequently as firmware code (simply because SecureBoot policy updates are typically managed by fwupd these days). The new default PCR mask for new TPM2 enrollments is thus empty by default. It is recommended to use managed [`systemd-pcrlock`][systemd-pcrlock] policies for binding to PCR 7 instead (as well as combining such policies with signed policies for PCR 11). Or in other words, it's recommended to make more use of the logic behind the `--tpm2-public-key=`, `--tpm2-public-key-pcrs=` and `--tpm2-pcrlock=` switches of the mentioned tools in place of `--tpm2-pcrs=`.
 
-- Support for the SystemdOptions EFI variable has been removed.
+- Support for the `SystemdOptions` EFI variable has been removed.
 
-- Meson options '-Dsplit-usr=', '-Drootlibdir=', '-Drootprefix=' (deprecated in v255), '-Ddefault-hierarchy=' (deprecated in v256), and '-Dnscd=' (deprecated in v257) have been removed.
+- Meson options `-Dsplit-usr=`, `-Drootlibdir=`, `-Drootprefix=` (deprecated in v255), `-Ddefault-hierarchy=` (deprecated in v256), and `-Dnscd=` (deprecated in v257) have been removed.
 
-- OpenSSL is now the only supported cryptography backend for [`systemd-resolved`][systemd-resolved] and [`systemd-importd`][systemd-importd], and support for gnutls and gcrypt has been removed. Hence, 'gnutls' setting for the '-Ddns-over-tls=' meson option has been deprecated. Also, the '-Dcryptolib=' meson option has been deprecated. They will be removed in a future release.
+- OpenSSL is now the only supported cryptography backend for [`systemd-resolved`][systemd-resolved] and [`systemd-importd`][systemd-importd], and support for gnutls and gcrypt has been removed. Hence, `gnutls` setting for the `-Ddns-over-tls=` meson option has been deprecated. Also, the `-Dcryptolib=` meson option has been deprecated. They will be removed in a future release.
 
-- systemd-logind's session tracking, which used to be performed via a FIFO installed in the client, now uses PIDFDs. The file descriptor returned by CreateSession() and related calls is therefore unused. Moreover, the exit of the session leader process will immediately cause the session to be stopped.
+- systemd-logind's session tracking, which used to be performed via a FIFO installed in the client, now uses PIDFDs. The file descriptor returned by `CreateSession()` and related calls is therefore unused. Moreover, the exit of the session leader process will immediately cause the session to be stopped.
 
-- To work around limitations of X11's keyboard handling systemd's keyboard mapping hardware database (hwdb.d/60-keyboard.hwdb) so far mapped the microphone mute and touchpad on/off/toggle keys to the function keys F20, F21, F22, F23 instead of their correct key codes.
+- To work around limitations of X11's keyboard handling systemd's keyboard mapping hardware database (`hwdb.d/60-keyboard.hwdb`) so far mapped the microphone mute and touchpad on/off/toggle keys to the function keys F20, F21, F22, F23 instead of their correct key codes.
   This key code mangling has been removed from udev.
   To maintain compatibility with X11 applications that rely on the old function key code mappings, this mangling has now been added to the relevant X11 keyboard driver modules.
   In order to ensure these keys continue to work, update to xf86-input-evdev >= 2.11.0 and xf86-input-libinput >= 1.5.0 before updating to systemd >= 258.
 
-- The D-Bus method org.freedesktop.systemd1.StartAuxiliaryScope() has been removed, which was deprecated since v257.
+- The D-Bus method `org.freedesktop.systemd1.StartAuxiliaryScope()` has been removed, which was deprecated since v257.
 
-- systemd-networkd previously emitted the machine ID as chassis ID through LLDP protocol, but now emits a deterministic ID, cryptographically derived from the machine ID as chassis ID. If you want to use the previous behavior, please set SYSTEMD_LLDP_SEND_MACHINE_ID=1 environment variable for systemd-networkd.
+- systemd-networkd previously emitted the machine ID as chassis ID through LLDP protocol, but now emits a deterministic ID, cryptographically derived from the machine ID as chassis ID. If you want to use the previous behavior, please set `SYSTEMD_LLDP_SEND_MACHINE_ID=1` environment variable for systemd-networkd.
 
-- Support for the !! command line prefix on ExecStart= lines (and related) has been removed, and if specified will be ignored. The concept was supposed to provide compatibility with kernels that predated the introduction of "ambient" process capabilities. However, the kernel baseline of the systemd project is now far beyond any kernels that lacked support for it, hence the prefix serves no purpose anymore.
+- Support for the `!!` command line prefix on `ExecStart=` lines (and related) has been removed, and if specified will be ignored. The concept was supposed to provide compatibility with kernels that predated the introduction of "ambient" process capabilities. However, the kernel baseline of the systemd project is now far beyond any kernels that lacked support for it, hence the prefix serves no purpose anymore.
 
-- The default keyring for systemd-importd and related tools, shipped in /usr/lib/systemd/, has been renamed from import-pubring.gpg to import-pubring.pgp, as it is supported by other PGP tools as well as GPG. The local keyring /etc/systemd/import-pubring.gpg is still parsed if present, to preserve backward compatibility.
+- The default keyring for systemd-importd and related tools, shipped in `/usr/lib/systemd/`, has been renamed from `import-pubring.gpg` to `import-pubring.pgp`, as it is supported by other PGP tools as well as GPG. The local keyring `/etc/systemd/import-pubring.gpg` is still parsed if present, to preserve backward compatibility.
 
-- Normally, per-user encrypted credentials are decrypted via the the systemd-creds.socket Varlink service, while the per-system ones are directly encrypted within the execution context of the intended service (which hence typically required access to /dev/tpmrm0). This has been changed: units that enable either PrivateDevices= or use DeviceAllow=/DevicePolicy= (and thus restrict access to device nodes) will now also make use of the systemd-creds.socket Varlink functionality, and will not attempt to decrypt the credentials in-process (and attempt to try to talk to the TPM for that). Previously, encrypted credentials for per-system services were incompatible with PrivateDevices= and resulted in automatic extension of the DeviceAllow= list. The latter behaviour has been removed.
+- Normally, per-user encrypted credentials are decrypted via the the `systemd-creds.socket` Varlink service, while the per-system ones are directly encrypted within the execution context of the intended service (which hence typically required access to `/dev/tpmrm0`). This has been changed: units that enable either `PrivateDevices=` or use `DeviceAllow=`/`DevicePolicy=` (and thus restrict access to device nodes) will now also make use of the `systemd-creds.socket` Varlink functionality, and will not attempt to decrypt the credentials in-process (and attempt to try to talk to the TPM for that). Previously, encrypted credentials for per-system services were incompatible with `PrivateDevices=` and resulted in automatic extension of the `DeviceAllow=` list. The latter behaviour has been removed.
 
-- The command '[`journalctl`][journalctl] --follow' now exits with success on SIGTERM/SIGINT and when the pipe it is writing to is disconnected.
+- The command '[`journalctl`][journalctl] `--follow`' now exits with success on SIGTERM/SIGINT and when the pipe it is writing to is disconnected.
 
 - Support for System V style system state control has been removed:
-  - The /dev/initctl device node has been removed.
-  - The initctl, runlevel, and telinit commands have been removed.
-  - Support for system state control via the init command (e.g. 'init 3') has been removed.
-  - The units runlevel[0-6].target have been removed.
+  - The `/dev/initctl` device node has been removed.
+  - The `initctl`, `runlevel`, and `telinit` commands have been removed.
+  - Support for system state control via the `init` command (e.g. `init 3`) has been removed.
+  - The units `runlevel[0-6].target` have been removed.
   - The concept of runlevels has been removed, so runlevel transitions are no longer recorded in the utmp/wtmp databases.
 
-- Support for traditional /forcefsck and /fastboot files to control execution mode of fsck on boot has been removed from systemd-fsck. To control the mode, please use the fsck.mode= kernel command line option or newly introduced fsck.mode credential.
+- Support for traditional `/forcefsck` and `/fastboot` files to control execution mode of fsck on boot has been removed from systemd-fsck. To control the mode, please use the `fsck.mode=` kernel command line option or newly introduced `fsck.mode` credential.
 
-- Support for traditional /forcequotacheck file to control execution mode of quotacheck on boot has been removed from systemd-quotacheck. To control the mode, please use the quotacheck.mode= kernel command line option of newly introduced quotacheck.mode credential.
+- Support for traditional `/forcequotacheck` file to control execution mode of quotacheck on boot has been removed from systemd-quotacheck. To control the mode, please use the `quotacheck.mode=` kernel command line option of newly introduced `quotacheck.mode` credential.
 
 - [`systemd-stub`][systemd-stub] v258 requires ukify v257.9 or v258 or newer when building a UKI. Due to an incompatible change necessary in order to fix a bug related to embedding a .sbat section larger than 512 bytes, ukify v257.8 or older will not be able to use systemd-stub v258 or newer.
 
@@ -73,11 +73,11 @@ title: systemd v258 Release Notes
 
 - Support for System V service scripts is deprecated and will be removed in v259. Please make sure to update your software *now* to include a native systemd unit file instead of a legacy System V script to retain compatibility with future systemd releases.
 
-- Support for the legacy /run/lock/ directory is deprecated and will be removed in v259. Any software that still needs access to this legacy directory is encouraged to ship their own tmpfiles.d configuration to set it up according to their needs. In general, services should store their lock files in RuntimeDirectory=/$RUNTIME_DIRECTORY, and software directly executed by users should use $XDG_RUNTIME_DIR. Software working with specific devices (e.g. serial port devices) should flock the device directly rather than creating a separate lock file.
+- Support for the legacy `/run/lock/` directory is deprecated and will be removed in v259. Any software that still needs access to this legacy directory is encouraged to ship their own `tmpfiles.d` configuration to set it up according to their needs. In general, services should store their lock files in `RuntimeDirectory=`/`$RUNTIME_DIRECTORY`, and software directly executed by users should use `$XDG_RUNTIME_DIR`. Software working with specific devices (e.g. serial port devices) should flock the device directly rather than creating a separate lock file.
 
-- Support for systemd-repart's FactoryReset EFI variable has been deprecated and support for it will be removed in v260. Use the newer, more generic FactoryResetRequest variable instead, which can be managed by "[`systemd-factory-reset`][systemd-factory-reset] request" and "systemd-factory-reset complete".
+- Support for systemd-repart's `FactoryReset` EFI variable has been deprecated and support for it will be removed in v260. Use the newer, more generic `FactoryResetRequest` variable instead, which can be managed by "[`systemd-factory-reset`][systemd-factory-reset] request" and `systemd-factory-reset complete`.
 
-- The meson option '-Dintegration-tests=' has been deprecated, and will be removed in a future release.
+- The meson option `-Dintegration-tests=` has been deprecated, and will be removed in a future release.
 
 - The legacy iptables support through libiptc will be removed in v259. Only nftables backend will be supported by systemd-networkd and systemd-nspawn since v259.
 
@@ -98,200 +98,200 @@ title: systemd v258 Release Notes
 
 ## Service manager/PID1:
 
-- The PrivateUsers= unit setting now accepts a new value "full", which is similar to "identity", but maps the whole 32bit UID range instead of just the first 2¹⁶. (See [Lennart's commentary on PrivateUsers sandboxing](/systemd-258/posts/52-privateusers/) for more details.)
+- The `PrivateUsers=` unit setting now accepts a new value "full", which is similar to "identity", but maps the whole 32bit UID range instead of just the first 2¹⁶. (See [Lennart's commentary on PrivateUsers sandboxing](/systemd-258/posts/52-privateusers/) for more details.)
 
-- The ProtectHostname= unit setting now accepts a new value "private", which is similar to "yes", but allows the unit's processes to modify the hostname. Since a UTC namespace is allocated for the unit this hostname change remains local to the unit, and does not affect the system as a whole. Optionally, the "private" string may be suffixed by a colon and a literal hostname specification, which is then used to initialize the hostname of the namespace to. (See [Lennart's commentary on ProtectHostname sandboxing](/systemd-258/posts/46-protect-hostname/) for more details.)
+- The `ProtectHostname=` unit setting now accepts a new value "private", which is similar to "yes", but allows the unit's processes to modify the hostname. Since a UTC namespace is allocated for the unit this hostname change remains local to the unit, and does not affect the system as a whole. Optionally, the "private" string may be suffixed by a colon and a literal hostname specification, which is then used to initialize the hostname of the namespace to. (See [Lennart's commentary on ProtectHostname sandboxing](/systemd-258/posts/46-protect-hostname/) for more details.)
 
-- .mount units now also support systemd credentials (i.e. SetCredential=/LoadCredential=/ImportCredential= and related settings). Previously this was available for service units only. (See [Lennart's commentary on user credentials and mount units](/systemd-258/posts/53-service-credentials/) for more details.)
+- `.mount` units now also support systemd credentials (i.e. `SetCredential=`/`LoadCredential=`/`ImportCredential=` and related settings). Previously this was available for service units only. (See [Lennart's commentary on user credentials and mount units](/systemd-258/posts/53-service-credentials/) for more details.)
 
-- A new unit file condition ConditionKernelModuleLoaded= has been added that may be used to check if a certain kernel module is already loaded (or built into the kernel). This is used to shortcut modprobe@.service instances, reducing redundant explicit modprobe invocations at boot to cover for kernels that have various subsystems built-in, while still providing support for kernels that have those subsystems built as loadable modules. (See [Lennart's commentary on kernel module conditions](/systemd-258/posts/36-modprobe-conditions/) for more details.)
+- A new unit file condition `ConditionKernelModuleLoaded=` has been added that may be used to check if a certain kernel module is already loaded (or built into the kernel). This is used to shortcut `modprobe@.service` instances, reducing redundant explicit modprobe invocations at boot to cover for kernels that have various subsystems built-in, while still providing support for kernels that have those subsystems built as loadable modules. (See [Lennart's commentary on kernel module conditions](/systemd-258/posts/36-modprobe-conditions/) for more details.)
 
 - Encrypted systemd service credentials are now available for user services too, including if locked to TPM. Previously, they could only be used for system services. (See [Lennart's commentary on user credentials and mount units](/systemd-258/posts/53-service-credentials/) for more details.)
 
-- Services instantiated for Accept=yes socket units will now include the Linux socket cookie (SO_COOKIE) in the instance name, as well as the PIDFD inode ID for the peer (the latter is only available for AF_UNIX sockets). This should make it easier to match specific service instances to the connections and peers they are associated with.
+- Services instantiated for `Accept=yes` socket units will now include the Linux socket cookie (`SO_COOKIE`) in the instance name, as well as the PIDFD inode ID for the peer (the latter is only available for AF_UNIX sockets). This should make it easier to match specific service instances to the connections and peers they are associated with.
 
-- The security rules enforced by the per-unit AttachProcesses() bus API call have been relaxed a bit: unprivileged clients may now use the call on arbitrary processes which run in any user namespace owned by the client's UID. Previously, a stricter rule applied that required the UIDs of the process to move and of the client to match exactly.
+- The security rules enforced by the per-unit `AttachProcesses()` bus API call have been relaxed a bit: unprivileged clients may now use the call on arbitrary processes which run in any user namespace owned by the client's UID. Previously, a stricter rule applied that required the UIDs of the process to move and of the client to match exactly.
 
-- A new per-unit RemoveSubgroup() D-Bus API call has been added that makes the service manager attempt to remove a sub-cgroup of units with cgroup delegation enabled. This is useful for unprivileged user namespace operation, where subgroups might be owned by user IDs that do not match the user ID the unit was delegated to, as is typical in user namespace scenarios. Per-user service managers will use this new call provided by the per-system service manager to clean up user units that contain cgroups owned by user namespace UIDs. (See [Lennart's commentary on user namespaces and cgroups](/systemd-258/posts/50-user-namespaces/) for more details.)
+- A new per-unit `RemoveSubgroup()` D-Bus API call has been added that makes the service manager attempt to remove a sub-cgroup of units with cgroup delegation enabled. This is useful for unprivileged user namespace operation, where subgroups might be owned by user IDs that do not match the user ID the unit was delegated to, as is typical in user namespace scenarios. Per-user service managers will use this new call provided by the per-system service manager to clean up user units that contain cgroups owned by user namespace UIDs. (See [Lennart's commentary on user namespaces and cgroups](/systemd-258/posts/50-user-namespaces/) for more details.)
 
-- .mount units gained support for a special x-systemd.graceful-option= pseudo-mount option, which may be used to list additional mount options that shall be used for the mount when it is established, under the condition the local kernel supports them. If the local kernel does not, they are automatically removed from the option string. This only works for kernel-level mount options, not for those implemented in userspace. This is useful for various purposes, for example to include "usrquota" for tmpfs mount options where that's supported. (See [Lennart's commentary on graceful mount options](/systemd-258/posts/20-mount-options/) for more details.)
+- `.mount` units gained support for a special `x-systemd.graceful-option=` pseudo-mount option, which may be used to list additional mount options that shall be used for the mount when it is established, under the condition the local kernel supports them. If the local kernel does not, they are automatically removed from the option string. This only works for kernel-level mount options, not for those implemented in userspace. This is useful for various purposes, for example to include "usrquota" for tmpfs mount options where that's supported. (See [Lennart's commentary on graceful mount options](/systemd-258/posts/20-mount-options/) for more details.)
 
-- Per-user quota is now enabled on /dev/shm/ and /tmp/ (the latter only if backed by tmpfs). (See [Lennart's commentary on /tmp/ security hardening](/systemd-258/posts/06-tmp-security/) for more details.)
+- Per-user quota is now enabled on `/dev/shm/` and `/tmp/` (the latter only if backed by tmpfs). (See [Lennart's commentary on /tmp/ security hardening](/systemd-258/posts/06-tmp-security/) for more details.)
 
-- If PAMName= is used for a service and the PAM session prompts for a password, it will now be queried via the [`systemd-ask-password`][systemd-ask-password] logic. Previously the prompt would simply be denied, typically causing the PAM session (and thus service activation) to fail. One effect of this change is that when lingering is enabled for a [`systemd-homed`][systemd-homed] user the user's password will now be prompted at boot to unlock the user's home directory in order to be able to start the per-user service manager early, as requested. (See [Lennart's commentary on PAM service prompts](/systemd-258/posts/19-pam-prompts/) for more details.)
+- If `PAMName=` is used for a service and the PAM session prompts for a password, it will now be queried via the [`systemd-ask-password`][systemd-ask-password] logic. Previously the prompt would simply be denied, typically causing the PAM session (and thus service activation) to fail. One effect of this change is that when lingering is enabled for a [`systemd-homed`][systemd-homed] user the user's password will now be prompted at boot to unlock the user's home directory in order to be able to start the per-user service manager early, as requested. (See [Lennart's commentary on PAM service prompts](/systemd-258/posts/19-pam-prompts/) for more details.)
 
-- The $MAINPID and $MANAGERPID environment variables we pass to processes executed for service units are now paired with new environment variables $MAINPIDFDID and $MANAGERPIDFDID. These new environment variables contain the numeric inode ID of the pidfd for the relevant process. As these 64bit IDs are unique for all processes of a specific Linux boot they can be used to race-freely reference a process, unlike the PID which is subject to races by recycling. (See [Lennart's commentary on PID file descriptor identifiers](/systemd-258/posts/42-pidfd-identifiers/) for more details.)
+- The `$MAINPID` and `$MANAGERPID` environment variables we pass to processes executed for service units are now paired with new environment variables `$MAINPIDFDID` and `$MANAGERPIDFDID`. These new environment variables contain the numeric inode ID of the pidfd for the relevant process. As these 64bit IDs are unique for all processes of a specific Linux boot they can be used to race-freely reference a process, unlike the PID which is subject to races by recycling. (See [Lennart's commentary on PID file descriptor identifiers](/systemd-258/posts/42-pidfd-identifiers/) for more details.)
 
-- So far the ConditionHost= condition matched against the local host name and machine UUID. It now also matches against the local product ID of the system (as provided by SMBIOS/DMI) and the boot ID. (See [Lennart's commentary on ConditionHost matching enhancements](/systemd-258/posts/08-condition-host/) for more details.)
+- So far the `ConditionHost=` condition matched against the local host name and machine UUID. It now also matches against the local product ID of the system (as provided by SMBIOS/DMI) and the boot ID. (See [Lennart's commentary on ConditionHost matching enhancements](/systemd-258/posts/08-condition-host/) for more details.)
 
-- A new setting DelegateNamespaces= for units has been added, which controls which type of Linux namespaces to delegate to the invoked unit processes. This primarily controls if the listed namespace types shall be owned by the host user namespace, or by the private user namespace of the unit. In the former case services cannot modify the relevant namespaces since they don't own it, in the latter case they can.
+- A new setting `DelegateNamespaces=` for units has been added, which controls which type of Linux namespaces to delegate to the invoked unit processes. This primarily controls if the listed namespace types shall be owned by the host user namespace, or by the private user namespace of the unit. In the former case services cannot modify the relevant namespaces since they don't own it, in the latter case they can.
 
-- If the service manager receives a RESTART_RESET=1 sd_notify() message from a service, it will now reset the automatic restart counter it maintains for the service. This is useful to give services control over RestartMaxDelaySec=/RestartSteps= progress.
+- If the service manager receives a `RESTART_RESET=1` `sd_notify()` message from a service, it will now reset the automatic restart counter it maintains for the service. This is useful to give services control over `RestartMaxDelaySec=`/`RestartSteps=` progress.
 
-- The /etc/hostname file may now include question mark characters ("?"), which when read will be initialized by hexadecimal digits hashed from the machine ID. This is useful when managing a fleet of devices that each shall have a valid and distinct hostname, generated in a predictable fashion. Example: if /etc/hostname contains "foobar-????-????" each booted system will end up with a hostname such as "foobar-7aaf-846c" or similar. (See [Lennart's commentary on hostname pattern matching](/systemd-258/posts/05-hostname-pattern/) for more details.)
+- The `/etc/hostname` file may now include question mark characters ("?"), which when read will be initialized by hexadecimal digits hashed from the machine ID. This is useful when managing a fleet of devices that each shall have a valid and distinct hostname, generated in a predictable fashion. Example: if `/etc/hostname` contains "foobar-????-????" each booted system will end up with a hostname such as "foobar-7aaf-846c" or similar. (See [Lennart's commentary on hostname pattern matching](/systemd-258/posts/05-hostname-pattern/) for more details.)
 
-- ConditionKernelVersion= has been replaced by a more generic ConditionVersion= setting, that can check the versions of more key components of the OS, besides the kernel. Initially, that's systemd's and glibc's versions. The older setting remains supported for compatibility.
+- `ConditionKernelVersion=` has been replaced by a more generic `ConditionVersion=` setting, that can check the versions of more key components of the OS, besides the kernel. Initially, that's systemd's and glibc's versions. The older setting remains supported for compatibility.
 
-- Slice units gained new ConcurrencySoftMax= and ConcurrencyHardMax= settings which control how many concurrent units may be active and queued for the slice at the same time. If more services are queued for a slice than the soft limit, they won't be dispatched until the concurrency falls below the limit again, but they remain in the job queue. If more services are queued than the hard limit the jobs will fail. This introduces a powerful job execution mechanism to systemd, with strong resource management, and support for hierarchial job pools (by means of slices). (See [Lennart's commentary on service workload management](/systemd-258/posts/07-service-workload/) for more details.)
+- Slice units gained new `ConcurrencySoftMax=` and `ConcurrencyHardMax=` settings which control how many concurrent units may be active and queued for the slice at the same time. If more services are queued for a slice than the soft limit, they won't be dispatched until the concurrency falls below the limit again, but they remain in the job queue. If more services are queued than the hard limit the jobs will fail. This introduces a powerful job execution mechanism to systemd, with strong resource management, and support for hierarchial job pools (by means of slices). (See [Lennart's commentary on service workload management](/systemd-258/posts/07-service-workload/) for more details.)
 
-- ExecStart= lines (and the other ExecXYZ= lines) now support a new '|' prefix that causes the command line to be invoked via a shell. (See [Lennart's commentary on the ExecStart pipe flag](/systemd-258/posts/26-execstart-pipe/) for more details.)
+- `ExecStart=` lines (and the other `ExecXYZ=` lines) now support a new `|` prefix that causes the command line to be invoked via a shell. (See [Lennart's commentary on the ExecStart pipe flag](/systemd-258/posts/26-execstart-pipe/) for more details.)
 
 - A basic Varlink API is now implemented in the service manager that can be used to determine its current state, and list units and their states.
 
-- Processes invoked via the .socket Accept=yes logic will now get an environment variable $SO_COOKIE that contains the Linux socket cookie (which otherwise can be acquired via getsockopt()) of the connection socket, formatted in decimal.
+- Processes invoked via the `.socket` `Accept=yes` logic will now get an environment variable `$SO_COOKIE` that contains the Linux socket cookie (which otherwise can be acquired via `getsockopt()`) of the connection socket, formatted in decimal.
 
-- When a service's configuration is reloaded (via "[`systemctl`][systemctl] reload" or an equivalent operation), any confext images for the services are also reloaded. (See [Lennart's commentary on confext immutable configuration](/systemd-258/posts/27-confext-immutable/) for more details.)
+- When a service's configuration is reloaded (via "[`systemctl`][systemctl] `reload`" or an equivalent operation), any confext images for the services are also reloaded. (See [Lennart's commentary on confext immutable configuration](/systemd-258/posts/27-confext-immutable/) for more details.)
 
-- A new RandomizedOffsetSec= setting has been added to .timer units which allows configured of a randomized but stable time offset for when the timer shall elapse.
+- A new `RandomizedOffsetSec=` setting has been added to `.timer` units which allows configured of a randomized but stable time offset for when the timer shall elapse.
 
-- Whenever a TTY is initialized by the service manager, an attempt is made to read the terminfo identifier from it via DCS sequences, as part of the regular ANSI sequence initialization scheme. The identifier is used to initialize $TERM. This is not done if $TERM is already set from some other sources. Note that the DCS sequence for this is widely supported, but not universal (at this point VTE-based terminal emulators lack the necessary support). This functionality should be particularly useful on serial TTYs as $TERM information will likely be initialized to a useful value instead of a badly guessed default of vt220. (See [Lennart's commentary on terminal context sequences](/systemd-258/posts/09-terminal-context/) for more details.)
+- Whenever a TTY is initialized by the service manager, an attempt is made to read the terminfo identifier from it via DCS sequences, as part of the regular ANSI sequence initialization scheme. The identifier is used to initialize `$TERM`. This is not done if `$TERM` is already set from some other sources. Note that the DCS sequence for this is widely supported, but not universal (at this point VTE-based terminal emulators lack the necessary support). This functionality should be particularly useful on serial TTYs as `$TERM` information will likely be initialized to a useful value instead of a badly guessed default of `vt220`. (See [Lennart's commentary on terminal context sequences](/systemd-258/posts/09-terminal-context/) for more details.)
 
-- .socket units gained a new PassPIDFD= setting that controls the new SO_PASSPIDFD socket option for AF_UNIX socket. There's also a new setting AcceptFileDescriptors= that controls the new SO_PASSRIGHTS. (See [Lennart's commentary on socket credentials](/systemd-258/posts/33-socket-credentials/) for more details.)
+- `.socket` units gained a new `PassPIDFD=` setting that controls the new `SO_PASSPIDFD` socket option for `AF_UNIX` socket. There's also a new setting `AcceptFileDescriptors=` that controls the new `SO_PASSRIGHTS`. (See [Lennart's commentary on socket credentials](/systemd-258/posts/33-socket-credentials/) for more details.)
 
 - A new job type "lenient" has been added, that is similar to the existing "fail" job mode, and which will fail the submitted transaction immediately if it would stop any currently running unit.
 
-- .socket units gained a new pair of settings DeferTrigger= and DeferTriggerMaxSec= which modify triggering behaviour of the socket. When used this will cause the triggered unit to be enqueued with the new "lenient" job mode, and if the submission of the transaction fails it is later retried to be submitted (up to a configurable timeout), whenever a unit is stopped. (See [Lennart's detailed commentary on soft-reboot and socket activation](/systemd-258/posts/49-soft-reboot-sockets/) for more details.)
+- `.socket` units gained a new pair of settings `DeferTrigger=` and `DeferTriggerMaxSec=` which modify triggering behaviour of the socket. When used this will cause the triggered unit to be enqueued with the new "lenient" job mode, and if the submission of the transaction fails it is later retried to be submitted (up to a configurable timeout), whenever a unit is stopped. (See [Lennart's detailed commentary on soft-reboot and socket activation](/systemd-258/posts/49-soft-reboot-sockets/) for more details.)
 
 - The "preset" logic has been extended so that there are now three preset directories: one that declares the default enablement state for per-system services run on the host, one for per-user services, and – now new – one for per-system services that are run in the initrd. This reflects the fact that in many cases services that shall be enabled by default on the host should not be enabled by default in the initrd, or vice versa. Note that while the regular per-system preset policy defaults to enabled, the one for the initrd defaults to disabled.
 
-- There are now new per-service settings StateDirectoryQuota=/StateDirectoryAccounting=, CacheDirectoryQuota=/CacheDirectoryAccounting=, LogsDirectoryQuota=/LogsDirectoryAccounting= which allow doing per-unit quota of the indicated per-unit directories. This is implemented via project quota, as supported by xfs and ext4. This does not support btrfs, currently. If quota accounting is enabled this information is shown in the usual "systemctl status" output. (See [Lennart's commentary on service disk quotas](/systemd-258/posts/29-sandboxing-quotas/) for more details.)
+- There are now new per-service settings `StateDirectoryQuota=`/`StateDirectoryAccounting=`, `CacheDirectoryQuota=`/`CacheDirectoryAccounting=`, `LogsDirectoryQuota=`/`LogsDirectoryAccounting=` which allow doing per-unit quota of the indicated per-unit directories. This is implemented via project quota, as supported by xfs and ext4. This does not support btrfs, currently. If quota accounting is enabled this information is shown in the usual `systemctl status` output. (See [Lennart's commentary on service disk quotas](/systemd-258/posts/29-sandboxing-quotas/) for more details.)
 
-- The service manager gained a new KillUnitSubgroup() syscall which may be used to send a signal to a sub-control group of the unit's control group. systemctl kill gained a new --kill-subgroup= switch to make this available from the shell.
+- The service manager gained a new `KillUnitSubgroup()` syscall which may be used to send a signal to a sub-control group of the unit's control group. `systemctl kill` gained a new `--kill-subgroup=` switch to make this available from the shell.
 
-- A new PrivateBPF= switch has been added for unit files, which may be used to mount a private bpffs instance for the unit's processes.
+- A new `PrivateBPF=` switch has been added for unit files, which may be used to mount a private bpffs instance for the unit's processes.
 
-- Four new options added to mount the bpffs with the delegate options: BPFDelegateCommands=, BPFDelegateMaps=, BPFDelegatePrograms=, BPFDelegateAttachments=.
+- Four new options added to mount the bpffs with the delegate options: `BPFDelegateCommands=`, `BPFDelegateMaps=`, `BPFDelegatePrograms=`, `BPFDelegateAttachments=`.
   These allow an unprivileged container to use some BPF functionalities.
   See also <https://lwn.net/Articles/947173/>
   (See [Lennart's commentary on eBPF delegation](/systemd-258/posts/55-ebpf-delegation/) for more details.)
 
-- New user manager services systemd-nspawn@.service and [`systemd-vmspawn`][systemd-vmspawn]@.service and a machines.target unit to manage them have been added.
+- New user manager services `systemd-nspawn@.service` and [`systemd-vmspawn`][systemd-vmspawn]`@.service` and a `machines.target` unit to manage them have been added.
 
 ## [`systemd-journald`][systemd-journald] & journal-remote:
 
-- journalctl's --setup-keys command now supports JSON output.
+- `journalctl`'s `--setup-keys` command now supports JSON output.
 
 - HTTP compression negotiation has been added to journal-upload and journal-remote.
 
-- journal-remote/journal-upload now support inserting additional HTTP fields into their requests, via the Header= configuration file setting.
+- journal-remote/journal-upload now support inserting additional HTTP fields into their requests, via the `Header=` configuration file setting.
 
-- journalctl gained a new --synchronize-on-exit=yes switch. If specified in combination with --follow and the journalctl process receives SIGINT (for example because the user hits Ctrl-C), a synchronization request is enqueued to systemd-journald, and log output continues until it completes. Or in other words, when this option is used any log output submitted before the SIGINT is guaranteed to be shown before journactl exits.
+- `journalctl` gained a new `--synchronize-on-exit=yes` switch. If specified in combination with `--follow` and the journalctl process receives SIGINT (for example because the user hits Ctrl-C), a synchronization request is enqueued to systemd-journald, and log output continues until it completes. Or in other words, when this option is used any log output submitted before the SIGINT is guaranteed to be shown before journactl exits.
 
-- systemd-journald's Synchronize() Varlink call has been reworked so that it no longer returns only once the logging subsystem has become completely idle, but already when all messages queued before the call was initiated are definitely written to disk. Effectively this means that the call is now guaranteed to complete in bounded time, even though it's slightly weaker in effect.
+- systemd-journald's `Synchronize()` Varlink call has been reworked so that it no longer returns only once the logging subsystem has become completely idle, but already when all messages queued before the call was initiated are definitely written to disk. Effectively this means that the call is now guaranteed to complete in bounded time, even though it's slightly weaker in effect.
 
-- Many of systemd-journald's Varlink calls (such as the aforementioned Synchronize()) are now available to unprivileged clients.
+- Many of systemd-journald's Varlink calls (such as the aforementioned `Synchronize()`) are now available to unprivileged clients.
 
 ## systemd-udevd & [`systemd-hwdb`][systemd-hwdb]:
 
-- A new udev property ID_NET_BRING_UP_BEFORE_JOINING_BRIDGE= is now supported that may be set on network interface devices (via hwdb), and tells systemd-networkd to bring the interface up before joining it to a bridge device.
+- A new udev property `ID_NET_BRING_UP_BEFORE_JOINING_BRIDGE=` is now supported that may be set on network interface devices (via hwdb), and tells systemd-networkd to bring the interface up before joining it to a bridge device.
 
-- A new udev property ID_NET_NAME_INCLUDE_DOMAIN= is now supported that may be set on network interface devices (via hwdb), that indicates that the automatic network device naming logic should suppress inclusion of the PCI domain in the naming scheme. This is used for Azure MANA devices.
+- A new udev property `ID_NET_NAME_INCLUDE_DOMAIN=` is now supported that may be set on network interface devices (via hwdb), that indicates that the automatic network device naming logic should suppress inclusion of the PCI domain in the naming scheme. This is used for Azure MANA devices.
 
-- A new udev property ID_AV_LIGHTS= has been defined that may be set on USB controlled A/V lights. Devices marked like this (via hwdb) will have the uaccess logic enabled, i.e. they will be associated with a seat and unprivileged users will get access to them.
+- A new udev property `ID_AV_LIGHTS=` has been defined that may be set on USB controlled A/V lights. Devices marked like this (via hwdb) will have the uaccess logic enabled, i.e. they will be associated with a seat and unprivileged users will get access to them.
 
-- udevadm's trigger command gained a switch --include-parents. If specified udevadm will not just trigger all devices matching whatever is specified otherwise on the command line, but also all parent devices of these devices.
+- `udevadm`'s `trigger` command gained a switch `--include-parents`. If specified `udevadm` will not just trigger all devices matching whatever is specified otherwise on the command line, but also all parent devices of these devices.
 
 - systemd-udevd now provides a Varlink interface with various runtime and lifecycle operations. It mostly replaces the previous private, undocumented "control" IPC API spoken between udevadm and systemd-udevd.
 
-- .link files gained two new knobs ReceiveFCS= (which controls whether to pass the Frame Check Sequence value up the stack) and ReceiveAll= (which controls whether to accept damaged Ethernet frames). It also gained a knob PartialGenericSegmentationOffload= for controlling Partial GSO support.
+- `.link` files gained two new knobs `ReceiveFCS=` (which controls whether to pass the Frame Check Sequence value up the stack) and `ReceiveAll=` (which controls whether to accept damaged Ethernet frames). It also gained a knob `PartialGenericSegmentationOffload=` for controlling Partial GSO support.
 
-- 'udevadm info/trigger/test/test-builtin' commands now also take device IDs to specify devices.
+- `udevadm info`/`trigger`/`test`/`test-builtin` commands now also take device IDs to specify devices.
 
-- udevadm test gained a new "--verbose" switch for generating additional debug output for the test.
+- `udevadm test` gained a new `--verbose` switch for generating additional debug output for the test.
 
-- The OPTIONS= udev expression now supports the new "dump" value, which will result in the current event's status to be logged at the moment the expression is processed. This is useful for debugging udev rules.
+- The `OPTIONS=` udev expression now supports the new "dump" value, which will result in the current event's status to be logged at the moment the expression is processed. This is useful for debugging udev rules.
 
-- A new kernel command line option udev.trace= has been added that allows enabling udev's tracing logic while booting an OS. udevadm control gained a new --trace= switch to change the same setting at runtime.
+- A new kernel command line option `udev.trace=` has been added that allows enabling udev's tracing logic while booting an OS. `udevadm control` gained a new `--trace=` switch to change the same setting at runtime.
 
-- udevadm test gained a new --extra-rules-dir= switch which may be used to look for udev rules in additional directories for testing purposes.
+- `udevadm test` gained a new `--extra-rules-dir=` switch which may be used to look for udev rules in additional directories for testing purposes.
 
-- udevadm gained a new "cat" command for showing the contents of installed rules files.
+- `udevadm` gained a new `cat` command for showing the contents of installed rules files.
 
-- udev will now create /dev/input/by-{id,path}/* style symlinks for hidraw devices too. (Previously these would be created for other input device types only.)
+- `udev` will now create `/dev/input/by-{id,path}/*` style symlinks for hidraw devices too. (Previously these would be created for other input device types only.)
 
-- *.link files gained support for configuring various Energy Efficient Ethernet (EEE) settings in a new [EnergyEfficientEthernet] section.
+- `*.link` files gained support for configuring various Energy Efficient Ethernet (EEE) settings in a new `[EnergyEfficientEthernet]` section.
 
-- udevadm test gained a new --json= switch for generating JSON output.
+- `udevadm test` gained a new `--json=` switch for generating JSON output.
 
-- A new udev builtin "factory_reset" has been added that simply reports if the system is currently booted in factory reset mode. This can be used by udev rules that determine the location of the root file system, in order to decide whether to expect that a root file already exists or still needs to be created/formatted/encrypted. (See [Lennart's commentary on factory reset support](/systemd-258/posts/12-factory-reset/) for more details.)
+- A new udev builtin `factory_reset` has been added that simply reports if the system is currently booted in factory reset mode. This can be used by udev rules that determine the location of the root file system, in order to decide whether to expect that a root file already exists or still needs to be created/formatted/encrypted. (See [Lennart's commentary on factory reset support](/systemd-258/posts/12-factory-reset/) for more details.)
 
-- The "blkid" builtin of udev has been changed to determine the host root file system by looking for the used ESP/XBOOTLDR only while running in the initrd. When running after the initrd→host transition it now just uses the root file system already mounted to /. Of course, usually this should have the same results, but there are situations thinkable where the ESP is on one disk and the root fs on another, and we better not second guess this once we transitioned onto the root file system.
+- The `blkid` builtin of udev has been changed to determine the host root file system by looking for the used ESP/XBOOTLDR only while running in the initrd. When running after the initrd→host transition it now just uses the root file system already mounted to `/`. Of course, usually this should have the same results, but there are situations thinkable where the ESP is on one disk and the root fs on another, and we better not second guess this once we transitioned onto the root file system.
 
-- A new udev builtin "dissect_image" has been added that uses the usual DDI image dissection code to identify partitions and their use and relationships. This is used by new udev rules to generate a set of symlinks in /dev/disk/by-designator/ that point to the various discovered partitions by their designator. (See [Lennart's commentary on DDI designators](/systemd-258/posts/54-ddi-designators/) for more details.)
+- A new udev builtin `dissect_image` has been added that uses the usual DDI image dissection code to identify partitions and their use and relationships. This is used by new udev rules to generate a set of symlinks in `/dev/disk/by-designator/` that point to the various discovered partitions by their designator. (See [Lennart's commentary on DDI designators](/systemd-258/posts/54-ddi-designators/) for more details.)
 
-- Android debug USB interfaces (ADB DbC, ADB, Fastboot) are now automatically marked for unprivileged access, generically via a new ID_DEBUG_APPLIANCE= udev property. Or in other words, running "adb" again your Android phone connected via USB, set to debug mode should just work without any additional rules. (See [Lennart's commentary on Android USB debugging support](/systemd-258/posts/40-android-usb/) for more details.)
+- Android debug USB interfaces (ADB DbC, ADB, Fastboot) are now automatically marked for unprivileged access, generically via a new `ID_DEBUG_APPLIANCE=` udev property. Or in other words, running `adb` again your Android phone connected via USB, set to debug mode should just work without any additional rules. (See [Lennart's commentary on Android USB debugging support](/systemd-258/posts/40-android-usb/) for more details.)
 
-- A new standard group "clock" has been introduced that is now used by default for PTP and RTC device nodes in /dev/.
+- A new standard group "clock" has been introduced that is now used by default for PTP and RTC device nodes in `/dev/`.
 
 ## systemd-networkd:
 
-- systemd-networkd now supports configuring the timeout for IPv4 Duplicate Address Detection via a new setting IPv4DuplicateAddressDetectionTimeoutSec=. The default timeout value has been changed from 7 seconds to 200 milliseconds.
+- systemd-networkd now supports configuring the timeout for IPv4 Duplicate Address Detection via a new setting `IPv4DuplicateAddressDetectionTimeoutSec=`. The default timeout value has been changed from 7 seconds to 200 milliseconds.
 
-- systemd-networkd gained support for IPv6 SIP, i.e. DHCPv6 options SD_DHCP6_OPTION_SIP_SERVER_DOMAIN_NAME (21) and SD_DHCP6_OPTION_SIP_SERVER_ADDRESS (22), controlled by a new UseSIP= option in the [DHCPv6] section.
+- systemd-networkd gained support for IPv6 SIP, i.e. DHCPv6 options `SD_DHCP6_OPTION_SIP_SERVER_DOMAIN_NAME` (21) and `SD_DHCP6_OPTION_SIP_SERVER_ADDRESS` (22), controlled by a new `UseSIP=` option in the `[DHCPv6]` section.
 
-- A new MPLSRouting= setting in the [Network] section in .network files can be used to control whether Multi-Protocol Label Switching is enabled on an interface.
+- A new `MPLSRouting=` setting in the `[Network]` section in `.network` files can be used to control whether Multi-Protocol Label Switching is enabled on an interface.
 
-- A system-wide default for ClientIdentifier= may now be set in networkd.conf. (Previously this had to be configured individually in each .network file.)
+- A system-wide default for `ClientIdentifier=` may now be set in `networkd.conf`. (Previously this had to be configured individually in each `.network` file.)
 
-- PersistLeases= setting in [DHCPServer] section now also accepts "runtime", to make the DHCP server saves and loads bound leases on the runtime storage.
+- `PersistLeases=` setting in `[DHCPServer]` section now also accepts "runtime", to make the DHCP server saves and loads bound leases on the runtime storage.
 
-- A new Preference= setting has been added to the [IPv6RoutePrefix] section to configure the route preference field.
+- A new `Preference=` setting has been added to the `[IPv6RoutePrefix]` section to configure the route preference field.
 
-- New LinkLocalLearning=, Locked=, MACAuthenticationBypass=, VLANTunnel= settings have been added the [Bridge] section of .network files.
+- New `LinkLocalLearning=`, `Locked=`, `MACAuthenticationBypass=`, `VLANTunnel=` settings have been added the `[Bridge]` section of `.network` files.
 
-- .netdev files gained new External=/VNIFilter= settings in [VXLAN] section.
+- `.netdev` files gained new `External=`/`VNIFilter=` settings in `[VXLAN]` section.
 
-- .netdev files can now configure HSR/SRP network devices too, via a new [HSR] section.
+- `.netdev` files can now configure HSR/SRP network devices too, via a new `[HSR]` section.
 
 - The LLDP client will now pick up the VLAN Id from LLDP data. The LLDP sender will now send this field on VLAN devices.
 
-- The DHCPv4 client in systemd-networkd now also supports BOOTP (via a new BOOTP= setting).
+- The DHCPv4 client in systemd-networkd now also supports BOOTP (via a new `BOOTP=` setting).
 
-- The Local= setting in [Tunnel] section gained a new "dhcp_pd" value to allow setting the local address based on dhcp-pd addresses.
+- The `Local=` setting in `[Tunnel]` section gained a new "dhcp_pd" value to allow setting the local address based on dhcp-pd addresses.
 
 ## [`sd-varlink`][sd-varlink] & [`sd-json`][sd-json]:
 
-- An API call sd_varlink_reset_fds() has been added that undoes the effect of sd_varlink_push_fd() (the API for submitting file descriptors to send along with a method call), without actually sending a Varlink message.
+- An API call `sd_varlink_reset_fds()` has been added that undoes the effect of `sd_varlink_push_fd()` (the API for submitting file descriptors to send along with a method call), without actually sending a Varlink message.
 
-- An API call sd_varlink_server_listen_name() has been added that is just like sd_varlink_server_listen_auto() but takes one additional parameter: the file descriptor name (in the sense of $LISTEN_FDNAMES) to look for, instead of "varlink". This is useful for services that implement multiple Varlink services on distinct sockets and shall be activatable through either.
+- An API call `sd_varlink_server_listen_name()` has been added that is just like `sd_varlink_server_listen_auto()` but takes one additional parameter: the file descriptor name (in the sense of `$LISTEN_FDNAMES`) to look for, instead of "varlink". This is useful for services that implement multiple Varlink services on distinct sockets and shall be activatable through either.
 
-- A pair of API calls sd_json_variant_type_from_string() and sd_json_variant_type_to_string() have been added that may be used to convert the JSON variant type identifier into a string representation and back.
+- A pair of API calls `sd_json_variant_type_from_string()` and `sd_json_variant_type_to_string()` have been added that may be used to convert the JSON variant type identifier into a string representation and back.
 
-- A pair of API calls sd_varlink_get_input_fd() and sd_varlink_get_output_fd() have been added that allow querying the connection file descriptors individually for each direction, in case two distinct file descriptors are used (for example in stdin/stdout scenarios).
+- A pair of API calls `sd_varlink_get_input_fd()` and `sd_varlink_get_output_fd()` have been added that allow querying the connection file descriptors individually for each direction, in case two distinct file descriptors are used (for example in stdin/stdout scenarios).
 
-- A new API call sd_varlink_get_current_method() has been added which reports the method call name currently being processed.
+- A new API call `sd_varlink_get_current_method()` has been added which reports the method call name currently being processed.
 
-- Two new flags SD_VARLINK_SERVER_ALLOW_FD_PASSING_INPUT and SD_VARLINK_SERVER_ALLOW_FD_PASSING_OUTPUT have been defined, which may be passed to sd_varlink_server_new(), and ensure that any connections associated with the server instance are automatically created with file descriptor passing enabled for input or output.
+- Two new flags `SD_VARLINK_SERVER_ALLOW_FD_PASSING_INPUT` and `SD_VARLINK_SERVER_ALLOW_FD_PASSING_OUTPUT` have been defined, which may be passed to `sd_varlink_server_new()`, and ensure that any connections associated with the server instance are automatically created with file descriptor passing enabled for input or output.
 
 - The "io.systemd.System" fallback Varlink errors that sd-varlink generates for Linux 'errno' style error numbers now carry both the numeric value (as before) and the symbolic name (i.e. "ENOENT"), ensuring that the error remains somewhat portable (as the numeric values are Linux and possibly architecture-specific).
 
-- The generic "io.systemd.service" Varlink service that various of our long-running services implement, gained a new GetEnvironment() call that returns the current environment block of the service's main process. In addition, this service interface has been implemented in many more long-running services.
+- The generic "io.systemd.service" Varlink service that various of our long-running services implement, gained a new `GetEnvironment()` call that returns the current environment block of the service's main process. In addition, this service interface has been implemented in many more long-running services.
 
-- A new sd-varlink call sd_varlink_get_description() has been added that returns the string previously set via sd_varlink_set_description().
+- A new sd-varlink call `sd_varlink_get_description()` has been added that returns the string previously set via `sd_varlink_set_description()`.
 
-- A new sd-varlink API call sd_varlink_get_n_fds() has been added that returns the number of pending incoming file descriptors on the current message.
+- A new sd-varlink API call `sd_varlink_get_n_fds()` has been added that returns the number of pending incoming file descriptors on the current message.
 
-- A new flag SD_VARLINK_SERVER_MODE_MKDIR_0755 may now be ORed into the mode parameter of sd_varlink_server_listen_address(). If specified then any leading directories in the provided AF_UNIX socket path are automatically created with an 0755 access mode, should they be missing.
+- A new flag `SD_VARLINK_SERVER_MODE_MKDIR_0755` may now be ORed into the mode parameter of `sd_varlink_server_listen_address()`. If specified then any leading directories in the provided `AF_UNIX` socket path are automatically created with an 0755 access mode, should they be missing.
 
-- sd_varlink_idl_parse() and sd_varlink_interface_free() have been added to sd-varlink, which can be used to parse Varlink IDL data.
+- `sd_varlink_idl_parse()` and `sd_varlink_interface_free()` have been added to sd-varlink, which can be used to parse Varlink IDL data.
 
 ## [`varlinkctl`][varlinkctl]:
 
-- varlinkctl gained a new --exec switch. When used a command line of a command to execute once a Varlink method call reply has been received may be specified. The command will receive the method call reply on standard input in JSON format, and any passed file descriptors via the $LISTEN_FDS protocol. This is useful for invoking method calls that return file descriptors from shell scripts.
+- `varlinkctl` gained a new `--exec` switch. When used a command line of a command to execute once a Varlink method call reply has been received may be specified. The command will receive the method call reply on standard input in JSON format, and any passed file descriptors via the `$LISTEN_FDS` protocol. This is useful for invoking method calls that return file descriptors from shell scripts.
 
-- varlinkctl gained a new --push-fd= switch which may be used to issue a Varlink method call and send along one or more file descriptors on transports that support it (i.e. AF_UNIX).
+- `varlinkctl` gained a new `--push-fd=` switch which may be used to issue a Varlink method call and send along one or more file descriptors on transports that support it (i.e. `AF_UNIX`).
 
 ## [`sd-device`][sd-device]:
 
-- A new API call sd_device_enumerator_add_all_parents() has been added that may be used to include all parent devices of otherwise matching devices in the enumeration.
+- A new API call `sd_device_enumerator_add_all_parents()` has been added that may be used to include all parent devices of otherwise matching devices in the enumeration.
 
-- A new API call sd_device_get_sysattr_value_with_size() has been added that returns a sysfs attribute file in binary form along with its size.
+- A new API call `sd_device_get_sysattr_value_with_size()` has been added that returns a sysfs attribute file in binary form along with its size.
 
 ## systemd-logind:
 
-- A new configuration knob WallMessages= has been added to logind.conf, which may be used to control whether wall(1) style messages shall be sent to all consoles when the system goes down.
+- A new configuration knob `WallMessages=` has been added to `logind.conf`, which may be used to control whether wall(1) style messages shall be sent to all consoles when the system goes down.
 
-- A new pseudo session class "none" has been defined. This may be used with the class= parameter of pam_systemd.so (and some other places) to disable allocation of a systemd-logind session for a specific session. Note that this is not a recommended mode of operation, as such "ghost" sessions will not be properly accounted for, and are excluded from the per-user/per-session resource accounting.
+- A new pseudo session class "none" has been defined. This may be used with the `class=` parameter of `pam_systemd.so` (and some other places) to disable allocation of a systemd-logind session for a specific session. Note that this is not a recommended mode of operation, as such "ghost" sessions will not be properly accounted for, and are excluded from the per-user/per-session resource accounting.
 
 - Two new session classes "user-light"/"user-early-light" have been added, that are just like the regular "user"/"user-early" session classes, but differ in one way: they do not cause activation of the per-user service manager. These new session classes are now used for logins of non-regular users which are used in a non-interactive way.
 
@@ -301,13 +301,13 @@ title: systemd v258 Release Notes
 
 - When issuing parallel A and AAAA lookups for the same domain name, and one succeeds quickly, we'll now shorten the timeout for the other. This should improve behaviour with DNS servers whose IPv6 support is flaky and reply to A quickly but not at all to AAAA.
 
-- The "Monitor" Varlink IPC API of systemd-resolved now gained support for a new SubscribeDNSConfiguration() call that enables subscription to any DNS configuration changes, as they happen. (See [Lennart's commentary on DNS monitoring and configuration subscriptions](/systemd-258/posts/13-dns-monitoring/) for more details.)
+- The "Monitor" Varlink IPC API of systemd-resolved now gained support for a new `SubscribeDNSConfiguration()` call that enables subscription to any DNS configuration changes, as they happen. (See [Lennart's commentary on DNS monitoring and configuration subscriptions](/systemd-258/posts/13-dns-monitoring/) for more details.)
 
-- [`systemd-networkd-wait-online`][systemd-networkd-wait-online] gained a new --dns switch that ensures that not only network connectivity is available, but also DNS configuration is established in systemd-resolved, making use of the new, aforementioned Varlink interface.
+- [`systemd-networkd-wait-online`][systemd-networkd-wait-online] gained a new `--dns` switch that ensures that not only network connectivity is available, but also DNS configuration is established in systemd-resolved, making use of the new, aforementioned Varlink interface.
 
-- resolved.conf gained a new setting RefuseRecordTypes= which takes a list of RR types for which to refuse lookup attempts. This may be used to for example block A or AAAA lookups on IPv4- or IPv6-only hosts.
+- `resolved.conf` gained a new setting `RefuseRecordTypes=` which takes a list of RR types for which to refuse lookup attempts. This may be used to for example block A or AAAA lookups on IPv4- or IPv6-only hosts.
 
-- A new DNS "delegate zone" concept has been introduced, which are additional lookup scopes (on top of the existing per-interface and the one global scope so far supported in resolved), which carry one or more DNS server addresses and a DNS search/routing domain. It allows routing requests to specific domains to specific servers. Delegate zones can be configured via drop-ins below /etc/systemd/dns-delegate.d/*.dns-delegate. (See [Lennart's commentary on systemd-resolved delegate zones](/systemd-258/posts/03-resolved-delegate/) for more details.)
+- A new DNS "delegate zone" concept has been introduced, which are additional lookup scopes (on top of the existing per-interface and the one global scope so far supported in resolved), which carry one or more DNS server addresses and a DNS search/routing domain. It allows routing requests to specific domains to specific servers. Delegate zones can be configured via drop-ins below `/etc/systemd/dns-delegate.d/*.dns-delegate`. (See [Lennart's commentary on systemd-resolved delegate zones](/systemd-258/posts/03-resolved-delegate/) for more details.)
 
 - "[`resolvectl`][resolvectl] query -t sshfp" will now decode the returned RR information, and show the cryptographic algorithms by name instead of number.
 
@@ -323,31 +323,31 @@ title: systemd v258 Release Notes
 
 ## systemd-stub, [`systemd-boot`][systemd-boot] & [`bootctl`][bootctl]:
 
-- UEFI firmware images may now be embedded in UKIs (in an ".efifw" PE section), for use in bring-your-own-firmware scenarios in Confidential Computing. The firmware is matched via CHIDs to the local invoking VM, in a fashion conceptually close to the DeviceTree selection already available since v257. If a suitable firmware image is found at boot, and the system's firmware version does not match it, the update is applied and the system is rebooted. If the firmware matches, boot proceeds as usual. (See [Lennart's commentary on UKI addons support](/systemd-258/posts/15-uki-addons/) for more details.)
+- UEFI firmware images may now be embedded in UKIs (in an `".efifw"` PE section), for use in bring-your-own-firmware scenarios in Confidential Computing. The firmware is matched via CHIDs to the local invoking VM, in a fashion conceptually close to the DeviceTree selection already available since v257. If a suitable firmware image is found at boot, and the system's firmware version does not match it, the update is applied and the system is rebooted. If the firmware matches, boot proceeds as usual. (See [Lennart's commentary on UKI addons support](/systemd-258/posts/15-uki-addons/) for more details.)
 
-- When systemd-stub is invoked through a network boot provided UKI, it will now query the source URL and write it to the LoaderDeviceURL EFI variable. This may then be used by Linux userspace to look for further resources (such as a root disk image) at the same location.
+- When systemd-stub is invoked through a network boot provided UKI, it will now query the source URL and write it to the `LoaderDeviceURL` EFI variable. This may then be used by Linux userspace to look for further resources (such as a root disk image) at the same location.
 
 - systemd-boot now understands two new Boot Loader Specification Type #1 stanzas: "uki" and "uki-url", which is very similar to "efi" and "linux", and references an UKI, the latter on a remote HTTP/HTTPS server. The latter is particularly relevant for implementing a fully UKI based boot process, but with network provided UKI images. (See Lennart's commentary on [HTTP boot with systemd-boot](/systemd-258/posts/10-http-boot/) and [UKI HTTP boot](/systemd-258/posts/44-uki-http-boot/) for more details.)
 
-- systemd-boot now looks for the special SMBIOS Type #11 vendor strings io.systemd.boot.entries-extra=, and synthesizes additional boot menu entries from the provided data. This is useful with systemd-vmspawn's --smbios11= switch, see below. (See Lennart's commentary on [stub credentials and boot entries](/systemd-258/posts/14-stub-credentials/) and [vmspawn SMBIOS Type 11](/systemd-258/posts/41-vmspawn-smbios/) for more details.)
+- systemd-boot now looks for the special SMBIOS Type #11 vendor strings `io.systemd.boot.entries-extra=`, and synthesizes additional boot menu entries from the provided data. This is useful with systemd-vmspawn's `--smbios11=` switch, see below. (See Lennart's commentary on [stub credentials and boot entries](/systemd-258/posts/14-stub-credentials/) and [vmspawn SMBIOS Type 11](/systemd-258/posts/41-vmspawn-smbios/) for more details.)
 
 - systemd-stub now defaults to a minimum of 120 available PE sections, instead of the previous default of 30. This reflects the fact that multi-profile UKI typically require a lot more sections than traditional single-profile UKIs. Note that this is just a compile-time default, downstream distributions might choose to raise this further – in particular on ARM systems where many Devicetree blobs shall be embedded into an UKI.
 
-- systemd-boot's loader.conf configuration file gained a new "reboot-on-error" setting which controls what to do if booting a selected entry fails, i.e. whether to reboot or just show the menu again.
+- systemd-boot's `loader.conf` configuration file gained a new "reboot-on-error" setting which controls what to do if booting a selected entry fails, i.e. whether to reboot or just show the menu again.
 
-- bootctl's --no-variables switch has been replaced by --variables=yes/no. By setting --variables=yes modification of EFI variables can be forced now in environments where we'd previously automatically turn this off (e.g. in choot() contexts).
+- `bootctl`'s `--no-variables` switch has been replaced by `--variables=yes/no`. By setting `--variables=yes` modification of EFI variables can be forced now in environments where we'd previously automatically turn this off (e.g. in `chroot()` contexts).
 
-- bootctl's --graceful is now implicitly enabled when running in a chroot, to ease integration in packaging scriptlets.
+- `bootctl`'s `--graceful` is now implicitly enabled when running in a chroot, to ease integration in packaging scriptlets.
 
 - systemd-stub gained support for a couple of "extension" CHIDs, that are not part of the Microsoft's original spec, and which include EDID display identification information in the hash. This may be used to match Devicetree blobs in UKIs. "[`systemd-analyze`][systemd-analyze] chid" has been updated to support these extension CHIDs, too. (They are clearly marked as extensions CHIDs, to emphasize they are systemd's own invention, and not based on the Windows CHID spec.) (See [Lennart's commentary on the CHID lookup tool](/systemd-258/posts/37-chid-lookup/) for more details.)
 
-- systemd-boot's loader.conf configuration file gained a new secure-boot-enroll-action setting which controls the action to take once automatic Secure Boot keys have been enrolled, i.e. whether to reboot or whether to shut down the system.
+- systemd-boot's `loader.conf` configuration file gained a new `secure-boot-enroll-action` setting which controls the action to take once automatic Secure Boot keys have been enrolled, i.e. whether to reboot or whether to shut down the system.
 
-- Userspace may set a new LoaderSysFail EFI variable. It is used by systemd-boot: when set and the system firmware reports some kind of system failure (for now this is pretty much only about failed firmware updates), systemd-boot will use the specified entry instead of following the usual fallback entry selection logic. bootctl gained a new "set-sysfail" verb to set this variable.
+- Userspace may set a new `LoaderSysFail` EFI variable. It is used by systemd-boot: when set and the system firmware reports some kind of system failure (for now this is pretty much only about failed firmware updates), systemd-boot will use the specified entry instead of following the usual fallback entry selection logic. `bootctl` gained a new "set-sysfail" verb to set this variable.
 
-- systemd-boot will now set LoaderTpm2ActivePcrBanks EFI variable to let the userspace know which TPM2 PCR banks are available. This is more reliable then trying to figure this out through sysfs.
+- systemd-boot will now set `LoaderTpm2ActivePcrBanks` EFI variable to let the userspace know which TPM2 PCR banks are available. This is more reliable then trying to figure this out through sysfs.
 
-- systemd-stub will now also load global sysexts and confexts from ESP/loader/extensions/*.{sysext,confext}.raw.
+- systemd-stub will now also load global sysexts and confexts from `ESP/loader/extensions/*.{sysext,confext}.raw`.
 
 ## [`systemd-nsresourced`][systemd-nsresourced] & [`systemd-mountfsd`][systemd-mountfsd]:
 
@@ -357,19 +357,19 @@ title: systemd v258 Release Notes
 
 - systemd-mountfsd gained a new IPC call accessible to unprivileged clients for acquiring an ID-mapped mount for any OS/container directory tree which is itself owned by the foreign UID/GID range, and has a parent directory owned by the caller's UID. This means the systemd-nsresourced/systemd-mountfsd combination is now suitable for running unprivileged containers both from a disk image and from a directory tree.
 
-- When activating a DDI via mountfsd's MountImage() call the returned data will now include the literal path to attach each returned path to, to simplify implementation of clients.
+- When activating a DDI via mountfsd's `MountImage()` call the returned data will now include the literal path to attach each returned path to, to simplify implementation of clients.
 
 - systemd-nsresourced gained an API for allocating a network TAP device to associate with a user namespaces. This can be used by unprivileged VMMs, to acquire IP networking. The network interface associated with the TAP device comes with a matching .link and .network file, so that systemd-networkd will set up IP routing (with masquerading) on it automatically.
 
 - systemd-nsresourced will now always ask polkit for authorization of its operations, even if they are supposed to be accessible to unprivileged clients, so that the PK policy has the last word.
 
-- systemd-nsresourced gained a new API call MakeDirectory(), which creates a new directory, owned by the foreign UID range. It's supposed to be used in conjunction with MountDirectory() for creating and populating new container trees within user/$HOME context.
+- systemd-nsresourced gained a new API call `MakeDirectory()`, which creates a new directory, owned by the foreign UID range. It's supposed to be used in conjunction with `MountDirectory()` for creating and populating new container trees within user/$HOME context.
 
 ## systemd-nspawn:
 
 - Support for unprivileged invocation of container images stored in plain directories has been added, using the new IPC APIs provided by "systemd-mountfsd", see above.
 
-- systemd-nspawn's --private-users= switch now supports a new value "managed", which will ensure allocation of a userns via systemd-nsresourced, even if run privileged.
+- systemd-nspawn's `--private-users=` switch now supports a new value "managed", which will ensure allocation of a userns via systemd-nsresourced, even if run privileged.
 
 - If systemd-nspawn is used interactively, two new special key sequences can be used to trigger an immediate clean shutdown or reboot of the container with systemd running as PID 1: '^]^]p' for shutdown and '^]^]r' for reboot. This is in addition to the previously supported '^]^]^]' which triggers immediate shutdown without going through the usual shutdown logic. (See [Lennart's commentary on systemd-nspawn hotkeys](/systemd-258/posts/25-nspawn-hotkeys/) for more details.)
 
