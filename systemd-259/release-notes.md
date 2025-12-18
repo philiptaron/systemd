@@ -27,16 +27,16 @@ title: systemd v259 Release Notes
   - libseccomp >= 2.4.0,
   - python >= 3.9.0.
 
-- The parsing of `RootImageOptions=` and the mount image parameters of `ExtensionImages=` and `MountImages=` will be changed in the next version so that the last duplicated definition for a given partition wins and is applied, rather than the first, to keep these options coherent with other unit settings.
+- The parsing of `RootImageOptions=` and the mount image parameters of `ExtensionImages=` and `MountImages=` will be changed in the next version so that the last duplicated definition for a given partition wins and is applied, rather than the first, to keep these options consistent with other unit settings.
 
 ## Feature Removals and Incompatible Changes:
 
-- The cgroup2 file system is now mounted with the `memory_hugetlb_accounting` mount option, supported since kernel 6.6.
+- The cgroup2 file system is now mounted with the `memory_hugetlb_accounting` mount option, supported since Linux kernel 6.6.
   This means that HugeTLB memory usage is now counted towards the cgroup’s overall memory usage for the memory controller.
 
 - The default storage mode for the journal is now `persistent`.
-  Previously, the default was `auto`, so the presence or lack of `/var/log/journal` determined the default storage mode, if no overriding configuration was provided.
-  The default can be changed with `-Djournal-storage-default=`.
+  Previously, the default was `auto`, so the presence or lack of `/var/log/journal/` determined the default storage mode, if no overriding configuration was provided.
+  The default can be changed with the `-Djournal-storage-default=` meson option.
 
 - [`systemd-networkd`][systemd-networkd] and [`systemd-nspawn`][systemd-nspawn] no longer support creating NAT rules via iptables/libiptc APIs; only nftables is now supported.
 
@@ -47,73 +47,73 @@ title: systemd v259 Release Notes
   This is done for security, since both the ESP and XBOOTLDR must be directly firmware-accessible and thus cannot by protected by cryptographic means.
   Thus it is essential to not mount arbitrarily complex file systems on them.
   This restriction only applies if automatic dissection is used.
-  If other file system types shall be used for XBOOTLDR (not recommended) this can be achieved via explicit /etc/fstab entries.
+  If other file system types shall be used for XBOOTLDR (not recommended) this can be achieved via explicit `/etc/fstab` entries.
 
 - [`systemd-machined`][systemd-machined] will now expose "hidden" disk images as read-only by default (hidden images are those whose name begins with a dot).
   They were already used to retain a pristine copy of the downloaded image, while modifications were made to a 2nd, local writable copy of the image.
   Hence, effectively they were read-only already, and this is now official.
 
 - The LUKS volume label string set by [`systemd-repart`][systemd-repart] no longer defaults to the literal same as the partition and file system label, but is prefixed with `luks-`.
-  This is done so that on LUKS enabled images a conflict between /dev/disk/by-label/ symlinks is removed, as this symlink is generated both for file system and LUKS superblock labels.
+  This is done so that on LUKS enabled images a conflict between `/dev/disk/by-label/` symlinks is removed, as this symlink is generated both for file system and LUKS superblock labels.
   There's a new `VolumeLabel=` setting for partitions that can be used to explicitly choose a LUKS superblock label, which can be used to explicitly revert to the old naming, if required.
 
 ## Service manager/PID1:
 
 - The service manager's Varlink IPC has been extended considerably.
   It now exposes service execution settings and more.
-  Its Unit.List() call now can filter by cgroup or invocation ID.
+  Its `Unit.List()` call now can filter by cgroup or invocation ID.
 
-- The service manager now exposes Reload() and Reexecute() Varlink IPC calls, mirroring the calls of the same name accessible via D-Bus.
+- The service manager now exposes `Reload()` and `Reexecute()` Varlink IPC calls, mirroring the calls of the same name accessible via D-Bus.
 
-- The $LISTEN_FDS protocol has been extended to support pidfd inode IDs.
-  The $LISTEN_PID environment variable is now augmented with a new $LISTEN_PIDFDID environment variable which contains the inode ID of the pidfd of the indicated process.
-  This removes any ambiguity regarding PID recycling: a process which verified that $LISTEN_PID points to its own PID can now also verify the pidfd inode ID, which does not recycle IDs.
+- The `$LISTEN_FDS` protocol has been extended to support pidfd inode IDs.
+  The `$LISTEN_PID` environment variable is now augmented with a new `$LISTEN_PIDFDID` environment variable which contains the inode ID of the pidfd of the indicated process.
+  This removes any ambiguity regarding PID recycling: a process which verified that `$LISTEN_PID` points to its own PID can now also verify the pidfd inode ID, which does not recycle IDs.
 
 - The log message made when a service exits will now show the wallclock time the service took in addition to the previously shown CPU time.
 
-- A new pair of properties OOMKills and ManagedOOMKills are now exposed on service units (and other unit types that spawn processes) that count the number of process kills made by the kernel or systemd-oomd.
+- A new pair of properties `OOMKills` and `ManagedOOMKills` are now exposed on service units (and other unit types that spawn processes) that count the number of process kills made by the kernel or `systemd-oomd`.
 
-- The service manager gained support for a new `RootDirectoryFileDescriptor=` property when creating transient service units.
+- The service manager gained support for a new `RootDirectoryFileDescriptor=` setting when creating transient service units.
   It is similar to `RootDirectory=` but takes a file descriptor rather than a path to the new root directory to use.
 
-- The service manager now supports a new `UserNamespacePath=` setting which mirrors the existing `IPCNamespacePath=` and `NetworkNamespacePath=` options, but applies to Linux user namespaces.
+- The service manager now supports a new `UserNamespacePath=` setting which mirrors the existing `IPCNamespacePath=` and `NetworkNamespacePath=` settings, but applies to Linux user namespaces.
 
 - The service manager gained a new `ExecReloadPost=` setting to configure commands to execute after reloading of the configuration of the service has completed.
 
 - Service manager job activation transactions now get a per-system unique 64-bit numeric ID assigned.
   This ID is logged as an additional log field for in messages related to the transaction.
 
-- The service manager now keeps track of transactions with ordering cycles and exposes them in the TransactionsWithOrderingCycle D-Bus property.
+- The service manager now keeps track of transactions with ordering cycles and exposes them in the `TransactionsWithOrderingCycle` D-Bus property.
 
 ## systemd-sysext/systemd-confext:
 
-- [`systemd-sysext`][systemd-sysext] and [`systemd-confext`][systemd-confext] now support configuration files /etc/systemd/systemd-sysext.conf and /etc/systemd/systemd-confext.conf, which can be used to configure mutability or the image policy to apply to DDI images.
+- [`systemd-sysext`][systemd-sysext] and [`systemd-confext`][systemd-confext] now support configuration files `/etc/systemd/systemd-sysext.conf` and `/etc/systemd/systemd-confext.conf`, which can be used to configure mutability or the image policy to apply to DDI images.
 
 - [`systemd-sysext`][systemd-sysext]'s and [`systemd-confext`][systemd-confext]'s `--mutable=` switch now accepts a new value `help` for listing available mutability modes.
 
-- [`systemd-sysext`][systemd-sysext] now supports configuring additional overlayfs mount settings via the $SYSTEMD_SYSEXT_OVERLAYFS_MOUNT_OPTIONS environment variable.
-  Similarly [`systemd-confext`][systemd-confext] now supports $SYSTEMD_CONFEXT_OVERLAYFS_MOUNT_OPTIONS.
+- [`systemd-sysext`][systemd-sysext] now supports configuring additional overlayfs mount settings via the `$SYSTEMD_SYSEXT_OVERLAYFS_MOUNT_OPTIONS` environment variable.
+  Similarly [`systemd-confext`][systemd-confext] now supports `$SYSTEMD_CONFEXT_OVERLAYFS_MOUNT_OPTIONS`.
 
 ## systemd-vmspawn/systemd-nspawn:
 
 - [`systemd-vmspawn`][systemd-vmspawn] will now initialize the `serial` fields of block devices attached to VMs to the filename of the file backing them on the host.
-  This makes it very easy to reference the right media in case many block devices from files are attached to the same VM via the /dev/disk/by-id/… links in the VM.
+  This makes it very easy to reference the right media in case many block devices from files are attached to the same VM via the `/dev/disk/by-id/…` links in the VM.
   *See also: [Lennart's explanation](posts/12-vmspawn-disk.md)*
 
-- [`systemd-nspawn`][systemd-nspawn]'s .nspawn file gained support for a new `NamespacePath=` setting in the [Network] section which takes a path to a network namespace inode, and which ensures the container is run inside that when booted. (This was previously only available via a command line switch.)
+- [`systemd-nspawn`][systemd-nspawn]'s `.nspawn` file gained support for a new `NamespacePath=` setting in the `[Network]` section which takes a path to a network namespace inode, and which ensures the container is run inside that when booted. (This was previously only available via a command line switch.)
 
 - [`systemd-vmspawn`][systemd-vmspawn] gained two new switches `--bind-user=`/`--bind-user-shell=` which mirror the switches of the same name in [`systemd-nspawn`][systemd-nspawn], and allow sharing a user account from the host inside the VM in a simple one-step operation.
   *See also: [Lennart's explanation](posts/05-vmspawn-bind-user.md)*
 
-- [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] gained a new `--bind-user-group=` switch to add a user bound via `--bind-user=` to the specified group (useful in particular for the `wheel` or `empower` groups).
+- [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] gained a new `--bind-user-group=` switch to add a user bound via `--bind-user=` to the specified group (useful in particular for the `wheel` or `empower` system groups).
 
 - [`systemd-vmspawn`][systemd-vmspawn] now configures RSA4096 support in the vTPM, if swtpm supports it.
 
-- [`systemd-vmspawn`][systemd-vmspawn] now enables qemu guest agent via the org.qemu.guest_agent.0 protocol when started with `--console=gui`.
+- [`systemd-vmspawn`][systemd-vmspawn] now enables qemu guest agent via the `org.qemu.guest_agent.0` protocol when started with `--console=gui`.
 
 ## systemd-repart:
 
-- repart.d/ drop-ins gained support for a new `TPM2PCRs=` setting, which can be used to configure the set of TPM2 PCRs to bind disk encryption to, in case TPM2-bound encryption is used.
+- `repart.d/` drop-ins gained support for a new `TPM2PCRs=` setting, which can be used to configure the set of TPM2 PCRs to bind disk encryption to, in case TPM2-bound encryption is used.
   This was previously only settable via the [`systemd-repart`][systemd-repart] command line.
   Similarly, `KeyFile=` has been added to configure a binary LUKS key file to use.
 
@@ -128,7 +128,7 @@ title: systemd v259 Release Notes
   This functionality is useful for installers, as partitions marked empty or marked for factory reset should typically be left out at install time, but not on first boot.
   *See also: [Lennart's explanation](posts/13-defer-partitions.md)*
 
-- The `Subvolumes=` values in repart.d/ drop-ins may now be suffixed with `:nodatacow`, in order to create subvolumes with data Copy-on-Write disabled.
+- The `Subvolumes=` values in `repart.d/` drop-ins may now be suffixed with `:nodatacow`, in order to create subvolumes with data Copy-on-Write disabled.
 
 ## systemd-udevd:
 
@@ -138,14 +138,14 @@ title: systemd v259 Release Notes
 - The net_id builtin for [`systemd-udevd`][systemd-udevd] now can generate predictable interface names for Wifi devices on DeviceTree systems.
 
 - [`systemd-udevd`][systemd-udevd] and [`systemd-repart`][systemd-repart] will now reread partition tables on block devices in a more graceful, incremental fashion.
-  Specifically, they no longer use the kernel BLKRRPART ioctl() which removes all in-memory partition objects loaded into the kernel and then recreates them as new objects.
-  Instead they will use the BLKPG ioctl() to make minimal changes, and individually add, remove, or grow modified partitions, avoiding removal/re-adding where the partitions were left unmodified on disk.
+  Specifically, they no longer use the kernel `BLKRRPART` ioctl() which removes all in-memory partition objects loaded into the kernel and then recreates them as new objects.
+  Instead they will use the `BLKPG` ioctl() to make minimal changes, and individually add, remove, or grow modified partitions, avoiding removal/re-adding where the partitions were left unmodified on disk.
   This should greatly improve behaviour on systems that make modifications to partition tables on disk while using them.
 
-- A new udev property ID_BLOCK_SUBSYSTEM is now exposed on block devices reporting a short identifier for the subsystem a block device belongs to.
+- A new udev property `ID_BLOCK_SUBSYSTEM` is now exposed on block devices reporting a short identifier for the subsystem a block device belongs to.
   This only applies to block devices not connected to a regular bus, i.e. virtual block devices such as loopback, DM, MD, or zram.
 
-- [`systemd-udevd`][systemd-udevd] will now generate /dev/gpio/by-id/… symlinks for GPIO devices.
+- [`systemd-udevd`][systemd-udevd] will now generate `/dev/gpio/by-id/…` symlinks for GPIO devices.
 
 ## systemd-homed/homectl:
 
@@ -153,58 +153,58 @@ title: systemd v259 Release Notes
   Previously, recovery keys could only be configured during initial user creation.
 
 - Two new `--prompt-shell=` and `--prompt-groups=` options have been added to [`homectl`][homectl] to control whether to query the user interactively for a login shell and supplementary groups memberships when interactive firstboot operation is requested.
-  The invocation in systemd-homed-firstboot.service now turns both off by default.
+  The invocation in `systemd-homed-firstboot.service` now turns both off by default.
 
 ## systemd-boot/systemd-stub:
 
 - [`systemd-boot`][systemd-boot] now supports log levels.
   The level may be set via `log-level=` in `loader.conf` and via the SMBIOS Type 11 field `io.systemd.boot.loglevel=`.
 
-- [`systemd-boot`][systemd-boot]'s `loader.conf` file gained support for configuring the SecureBoot key enrollment time-out via `secure-boot-enroll-timeout-sec=`.
+- [`systemd-boot`][systemd-boot]'s `loader.conf` file gained support for configuring the Secure Boot key enrollment time-out via `secure-boot-enroll-timeout-sec=`.
 
 - Boot Loader Specification Type #1 entries now support a `profile` field which may be used to explicitly select a profile in multi-profile UKIs invoked via the `uki` field.
 
 ## sd-varlink/varlinkctl:
 
-- [`sd-varlink`][sd-varlink]'s sd_varlink_set_relative_timeout() call will now reset the timeout to the default if 0 is passed.
+- [`sd-varlink`][sd-varlink]'s `sd_varlink_set_relative_timeout()` call will now reset the timeout to the default if 0 is passed.
 
-- [`sd-varlink`][sd-varlink]'s sd_varlink_server_new() call learned two new flags SD_VARLINK_SERVER_HANDLE_SIGTERM + SD_VARLINK_SERVER_HANDLE_SIGINT, which are honoured by sd_varlink_server_loop_auto() and will cause it to exit processing cleanly once SIGTERM/SIGINT are received.
+- [`sd-varlink`][sd-varlink]'s `sd_varlink_server_new()` call learned two new flags `SD_VARLINK_SERVER_HANDLE_SIGTERM` + `SD_VARLINK_SERVER_HANDLE_SIGINT`, which are honoured by `sd_varlink_server_loop_auto()` and will cause it to exit processing cleanly once `SIGTERM`/`SIGINT` are received.
 
-- [`varlinkctl`][varlinkctl] in `--more` mode will now send a `READY=1` sd_notify() message once it receives the first reply.
-  This is useful for tools or scripts that wrap it (and implement the $NOTIFY_SOCKET protocol) to know when a first confirmation of success is received.
+- [`varlinkctl`][varlinkctl] in `--more` mode will now send a `READY=1` `sd_notify()` message once it receives the first reply.
+  This is useful for tools or scripts that wrap it (and implement the `$NOTIFY_SOCKET` protocol) to know when a first confirmation of success is received.
 
-- [`sd-varlink`][sd-varlink] gained a new sd_varlink_is_connected() call which reports whether a Varlink connection is currently connected.
+- [`sd-varlink`][sd-varlink] gained a new `sd_varlink_is_connected()` call which reports whether a Varlink connection is currently connected.
 
 ## Shared library dependencies:
 
 *See also: [Lennart's explanation of dlopen() dependencies](posts/02-dlopen-dependencies.md)*
 
-- Linux audit support is now implemented via dlopen() rather than regular dynamic library linking.
+- Linux audit support is now implemented via `dlopen()` rather than regular dynamic library linking.
   This means the dependency is now weak, which is useful to reduce footprint inside of containers and such, where Linux audit doesn't really work anyway.
 
-- Similarly PAM support is now implemented via dlopen() too (except for the PAM modules pam_systemd + pam_systemd_home + pam_systemd_loadkey, which are loaded by PAM and hence need PAM anyway to operate).
+- Similarly PAM support is now implemented via `dlopen()` too (except for the PAM modules `pam_systemd` + `pam_systemd_home` + `pam_systemd_loadkey`, which are loaded by PAM and hence need PAM anyway to operate).
 
-- Similarly, libacl support is now implemented via dlopen().
+- Similarly, libacl support is now implemented via `dlopen()`.
 
-- Similarly, libblkid support is now implemented via dlopen().
+- Similarly, libblkid support is now implemented via `dlopen()`.
 
-- Similarly, libseccomp support is now implemented via dlopen().
+- Similarly, libseccomp support is now implemented via `dlopen()`.
 
-- Similarly, libselinux support is now implemented via dlopen().
+- Similarly, libselinux support is now implemented via `dlopen()`.
 
-- Similarly, libmount support is now implemented via dlopen().
+- Similarly, libmount support is now implemented via `dlopen()`.
   Note, that libmount still must be installed in order to invoke the service manager itself.
-  However, libsystemd.so no longer requires it, and neither do various ways to invoke the systemd service manager binary short of using it to manage a system.
+  However, `libsystemd.so` no longer requires it, and neither do various ways to invoke the systemd service manager binary short of using it to manage a system.
 
 - systemd no longer links against libcap at all.
   The simple system call wrappers and other APIs it provides have been reimplemented directly in systemd, which reduced the codebase and the dependency tree.
 
 ## systemd-machined/systemd-importd:
 
-- [`systemd-machined`][systemd-machined] gained support for RegisterMachineEx() + CreateMachineEx() method calls which operate like their counterparts without "Ex", but take a number of additional parameters, similar to what is already supported via the equivalent functionality in the Varlink APIs of [`systemd-machined`][systemd-machined].
+- [`systemd-machined`][systemd-machined] gained support for `RegisterMachineEx()` + `CreateMachineEx()` method calls which operate like their counterparts without "Ex", but take a number of additional parameters, similar to what is already supported via the equivalent functionality in the Varlink APIs of [`systemd-machined`][systemd-machined].
   Most importantly, they support PIDFDs instead of PIDs.
 
-- [`systemd-machined`][systemd-machined] may now also run in a per-user instance, in addition to the per-system instance. [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] have been updated to register their invocations with both the calling user's instance of [`systemd-machined`][systemd-machined] and the system one, if permissions allow it. [`machinectl`][machinectl] now accepts `--user` and `--system` switches that control which daemon instance to operate on. [`systemd-ssh-proxy`][systemd-ssh-proxy] now will query both instances for the AF_VSOCK CID.
+- [`systemd-machined`][systemd-machined] may now also run in a per-user instance, in addition to the per-system instance. [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] have been updated to register their invocations with both the calling user's instance of [`systemd-machined`][systemd-machined] and the system one, if permissions allow it. [`machinectl`][machinectl] now accepts `--user` and `--system` switches that control which daemon instance to operate on. [`systemd-ssh-proxy`][systemd-ssh-proxy] now will query both instances for the `AF_VSOCK` CID.
 
 - [`systemd-machined`][systemd-machined] implements a resolve hook now, so that the names of local containers and VMs can be resolved locally to their respective IP addresses.
 
@@ -212,11 +212,11 @@ title: systemd v259 Release Notes
   This completes work begun earlier which already ported [`systemd-importd`][systemd-importd]'s tar generation.
 
 - [`systemd-importd`][systemd-importd] now may also be run as a per-user service, in addition to the existing per-system instance.
-  It will place the downloaded images in ~/.local/state/machines/ and similar directories. [`importctl`][importctl] gained `--user`/`--system` switches to control which instance to talk to.
+  It will place the downloaded images in `~/.local/state/machines/` and similar directories. [`importctl`][importctl] gained `--user`/`--system` switches to control which instance to talk to.
 
 ## systemd-firstboot:
 
-- [`systemd-firstboot`][systemd-firstboot]'s and [`homectl`][homectl]'s interactive boot-time interface have been updated to show a colored bar at the top and bottom of the screen, whose color can be configured via /etc/os-release.
+- [`systemd-firstboot`][systemd-firstboot]'s and [`homectl`][homectl]'s interactive boot-time interface have been updated to show a colored bar at the top and bottom of the screen, whose color can be configured via `/etc/os-release`.
   The bar can be disabled via the new `--chrome=` switches to both tools.
 
 - [`systemd-firstboot`][systemd-firstboot]'s and [`homectl`][homectl]'s interactive boot-time interface will now temporarily mute the kernel's and PID1's own console output while running, in order to not mix the tool's own output with the other sources.
@@ -225,35 +225,35 @@ title: systemd v259 Release Notes
 
 - [`systemd-firstboot`][systemd-firstboot] gained a new switch `--prompt-keymap-auto`.
   When specified, the tool will interactively query the user for a keymap when running on a real local VT console (i.e. on a user device where the keymap would actually be respected), but not if invoked on other TTYs (such as a serial port, hypervisor console, SSH, …), where the keymap setting would have no effect anyway.
-  The invocation in systemd-firstboot.service now uses this.
+  The invocation in `systemd-firstboot.service` now uses this.
 
 ## systemd-creds:
 
-- [`systemd-creds`][systemd-creds]'s Varlink IPC API now supports a new `withKey` parameter on the Encrypt() method call, for selecting what to bind the encryption to precisely, matching the `--with-key=` switch on the command line.
+- [`systemd-creds`][systemd-creds]'s Varlink IPC API now supports a new `withKey` parameter on the `Encrypt()` method call, for selecting what to bind the encryption to precisely, matching the `--with-key=` switch on the command line.
 
 - [`systemd-creds`][systemd-creds] now allow explicit control of whether to accept encryption with a NULL key when decrypting, via the `--allow-null` and `--refuse-null` switches.
   Previously only the former existed, but null keys were also accepted if UEFI SecureBoot was reported off.
   This automatism is retained, but only if neither of the two switches are specified.
-  The [`systemd-creds`][systemd-creds] Varlink IPC API learned similar parameters on the Decrypt() call.
+  The [`systemd-creds`][systemd-creds] Varlink IPC API learned similar parameters on the `Decrypt()` call.
 
 ## systemd-networkd:
 
 - [`systemd-networkd`][systemd-networkd]'s DHCP sever support gained two settings `EmitDomain=` and `Domain=` for controlling whether leases handed out should report a domain, and which.
   It also gained a per-static lease `Hostname=` setting for the hostname of the client.
 
-- [`systemd-networkd`][systemd-networkd] now exposes a Describe() method call to show network interface properties.
+- [`systemd-networkd`][systemd-networkd] now exposes a `Describe()` method call to show network interface properties.
 
 - [`systemd-networkd`][systemd-networkd] now implements a resolve hook for its internal DHCP server, so that the hostnames tracked in DHCP leases can be resolved locally.
   This is now enabled by default for the DHCP server running on the host side of local [`systemd-nspawn`][systemd-nspawn] or [`systemd-vmspawn`][systemd-vmspawn] networks.
 
 ## systemd-resolved:
 
-- [`systemd-resolved`][systemd-resolved] gained a new Varlink IPC method call DumpDNSConfiguration() which returns the full DNS configuration in one reply.
+- [`systemd-resolved`][systemd-resolved] gained a new Varlink IPC method call `DumpDNSConfiguration()` which returns the full DNS configuration in one reply.
   This is exposed by [`resolvectl`][resolvectl] `--json=`.
 
 - [`systemd-resolved`][systemd-resolved] now allows local, privileged services to hook into local name resolution requests.
-  For that a new directory /run/systemd/resolve.hook/ has been introduced.
-  Any privileged local service can bind an AF_UNIX Varlink socket there, and implement the simple io.systemd.Resolve.Hook Varlink API on it.
+  For that a new directory `/run/systemd/resolve.hook/` has been introduced.
+  Any privileged local service can bind an `AF_UNIX` Varlink socket there, and implement the simple `io.systemd.Resolve.Hook` Varlink API on it.
   If so it will receive a method call on it for each name resolution request, which it can then reply to.
   It can reply positively, deny the request or let the regular request handling take place.
   *See also: [Lennart's explanation](posts/01-resolved-hooks.md)*
@@ -271,12 +271,12 @@ title: systemd v259 Release Notes
   By introducing NvPCRs the scarcity of PCRs is addressed, which allows us to measure more resources later without affecting the definition and current use of the scarce regular PCRs.
   Note that NvPCRs have different semantics than PCRs: they are not available pre-userspace (i.e. initrd userspace creates them and initializes them), including in the pre-kernel firmware world; moreover, they require an explicit "anchor" initialization of a privileged per-system secret (in order to prevent attackers from removing/recreating the backing NV indexes to reset them).
   This makes them predictable only if the result of the anchor measurement is known ahead of time, which will differ on each installed system.
-  Initialization of defined NvPCRs is done in [`systemd-tpm2-setup`][systemd-tpm2-setup].service in the initrd.
+  Initialization of defined NvPCRs is done in [`systemd-tpm2-setup`][systemd-tpm2-setup]`.service` in the initrd.
   Information about the initialization of NvPCRs is measured into PCR 9, and finalized by a separator measurement.
-  The NV index base handle is configurable at build time via the `tpm2-nvpcr-base` meson setting.
+  The NV index base handle is configurable at build time via the `tpm2-nvpcr-base` meson option.
   It currently defaults to a value the TCG has shown intent to assign to Linux, but this has not officially been done yet. [`systemd-pcrextend`][systemd-pcrextend] and its Varlink APIs have been extended to optionally measure into an NvPCR instead of a classic PCR.
 
-- A new service `systemd-pcrproduct.service` is added which is similar to `systemd-pcrmachine.service` but instead of the machine ID (i.e. /etc/machined-id) measures the product ID (as reported by SMBIOS or Devicetree).
+- A new service `systemd-pcrproduct.service` is added which is similar to `systemd-pcrmachine.service` but instead of the machine ID (i.e. `/etc/machine-id`) measures the product ID (as reported by SMBIOS or Devicetree).
   It uses a new NvPCR called `hardware` for this.
 
 - [`systemd-pcrlock`][systemd-pcrlock] has been updated to generate CEL event log data covering NvPCRs too.
@@ -293,9 +293,9 @@ title: systemd v259 Release Notes
 
 - [`run0`][run0] gained a new `--empower` switch.
   It will invoke a new session with elevated privileges – without switching to the root user.
-  Specifically, it sets the full ambient capabilities mask (including CAP_SYS_ADMIN), which ensures that privileged system calls will typically be permitted.
+  Specifically, it sets the full ambient capabilities mask (including `CAP_SYS_ADMIN`), which ensures that privileged system calls will typically be permitted.
   Moreover, it adds the session processes to the new `empower` system group, which is respected by polkit and allows privileged access to most polkit actions.
-  This provides a much less invasive way to acquire privileges, as it will not change $HOME or the UID and hence risk creation of files owned by the wrong UID in the user's home. (Note that `--empower` might not work in all cases, as many programs still do access checks purely based on the UID, without Linux process capabilities or polkit policies having any effect on them.)
+  This provides a much less invasive way to acquire privileges, as it will not change `$HOME` or the UID and hence risk creation of files owned by the wrong UID in the user's home. (Note that `--empower` might not work in all cases, as many programs still do access checks purely based on the UID, without Linux process capabilities or polkit policies having any effect on them.)
   *See also: [Lennart's explanation](posts/04-run0-empower.md)*
 
 - [`systemd-run`][systemd-run] gained support for `--root-directory=` to invoke the service in the specified root directory.
@@ -303,9 +303,9 @@ title: systemd v259 Release Notes
 
 ## sd-event:
 
-- [`sd-event`][sd-event]'s sd_event_add_child() and sd_event_add_child_pidfd() calls now support the WNOWAIT flag which tells [`sd-event`][sd-event] to not reap the child process.
+- [`sd-event`][sd-event]'s `sd_event_add_child()` and `sd_event_add_child_pidfd()` calls now support the `WNOWAIT` flag which tells [`sd-event`][sd-event] to not reap the child process.
 
-- [`sd-event`][sd-event] gained two new calls sd_event_set_exit_on_idle() and sd_event_get_exit_on_idle(), which enable automatic exit from the event loop if no enabled (non-exit) event sources remain.
+- [`sd-event`][sd-event] gained two new calls `sd_event_set_exit_on_idle()` and `sd_event_get_exit_on_idle()`, which enable automatic exit from the event loop if no enabled (non-exit) event sources remain.
 
 ## Other:
 
@@ -326,15 +326,15 @@ title: systemd v259 Release Notes
 
 - [`systemd-stdio-bridge`][systemd-stdio-bridge] gained a new `--quiet` option.
 
-- [`systemd-mountfsd`][systemd-mountfsd]'s MountImage() call gained support for explicitly controlling whether to share dm-verity volumes between images that have the same root hashes.
+- [`systemd-mountfsd`][systemd-mountfsd]'s `MountImage()` call gained support for explicitly controlling whether to share dm-verity volumes between images that have the same root hashes.
   It also learned support for setting up bare file system images with separate Verity data files and signatures.
 
 - [`journalctl`][journalctl] learned a new short switch `-W` for the existing long switch `--no-hostname`.
 
-- system-alloc-{uid,gid}-min are now exported in systemd.pc.
+- `system-alloc-{uid,gid}-min` are now exported in `systemd.pc`.
 
 - Incomplete support for musl libc is now available by setting the `libc` meson option to `musl`.
-  Note that systemd compiled with musl has various limitations: since NSS or equivalent functionality is not available, nss-systemd, nss-resolve, `DynamicUser=`, [`systemd-homed`][systemd-homed], [`systemd-userdbd`][systemd-userdbd], the foreign UID ID, unprivileged [`systemd-nspawn`][systemd-nspawn], [`systemd-nsresourced`][systemd-nsresourced], and so on will not work.
+  Note that systemd compiled with musl has various limitations: since NSS or equivalent functionality is not available, `nss-systemd`, `nss-resolve`, `DynamicUser=`, [`systemd-homed`][systemd-homed], [`systemd-userdbd`][systemd-userdbd], the foreign UID ID, unprivileged [`systemd-nspawn`][systemd-nspawn], [`systemd-nsresourced`][systemd-nsresourced], and so on will not work.
   Also, the usual memory pressure behaviour of long-running systemd services has no effect on musl.
   We also implemented a bunch of shims and workarounds to support compiling and running with musl.
   Caveat emptor.
