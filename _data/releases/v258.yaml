@@ -172,50 +172,50 @@ commentary:
 sections:
 - title: 'Incompatible changes:'
   anchor: incompatible-changes
-- title: Announcements of Future F...
+- title: Announcements of Futur...
   anchor: announcements-of-future-feature-removals
 - title: 'Service manager/PID1:'
   anchor: service-managerpid1
-- title: '[`systemd-journald`][syst...'
-  anchor: systemd-journaldsystemd-journald-journal-remote
-- title: systemd-udevd & [`systemd...
-  anchor: systemd-udevd-systemd-hwdbsystemd-hwdb
+- title: systemd-journald & jou...
+  anchor: systemd-journald-journal-remote
+- title: systemd-udevd & system...
+  anchor: systemd-udevd-systemd-hwdb
 - title: 'systemd-networkd:'
   anchor: systemd-networkd
-- title: '[`sd-varlink`][sd-varlink...'
-  anchor: sd-varlinksd-varlink-sd-jsonsd-json
-- title: '[`varlinkctl`][varlinkctl...'
-  anchor: varlinkctlvarlinkctl
-- title: '[`sd-device`][sd-device]:'
-  anchor: sd-devicesd-device
+- title: 'sd-varlink & sd-json:'
+  anchor: sd-varlink-sd-json
+- title: 'varlinkctl:'
+  anchor: varlinkctl
+- title: 'sd-device:'
+  anchor: sd-device
 - title: 'systemd-logind:'
   anchor: systemd-logind
 - title: 'systemd-resolved:'
   anchor: systemd-resolved
-- title: '[`systemd-hostnamed`][sys...'
-  anchor: systemd-hostnamedsystemd-hostnamed
-- title: systemd-stub, [`systemd-b...
-  anchor: systemd-stub-systemd-bootsystemd-boot-bootctlbootctl
-- title: '[`systemd-nsresourced`][s...'
-  anchor: systemd-nsresourcedsystemd-nsresourced-systemd-mountfsdsystemd-mountfsd
+- title: 'systemd-hostnamed:'
+  anchor: systemd-hostnamed
+- title: systemd-stub, systemd-...
+  anchor: systemd-stub-systemd-boot-bootctl
+- title: systemd-nsresourced & ...
+  anchor: systemd-nsresourced-systemd-mountfsd
 - title: 'systemd-nspawn:'
   anchor: systemd-nspawn
 - title: 'systemd-vmspawn:'
   anchor: systemd-vmspawn
-- title: '[`systemd-machined`][syst...'
-  anchor: systemd-machinedsystemd-machined
-- title: '[`systemd-measure`][syste...'
-  anchor: systemd-measuresystemd-measure-ukify-systemd-keyutilsystemd-keyutil-systemd-sbsignsystemd-sbsign
+- title: 'systemd-machined:'
+  anchor: systemd-machined
+- title: systemd-measure, ukify...
+  anchor: systemd-measure-ukify-systemd-keyutil-systemd-sbsign
 - title: 'TPM2:'
   anchor: tpm2
-- title: '[`systemd-userdbd`][syste...'
-  anchor: systemd-userdbdsystemd-userdbd-systemd-homed
-- title: systemd-run and [`run0`][...
-  anchor: systemd-run-and-run0run0
-- title: DDI support & [`systemd-d...
-  anchor: ddi-support-systemd-dissectsystemd-dissect
-- title: systemd-importd & [`impor...
-  anchor: systemd-importd-importctlimportctl
+- title: systemd-userdbd & syst...
+  anchor: systemd-userdbd-systemd-homed
+- title: 'systemd-run and run0:'
+  anchor: systemd-run-and-run0
+- title: DDI support & systemd-...
+  anchor: ddi-support-systemd-dissect
+- title: systemd-importd & impo...
+  anchor: systemd-importd-importctl
 - title: 'Factory Reset:'
   anchor: factory-reset
 - title: 'systemd-repart:'
