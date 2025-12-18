@@ -93,10 +93,12 @@
 
 - systemd-vmspawn will now initialize the "serial" fields of block devices attached to VMs to the filename of the file backing them on the host.
   This makes it very easy to reference the right media in case many block devices from files are attached to the same VM via the /dev/disk/by-id/… links in the VM.
+  *See also: [Lennart's explanation](posts/12-vmspawn-disk.md)*
 
 - systemd-nspawn's .nspawn file gained support for a new NamespacePath= setting in the [Network] section which takes a path to a network namespace inode, and which ensures the container is run inside that when booted. (This was previously only available via a command line switch.)
 
 - systemd-vmspawn gained two new switches --bind-user=/--bind-user-shell= which mirror the switches of the same name in systemd-nspawn, and allow sharing a user account from the host inside the VM in a simple one-step operation.
+  *See also: [Lennart's explanation](posts/05-vmspawn-bind-user.md)*
 
 - systemd-vmspawn and systemd-nspawn gained a new --bind-user-group= switch to add a user bound via --bind-user= to the specified group (useful in particular for the 'wheel' or 'empower' groups).
 
@@ -111,12 +113,15 @@
   Similarly, KeyFile= has been added to configure a binary LUKS key file to use.
 
 - systemd-repart's functionality is now accessible via Varlink IPC.
+  *See also: [Lennart's explanation](posts/11-repart-varlink.md)*
 
 - systemd-repart may now be invoked with a device node path specified as "-".
   Instead of operating on a block device this will just determine the minimum block device size required to apply the defined partitions and exit.
+  *See also: [Lennart's explanation](posts/07-repart-size-calc.md)*
 
 - systemd-repart gained two new switches --defer-partitions-empty=yes and --defer-partitions-factory-reset=yes which are similar to --defer-partitions= but instead of expecting a list of partitions to defer will defer all partitions marked via Format=empty or FactoryReset=yes.
   This functionality is useful for installers, as partitions marked empty or marked for factory reset should typically be left out at install time, but not on first boot.
+  *See also: [Lennart's explanation](posts/13-defer-partitions.md)*
 
 - The Subvolumes= values in repart.d/ drop-ins may now be suffixed with :nodatacow, in order to create subvolumes with data Copy-on-Write disabled.
 
@@ -166,6 +171,8 @@
 - sd-varlink gained a new sd_varlink_is_connected() call which reports whether a Varlink connection is currently connected.
 
 ## Shared library dependencies:
+
+*See also: [Lennart's explanation of dlopen() dependencies](posts/02-dlopen-dependencies.md)*
 
 - Linux audit support is now implemented via dlopen() rather than regular dynamic library linking.
   This means the dependency is now weak, which is useful to reduce footprint inside of containers and such, where Linux audit doesn't really work anyway.
@@ -244,10 +251,13 @@
   Any privileged local service can bind an AF_UNIX Varlink socket there, and implement the simple io.systemd.Resolve.Hook Varlink API on it.
   If so it will receive a method call on it for each name resolution request, which it can then reply to.
   It can reply positively, deny the request or let the regular request handling take place.
+  *See also: [Lennart's explanation](posts/01-resolved-hooks.md)*
 
 - DNS0 has been removed from the default fallback DNS server list of systemd-resolved, since it ceased operations.
 
 ## TPM2 infrastructure:
+
+*See also: [Lennart's explanation of TPM and verified boot](posts/09-tpm-verified-boot.md)*
 
 - systemd-pcrlock no longer locks to PCR 12 by default, since its own policy description typically ends up in there, as it is passed into a UKI via a credential, and such credentials are measured into PCR 12.
 
@@ -269,8 +279,10 @@
 ## systemd-analyze:
 
 - systemd-analyze gained a new verb "dlopen-metadata" which can show the dlopen() weak dependency metadata of an ELF binary that declares that.
+  *See also: [Lennart's explanation](posts/03-dlopen-metadata.md)*
 
 - A new verb "nvpcrs" has been added to systemd-analyze, which lists NvPCRs with their names and values, similar to the existing "pcrs" operation which does the same for classic PCRs.
+  *See also: [Lennart's explanation](posts/10-analyze-nvpcrs.md)*
 
 ## systemd-run/run0:
 
@@ -279,6 +291,7 @@
   Specifically, it sets the full ambient capabilities mask (including CAP_SYS_ADMIN), which ensures that privileged system calls will typically be permitted.
   Moreover, it adds the session processes to the new "empower" system group, which is respected by polkit and allows privileged access to most polkit actions.
   This provides a much less invasive way to acquire privileges, as it will not change $HOME or the UID and hence risk creation of files owned by the wrong UID in the user's home. (Note that --empower might not work in all cases, as many programs still do access checks purely based on the UID, without Linux process capabilities or polkit policies having any effect on them.)
+  *See also: [Lennart's explanation](posts/04-run0-empower.md)*
 
 - systemd-run gained support for --root-directory= to invoke the service in the specified root directory.
   It also gained --same-root-dir (with a short switch -R) for invoking the new service in the same root directory as the caller's. --same-root-dir has also been added to run0.
@@ -302,6 +315,7 @@
   Unlike those suffixes, ".ignore" is package manager agnostic.
 
 - systemd-modules-load will now load configured kernel modules in parallel.
+  *See also: [Lennart's explanation](posts/08-modules-load-parallel.md)*
 
 - systemd-integrity-setup now supports HMAC-SHA256, PHMAC-SHA256, PHMAC-SHA512.
 
@@ -319,6 +333,7 @@
   Also, the usual memory pressure behaviour of long-running systemd services has no effect on musl.
   We also implemented a bunch of shims and workarounds to support compiling and running with musl.
   Caveat emptor.
+  *See also: [Lennart's explanation](posts/06-musl-libc.md)*
 
 This support for musl is provided without a promise of continued support in future releases.
 We'll make the decision based on the amount of work required to maintain the compatibility layer in systemd, how many musl-specific bugs are reported, and feedback on the desirability of this effort provided by users and distributions.
