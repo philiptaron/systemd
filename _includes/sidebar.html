@@ -25,18 +25,18 @@
         {% assign release = site.data.releases.v259 %}
 
         <h3>Commentary</h3>
-        <ul class="toc-list">
+        <ol class="toc-list">
             {% for post in release.commentary %}
-            <li><a href="{{ site.baseurl }}{{ post.path }}">{{ post.num }}. {{ post.title }}</a></li>
+            <li><a href="{{ site.baseurl }}{{ post.path }}">{{ post.title }}</a></li>
             {% endfor %}
-        </ul>
+        </ol>
 
         <h3>Sections</h3>
-        <ul class="toc-list">
+        <ol class="toc-list">
             {% for section in release.sections %}
             <li><a href="{{ site.baseurl }}{{ release.release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
             {% endfor %}
-        </ul>
+        </ol>
 
         {% else %}
         <!-- Fallback: simple navigation -->
