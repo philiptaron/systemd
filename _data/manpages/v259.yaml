@@ -1792,11 +1792,11 @@ pages:
     file: sd_bus_slot_get_destroy_callback.html
   sd_bus_slot_get_floating:
     section: 3
-    description: "Control whether a bus slot object is "floating""
+    description: "Control whether a bus slot object is 'floating'"
     file: sd_bus_slot_get_floating.html
   sd_bus_slot_get_userdata:
     section: 3
-    description: "Set and query the value in the "userdata" field"
+    description: "Set and query the value in the 'userdata' field"
     file: sd_bus_slot_get_userdata.html
   sd_bus_slot_ref:
     section: 3
@@ -1812,11 +1812,11 @@ pages:
     file: sd_bus_slot_set_destroy_callback.html
   sd_bus_slot_set_floating:
     section: 3
-    description: "Control whether a bus slot object is "floating""
+    description: "Control whether a bus slot object is 'floating'"
     file: sd_bus_slot_set_floating.html
   sd_bus_slot_set_userdata:
     section: 3
-    description: "Set and query the value in the "userdata" field"
+    description: "Set and query the value in the 'userdata' field"
     file: sd_bus_slot_set_userdata.html
   sd_bus_slot_unref:
     section: 3
@@ -2116,11 +2116,11 @@ pages:
     file: sd_event_add_exit.html
   sd_event_add_inotify:
     section: 3
-    description: "Add an "inotify" file system inode event source to an event loop"
+    description: "Add an 'inotify' file system inode event source to an event loop"
     file: sd_event_add_inotify.html
   sd_event_add_inotify_fd:
     section: 3
-    description: "Add an "inotify" file system inode event source to an event loop"
+    description: "Add an 'inotify' file system inode event source to an event loop"
     file: sd_event_add_inotify_fd.html
   sd_event_add_io:
     section: 3
@@ -2216,7 +2216,7 @@ pages:
     file: SD_EVENT_INITIAL.html
   sd_event_inotify_handler_t:
     section: 3
-    description: "Add an "inotify" file system inode event source to an event loop"
+    description: "Add an 'inotify' file system inode event source to an event loop"
     file: sd_event_inotify_handler_t.html
   sd_event_io_handler_t:
     section: 3
@@ -2356,11 +2356,11 @@ pages:
     file: sd_event_source_get_floating.html
   sd_event_source_get_inotify_mask:
     section: 3
-    description: "Add an "inotify" file system inode event source to an event loop"
+    description: "Add an 'inotify' file system inode event source to an event loop"
     file: sd_event_source_get_inotify_mask.html
   sd_event_source_get_inotify_path:
     section: 3
-    description: "Add an "inotify" file system inode event source to an event loop"
+    description: "Add an 'inotify' file system inode event source to an event loop"
     file: sd_event_source_get_inotify_path.html
   sd_event_source_get_io_events:
     section: 3
