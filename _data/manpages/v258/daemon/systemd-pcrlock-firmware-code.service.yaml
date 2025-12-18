@@ -1,0 +1,2 @@
+description:  Analyze and predict TPM2 PCR states and generate an access policy from the prediction
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-pcrlock-firmware-code.service.html

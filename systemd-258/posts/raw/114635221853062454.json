@@ -1,0 +1,74 @@
+{
+  "id": "114635221853062454",
+  "created_at": "2025-06-06T07:24:29.389Z",
+  "in_reply_to_id": null,
+  "in_reply_to_account_id": null,
+  "sensitive": false,
+  "spoiler_text": "",
+  "visibility": "public",
+  "language": "en",
+  "uri": "https://mastodon.social/users/pid_eins/statuses/114635221853062454",
+  "url": "https://mastodon.social/@pid_eins/114635221853062454",
+  "replies_count": 3,
+  "reblogs_count": 16,
+  "favourites_count": 28,
+  "quotes_count": 0,
+  "edited_at": null,
+  "content": "<p>1\ufe0f\u20e32\ufe0f\u20e3 Here&#39;s the 12th post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>I believe a fundamental aspect of OS security must be a secure way to return the OS into a well-defined, secure state if a compromise has been identified.</p><p>Fending of an attacker is one thing, accepting that it might happen anyway and that you can recover from that in a reasonable way is another. And that&#39;s the case not only if you think about &quot;cattle&quot; style installs\u2026</p>",
+  "reblog": null,
+  "application": {
+    "name": "Web",
+    "website": null
+  },
+  "account": {
+    "id": "109248059314089584",
+    "username": "pid_eins",
+    "acct": "pid_eins",
+    "display_name": "Lennart Poettering",
+    "locked": false,
+    "bot": false,
+    "discoverable": null,
+    "indexable": false,
+    "group": false,
+    "created_at": "2022-10-28T00:00:00.000Z",
+    "note": "<p>\u26f5 I write software. \u26f5</p>",
+    "url": "https://mastodon.social/@pid_eins",
+    "uri": "https://mastodon.social/users/pid_eins",
+    "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+    "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+    "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+    "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+    "followers_count": 8188,
+    "following_count": 343,
+    "statuses_count": 2260,
+    "last_status_at": "2025-12-18",
+    "hide_collections": null,
+    "noindex": false,
+    "emojis": [],
+    "roles": [],
+    "fields": [
+      {
+        "name": "Web",
+        "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+        "verified_at": null
+      }
+    ]
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [
+    {
+      "name": "systemd258",
+      "url": "https://mastodon.social/tags/systemd258"
+    }
+  ],
+  "emojis": [],
+  "quote": null,
+  "card": null,
+  "poll": null,
+  "quote_approval": {
+    "automatic": [],
+    "manual": [],
+    "current_user": "denied"
+  }
+}

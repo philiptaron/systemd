@@ -1,0 +1,836 @@
+{
+  "post": {
+    "id": "113667281002214225",
+    "created_at": "2024-12-17T08:44:24.122Z",
+    "in_reply_to_id": "113667271436496248",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/113667281002214225",
+    "url": "https://mastodon.social/@pid_eins/113667281002214225",
+    "replies_count": 3,
+    "reblogs_count": 4,
+    "favourites_count": 33,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>And that&#39;s it! After 37 installments I think I covered pretty much all the bigger things in the NEWS file with a story.</p><p>Of course, there&#39;s a lot more in this release. For the full list, consult our NEWS file:</p><p><a href=\"https://github.com/systemd/systemd/blob/70bae7648f2c18010187c9cf20093155eaa26029/NEWS\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/blo</span><span class=\"invisible\">b/70bae7648f2c18010187c9cf20093155eaa26029/NEWS</span></a></p><p>Stay tuned so that you won&#39;t miss out on the <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a> series when the time comes for the next release!</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": {
+      "url": "https://github.com/systemd/systemd/blob/70bae7648f2c18010187c9cf20093155eaa26029/NEWS",
+      "title": "systemd/NEWS at 70bae7648f2c18010187c9cf20093155eaa26029 \u00b7 systemd/systemd",
+      "description": "The systemd System and Service Manager . Contribute to systemd/systemd development by creating an account on GitHub.",
+      "language": "en",
+      "type": "link",
+      "author_name": "",
+      "author_url": "",
+      "provider_name": "GitHub",
+      "provider_url": "",
+      "html": "",
+      "width": 588,
+      "height": 392,
+      "image": null,
+      "image_description": "The systemd System and Service Manager . Contribute to systemd/systemd development by creating an account on GitHub.",
+      "embed_url": "",
+      "blurhash": "U9S?Gd%f%M$+-;j[j[ju~XepIUo|?bjaayj[",
+      "published_at": null,
+      "authors": []
+    },
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [
+    {
+      "id": "113667254835871626",
+      "created_at": "2024-12-17T08:37:44.856Z",
+      "in_reply_to_id": null,
+      "in_reply_to_account_id": null,
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/113667254835871626",
+      "url": "https://mastodon.social/@pid_eins/113667254835871626",
+      "replies_count": 1,
+      "reblogs_count": 6,
+      "favourites_count": 17,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>3\ufe0f\u20e37\ufe0f\u20e3 Here&#39;s the 37th post highlighting key new features of the current v257 release of systemd. <a href=\"https://mastodon.social/tags/systemd257\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd257</span></a> </p><p>In systemd v256 we added a small tool &quot;systemd-ssh-proxy&quot; whose job is to allow connecting to local VMs with ssh via the AF_VSOCK protocol (as opposed to AF_INET/AF_INET6). It acts as host-side counterpart to the guest-side systemd-ssh-generator that automatically binds sshd to AF_VSOCK.</p><p>In systemd v257 the functionality has been updated so that instead of specifying\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [
+        {
+          "name": "systemd257",
+          "url": "https://mastodon.social/tags/systemd257"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "113667263582402333",
+      "created_at": "2024-12-17T08:39:58.314Z",
+      "in_reply_to_id": "113667254835871626",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/113667263582402333",
+      "url": "https://mastodon.social/@pid_eins/113667263582402333",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026the AF_VSOCK &quot;CID&quot; (which is like an IP address, i.e. an identifier for the local VM) you can specify a friendly machine name, if the VM in question is registered with systemd-machined. systemd-vmspawn sets things up that way out of the box, of course. That means, with current off-the-shelf systemd inside a VM and on the host you can now just do &quot;ssh machine/foobar&quot; to connect to a local VM called &quot;foobar&quot;, via AF_VSOCK, i.e. independently of any fragile network.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "113667271436496248",
+      "created_at": "2024-12-17T08:41:58.159Z",
+      "in_reply_to_id": "113667263582402333",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/113667271436496248",
+      "url": "https://mastodon.social/@pid_eins/113667271436496248",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>This is extremely handy, since it &quot;just works&quot; here. In fact, I switched over to this for my private VM needs entirely now.</p><p>(In related news, systemd-ssh-proxy now supports the AF_VSOCK &quot;MUX&quot; protocol too. This means it&#39;s now compatible not only with AF_VSOCK how it&#39;s implemented by qemu, but also with the implementations in Firecracker/CloudHypervisor)</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "replies": [
+    {
+      "id": "113667334695952562",
+      "created_at": "2024-12-17T08:58:02.000Z",
+      "in_reply_to_id": "113667281002214225",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://nerdculture.de/users/fluchtkapsel/statuses/113667334654471960",
+      "url": "https://nerdculture.de/@fluchtkapsel/113667334654471960",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Thanks for all those 37 threads! Just for those I enabled notifications on new posts from you. Highly interesting, and although not everything will help me there's still a lot for me and I know that the rest will be found useful by others.</p><p>I'm looking forward to your threads on v258.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109270387681378581",
+        "username": "fluchtkapsel",
+        "acct": "fluchtkapsel@nerdculture.de",
+        "display_name": "Fluchtkapsel",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-01T00:00:00.000Z",
+        "note": "<p>ally, intersectionalist, technology enthusiast, FLOSS evangelist, employed by Wikimedia Deutschland, priv. account</p><p>* Sci-Fi: Revelation, Expanse, Babylon 5, Farscape, Star Trek, Foundation<br>* Fantasy: Malazan Book of the Fallen, everything by Daniel Abraham, Joe Abercrombie<br>* Linux Gaming, emulated retro gaming<br>* RPG: Cypher System (Numenera, Invisible Sun), D&amp;D, Fate, Savage Worlds, World of Darkness<br>Meta: tootfinder. tfr, searchable <a href=\"https://www.tootfinder.ch\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://www.</span><span class=\"\">tootfinder.ch</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://nerdculture.de/@fluchtkapsel",
+        "uri": "https://nerdculture.de/users/fluchtkapsel",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/270/387/681/378/581/original/c3ea16613ce784e7.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/270/387/681/378/581/original/c3ea16613ce784e7.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/270/387/681/378/581/original/35af1ea21972b96c.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/270/387/681/378/581/original/35af1ea21972b96c.jpg",
+        "followers_count": 404,
+        "following_count": 1320,
+        "statuses_count": 9844,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "er/ihm, he/him, they/them",
+            "verified_at": null
+          },
+          {
+            "name": "Job",
+            "value": "IT System Administrator (Linux)",
+            "verified_at": null
+          },
+          {
+            "name": "Website",
+            "value": "<a href=\"https://masinad.github.io/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">masinad.github.io/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:04:57.497+00:00"
+          },
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/MasinAD\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/MasinAD</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "113667551357003305",
+      "created_at": "2024-12-17T09:53:09.410Z",
+      "in_reply_to_id": "113667281002214225",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/jzik/statuses/113667551357003305",
+      "url": "https://mastodon.social/@jzik/113667551357003305",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Thanks! For some features I struggled to grasp but overall this was educational.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tusky",
+        "website": "https://tusky.app"
+      },
+      "account": {
+        "id": "519992",
+        "username": "jzik",
+        "acct": "jzik",
+        "display_name": "Joseph Zikusooka (ZIK)",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2018-09-07T00:00:00.000Z",
+        "note": "<p>Passionate about Free/Libre Open Source Software. FOSS advocate, developer,  contributor and Linux Trainer <a href=\"https://mastodon.social/tags/FOSS\" class=\"mention hashtag\" rel=\"tag\">#<span>FOSS</span></a> <a href=\"https://mastodon.social/tags/Linux\" class=\"mention hashtag\" rel=\"tag\">#<span>Linux</span></a> <a href=\"https://mastodon.social/tags/Opensource\" class=\"mention hashtag\" rel=\"tag\">#<span>Opensource</span></a> <a href=\"https://mastodon.social/tags/Security\" class=\"mention hashtag\" rel=\"tag\">#<span>Security</span></a> <a href=\"https://mastodon.social/tags/Python\" class=\"mention hashtag\" rel=\"tag\">#<span>Python</span></a> <a href=\"https://mastodon.social/tags/Smarthome\" class=\"mention hashtag\" rel=\"tag\">#<span>Smarthome</span></a></p><p>Contacts:  <a href=\"https://zikusooka.com/connect.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">zikusooka.com/connect.html</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://mastodon.social/@jzik",
+        "uri": "https://mastodon.social/users/jzik",
+        "avatar": "https://files.mastodon.social/accounts/avatars/000/519/992/original/97cbe82c87586819.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/000/519/992/original/97cbe82c87586819.png",
+        "header": "https://files.mastodon.social/accounts/headers/000/519/992/original/9c64875804c1529b.png",
+        "header_static": "https://files.mastodon.social/accounts/headers/000/519/992/original/9c64875804c1529b.png",
+        "followers_count": 176,
+        "following_count": 349,
+        "statuses_count": 742,
+        "last_status_at": "2025-12-15",
+        "hide_collections": true,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://joseph.zikusooka.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">joseph.zikusooka.com</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2023-02-11T06:55:39.289+00:00"
+          },
+          {
+            "name": "Linkedin",
+            "value": "<a href=\"https://linkedin.com/in/zik-joseph\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linkedin.com/in/zik-joseph</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "BlueSky",
+            "value": "<a href=\"https://bsky.app/profile/jzik.bsky.social\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">bsky.app/profile/jzik.bsky.soc</span><span class=\"invisible\">ial</span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/zikusooka\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/zikusooka</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-03-01T18:29:13.868+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "113669756574207539",
+      "created_at": "2024-12-17T19:13:57.000Z",
+      "in_reply_to_id": "113667281002214225",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://digitalcourage.social/users/johanneskastl/statuses/113669756521867766",
+      "url": "https://digitalcourage.social/@johanneskastl/113669756521867766",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Thanks for taking the time to write this together. And thanks for doing this in Mastodon!</p>",
+      "reblog": null,
+      "account": {
+        "id": "109750774944126570",
+        "username": "johanneskastl",
+        "acct": "johanneskastl@digitalcourage.social",
+        "display_name": "Johannes Kastl",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-01-21T00:00:00.000Z",
+        "note": "<p>Senior Cloud Engineer at ARS Computer &amp; Consulting, Munich</p><p>Opinions are my own. Crude sense of humour also my own.</p><p>Nerd, music lover, photographer, musician, husband,  dad, vegetarian, environmentalist, anti-racist, feminist, sysadmin, open source enthusiast.  <br>Loves classical movie scores.</p>",
+        "url": "https://digitalcourage.social/@johanneskastl",
+        "uri": "https://digitalcourage.social/users/johanneskastl",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/750/774/944/126/570/original/51a4517a13f20ee4.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/750/774/944/126/570/original/51a4517a13f20ee4.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/750/774/944/126/570/original/465af93ee798b03c.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/750/774/944/126/570/original/465af93ee798b03c.jpg",
+        "followers_count": 458,
+        "following_count": 553,
+        "statuses_count": 52175,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "He/Him",
+            "verified_at": null
+          },
+          {
+            "name": "Open Source rocks.",
+            "value": "Do you?",
+            "verified_at": null
+          },
+          {
+            "name": "Save the planet!",
+            "value": "Now!",
+            "verified_at": null
+          },
+          {
+            "name": "Homepage",
+            "value": "<a href=\"https://johannes-kastl.de\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">johannes-kastl.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T00:50:05.361+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [],
+  "all_descendants": [
+    {
+      "id": "113667334695952562",
+      "created_at": "2024-12-17T08:58:02.000Z",
+      "in_reply_to_id": "113667281002214225",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://nerdculture.de/users/fluchtkapsel/statuses/113667334654471960",
+      "url": "https://nerdculture.de/@fluchtkapsel/113667334654471960",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Thanks for all those 37 threads! Just for those I enabled notifications on new posts from you. Highly interesting, and although not everything will help me there's still a lot for me and I know that the rest will be found useful by others.</p><p>I'm looking forward to your threads on v258.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109270387681378581",
+        "username": "fluchtkapsel",
+        "acct": "fluchtkapsel@nerdculture.de",
+        "display_name": "Fluchtkapsel",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-01T00:00:00.000Z",
+        "note": "<p>ally, intersectionalist, technology enthusiast, FLOSS evangelist, employed by Wikimedia Deutschland, priv. account</p><p>* Sci-Fi: Revelation, Expanse, Babylon 5, Farscape, Star Trek, Foundation<br>* Fantasy: Malazan Book of the Fallen, everything by Daniel Abraham, Joe Abercrombie<br>* Linux Gaming, emulated retro gaming<br>* RPG: Cypher System (Numenera, Invisible Sun), D&amp;D, Fate, Savage Worlds, World of Darkness<br>Meta: tootfinder. tfr, searchable <a href=\"https://www.tootfinder.ch\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://www.</span><span class=\"\">tootfinder.ch</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://nerdculture.de/@fluchtkapsel",
+        "uri": "https://nerdculture.de/users/fluchtkapsel",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/270/387/681/378/581/original/c3ea16613ce784e7.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/270/387/681/378/581/original/c3ea16613ce784e7.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/270/387/681/378/581/original/35af1ea21972b96c.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/270/387/681/378/581/original/35af1ea21972b96c.jpg",
+        "followers_count": 404,
+        "following_count": 1320,
+        "statuses_count": 9844,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "er/ihm, he/him, they/them",
+            "verified_at": null
+          },
+          {
+            "name": "Job",
+            "value": "IT System Administrator (Linux)",
+            "verified_at": null
+          },
+          {
+            "name": "Website",
+            "value": "<a href=\"https://masinad.github.io/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">masinad.github.io/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:04:57.497+00:00"
+          },
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/MasinAD\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/MasinAD</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "113667551357003305",
+      "created_at": "2024-12-17T09:53:09.410Z",
+      "in_reply_to_id": "113667281002214225",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/jzik/statuses/113667551357003305",
+      "url": "https://mastodon.social/@jzik/113667551357003305",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Thanks! For some features I struggled to grasp but overall this was educational.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tusky",
+        "website": "https://tusky.app"
+      },
+      "account": {
+        "id": "519992",
+        "username": "jzik",
+        "acct": "jzik",
+        "display_name": "Joseph Zikusooka (ZIK)",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2018-09-07T00:00:00.000Z",
+        "note": "<p>Passionate about Free/Libre Open Source Software. FOSS advocate, developer,  contributor and Linux Trainer <a href=\"https://mastodon.social/tags/FOSS\" class=\"mention hashtag\" rel=\"tag\">#<span>FOSS</span></a> <a href=\"https://mastodon.social/tags/Linux\" class=\"mention hashtag\" rel=\"tag\">#<span>Linux</span></a> <a href=\"https://mastodon.social/tags/Opensource\" class=\"mention hashtag\" rel=\"tag\">#<span>Opensource</span></a> <a href=\"https://mastodon.social/tags/Security\" class=\"mention hashtag\" rel=\"tag\">#<span>Security</span></a> <a href=\"https://mastodon.social/tags/Python\" class=\"mention hashtag\" rel=\"tag\">#<span>Python</span></a> <a href=\"https://mastodon.social/tags/Smarthome\" class=\"mention hashtag\" rel=\"tag\">#<span>Smarthome</span></a></p><p>Contacts:  <a href=\"https://zikusooka.com/connect.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">zikusooka.com/connect.html</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://mastodon.social/@jzik",
+        "uri": "https://mastodon.social/users/jzik",
+        "avatar": "https://files.mastodon.social/accounts/avatars/000/519/992/original/97cbe82c87586819.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/000/519/992/original/97cbe82c87586819.png",
+        "header": "https://files.mastodon.social/accounts/headers/000/519/992/original/9c64875804c1529b.png",
+        "header_static": "https://files.mastodon.social/accounts/headers/000/519/992/original/9c64875804c1529b.png",
+        "followers_count": 176,
+        "following_count": 349,
+        "statuses_count": 742,
+        "last_status_at": "2025-12-15",
+        "hide_collections": true,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://joseph.zikusooka.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">joseph.zikusooka.com</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2023-02-11T06:55:39.289+00:00"
+          },
+          {
+            "name": "Linkedin",
+            "value": "<a href=\"https://linkedin.com/in/zik-joseph\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linkedin.com/in/zik-joseph</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "BlueSky",
+            "value": "<a href=\"https://bsky.app/profile/jzik.bsky.social\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">bsky.app/profile/jzik.bsky.soc</span><span class=\"invisible\">ial</span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/zikusooka\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/zikusooka</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-03-01T18:29:13.868+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "113669756574207539",
+      "created_at": "2024-12-17T19:13:57.000Z",
+      "in_reply_to_id": "113667281002214225",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://digitalcourage.social/users/johanneskastl/statuses/113669756521867766",
+      "url": "https://digitalcourage.social/@johanneskastl/113669756521867766",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Thanks for taking the time to write this together. And thanks for doing this in Mastodon!</p>",
+      "reblog": null,
+      "account": {
+        "id": "109750774944126570",
+        "username": "johanneskastl",
+        "acct": "johanneskastl@digitalcourage.social",
+        "display_name": "Johannes Kastl",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-01-21T00:00:00.000Z",
+        "note": "<p>Senior Cloud Engineer at ARS Computer &amp; Consulting, Munich</p><p>Opinions are my own. Crude sense of humour also my own.</p><p>Nerd, music lover, photographer, musician, husband,  dad, vegetarian, environmentalist, anti-racist, feminist, sysadmin, open source enthusiast.  <br>Loves classical movie scores.</p>",
+        "url": "https://digitalcourage.social/@johanneskastl",
+        "uri": "https://digitalcourage.social/users/johanneskastl",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/750/774/944/126/570/original/51a4517a13f20ee4.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/750/774/944/126/570/original/51a4517a13f20ee4.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/750/774/944/126/570/original/465af93ee798b03c.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/750/774/944/126/570/original/465af93ee798b03c.jpg",
+        "followers_count": 458,
+        "following_count": 553,
+        "statuses_count": 52175,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "He/Him",
+            "verified_at": null
+          },
+          {
+            "name": "Open Source rocks.",
+            "value": "Do you?",
+            "verified_at": null
+          },
+          {
+            "name": "Save the planet!",
+            "value": "Now!",
+            "verified_at": null
+          },
+          {
+            "name": "Homepage",
+            "value": "<a href=\"https://johannes-kastl.de\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">johannes-kastl.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T00:50:05.361+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

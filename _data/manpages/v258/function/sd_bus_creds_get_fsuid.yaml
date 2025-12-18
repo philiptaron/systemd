@@ -1,0 +1,2 @@
+description:  Retrieve fields from a credentials object
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_creds_get_fsuid.html

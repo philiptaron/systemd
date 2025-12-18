@@ -1,0 +1,2 @@
+description:  Convert an external identifier into an object path and back
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_path_decode_many.html

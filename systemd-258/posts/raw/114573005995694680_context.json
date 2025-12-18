@@ -1,0 +1,3536 @@
+{
+  "post": {
+    "id": "114573005995694680",
+    "created_at": "2025-05-26T07:42:10.751Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/114573005995694680",
+    "url": "https://mastodon.social/@pid_eins/114573005995694680",
+    "replies_count": 3,
+    "reblogs_count": 15,
+    "favourites_count": 26,
+    "quotes_count": 0,
+    "edited_at": "2025-05-26T08:05:13.276Z",
+    "content": "<p>4\ufe0f\u20e3 Here&#39;s the 4th post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>One key Linux technology container runtimes rely on are user namespaces (&quot;userns&quot;). These essentially virtualize the UID/GID range so that each container can have their own set of UIDs/GIDs, that map to individual, distinct subsets of the host&#39;s UIDs/GIDs. Given that UIDs/GIDs are the most fundamental of UNIX&#39;s security credentials, userns are a pretty essential to security of containers.</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "114573017885620302",
+      "created_at": "2025-05-26T07:45:12.168Z",
+      "in_reply_to_id": "114573005995694680",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573017885620302",
+      "url": "https://mastodon.social/@pid_eins/114573017885620302",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": "2025-05-26T08:06:08.807Z",
+      "content": "<p>Implementing userns is somewhat painful: a lot of restrictions apply, but from my PoV the messiest part is allocating UID/GID ranges on the host that can be used for each container, in particular when you intend to make use of userns entirely unpriv: how do you take control of a UID range if you yourself run under an unpriv UID range, and UIDs are the fundamental form of security isolation on Linux?</p><p>The most widely deployed container engines use a concept called &quot;subuids&quot;/&quot;subgids&quot; for that.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573180915981449",
+      "created_at": "2025-05-26T08:26:39.000Z",
+      "in_reply_to_id": "114573005995694680",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/valpackett/statuses/114573180895344032",
+      "url": "https://social.treehouse.systems/@valpackett/114573180895344032",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> the \"map to host range\" aspect has always been one of the most baffling linux decisions to me. why did they not just introduce a namespace ID as a second key so that (nsid, uid) pairs would become user accounts' actual identifiers, the way freebsd does it &gt;_&lt;</p>",
+      "reblog": null,
+      "account": {
+        "id": "111102106744818113",
+        "username": "valpackett",
+        "acct": "valpackett@treehouse.systems",
+        "display_name": "Val Packett \ud83e\uddc9",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-09-21T00:00:00.000Z",
+        "note": "<p>Purple is my natural hair color. I have strong opinions about software and sometime I even get to make them reality. Same for the state of the world in general, but I have a lot less influence there.</p><p>Professionally: Linux Graphics Plumbing for Qubes OS. Unprofessionally: aarch64laptops, postmarketOS, lots of random projects, local activism/politics.</p>",
+        "url": "https://social.treehouse.systems/@valpackett",
+        "uri": "https://social.treehouse.systems/users/valpackett",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/102/106/744/818/113/original/9a589ea017ce1f99.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/102/106/744/818/113/original/9a589ea017ce1f99.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/102/106/744/818/113/original/f8edc1cec40f7d5c.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/102/106/744/818/113/original/f8edc1cec40f7d5c.jpg",
+        "followers_count": 561,
+        "following_count": 331,
+        "statuses_count": 2753,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://val.packett.cool\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">val.packett.cool</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T03:34:50.722+00:00"
+          },
+          {
+            "name": "Nerdy Linktree",
+            "value": "<a href=\"https://keyoxide.org/aspe:val.packett.cool:DV7YKMH5QMHF5ZVU5UUSIXXXMI\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">keyoxide.org/aspe:val.packett.</span><span class=\"invisible\">cool:DV7YKMH5QMHF5ZVU5UUSIXXXMI</span></a>",
+            "verified_at": "2025-12-18T03:34:50.988+00:00"
+          },
+          {
+            "name": "Pronouns",
+            "value": "she|they",
+            "verified_at": null
+          },
+          {
+            "name": "Pronombres",
+            "value": "ella|elle",
+            "verified_at": null
+          },
+          {
+            "name": "Cuenta alt (en argentino)",
+            "value": "<a href=\"https://rebel.ar/@val\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">rebel.ar/@val</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573228532837436",
+      "created_at": "2025-05-26T08:38:46.394Z",
+      "in_reply_to_id": "114573005995694680",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TheStroyer/statuses/114573228532837436",
+      "url": "https://mastodon.social/@TheStroyer/114573228532837436",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Would this system also work for mounting regular directories inside unpriviliged containers? I&#39;m always annoyed that the user that created a podman container cannot directly access the contents of a volume mounted in the container</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "1089834",
+        "username": "TheStroyer",
+        "acct": "TheStroyer",
+        "display_name": "",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-01-26T00:00:00.000Z",
+        "note": "",
+        "url": "https://mastodon.social/@TheStroyer",
+        "uri": "https://mastodon.social/users/TheStroyer",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 3,
+        "following_count": 30,
+        "statuses_count": 381,
+        "last_status_at": "2025-11-17",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "114573029973004044",
+      "created_at": "2025-05-26T07:48:16.609Z",
+      "in_reply_to_id": "114573017885620302",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573029973004044",
+      "url": "https://mastodon.social/@pid_eins/114573029973004044",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>And frankly, I detest the concept oh so very much. First of all they are a relatively static concept, i.e. assign &quot;subordinate&quot; UID/GID ranges persistently to specific users, i.e. they &quot;stick&quot; forever to the user. And not only that, but container trees need to recursively chown()ed to them, which makes them also &quot;stick&quot; to the container trees. Moreover, they only work for unprivileged container managers because they are implemented via a setuid binary.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573042603518246",
+      "created_at": "2025-05-26T07:51:29.334Z",
+      "in_reply_to_id": "114573029973004044",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573042603518246",
+      "url": "https://mastodon.social/@pid_eins/114573042603518246",
+      "replies_count": 2,
+      "reblogs_count": 5,
+      "favourites_count": 12,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>I think the concept of setuid binaries is a terrible concept, and a major weakness of the Linux security model. In the systemd tree for example we&#39;d never accept a suid binary to be added, because we see the concept as effectively a built-in security flaw.</p><p>Anyway, tldr: I dislike subuids/subgids very much.</p><p>With systemd v257 we already added concepts to that container managers can avoid subuids/subgids and still get the benefits of userns:</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573051904511385",
+      "created_at": "2025-05-26T07:53:51.255Z",
+      "in_reply_to_id": "114573042603518246",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573051904511385",
+      "url": "https://mastodon.social/@pid_eins/114573051904511385",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 13,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>First of all, there&#39;s an IPC API in v257 to get a dynamic, transient UID/GID range for a userns. A container runtime can acquire this, and make processes run under these ranges.</p><p>Secondly, there&#39;s an IPC API in v257 to mount disk images (i.e. file systems stored in regular files) with their UID/GID range mapped to such a dynamic UID/GID range acquired before.</p><p>A container runtime thus can first acquire a UID/GID range via the  first API, and then mount a disk image to match that range, \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573061073096718",
+      "created_at": "2025-05-26T07:56:11.159Z",
+      "in_reply_to_id": "114573051904511385",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573061073096718",
+      "url": "https://mastodon.social/@pid_eins/114573061073096718",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026 and then run the container from this combination.</p><p>That&#39;s already quite powerful, and I use that all the time for running truly unpriv containers from disk images.</p><p>As it turns out though running containers of disk images (as opposed to running them from directory trees that are already mounted) is not the most common thing. With v258 we are doing something about it: we set aside one fixed range of 64K host UIDs/GIDs that can now be used for container trees placed in regular directories.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573075074761394",
+      "created_at": "2025-05-26T07:59:44.806Z",
+      "in_reply_to_id": "114573061073096718",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573075074761394",
+      "url": "https://mastodon.social/@pid_eins/114573075074761394",
+      "replies_count": 3,
+      "reblogs_count": 3,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>A new IPC API is now available to work with that: you pass in an fd to the directory, and an fd to a userns, and it returns you a mount fd of the dir, matching the userns. </p><p>And the twist of it: this is accessible to unpriv clients: access will be granted without any further authentication as long as the dir&#39;s parent dir is owned by the client&#39;s own UID. </p><p>Or in other words: this allows container runtimes to place unpacked container trees in a user&#39;s $HOME.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573086693287119",
+      "created_at": "2025-05-26T08:02:42.090Z",
+      "in_reply_to_id": "114573075074761394",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573086693287119",
+      "url": "https://mastodon.social/@pid_eins/114573086693287119",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": "2025-05-26T08:08:07.622Z",
+      "content": "<p>They just need to make sure these trees are owned by the that new fixed UID range (which we dubbed the &quot;foreign&quot; UID range). After that, the container runtime can dynamically acquire a runtime UID range, then ask the new IPC API to get a mount of the container tree mapped to the runtime UID range, and voil\u00e1: fully unpriv containers. Without any &quot;sticky&quot; UID assignments to users or to inodes on disk. And without any suid binary mess.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573089692720081",
+      "created_at": "2025-05-26T08:03:27.860Z",
+      "in_reply_to_id": "114573086693287119",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573089692720081",
+      "url": "https://mastodon.social/@pid_eins/114573089692720081",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Oh, and there&#39;s a new &quot;systemd-dissect --shift foreign \u2026&quot; tool that allows you to fix up existing container trees, so that they are re-chown()-ed to the foreign UID range. (This requires privs of course).</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573656071160172",
+      "created_at": "2025-05-26T10:27:30.129Z",
+      "in_reply_to_id": "114573588871342311",
+      "in_reply_to_account_id": "109932922201266547",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573656071160172",
+      "url": "https://mastodon.social/@pid_eins/114573656071160172",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.scot/@pauldoo\" class=\"u-url mention\">@<span>pauldoo</span></a></span> no, that&#39;s about allocating static uids/gids. for running containers one wants dynamic ones.</p><p>also, i think the &quot;drift&quot; problem is a made up problem which can be avoided altogether if people just would make better choices.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109932922201266547",
+          "username": "pauldoo",
+          "url": "https://mastodon.scot/@pauldoo",
+          "acct": "pauldoo@mastodon.scot"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114574063401743620",
+      "created_at": "2025-05-26T12:11:05.483Z",
+      "in_reply_to_id": "114573443092960797",
+      "in_reply_to_account_id": "110865874782054546",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114574063401743620",
+      "url": "https://mastodon.social/@pid_eins/114574063401743620",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.online/@heftig\" class=\"u-url mention\">@<span>heftig</span></a></span> You Sir, are asking the right questions.</p><p><a href=\"https://github.com/systemd/systemd/pull/37616\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/pul</span><span class=\"invisible\">l/37616</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "110865874782054546",
+          "username": "heftig",
+          "url": "https://mastodon.online/@heftig",
+          "acct": "heftig@mastodon.online"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/systemd/pull/37616",
+        "title": "mountfsd: add ability to create dir owned by foreign UID range in unpriv $HOME by poettering \u00b7 Pull Request #37616 \u00b7 systemd/systemd",
+        "description": "",
+        "language": "en",
+        "type": "link",
+        "author_name": "poettering",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": [
+          {
+            "name": "poettering",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573142351536041",
+      "created_at": "2025-05-26T08:16:51.372Z",
+      "in_reply_to_id": "114573130115013453",
+      "in_reply_to_account_id": "863334",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573142351536041",
+      "url": "https://mastodon.social/@pid_eins/114573142351536041",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://wizzards.club/@wrybane\" class=\"u-url mention\">@<span>wrybane</span></a></span> The disk images must come with Verity info and a signature for the verity data, which matches a key either known to the kernel or listed in /etc/verity.d/.</p><p>Or in other words: the disk images *files* are under full control of the user, but they are validated as they are mounted, and the *contents* of those files must be authenticated by some key known to the system.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "863334",
+          "username": "wrybane",
+          "url": "https://wizzards.club/@wrybane",
+          "acct": "wrybane@wizzards.club"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573425874485102",
+      "created_at": "2025-05-26T09:28:57.589Z",
+      "in_reply_to_id": "114573369670286933",
+      "in_reply_to_account_id": "109386301757695997",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573425874485102",
+      "url": "https://mastodon.social/@pid_eins/114573425874485102",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://aus.social/@jamesh\" class=\"u-url mention\">@<span>jamesh</span></a></span> Frankly, maintaining polkit is such a thankless job, nobody is going to be thankful if you maintain that. I feel with the current maintainers...  </p><p>But I think you are looking for this, no?  <a href=\"https://github.com/polkit-org/polkit/pull/501\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/polkit-org/polkit/p</span><span class=\"invisible\">ull/501</span></a></p><p>in other words: polkit is suid-less these days.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109386301757695997",
+          "username": "jamesh",
+          "url": "https://aus.social/@jamesh",
+          "acct": "jamesh@aus.social"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/polkit-org/polkit/pull/501",
+        "title": "agent helper: support separate socket-activated service to run without SETUID by bluca \u00b7 Pull Request #501 \u00b7 polkit-org/polkit",
+        "description": "SETUID binaries are considered harmful, as te execution context is under the control of unprivileged attackers.\nEnhance the polkit pam agent helper with a new mode: when running under systemd, add ...",
+        "language": "en",
+        "type": "link",
+        "author_name": "bluca",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "SETUID binaries are considered harmful, as te execution context is under the control of unprivileged attackers.\nEnhance the polkit pam agent helper with a new mode: when running under systemd, add ...",
+        "embed_url": "",
+        "blurhash": "USRMb$RkoL-p-;tRRjt7t6xuM{Rj~qaeofNF",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "bluca",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573209176000356",
+      "created_at": "2025-05-26T08:33:51.033Z",
+      "in_reply_to_id": "114573180915981449",
+      "in_reply_to_account_id": "111102106744818113",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573209176000356",
+      "url": "https://mastodon.social/@pid_eins/114573209176000356",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.treehouse.systems/@valpackett\" class=\"u-url mention\">@<span>valpackett</span></a></span> Yeah, I think so too, they should have just extended the UID range to 64bit or so (or maybe even 128bit, so you can just consider them uuids, like on other OSes).</p><p>But I guess they didn&#39;t want to touch existing file systems in this regard, as they generally just store 32bit uids/gids, not more...</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111102106744818113",
+          "username": "valpackett",
+          "url": "https://social.treehouse.systems/@valpackett",
+          "acct": "valpackett@treehouse.systems"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573259612421034",
+      "created_at": "2025-05-26T08:46:40.630Z",
+      "in_reply_to_id": "114573228532837436",
+      "in_reply_to_account_id": "1089834",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573259612421034",
+      "url": "https://mastodon.social/@pid_eins/114573259612421034",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TheStroyer\" class=\"u-url mention\">@<span>TheStroyer</span></a></span> the IPC allows two things to unpriv clients: you pass in a dir owned by the foreign UID range whose parent dir is owned by the client UID. This is what my post here mostly talks about. In this case the 64K UIDs/GIDs of the foreign UID range are mapped wholesale to the 64K UIDs/GIDs of the provided userns.</p><p>But it also accepts a dir owned directly by the client UID, in which case a mapping with a single UID is created: from the client&#39;s UID to root of the container.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1089834",
+          "username": "TheStroyer",
+          "url": "https://mastodon.social/@TheStroyer",
+          "acct": "TheStroyer"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573260742220892",
+      "created_at": "2025-05-26T08:46:57.873Z",
+      "in_reply_to_id": "114573259612421034",
+      "in_reply_to_account_id": "1089834",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573260742220892",
+      "url": "https://mastodon.social/@pid_eins/114573260742220892",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TheStroyer\" class=\"u-url mention\">@<span>TheStroyer</span></a></span> the latter should be what you are looking for, as I understand it.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1089834",
+          "username": "TheStroyer",
+          "url": "https://mastodon.social/@TheStroyer",
+          "acct": "TheStroyer"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "114573017885620302",
+      "created_at": "2025-05-26T07:45:12.168Z",
+      "in_reply_to_id": "114573005995694680",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573017885620302",
+      "url": "https://mastodon.social/@pid_eins/114573017885620302",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": "2025-05-26T08:06:08.807Z",
+      "content": "<p>Implementing userns is somewhat painful: a lot of restrictions apply, but from my PoV the messiest part is allocating UID/GID ranges on the host that can be used for each container, in particular when you intend to make use of userns entirely unpriv: how do you take control of a UID range if you yourself run under an unpriv UID range, and UIDs are the fundamental form of security isolation on Linux?</p><p>The most widely deployed container engines use a concept called &quot;subuids&quot;/&quot;subgids&quot; for that.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573029973004044",
+      "created_at": "2025-05-26T07:48:16.609Z",
+      "in_reply_to_id": "114573017885620302",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573029973004044",
+      "url": "https://mastodon.social/@pid_eins/114573029973004044",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>And frankly, I detest the concept oh so very much. First of all they are a relatively static concept, i.e. assign &quot;subordinate&quot; UID/GID ranges persistently to specific users, i.e. they &quot;stick&quot; forever to the user. And not only that, but container trees need to recursively chown()ed to them, which makes them also &quot;stick&quot; to the container trees. Moreover, they only work for unprivileged container managers because they are implemented via a setuid binary.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573042603518246",
+      "created_at": "2025-05-26T07:51:29.334Z",
+      "in_reply_to_id": "114573029973004044",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573042603518246",
+      "url": "https://mastodon.social/@pid_eins/114573042603518246",
+      "replies_count": 2,
+      "reblogs_count": 5,
+      "favourites_count": 12,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>I think the concept of setuid binaries is a terrible concept, and a major weakness of the Linux security model. In the systemd tree for example we&#39;d never accept a suid binary to be added, because we see the concept as effectively a built-in security flaw.</p><p>Anyway, tldr: I dislike subuids/subgids very much.</p><p>With systemd v257 we already added concepts to that container managers can avoid subuids/subgids and still get the benefits of userns:</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573051904511385",
+      "created_at": "2025-05-26T07:53:51.255Z",
+      "in_reply_to_id": "114573042603518246",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573051904511385",
+      "url": "https://mastodon.social/@pid_eins/114573051904511385",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 13,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>First of all, there&#39;s an IPC API in v257 to get a dynamic, transient UID/GID range for a userns. A container runtime can acquire this, and make processes run under these ranges.</p><p>Secondly, there&#39;s an IPC API in v257 to mount disk images (i.e. file systems stored in regular files) with their UID/GID range mapped to such a dynamic UID/GID range acquired before.</p><p>A container runtime thus can first acquire a UID/GID range via the  first API, and then mount a disk image to match that range, \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573061073096718",
+      "created_at": "2025-05-26T07:56:11.159Z",
+      "in_reply_to_id": "114573051904511385",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573061073096718",
+      "url": "https://mastodon.social/@pid_eins/114573061073096718",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026 and then run the container from this combination.</p><p>That&#39;s already quite powerful, and I use that all the time for running truly unpriv containers from disk images.</p><p>As it turns out though running containers of disk images (as opposed to running them from directory trees that are already mounted) is not the most common thing. With v258 we are doing something about it: we set aside one fixed range of 64K host UIDs/GIDs that can now be used for container trees placed in regular directories.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573075074761394",
+      "created_at": "2025-05-26T07:59:44.806Z",
+      "in_reply_to_id": "114573061073096718",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573075074761394",
+      "url": "https://mastodon.social/@pid_eins/114573075074761394",
+      "replies_count": 3,
+      "reblogs_count": 3,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>A new IPC API is now available to work with that: you pass in an fd to the directory, and an fd to a userns, and it returns you a mount fd of the dir, matching the userns. </p><p>And the twist of it: this is accessible to unpriv clients: access will be granted without any further authentication as long as the dir&#39;s parent dir is owned by the client&#39;s own UID. </p><p>Or in other words: this allows container runtimes to place unpacked container trees in a user&#39;s $HOME.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573086693287119",
+      "created_at": "2025-05-26T08:02:42.090Z",
+      "in_reply_to_id": "114573075074761394",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573086693287119",
+      "url": "https://mastodon.social/@pid_eins/114573086693287119",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": "2025-05-26T08:08:07.622Z",
+      "content": "<p>They just need to make sure these trees are owned by the that new fixed UID range (which we dubbed the &quot;foreign&quot; UID range). After that, the container runtime can dynamically acquire a runtime UID range, then ask the new IPC API to get a mount of the container tree mapped to the runtime UID range, and voil\u00e1: fully unpriv containers. Without any &quot;sticky&quot; UID assignments to users or to inodes on disk. And without any suid binary mess.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573089692720081",
+      "created_at": "2025-05-26T08:03:27.860Z",
+      "in_reply_to_id": "114573086693287119",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573089692720081",
+      "url": "https://mastodon.social/@pid_eins/114573089692720081",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Oh, and there&#39;s a new &quot;systemd-dissect --shift foreign \u2026&quot; tool that allows you to fix up existing container trees, so that they are re-chown()-ed to the foreign UID range. (This requires privs of course).</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573159909651707",
+      "created_at": "2025-05-26T08:21:19.286Z",
+      "in_reply_to_id": "114573089692720081",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/andrew_shadura/statuses/114573159909651707",
+      "url": "https://mastodon.social/@andrew_shadura/114573159909651707",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span>, taken out of the context, this toot alone (as I saw it in my feed), reads as if it were something out of the git-manpage-generator\u2019s output \ud83d\ude42<br />I hope the actual tool does have a good manpage!</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "277710",
+        "username": "andrew_shadura",
+        "acct": "andrew_shadura",
+        "display_name": "Andrej Shadura",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2018-01-23T00:00:00.000Z",
+        "note": "<p>I work on free software at <a href=\"https://collabora.com\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">collabora.com</span><span class=\"invisible\"></span></a> and sell comfortable Dutch city bicycles at <a href=\"https://stadsfiets.sk\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">stadsfiets.sk</span><span class=\"invisible\"></span></a>.</p>",
+        "url": "https://mastodon.social/@andrew_shadura",
+        "uri": "https://mastodon.social/users/andrew_shadura",
+        "avatar": "https://files.mastodon.social/accounts/avatars/000/277/710/original/0cf892df638484de.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/000/277/710/original/0cf892df638484de.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 326,
+        "following_count": 209,
+        "statuses_count": 3955,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Homepage",
+            "value": "<a href=\"https://shadura.me/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">shadura.me/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2018-10-09T18:46:33.395+00:00"
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.shadura.me/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.shadura.me/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2020-12-29T22:37:40.551+00:00"
+          },
+          {
+            "name": "Videos of my talks",
+            "value": "<a href=\"https://peertube.debian.social/accounts/andrewsh/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">peertube.debian.social/account</span><span class=\"invisible\">s/andrewsh/</span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/andrewshadura\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/andrewshadura</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2024-12-12T17:33:43.685+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573588871342311",
+      "created_at": "2025-05-26T10:10:24.000Z",
+      "in_reply_to_id": "114573089692720081",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.scot/users/pauldoo/statuses/114573588858662384",
+      "url": "https://mastodon.scot/@pauldoo/114573588858662384",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> do you expect this could help with the UID/GID drift problem on image based distros? <a href=\"https://lwn.net/Articles/1018082/\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">lwn.net/Articles/1018082/</span><span class=\"invisible\"></span></a></p><p>It sounds related, but I\u2019m not enough of an expert to know if this systemd feature specifically will help.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109932922201266547",
+        "username": "pauldoo",
+        "acct": "pauldoo@mastodon.scot",
+        "display_name": "Paul Richards",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-02-26T00:00:00.000Z",
+        "note": "<p>Nerd.</p>",
+        "url": "https://mastodon.scot/@pauldoo",
+        "uri": "https://mastodon.scot/users/pauldoo",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/932/922/201/266/547/original/26e9735386c819af.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/932/922/201/266/547/original/26e9735386c819af.jpeg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 85,
+        "following_count": 249,
+        "statuses_count": 816,
+        "last_status_at": "2025-11-29",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "they / them",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://lwn.net/Articles/1018082/",
+        "title": "Addressing UID/GID drift in rpm-ostree and bootc",
+        "description": "The Fedora Project is looking for solutions to an interesting problem with its image-based edit [...]",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "LWN.net",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573656071160172",
+      "created_at": "2025-05-26T10:27:30.129Z",
+      "in_reply_to_id": "114573588871342311",
+      "in_reply_to_account_id": "109932922201266547",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573656071160172",
+      "url": "https://mastodon.social/@pid_eins/114573656071160172",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.scot/@pauldoo\" class=\"u-url mention\">@<span>pauldoo</span></a></span> no, that&#39;s about allocating static uids/gids. for running containers one wants dynamic ones.</p><p>also, i think the &quot;drift&quot; problem is a made up problem which can be avoided altogether if people just would make better choices.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109932922201266547",
+          "username": "pauldoo",
+          "url": "https://mastodon.scot/@pauldoo",
+          "acct": "pauldoo@mastodon.scot"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573443092960797",
+      "created_at": "2025-05-26T09:33:19.000Z",
+      "in_reply_to_id": "114573075074761394",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.online/users/heftig/statuses/114573443059107952",
+      "url": "https://mastodon.online/@heftig/114573443059107952",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Doesn't the container runtime still need chown privilege to create the tree? Is there a way for an unprivileged runtime to do so?</p>",
+      "reblog": null,
+      "account": {
+        "id": "110865874782054546",
+        "username": "heftig",
+        "acct": "heftig@mastodon.online",
+        "display_name": "Jan Steffens",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-07-03T00:00:00.000Z",
+        "note": "<p>-----BEGIN PGP SIGNED MESSAGE-----<br>Hash: SHA512</p><p>I am <a href=\"https://mastodon.online/@heftig\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">mastodon.online/@heftig</span><span class=\"invisible\"></span></a><br>-----BEGIN PGP SIGNATURE-----</p><p>iIsEARYKADMWIQSDvIiJNRtd67toQW64rAhgDxCM3wUCZczh1RUcaGVmdGlnQGFy<br>Y2hsaW51eC5vcmcACgkQuKwIYA8QjN8cfwD/WmpKhM+LHY8MKesnlL5dY4eL8TQD<br>sdtN7m7fRQd/WCQA/RC2UtGMv16lIenROvBEbXMEJYYlnDvH6t/cQu0ptRII<br>=t/UN<br>-----END PGP SIGNATURE-----</p>",
+        "url": "https://mastodon.online/@heftig",
+        "uri": "https://mastodon.online/users/heftig",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/865/874/782/054/546/original/02bc365f4cf8e52c.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/865/874/782/054/546/original/02bc365f4cf8e52c.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 103,
+        "following_count": 74,
+        "statuses_count": 253,
+        "last_status_at": "2025-12-12",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/heftig\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/heftig</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-12T05:09:24.137+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114574063401743620",
+      "created_at": "2025-05-26T12:11:05.483Z",
+      "in_reply_to_id": "114573443092960797",
+      "in_reply_to_account_id": "110865874782054546",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114574063401743620",
+      "url": "https://mastodon.social/@pid_eins/114574063401743620",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.online/@heftig\" class=\"u-url mention\">@<span>heftig</span></a></span> You Sir, are asking the right questions.</p><p><a href=\"https://github.com/systemd/systemd/pull/37616\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/pul</span><span class=\"invisible\">l/37616</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "110865874782054546",
+          "username": "heftig",
+          "url": "https://mastodon.online/@heftig",
+          "acct": "heftig@mastodon.online"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/systemd/pull/37616",
+        "title": "mountfsd: add ability to create dir owned by foreign UID range in unpriv $HOME by poettering \u00b7 Pull Request #37616 \u00b7 systemd/systemd",
+        "description": "",
+        "language": "en",
+        "type": "link",
+        "author_name": "poettering",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": [
+          {
+            "name": "poettering",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114574558838858108",
+      "created_at": "2025-05-26T14:17:04.000Z",
+      "in_reply_to_id": "114573075074761394",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.linux.pizza/users/latenightowl/statuses/114574558759182557",
+      "url": "https://social.linux.pizza/@latenightowl/114574558759182557",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> This sounds great!</p>",
+      "reblog": null,
+      "account": {
+        "id": "109299171627447725",
+        "username": "latenightowl",
+        "acct": "latenightowl@social.linux.pizza",
+        "display_name": "Late Night Owl",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-11-06T00:00:00.000Z",
+        "note": "<p>A person. A nerd. Recovering worhoholic. Software developer. Homelab maintainer.</p><p>the game</p>",
+        "url": "https://social.linux.pizza/@latenightowl",
+        "uri": "https://social.linux.pizza/users/latenightowl",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/299/171/627/447/725/original/6996beb5b4131c9b.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/299/171/627/447/725/original/6996beb5b4131c9b.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/299/171/627/447/725/original/ae471bdeac29d296.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/299/171/627/447/725/original/ae471bdeac29d296.jpg",
+        "followers_count": 129,
+        "following_count": 373,
+        "statuses_count": 520,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Distribution of choice",
+            "value": "Fedora | Alma | CentOS Stream | PostmarketOS",
+            "verified_at": null
+          },
+          {
+            "name": "Desktop of choice",
+            "value": "GNOME",
+            "verified_at": null
+          },
+          {
+            "name": "Terminal font",
+            "value": "Adwaita Mono Regular",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573130115013453",
+      "created_at": "2025-05-26T08:13:44.000Z",
+      "in_reply_to_id": "114573051904511385",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://wizzards.club/users/wrybane/statuses/114573130099520582",
+      "url": "https://wizzards.club/@wrybane/114573130099520582",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> are those disk images under user control and require no privileges to issue the mount call? Just thinking of potential kernel side file system bugs one could exploit if I can modify the raw file system image.</p>",
+      "reblog": null,
+      "account": {
+        "id": "863334",
+        "username": "wrybane",
+        "acct": "wrybane@wizzards.club",
+        "display_name": "Blub",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": true,
+        "group": false,
+        "created_at": "2019-07-20T00:00:00.000Z",
+        "note": "<p>Socially confused monotropic introvert.</p>",
+        "url": "https://wizzards.club/@wrybane",
+        "uri": "https://wizzards.club/users/wrybane",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/000/863/334/original/650c03286697a17d.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/000/863/334/original/650c03286697a17d.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 16,
+        "following_count": 68,
+        "statuses_count": 107,
+        "last_status_at": "2025-12-15",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573142351536041",
+      "created_at": "2025-05-26T08:16:51.372Z",
+      "in_reply_to_id": "114573130115013453",
+      "in_reply_to_account_id": "863334",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573142351536041",
+      "url": "https://mastodon.social/@pid_eins/114573142351536041",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://wizzards.club/@wrybane\" class=\"u-url mention\">@<span>wrybane</span></a></span> The disk images must come with Verity info and a signature for the verity data, which matches a key either known to the kernel or listed in /etc/verity.d/.</p><p>Or in other words: the disk images *files* are under full control of the user, but they are validated as they are mounted, and the *contents* of those files must be authenticated by some key known to the system.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "863334",
+          "username": "wrybane",
+          "url": "https://wizzards.club/@wrybane",
+          "acct": "wrybane@wizzards.club"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573369670286933",
+      "created_at": "2025-05-26T09:14:39.000Z",
+      "in_reply_to_id": "114573042603518246",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://aus.social/users/jamesh/statuses/114573369629317548",
+      "url": "https://aus.social/@jamesh/114573369629317548",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I guess that means polkit is never getting absorbed into the systemd project?</p><p>(unless there is a good way to replace polkit-agent-helper-1)</p>",
+      "reblog": null,
+      "account": {
+        "id": "109386301757695997",
+        "username": "jamesh",
+        "acct": "jamesh@aus.social",
+        "display_name": "James Henstridge",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-11-21T00:00:00.000Z",
+        "note": "<p>Ubuntu Desktop developer at Canonical.</p><p>Living in Perth, Western Australia.</p>",
+        "url": "https://aus.social/@jamesh",
+        "uri": "https://aus.social/users/jamesh",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/386/301/757/695/997/original/9be0515844215592.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/386/301/757/695/997/original/9be0515844215592.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 363,
+        "following_count": 197,
+        "statuses_count": 3066,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://www.jamesh.id.au\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"\">jamesh.id.au</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T19:18:31.871+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573425874485102",
+      "created_at": "2025-05-26T09:28:57.589Z",
+      "in_reply_to_id": "114573369670286933",
+      "in_reply_to_account_id": "109386301757695997",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573425874485102",
+      "url": "https://mastodon.social/@pid_eins/114573425874485102",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://aus.social/@jamesh\" class=\"u-url mention\">@<span>jamesh</span></a></span> Frankly, maintaining polkit is such a thankless job, nobody is going to be thankful if you maintain that. I feel with the current maintainers...  </p><p>But I think you are looking for this, no?  <a href=\"https://github.com/polkit-org/polkit/pull/501\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/polkit-org/polkit/p</span><span class=\"invisible\">ull/501</span></a></p><p>in other words: polkit is suid-less these days.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109386301757695997",
+          "username": "jamesh",
+          "url": "https://aus.social/@jamesh",
+          "acct": "jamesh@aus.social"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/polkit-org/polkit/pull/501",
+        "title": "agent helper: support separate socket-activated service to run without SETUID by bluca \u00b7 Pull Request #501 \u00b7 polkit-org/polkit",
+        "description": "SETUID binaries are considered harmful, as te execution context is under the control of unprivileged attackers.\nEnhance the polkit pam agent helper with a new mode: when running under systemd, add ...",
+        "language": "en",
+        "type": "link",
+        "author_name": "bluca",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "SETUID binaries are considered harmful, as te execution context is under the control of unprivileged attackers.\nEnhance the polkit pam agent helper with a new mode: when running under systemd, add ...",
+        "embed_url": "",
+        "blurhash": "USRMb$RkoL-p-;tRRjt7t6xuM{Rj~qaeofNF",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "bluca",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573441321375362",
+      "created_at": "2025-05-26T09:32:52.000Z",
+      "in_reply_to_id": "114573425874485102",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://aus.social/users/jamesh/statuses/114573441291410540",
+      "url": "https://aus.social/@jamesh/114573441291410540",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I hadn't seen that. Looks like it'd greatly simplify some of the AppArmor policies I've written in the past (switching to a subprofile on exec that can only do NSS/PAM and send the D-Bus method).</p>",
+      "reblog": null,
+      "account": {
+        "id": "109386301757695997",
+        "username": "jamesh",
+        "acct": "jamesh@aus.social",
+        "display_name": "James Henstridge",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-11-21T00:00:00.000Z",
+        "note": "<p>Ubuntu Desktop developer at Canonical.</p><p>Living in Perth, Western Australia.</p>",
+        "url": "https://aus.social/@jamesh",
+        "uri": "https://aus.social/users/jamesh",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/386/301/757/695/997/original/9be0515844215592.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/386/301/757/695/997/original/9be0515844215592.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 363,
+        "following_count": 197,
+        "statuses_count": 3066,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://www.jamesh.id.au\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"\">jamesh.id.au</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T19:18:31.871+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573382525867784",
+      "created_at": "2025-05-26T09:17:55.000Z",
+      "in_reply_to_id": "114573029973004044",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/mupuf/statuses/114573382502861914",
+      "url": "https://social.treehouse.systems/@mupuf/114573382502861914",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Amen to that! Can't wait for rootless podman to make use of it!</p>",
+      "reblog": null,
+      "account": {
+        "id": "114409813739882307",
+        "username": "mupuf",
+        "acct": "mupuf@treehouse.systems",
+        "display_name": "Martin Roukala (n\u00e9 Peres)",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-04-26T00:00:00.000Z",
+        "note": "<p>Linux Graphics CI engineer and HW lover attempting to provide production-ready upstream drivers for Linux! Ex-Nouveau, ex-member of the X.Org board of directors.</p><p>Working on boot2container, CI-tron, Mesa, the Steam Deck, and other gaming-related projects.</p><p>searchable</p>",
+        "url": "https://social.treehouse.systems/@mupuf",
+        "uri": "https://social.treehouse.systems/users/mupuf",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/114/409/813/739/882/307/original/b5299c9e10895cec.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/114/409/813/739/882/307/original/b5299c9e10895cec.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 284,
+        "following_count": 182,
+        "statuses_count": 241,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://www.mupuf.org\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"\">mupuf.org</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T07:16:37.439+00:00"
+          },
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/GfxMupuf\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/GfxMupuf</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Freedesktop Gitlab",
+            "value": "<a href=\"https://gitlab.freedesktop.org/mupuf\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">gitlab.freedesktop.org/mupuf</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573180915981449",
+      "created_at": "2025-05-26T08:26:39.000Z",
+      "in_reply_to_id": "114573005995694680",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/valpackett/statuses/114573180895344032",
+      "url": "https://social.treehouse.systems/@valpackett/114573180895344032",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> the \"map to host range\" aspect has always been one of the most baffling linux decisions to me. why did they not just introduce a namespace ID as a second key so that (nsid, uid) pairs would become user accounts' actual identifiers, the way freebsd does it &gt;_&lt;</p>",
+      "reblog": null,
+      "account": {
+        "id": "111102106744818113",
+        "username": "valpackett",
+        "acct": "valpackett@treehouse.systems",
+        "display_name": "Val Packett \ud83e\uddc9",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-09-21T00:00:00.000Z",
+        "note": "<p>Purple is my natural hair color. I have strong opinions about software and sometime I even get to make them reality. Same for the state of the world in general, but I have a lot less influence there.</p><p>Professionally: Linux Graphics Plumbing for Qubes OS. Unprofessionally: aarch64laptops, postmarketOS, lots of random projects, local activism/politics.</p>",
+        "url": "https://social.treehouse.systems/@valpackett",
+        "uri": "https://social.treehouse.systems/users/valpackett",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/102/106/744/818/113/original/9a589ea017ce1f99.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/102/106/744/818/113/original/9a589ea017ce1f99.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/102/106/744/818/113/original/f8edc1cec40f7d5c.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/102/106/744/818/113/original/f8edc1cec40f7d5c.jpg",
+        "followers_count": 561,
+        "following_count": 331,
+        "statuses_count": 2753,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://val.packett.cool\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">val.packett.cool</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T03:34:50.722+00:00"
+          },
+          {
+            "name": "Nerdy Linktree",
+            "value": "<a href=\"https://keyoxide.org/aspe:val.packett.cool:DV7YKMH5QMHF5ZVU5UUSIXXXMI\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">keyoxide.org/aspe:val.packett.</span><span class=\"invisible\">cool:DV7YKMH5QMHF5ZVU5UUSIXXXMI</span></a>",
+            "verified_at": "2025-12-18T03:34:50.988+00:00"
+          },
+          {
+            "name": "Pronouns",
+            "value": "she|they",
+            "verified_at": null
+          },
+          {
+            "name": "Pronombres",
+            "value": "ella|elle",
+            "verified_at": null
+          },
+          {
+            "name": "Cuenta alt (en argentino)",
+            "value": "<a href=\"https://rebel.ar/@val\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">rebel.ar/@val</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573209176000356",
+      "created_at": "2025-05-26T08:33:51.033Z",
+      "in_reply_to_id": "114573180915981449",
+      "in_reply_to_account_id": "111102106744818113",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573209176000356",
+      "url": "https://mastodon.social/@pid_eins/114573209176000356",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.treehouse.systems/@valpackett\" class=\"u-url mention\">@<span>valpackett</span></a></span> Yeah, I think so too, they should have just extended the UID range to 64bit or so (or maybe even 128bit, so you can just consider them uuids, like on other OSes).</p><p>But I guess they didn&#39;t want to touch existing file systems in this regard, as they generally just store 32bit uids/gids, not more...</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111102106744818113",
+          "username": "valpackett",
+          "url": "https://social.treehouse.systems/@valpackett",
+          "acct": "valpackett@treehouse.systems"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573240215194573",
+      "created_at": "2025-05-26T08:41:44.000Z",
+      "in_reply_to_id": "114573209176000356",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/valpackett/statuses/114573240190071088",
+      "url": "https://social.treehouse.systems/@valpackett/114573240190071088",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> oh, wanting to persist the nsid would complicate things indeed. (freebsd doesn't, at all, jail id is runtime only and the uid in the fs remains equal)</p><p>but unprivileged namespacing cannot work if we want to store files as uid 0 in the actual fs while not being uid 0 on the host, right</p>",
+      "reblog": null,
+      "account": {
+        "id": "111102106744818113",
+        "username": "valpackett",
+        "acct": "valpackett@treehouse.systems",
+        "display_name": "Val Packett \ud83e\uddc9",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-09-21T00:00:00.000Z",
+        "note": "<p>Purple is my natural hair color. I have strong opinions about software and sometime I even get to make them reality. Same for the state of the world in general, but I have a lot less influence there.</p><p>Professionally: Linux Graphics Plumbing for Qubes OS. Unprofessionally: aarch64laptops, postmarketOS, lots of random projects, local activism/politics.</p>",
+        "url": "https://social.treehouse.systems/@valpackett",
+        "uri": "https://social.treehouse.systems/users/valpackett",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/102/106/744/818/113/original/9a589ea017ce1f99.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/102/106/744/818/113/original/9a589ea017ce1f99.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/102/106/744/818/113/original/f8edc1cec40f7d5c.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/102/106/744/818/113/original/f8edc1cec40f7d5c.jpg",
+        "followers_count": 561,
+        "following_count": 331,
+        "statuses_count": 2753,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://val.packett.cool\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">val.packett.cool</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T03:34:50.722+00:00"
+          },
+          {
+            "name": "Nerdy Linktree",
+            "value": "<a href=\"https://keyoxide.org/aspe:val.packett.cool:DV7YKMH5QMHF5ZVU5UUSIXXXMI\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">keyoxide.org/aspe:val.packett.</span><span class=\"invisible\">cool:DV7YKMH5QMHF5ZVU5UUSIXXXMI</span></a>",
+            "verified_at": "2025-12-18T03:34:50.988+00:00"
+          },
+          {
+            "name": "Pronouns",
+            "value": "she|they",
+            "verified_at": null
+          },
+          {
+            "name": "Pronombres",
+            "value": "ella|elle",
+            "verified_at": null
+          },
+          {
+            "name": "Cuenta alt (en argentino)",
+            "value": "<a href=\"https://rebel.ar/@val\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">rebel.ar/@val</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573311246033756",
+      "created_at": "2025-05-26T08:59:47.000Z",
+      "in_reply_to_id": "114573240215194573",
+      "in_reply_to_account_id": "111102106744818113",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/cas/statuses/114573311206887523",
+      "url": "https://social.treehouse.systems/@cas/114573311206887523",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.treehouse.systems/@valpackett\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>valpackett</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> kinda, i've just been enabling more or less exactly this functionality in pmbootstrap by using mkfs.ext4 -d ... in the user namespace. You can create a filesystem entirely in userspace and therefore have permissions be what you expect</p>",
+      "reblog": null,
+      "account": {
+        "id": "110533974478881160",
+        "username": "cas",
+        "acct": "cas@treehouse.systems",
+        "display_name": "kcxt (casey)",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-12-18T00:00:00.000Z",
+        "note": "<p>im Casey, \ud83c\udff3\ufe0f\u200d\ud83c\udf08 queer hacker in Berlin!</p><p>I do <a href=\"https://social.treehouse.systems/tags/LinuxMobile\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>LinuxMobile</span></a> and <span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@postmarketOS\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>postmarketOS</span></a></span> stuff.</p><p>I maintain U-Boot for Qualcomm devices and do other cool embedded stuff @ Linaro</p><p><a href=\"https://social.treehouse.systems/tags/GoVegan\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>GoVegan</span></a> \ud83c\udf31</p><p>personal account: <span class=\"h-card\" translate=\"no\"><a href=\"https://social.dreampi.es/@casey\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>casey</span></a></span></p>",
+        "url": "https://social.treehouse.systems/@cas",
+        "uri": "https://social.treehouse.systems/users/cas",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/533/974/478/881/160/original/c59214079110e4f4.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/533/974/478/881/160/original/c59214079110e4f4.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/110/533/974/478/881/160/original/f4950fb53d57612a.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/110/533/974/478/881/160/original/f4950fb53d57612a.jpeg",
+        "followers_count": 3104,
+        "following_count": 734,
+        "statuses_count": 6188,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "pronouns",
+            "value": "they/she",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/kcxt\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">github.com/kcxt</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Matrix",
+            "value": "kcxt:postmarketos.org",
+            "verified_at": null
+          },
+          {
+            "name": "Website",
+            "value": "<a href=\"https://connolly.tech\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">connolly.tech</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T23:15:10.110+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111102106744818113",
+          "username": "valpackett",
+          "url": "https://social.treehouse.systems/@valpackett",
+          "acct": "valpackett@treehouse.systems"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573228532837436",
+      "created_at": "2025-05-26T08:38:46.394Z",
+      "in_reply_to_id": "114573005995694680",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TheStroyer/statuses/114573228532837436",
+      "url": "https://mastodon.social/@TheStroyer/114573228532837436",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Would this system also work for mounting regular directories inside unpriviliged containers? I&#39;m always annoyed that the user that created a podman container cannot directly access the contents of a volume mounted in the container</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "1089834",
+        "username": "TheStroyer",
+        "acct": "TheStroyer",
+        "display_name": "",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-01-26T00:00:00.000Z",
+        "note": "",
+        "url": "https://mastodon.social/@TheStroyer",
+        "uri": "https://mastodon.social/users/TheStroyer",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 3,
+        "following_count": 30,
+        "statuses_count": 381,
+        "last_status_at": "2025-11-17",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573259612421034",
+      "created_at": "2025-05-26T08:46:40.630Z",
+      "in_reply_to_id": "114573228532837436",
+      "in_reply_to_account_id": "1089834",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573259612421034",
+      "url": "https://mastodon.social/@pid_eins/114573259612421034",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TheStroyer\" class=\"u-url mention\">@<span>TheStroyer</span></a></span> the IPC allows two things to unpriv clients: you pass in a dir owned by the foreign UID range whose parent dir is owned by the client UID. This is what my post here mostly talks about. In this case the 64K UIDs/GIDs of the foreign UID range are mapped wholesale to the 64K UIDs/GIDs of the provided userns.</p><p>But it also accepts a dir owned directly by the client UID, in which case a mapping with a single UID is created: from the client&#39;s UID to root of the container.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1089834",
+          "username": "TheStroyer",
+          "url": "https://mastodon.social/@TheStroyer",
+          "acct": "TheStroyer"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573260742220892",
+      "created_at": "2025-05-26T08:46:57.873Z",
+      "in_reply_to_id": "114573259612421034",
+      "in_reply_to_account_id": "1089834",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573260742220892",
+      "url": "https://mastodon.social/@pid_eins/114573260742220892",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TheStroyer\" class=\"u-url mention\">@<span>TheStroyer</span></a></span> the latter should be what you are looking for, as I understand it.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1089834",
+          "username": "TheStroyer",
+          "url": "https://mastodon.social/@TheStroyer",
+          "acct": "TheStroyer"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573279714499733",
+      "created_at": "2025-05-26T08:51:47.365Z",
+      "in_reply_to_id": "114573260742220892",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TheStroyer/statuses/114573279714499733",
+      "url": "https://mastodon.social/@TheStroyer/114573279714499733",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> yeah, the second one was what I was looking for, thank you. I do hope podman makes use of this</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "1089834",
+        "username": "TheStroyer",
+        "acct": "TheStroyer",
+        "display_name": "",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-01-26T00:00:00.000Z",
+        "note": "",
+        "url": "https://mastodon.social/@TheStroyer",
+        "uri": "https://mastodon.social/users/TheStroyer",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 3,
+        "following_count": 30,
+        "statuses_count": 381,
+        "last_status_at": "2025-11-17",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

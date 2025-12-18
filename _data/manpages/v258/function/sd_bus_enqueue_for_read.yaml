@@ -1,0 +1,2 @@
+description:  Re-enqueue a bus message on a bus connection, for reading
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_enqueue_for_read.html

@@ -1,0 +1,2 @@
+description:  Append an array of fields to a D-Bus message
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_append_array.html

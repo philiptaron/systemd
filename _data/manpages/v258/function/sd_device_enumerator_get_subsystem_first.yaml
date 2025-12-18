@@ -1,0 +1,2 @@
+description:  Enumerates devices and get the first or next device.
+url: https://www.freedesktop.org/software/systemd/man/258/sd_device_enumerator_get_subsystem_first.html

@@ -1,0 +1,2 @@
+description:  Enable or disable event sources
+url: https://www.freedesktop.org/software/systemd/man/258/sd_event_source_set_enabled.html

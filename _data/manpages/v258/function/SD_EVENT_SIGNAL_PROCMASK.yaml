@@ -1,0 +1,2 @@
+description:  Add a UNIX process signal event source to an event loop
+url: https://www.freedesktop.org/software/systemd/man/258/SD_EVENT_SIGNAL_PROCMASK.html

@@ -1,0 +1,865 @@
+{
+  "post": {
+    "id": "115179113138417200",
+    "created_at": "2025-09-10T08:43:11.801Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/115179113138417200",
+    "url": "https://mastodon.social/@pid_eins/115179113138417200",
+    "replies_count": 2,
+    "reblogs_count": 8,
+    "favourites_count": 15,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>5\ufe0f\u20e32\ufe0f\u20e3 Here&#39;s the 52nd post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>PrivateUsers= is one of the many sandboxing knobs in service unit files. It configures a minimal user namespace for the service code to run in. So far you could set it to &quot;self&quot;, which would set up the user namespace mapping for the service to map the root user and the service&#39;s user to itself, and leave everything else unmapped.</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "115179127146633043",
+      "created_at": "2025-09-10T08:46:45.531Z",
+      "in_reply_to_id": "115179113138417200",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115179127146633043",
+      "url": "https://mastodon.social/@pid_eins/115179127146633043",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Setting the knob to &quot;self&quot; hence would somewhat disconnect the service from the host user table: all inodes, processes, and other objects it sees will be owned by itself, by root or by the &quot;nobody&quot; user (which is where unmapped users are mapped to). </p><p>In v257 the setting learnt a new value &quot;identity&quot;. If used the first 64K users plus the service&#39;s own user (if outside the 64K range) would be mapped, nothing else. Or in other words,  the service would be limited to the 16bit UID range.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115219796907192297",
+      "created_at": "2025-09-17T13:09:36.000Z",
+      "in_reply_to_id": "115179113138417200",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://urbanists.social/users/markstos/statuses/115219796876719566",
+      "url": "https://urbanists.social/@markstos/115219796876719566",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Will this help rootless podman to run as a systemd service? Currently setting User= to run a podman service doesn\u2019t work without hacks.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109540776797001281",
+        "username": "markstos",
+        "acct": "markstos@urbanists.social",
+        "display_name": "Mark Stosberg",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-12-18T00:00:00.000Z",
+        "note": "<p>Interests include <a href=\"https://urbanists.social/tags/TranspoEquity\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>TranspoEquity</span></a>, <a href=\"https://urbanists.social/tags/UltraRunning\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>UltraRunning</span></a>, <a href=\"https://urbanists.social/tags/BloomingtonIN\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>BloomingtonIN</span></a>, <a href=\"https://urbanists.social/tags/DevOps\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>DevOps</span></a>, <a href=\"https://urbanists.social/tags/UrbanPlanning\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>UrbanPlanning</span></a>, <a href=\"https://urbanists.social/tags/Mapping\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Mapping</span></a>, <a href=\"https://urbanists.social/tags/Linux\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Linux</span></a></p><p>Boosting questions and helpful or actionable posts. Let\u2019s build better together.</p>",
+        "url": "https://urbanists.social/@markstos",
+        "uri": "https://urbanists.social/users/markstos",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/540/776/797/001/281/original/4923a2daa997fa7f.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/540/776/797/001/281/original/4923a2daa997fa7f.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/540/776/797/001/281/original/849c8d244cb19491.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/540/776/797/001/281/original/849c8d244cb19491.jpg",
+        "followers_count": 874,
+        "following_count": 548,
+        "statuses_count": 5644,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog: Bikes, Mapping, Linux, Keyboards",
+            "value": "<a href=\"https://mark.stosberg.com\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">mark.stosberg.com</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:24:40.665+00:00"
+          },
+          {
+            "name": "Walk Potential",
+            "value": "<a href=\"https://gitlab.com/markstos/walk-potential\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">gitlab.com/markstos/walk-poten</span><span class=\"invisible\">tial</span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Sidewalk Priority Mapping",
+            "value": "<a href=\"https://gitlab.com/markstos/sidewalk-priority-map\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">gitlab.com/markstos/sidewalk-p</span><span class=\"invisible\">riority-map</span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Newsletters",
+            "value": "Mapping, Tech, Plant-powered adventures",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "115179140857740263",
+      "created_at": "2025-09-10T08:50:14.746Z",
+      "in_reply_to_id": "115179127146633043",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115179140857740263",
+      "url": "https://mastodon.social/@pid_eins/115179140857740263",
+      "replies_count": 2,
+      "reblogs_count": 1,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>With v258 a third value has been added: &quot;full&quot;. If used the user namespace&#39;s UID mapping would map all 2^32 UIDs to themselves.</p><p>You might wonder: what&#39;s the point of a user namespace if it has a full mapping of the host UID range without altering anything?  Here&#39;s the thing: user namespaces are not just about mappings, they also make various operations unnaccessible to processes contained in them, and they can &quot;own&quot; other namespace types.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "115179127146633043",
+      "created_at": "2025-09-10T08:46:45.531Z",
+      "in_reply_to_id": "115179113138417200",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115179127146633043",
+      "url": "https://mastodon.social/@pid_eins/115179127146633043",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Setting the knob to &quot;self&quot; hence would somewhat disconnect the service from the host user table: all inodes, processes, and other objects it sees will be owned by itself, by root or by the &quot;nobody&quot; user (which is where unmapped users are mapped to). </p><p>In v257 the setting learnt a new value &quot;identity&quot;. If used the first 64K users plus the service&#39;s own user (if outside the 64K range) would be mapped, nothing else. Or in other words,  the service would be limited to the 16bit UID range.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115179140857740263",
+      "created_at": "2025-09-10T08:50:14.746Z",
+      "in_reply_to_id": "115179127146633043",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115179140857740263",
+      "url": "https://mastodon.social/@pid_eins/115179140857740263",
+      "replies_count": 2,
+      "reblogs_count": 1,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>With v258 a third value has been added: &quot;full&quot;. If used the user namespace&#39;s UID mapping would map all 2^32 UIDs to themselves.</p><p>You might wonder: what&#39;s the point of a user namespace if it has a full mapping of the host UID range without altering anything?  Here&#39;s the thing: user namespaces are not just about mappings, they also make various operations unnaccessible to processes contained in them, and they can &quot;own&quot; other namespace types.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115179632402729177",
+      "created_at": "2025-09-10T10:55:15.134Z",
+      "in_reply_to_id": "115179140857740263",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/brauner/statuses/115179632402729177",
+      "url": "https://mastodon.social/@brauner/115179632402729177",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Ah, interesting this goes back a couple of years where I pitched that idea. Interesting to see it come to fruition.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "318216",
+        "username": "brauner",
+        "acct": "brauner",
+        "display_name": "Christian Brauner \ud83e\udd8a\ud83d\udc3a",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2018-04-05T00:00:00.000Z",
+        "note": "<p>Maintains the <a href=\"https://mastodon.social/tags/VFS\" class=\"mention hashtag\" rel=\"tag\">#<span>VFS</span></a> in the Linux Kernel, <a href=\"https://mastodon.social/tags/pidfds\" class=\"mention hashtag\" rel=\"tag\">#<span>pidfds</span></a>, and a bunch of other stuff.<br /><a href=\"https://mastodon.social/tags/systemd\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd</span></a>, <a href=\"https://mastodon.social/tags/LXC\" class=\"mention hashtag\" rel=\"tag\">#<span>LXC</span></a>, <a href=\"https://mastodon.social/tags/LXD\" class=\"mention hashtag\" rel=\"tag\">#<span>LXD</span></a> and a few other things.</p>",
+        "url": "https://mastodon.social/@brauner",
+        "uri": "https://mastodon.social/users/brauner",
+        "avatar": "https://files.mastodon.social/accounts/avatars/000/318/216/original/0eaf422dd11869d5.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/000/318/216/original/0eaf422dd11869d5.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/000/318/216/original/6f416ea1286cbac1.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/000/318/216/original/6f416ea1286cbac1.jpg",
+        "followers_count": 1401,
+        "following_count": 368,
+        "statuses_count": 1484,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Website & Blog",
+            "value": "<a href=\"https://brauner.io\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">brauner.io</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2022-11-12T00:34:28.702+00:00"
+          },
+          {
+            "name": "Verification",
+            "value": "<a href=\"https://keyoxide.org/4880B8C9BD0E5106FC070F4F7B3C391EFEA93624\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">keyoxide.org/4880B8C9BD0E5106F</span><span class=\"invisible\">C070F4F7B3C391EFEA93624</span></a>",
+            "verified_at": "2022-11-09T14:26:34.702+00:00"
+          },
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/brauner\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/brauner</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Kernel Blog",
+            "value": "<a href=\"http://people.kernel.org/brauner\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">people.kernel.org/brauner</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115181749331128755",
+      "created_at": "2025-09-10T19:53:36.000Z",
+      "in_reply_to_id": "115179632402729177",
+      "in_reply_to_account_id": "318216",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://floss.social/users/siosm/statuses/115181749291286932",
+      "url": "https://floss.social/@siosm/115181749291286932",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@brauner\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>brauner</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I'm having trouble figuring out what that would be useful for. Could you share an example?</p>",
+      "reblog": null,
+      "account": {
+        "id": "108329711584929360",
+        "username": "siosm",
+        "acct": "siosm@floss.social",
+        "display_name": "Timoth\u00e9e Ravier",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-05-13T00:00:00.000Z",
+        "note": "<p>CoreOS engineer at Red Hat :redhat:, Fedora Atomic Desktops maintainer (Silverblue :silverblue:, Kinoite :Kinoite:), KDE developer :kde: and KDE Apps maintainer on Flathub :flatpak:.</p><p>Mostly boosts about :linux:, :rust:, :golang:, :androidalt:, :fedora:, :redhat:, :kde:, :plasma:, :gnome:, :k8s:, :flatpak:, :Kinoite:, :silverblue:, systemd, security and some French politics.</p><p>Searchable via tootfinder (<a href=\"https://tootfinder.ch/\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">tootfinder.ch/</span><span class=\"invisible\"></span></a>).<br>He/him/his.</p>",
+        "url": "https://floss.social/@siosm",
+        "uri": "https://floss.social/users/siosm",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/108/329/711/584/929/360/original/9614df0dc59b6bd1.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/108/329/711/584/929/360/original/9614df0dc59b6bd1.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/108/329/711/584/929/360/original/bb55a07bbd75823f.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/108/329/711/584/929/360/original/bb55a07bbd75823f.jpeg",
+        "followers_count": 1072,
+        "following_count": 347,
+        "statuses_count": 3398,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "redhat",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/260/989/original/0ae916264573b675.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/260/989/static/0ae916264573b675.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "silverblue",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/459/620/original/8373084ddfc6b25e.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/459/620/static/8373084ddfc6b25e.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "Kinoite",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/459/604/original/f5d278073862d98d.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/459/604/static/f5d278073862d98d.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "kde",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/100/393/original/8730f51bf371aa99.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/100/393/static/8730f51bf371aa99.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "flatpak",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/459/605/original/661385f732526c41.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/459/605/static/661385f732526c41.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "linux",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/090/673/original/4479cdfeafae5862.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/090/673/static/4479cdfeafae5862.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "rust",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/407/330/original/2a80798ff05f13d5.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/407/330/static/2a80798ff05f13d5.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "golang",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/417/509/original/6e6ecd2111a92706.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/417/509/static/6e6ecd2111a92706.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "androidalt",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/329/154/original/457375dfe53a380a.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/329/154/static/457375dfe53a380a.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "fedora",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/093/347/original/4bd4f982cc3862f1.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/093/347/static/4bd4f982cc3862f1.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "plasma",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/374/463/original/5cd2d53c393ab799.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/374/463/static/5cd2d53c393ab799.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "gnome",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/111/143/original/6456d27185f6d35e.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/111/143/static/6456d27185f6d35e.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "k8s",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/444/982/original/95402ec1de26eecc.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/444/982/static/95402ec1de26eecc.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Website / Blog",
+            "value": "<a href=\"https://tim.siosm.fr\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">tim.siosm.fr</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T14:34:39.927+00:00"
+          },
+          {
+            "name": "Matrix",
+            "value": "<a href=\"https://matrix.to/#/@siosm:matrix.org\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">matrix.to/#/@siosm:matrix.org</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/travier\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/travier</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T14:34:41.420+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "318216",
+          "username": "brauner",
+          "url": "https://mastodon.social/@brauner",
+          "acct": "brauner"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115197960285918315",
+      "created_at": "2025-09-13T16:36:15.000Z",
+      "in_reply_to_id": "115179140857740263",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://chaos.social/users/lw64/statuses/115197960247044671",
+      "url": "https://chaos.social/@lw64/115197960247044671",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> btw, I submitted a pull request recently to add rootidmapped PrivateUsers. It's just 15 lines of added code, a review wouldn't take long \ud83d\ude09</p>",
+      "reblog": null,
+      "account": {
+        "id": "113131602698773326",
+        "username": "lw64",
+        "acct": "lw64@chaos.social",
+        "display_name": "Lorenz",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2024-09-13T00:00:00.000Z",
+        "note": "<p>Hi, I am Lorenz, I am interested in many things, lets see what comes next :)</p><p>I am contributor to the <a href=\"https://chaos.social/tags/OpenSource\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>OpenSource</span></a> Software project <a href=\"https://chaos.social/tags/GNOME\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>GNOME</span></a>, I am GNOME Foundation Member and Board Director.</p><p>I am in Berlin/Germany, looking out to explore, meeting new people, and more opportunities!</p>",
+        "url": "https://chaos.social/@lw64",
+        "uri": "https://chaos.social/users/lw64",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/113/131/602/698/773/326/original/71801b4171b3671d.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/113/131/602/698/773/326/original/71801b4171b3671d.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/113/131/602/698/773/326/original/a577f950cab76ae5.gif",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/113/131/602/698/773/326/static/a577f950cab76ae5.png",
+        "followers_count": 293,
+        "following_count": 235,
+        "statuses_count": 1469,
+        "last_status_at": "2025-12-16",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "He/Him",
+            "verified_at": null
+          },
+          {
+            "name": "Languages",
+            "value": "english, german, a little spanish, more little khmer",
+            "verified_at": null
+          },
+          {
+            "name": "Old profile",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://floss.social/@lw64\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>lw64@floss.social</span></a></span>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115219796907192297",
+      "created_at": "2025-09-17T13:09:36.000Z",
+      "in_reply_to_id": "115179113138417200",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://urbanists.social/users/markstos/statuses/115219796876719566",
+      "url": "https://urbanists.social/@markstos/115219796876719566",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Will this help rootless podman to run as a systemd service? Currently setting User= to run a podman service doesn\u2019t work without hacks.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109540776797001281",
+        "username": "markstos",
+        "acct": "markstos@urbanists.social",
+        "display_name": "Mark Stosberg",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-12-18T00:00:00.000Z",
+        "note": "<p>Interests include <a href=\"https://urbanists.social/tags/TranspoEquity\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>TranspoEquity</span></a>, <a href=\"https://urbanists.social/tags/UltraRunning\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>UltraRunning</span></a>, <a href=\"https://urbanists.social/tags/BloomingtonIN\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>BloomingtonIN</span></a>, <a href=\"https://urbanists.social/tags/DevOps\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>DevOps</span></a>, <a href=\"https://urbanists.social/tags/UrbanPlanning\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>UrbanPlanning</span></a>, <a href=\"https://urbanists.social/tags/Mapping\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Mapping</span></a>, <a href=\"https://urbanists.social/tags/Linux\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Linux</span></a></p><p>Boosting questions and helpful or actionable posts. Let\u2019s build better together.</p>",
+        "url": "https://urbanists.social/@markstos",
+        "uri": "https://urbanists.social/users/markstos",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/540/776/797/001/281/original/4923a2daa997fa7f.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/540/776/797/001/281/original/4923a2daa997fa7f.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/540/776/797/001/281/original/849c8d244cb19491.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/540/776/797/001/281/original/849c8d244cb19491.jpg",
+        "followers_count": 874,
+        "following_count": 548,
+        "statuses_count": 5644,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog: Bikes, Mapping, Linux, Keyboards",
+            "value": "<a href=\"https://mark.stosberg.com\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">mark.stosberg.com</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:24:40.665+00:00"
+          },
+          {
+            "name": "Walk Potential",
+            "value": "<a href=\"https://gitlab.com/markstos/walk-potential\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">gitlab.com/markstos/walk-poten</span><span class=\"invisible\">tial</span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Sidewalk Priority Mapping",
+            "value": "<a href=\"https://gitlab.com/markstos/sidewalk-priority-map\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">gitlab.com/markstos/sidewalk-p</span><span class=\"invisible\">riority-map</span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Newsletters",
+            "value": "Mapping, Tech, Plant-powered adventures",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

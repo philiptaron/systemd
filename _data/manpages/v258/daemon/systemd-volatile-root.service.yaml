@@ -1,0 +1,2 @@
+description:  Make the root file system volatile
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-volatile-root.service.html

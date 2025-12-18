@@ -1,0 +1,2 @@
+description:  Set and query bus message addressing information
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_get_path.html

@@ -1,0 +1,2 @@
+description:  Determine the class and network interface indices of a locally running virtual machine or container
+url: https://www.freedesktop.org/software/systemd/man/258/sd_machine_get_class.html

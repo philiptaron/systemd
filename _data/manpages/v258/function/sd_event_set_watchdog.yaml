@@ -1,0 +1,2 @@
+description:  Enable event loop watchdog support
+url: https://www.freedesktop.org/software/systemd/man/258/sd_event_set_watchdog.html

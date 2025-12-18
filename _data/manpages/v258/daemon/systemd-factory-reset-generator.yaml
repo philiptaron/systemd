@@ -1,0 +1,2 @@
+description:  Pull factory-reset-now.target into the initial boot transaction when factory reset has been requested
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-factory-reset-generator.html

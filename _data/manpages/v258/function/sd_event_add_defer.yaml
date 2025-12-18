@@ -1,0 +1,2 @@
+description:  Add static event sources to an event loop
+url: https://www.freedesktop.org/software/systemd/man/258/sd_event_add_defer.html

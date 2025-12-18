@@ -1,0 +1,2 @@
+description:  Initialize basic system settings on or before the first boot-up of a system
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-firstboot.service.html

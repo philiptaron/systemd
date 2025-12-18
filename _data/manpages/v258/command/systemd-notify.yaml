@@ -1,0 +1,2 @@
+description:  Notify service manager about start-up completion and other daemon status changes
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-notify.html

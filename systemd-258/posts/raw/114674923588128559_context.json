@@ -1,0 +1,3319 @@
+{
+  "post": {
+    "id": "114674923588128559",
+    "created_at": "2025-06-13T07:41:09.803Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/114674923588128559",
+    "url": "https://mastodon.social/@pid_eins/114674923588128559",
+    "replies_count": 1,
+    "reblogs_count": 13,
+    "favourites_count": 21,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>1\ufe0f\u20e36\ufe0f\u20e3 Here&#39;s the 16th  post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>Since a while systemd has included the &quot;userdb&quot; subsystem, that extends the classic ~1983 &quot;struct passwd&quot; (as returned by getpwnam()) in a powerful, modernized way. While userdb&#39;s user records are a true superset of POSIX&#39;/Linux&#39; struct passwd, the retain the basic concepts: one can query a record by its UID or by its username, and gets a record back.</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "114674946522038928",
+      "created_at": "2025-06-13T07:46:59.732Z",
+      "in_reply_to_id": "114674923588128559",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114674946522038928",
+      "url": "https://mastodon.social/@pid_eins/114674946522038928",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>The way the records are usually understood in UNIX is that the username \u2194 record \u2194 UID relationships are bijective, i.e. there&#39;s exactly one user name for a record, and one UID for it and vice versa, but afaics this is never clarified as part of POSIX.</p><p>Because of the lax definitions various subsystems that provide user records have departed from the bijective property, and defined records that can be found not just under a single name, but by many.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "114674961878143749",
+      "created_at": "2025-06-13T07:50:54.047Z",
+      "in_reply_to_id": "114674946522038928",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114674961878143749",
+      "url": "https://mastodon.social/@pid_eins/114674961878143749",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>What&#39;se worse people also sometimes reuse UIDs among multiple user records.</p><p>Doing any of this is always a mess, since the lookup key doesn&#39;t actually necessarily appear in the record anymore, and forth and back translations are not symmetric anymore. Suffice to say, setups like that will run into problems, sooner rather than later, since applications and deployments typically are not ready for this.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114674970992015469",
+      "created_at": "2025-06-13T07:53:13.118Z",
+      "in_reply_to_id": "114674961878143749",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114674970992015469",
+      "url": "https://mastodon.social/@pid_eins/114674970992015469",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>In v258 the userdb subsystem is extended to relax rules a bit on this, but in a safer way than this was done with struct passwd. Specifically, there&#39;s now an &quot;aliases&quot; field in the userdb user record, that can list additional names a user record shall be discoverable under. When a user name is searched, the lookup will now match both the primary name of the user record, and alternatively any of its alias names.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114674986512614072",
+      "created_at": "2025-06-13T07:57:09.940Z",
+      "in_reply_to_id": "114674970992015469",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114674986512614072",
+      "url": "https://mastodon.social/@pid_eins/114674986512614072",
+      "replies_count": 2,
+      "reblogs_count": 1,
+      "favourites_count": 14,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Usecase: my user &quot;lennart&quot; now has an alias &quot;l&quot;, so that I save 6 keypresses per login! Yay!</p><p>Why is this different from the hacky way people did this previously? Primarily: the alias names are *part* of the user record, and it&#39;s always clear which one is the primary name and which ones the aliases.</p><p>With this forth/back translations *are* reversible: if you lookup a user record by an alias name, then lookup the user record by its UID, it *will* list the alias name.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675124957044692",
+      "created_at": "2025-06-13T08:32:22.441Z",
+      "in_reply_to_id": "114675056975846018",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114675124957044692",
+      "url": "https://mastodon.social/@pid_eins/114675124957044692",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> what kind of races are you referring to?</p><p>The lookups are always done in parallel to all backends, and the first one replying wins, under the assumptions that user name/UID conflicts have been dealt with already before lookup time, i.e. at definition time.</p><p>But not sure I grok what your question is about,</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675526891348932",
+      "created_at": "2025-06-13T10:14:35.498Z",
+      "in_reply_to_id": "114675445010768702",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114675526891348932",
+      "url": "https://mastodon.social/@pid_eins/114675526891348932",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> userdb *expressely* makes no attempt to resolve conflicts. That can only fail and hide problems. If there are conflicts then they need to be dealt with *before* making the records available, not after.</p><p>Hence, it&#39;s not userbd&#39;s job to fix the security mess that conflicts are, it&#39;s the job of whatever owns the record to clean this up.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676042991239464",
+      "created_at": "2025-06-13T12:25:50.537Z",
+      "in_reply_to_id": "114675718174767136",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114676042991239464",
+      "url": "https://mastodon.social/@pid_eins/114676042991239464",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\">@<span>erincandescent</span></a></span> sorry, i strongly disagree this is a problem to deal with in systemd. Please contact your ldap clients of choice about this: *they* must deal with such conflicts, and not let them leak onto the final systems.</p><p>Hence, please ask your ldap project of choice for its security contact and ping them, not systemd.</p><p>Sorry, but I am refusing to make this my problem.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676142636318376",
+      "created_at": "2025-06-13T12:51:10.993Z",
+      "in_reply_to_id": "114676127328173848",
+      "in_reply_to_account_id": "111917734559633743",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114676142636318376",
+      "url": "https://mastodon.social/@pid_eins/114676142636318376",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\">@<span>erincandescent</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> on nss there&#39;s a strict order which is encoded in nsswitch.conf, and the first one wins. But it&#39;s a frickin mess, because it also supports &quot;merging&quot; group records, and then it just squashes the stack of modules.</p><p>I am very strongly of the opinion that merging records is broken, and that a conflict doesn&#39;t stop being a conflict just because you let one side win on the local system.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        },
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676036751918737",
+      "created_at": "2025-06-13T12:24:15.326Z",
+      "in_reply_to_id": "114675619945637490",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114676036751918737",
+      "url": "https://mastodon.social/@pid_eins/114676036751918737",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> if you have a setup where user names clash, then that#s your bug, and userdb is *waaaayy* too late in the chain to do anything about it. Fix your setup. It&#39;s *always* going to be a total mess if some tools think user record X is right and others think user record Y is right, and userdb is not going to possibly solve that.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676029292635636",
+      "created_at": "2025-06-13T12:22:21.504Z",
+      "in_reply_to_id": "114675604367763420",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114676029292635636",
+      "url": "https://mastodon.social/@pid_eins/114676029292635636",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> Sorry, but this is really to fix for the backends. userdb is really not the place.</p><p>If you have conflicting user names or UIDs, then yes, that&#39;s problematic. But I am strongly of the opinion that userdb would be the wrong place to deal with it: it&#39;s the backends which are responsible for this. If the deed is already done it&#39;s *never* going to be reliable to try to polish the burning pile of shit in userdb.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "114674946522038928",
+      "created_at": "2025-06-13T07:46:59.732Z",
+      "in_reply_to_id": "114674923588128559",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114674946522038928",
+      "url": "https://mastodon.social/@pid_eins/114674946522038928",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>The way the records are usually understood in UNIX is that the username \u2194 record \u2194 UID relationships are bijective, i.e. there&#39;s exactly one user name for a record, and one UID for it and vice versa, but afaics this is never clarified as part of POSIX.</p><p>Because of the lax definitions various subsystems that provide user records have departed from the bijective property, and defined records that can be found not just under a single name, but by many.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114674961878143749",
+      "created_at": "2025-06-13T07:50:54.047Z",
+      "in_reply_to_id": "114674946522038928",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114674961878143749",
+      "url": "https://mastodon.social/@pid_eins/114674961878143749",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>What&#39;se worse people also sometimes reuse UIDs among multiple user records.</p><p>Doing any of this is always a mess, since the lookup key doesn&#39;t actually necessarily appear in the record anymore, and forth and back translations are not symmetric anymore. Suffice to say, setups like that will run into problems, sooner rather than later, since applications and deployments typically are not ready for this.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114674970992015469",
+      "created_at": "2025-06-13T07:53:13.118Z",
+      "in_reply_to_id": "114674961878143749",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114674970992015469",
+      "url": "https://mastodon.social/@pid_eins/114674970992015469",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>In v258 the userdb subsystem is extended to relax rules a bit on this, but in a safer way than this was done with struct passwd. Specifically, there&#39;s now an &quot;aliases&quot; field in the userdb user record, that can list additional names a user record shall be discoverable under. When a user name is searched, the lookup will now match both the primary name of the user record, and alternatively any of its alias names.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114674986512614072",
+      "created_at": "2025-06-13T07:57:09.940Z",
+      "in_reply_to_id": "114674970992015469",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114674986512614072",
+      "url": "https://mastodon.social/@pid_eins/114674986512614072",
+      "replies_count": 2,
+      "reblogs_count": 1,
+      "favourites_count": 14,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Usecase: my user &quot;lennart&quot; now has an alias &quot;l&quot;, so that I save 6 keypresses per login! Yay!</p><p>Why is this different from the hacky way people did this previously? Primarily: the alias names are *part* of the user record, and it&#39;s always clear which one is the primary name and which ones the aliases.</p><p>With this forth/back translations *are* reversible: if you lookup a user record by an alias name, then lookup the user record by its UID, it *will* list the alias name.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675056975846018",
+      "created_at": "2025-06-13T08:15:02.000Z",
+      "in_reply_to_id": "114674986512614072",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675056805732887",
+      "url": "https://infosec.exchange/@firstyear/114675056805732887",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Do userdb lookups with varlink still allow races between responders?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675124957044692",
+      "created_at": "2025-06-13T08:32:22.441Z",
+      "in_reply_to_id": "114675056975846018",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114675124957044692",
+      "url": "https://mastodon.social/@pid_eins/114675124957044692",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> what kind of races are you referring to?</p><p>The lookups are always done in parallel to all backends, and the first one replying wins, under the assumptions that user name/UID conflicts have been dealt with already before lookup time, i.e. at definition time.</p><p>But not sure I grok what your question is about,</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675445010768702",
+      "created_at": "2025-06-13T09:53:45.000Z",
+      "in_reply_to_id": "114675124957044692",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675444984975107",
+      "url": "https://infosec.exchange/@firstyear/114675444984975107",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> what do you mean by \"at definition time\"? Can a backend say \"I own X through Y uids\"? Or something else? </p><p>The race im referring to is the \"first response wins\", where if for some reason two backends disagree then there is a potential for conflict depending who wins the race (or security issue).</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675468127198496",
+      "created_at": "2025-06-13T09:59:38.000Z",
+      "in_reply_to_id": "114675445010768702",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675468110289812",
+      "url": "https://infosec.exchange/@firstyear/114675468110289812",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> an example being say a system with two different ldap providers. There is an admin on one ldap server and a user creates an account on the second. Then they can race to see who responds and if the attacker manages to get a conflict they could escalate privs due to userdb allowing the race (rather than defining a resolover order to prevent the overriding of the admin).</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675526891348932",
+      "created_at": "2025-06-13T10:14:35.498Z",
+      "in_reply_to_id": "114675445010768702",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114675526891348932",
+      "url": "https://mastodon.social/@pid_eins/114675526891348932",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> userdb *expressely* makes no attempt to resolve conflicts. That can only fail and hide problems. If there are conflicts then they need to be dealt with *before* making the records available, not after.</p><p>Hence, it&#39;s not userbd&#39;s job to fix the security mess that conflicts are, it&#39;s the job of whatever owns the record to clean this up.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675604367763420",
+      "created_at": "2025-06-13T10:34:17.000Z",
+      "in_reply_to_id": "114675526891348932",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675604346938558",
+      "url": "https://infosec.exchange/@firstyear/114675604346938558",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I wish it was so easy :( there have been plenty of secuirty issues due to canonicalisation issues with names (such as root$ -&gt; root with AD), let alone malicious intent. So as much as id love to say we can trust backends to sort conflicts when malice becomes involved it throws a lot out the window. Should I raise an issue on github or similar to describe the possible security issues so they can be addressed?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675619945637490",
+      "created_at": "2025-06-13T10:38:14.000Z",
+      "in_reply_to_id": "114675604367763420",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675619918127425",
+      "url": "https://infosec.exchange/@firstyear/114675619918127425",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> as a more obvious example its possible for an ldap provider to stomp a local account in a malicious scenario if it can win the race.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675667278337858",
+      "created_at": "2025-06-13T10:50:09.330Z",
+      "in_reply_to_id": "114675619945637490",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://akko.erincandescent.net/objects/6d72e24f-e5db-4b32-bf4f-82b6cd2c5974",
+      "url": "https://akko.erincandescent.net/objects/6d72e24f-e5db-4b32-bf4f-82b6cd2c5974",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://infosec.exchange/@firstyear\" rel=\"nofollow noopener\" target=\"_blank\">@<span>firstyear</span></a></span> <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://mastodon.social/@pid_eins\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Is a malicious LDAP provider not a case of the <a href=\"https://devblogs.microsoft.com/oldnewthing/20060508-22/?p=31283\" rel=\"nofollow noopener\" target=\"_blank\">\u201cIt rather involved being on the other side of this airtight hatchway\u201d</a> category of security bugs?</p><p>A userdb implementation is defintionally effectively root. One should not install malicious userdb implementations</p>",
+      "reblog": null,
+      "account": {
+        "id": "111917734559633743",
+        "username": "erincandescent",
+        "acct": "erincandescent@erincandescent.net",
+        "display_name": "Erin \ud83d\udcbd\u2728",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-02-12T00:00:00.000Z",
+        "note": "immigrant | software engineer in card payments<br>liker of ISO 8583, the 8051, ASN.1, SS7 and EBCDIC.<br>30-something who's grew up online and has seen it all. sometimes an optimist, sometimes nostalgic.<br><br>I wrote the ActivityPub initial draft, so this social network is in some way my fault. These days I spend a lot of time studying social dynamics and thinking about how we build social systems which foster a healthier culture.<br><br>Profile Picture is FALKE from Signalis (you should play it). See also: <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://akko.erincandescent.net/users/erinfluorescent\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erinfluorescent</span></a></span>",
+        "url": "https://akko.erincandescent.net/users/erincandescent",
+        "uri": "https://akko.erincandescent.net/users/erincandescent",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "followers_count": 2779,
+        "following_count": 494,
+        "statuses_count": 5502,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Autonomous-System-Number:",
+            "value": "212068",
+            "verified_at": null
+          },
+          {
+            "name": "Accept-Language:",
+            "value": "en_GB, en;q=0.9, de;q=0.7, fr;q=0.1",
+            "verified_at": null
+          },
+          {
+            "name": "Pronouns:",
+            "value": "they/them, she/her",
+            "verified_at": null
+          },
+          {
+            "name": "Pronomen:",
+            "value": "sie/ihre",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://devblogs.microsoft.com/oldnewthing/20060508-22/?p=31283",
+        "title": "It rather involved being on the other side of this airtight hatchway - The Old New Thing",
+        "description": "Not every code injection bug is a security hole.",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "The Old New Thing",
+        "provider_url": "",
+        "html": "",
+        "width": 110,
+        "height": 145,
+        "image": "https://files.mastodon.social/cache/preview_cards/images/035/494/855/original/da31f00406370e89.jpg",
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": "URG[m4M{-:ay?HWBIUj[~WWBj@kB4nofE1of",
+        "published_at": "2006-05-08T10:00:22.000Z",
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675678182597743",
+      "created_at": "2025-06-13T10:53:03.000Z",
+      "in_reply_to_id": "114675667278337858",
+      "in_reply_to_account_id": "111917734559633743",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675678156884975",
+      "url": "https://infosec.exchange/@firstyear/114675678156884975",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erincandescent</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> sadly sometimes its not just \"broken ldap\" but the userdb resolver having confusion attacks against it. Either way we should harden against malicious backends rather than enable them to run away shouldnt we?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675684990843921",
+      "created_at": "2025-06-13T10:54:47.000Z",
+      "in_reply_to_id": "114675678182597743",
+      "in_reply_to_account_id": "111917734559633743",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675684966095204",
+      "url": "https://infosec.exchange/@firstyear/114675684966095204",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erincandescent</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> even a trusted backend can become a malicious one pretty fast, and defense in depth is important in these cases.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675704537876781",
+      "created_at": "2025-06-13T10:59:38.521Z",
+      "in_reply_to_id": "114675684990843921",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://akko.erincandescent.net/objects/80cfe577-b176-435c-ba2e-935cdec14648",
+      "url": "https://akko.erincandescent.net/objects/80cfe577-b176-435c-ba2e-935cdec14648",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://infosec.exchange/@firstyear\" rel=\"nofollow noopener\" target=\"_blank\">@<span>firstyear</span></a></span> <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://mastodon.social/@pid_eins\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I\u2019m not sure protecting against e.g. aliasing external accounts to root actually buys you security in practice</p><p>A malicious backend/ldap server can collide a user account with the root user, sure. It can also just put any user in the permitted-to-use-sudo (or similar) group, which is a thing backends are expected to do, and will not cause breakage which will alert the system administrator.</p>",
+      "reblog": null,
+      "account": {
+        "id": "111917734559633743",
+        "username": "erincandescent",
+        "acct": "erincandescent@erincandescent.net",
+        "display_name": "Erin \ud83d\udcbd\u2728",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-02-12T00:00:00.000Z",
+        "note": "immigrant | software engineer in card payments<br>liker of ISO 8583, the 8051, ASN.1, SS7 and EBCDIC.<br>30-something who's grew up online and has seen it all. sometimes an optimist, sometimes nostalgic.<br><br>I wrote the ActivityPub initial draft, so this social network is in some way my fault. These days I spend a lot of time studying social dynamics and thinking about how we build social systems which foster a healthier culture.<br><br>Profile Picture is FALKE from Signalis (you should play it). See also: <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://akko.erincandescent.net/users/erinfluorescent\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erinfluorescent</span></a></span>",
+        "url": "https://akko.erincandescent.net/users/erincandescent",
+        "uri": "https://akko.erincandescent.net/users/erincandescent",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "followers_count": 2779,
+        "following_count": 494,
+        "statuses_count": 5502,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Autonomous-System-Number:",
+            "value": "212068",
+            "verified_at": null
+          },
+          {
+            "name": "Accept-Language:",
+            "value": "en_GB, en;q=0.9, de;q=0.7, fr;q=0.1",
+            "verified_at": null
+          },
+          {
+            "name": "Pronouns:",
+            "value": "they/them, she/her",
+            "verified_at": null
+          },
+          {
+            "name": "Pronomen:",
+            "value": "sie/ihre",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675725975217257",
+      "created_at": "2025-06-13T11:05:12.000Z",
+      "in_reply_to_id": "114675704537876781",
+      "in_reply_to_account_id": "111917734559633743",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675725941391919",
+      "url": "https://infosec.exchange/@firstyear/114675725941391919",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erincandescent</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> there is a significant difference between these two actions in reality though as sudo of a user normally requires their credentials but ability to get to root is far easier if you can stomp the root account and its credentials. But even then, we should still defend these things even if there are possible alternatives, and we make the alternatives harder to access.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675718174767136",
+      "created_at": "2025-06-13T11:03:13.000Z",
+      "in_reply_to_id": "114675684990843921",
+      "in_reply_to_account_id": "111917734559633743",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114675718150845551",
+      "url": "https://infosec.exchange/@firstyear/114675718150845551",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erincandescent</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> so again, whats the best place for reporting a potential security issue like this? Github?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676042991239464",
+      "created_at": "2025-06-13T12:25:50.537Z",
+      "in_reply_to_id": "114675718174767136",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114676042991239464",
+      "url": "https://mastodon.social/@pid_eins/114676042991239464",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\">@<span>erincandescent</span></a></span> sorry, i strongly disagree this is a problem to deal with in systemd. Please contact your ldap clients of choice about this: *they* must deal with such conflicts, and not let them leak onto the final systems.</p><p>Hence, please ask your ldap project of choice for its security contact and ping them, not systemd.</p><p>Sorry, but I am refusing to make this my problem.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676051574074376",
+      "created_at": "2025-06-13T12:28:01.000Z",
+      "in_reply_to_id": "114676042991239464",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114676051547252020",
+      "url": "https://infosec.exchange/@firstyear/114676051547252020",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erincandescent</span></a></span> Okay, glad to know where you stand on this. Thanks :)</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676127328173848",
+      "created_at": "2025-06-13T12:47:04.657Z",
+      "in_reply_to_id": "114676051574074376",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://akko.erincandescent.net/objects/6317b562-03c5-42ab-bfb4-8577207e1836",
+      "url": "https://akko.erincandescent.net/objects/6317b562-03c5-42ab-bfb4-8577207e1836",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://infosec.exchange/@firstyear\" rel=\"nofollow noopener\" target=\"_blank\">@<span>firstyear</span></a></span> <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://mastodon.social/@pid_eins\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> pragmatically: there\u2019s no real difference from with nss here, right? with nss_ldap i can also e.g. inject a user record with uid=1</p>",
+      "reblog": null,
+      "account": {
+        "id": "111917734559633743",
+        "username": "erincandescent",
+        "acct": "erincandescent@erincandescent.net",
+        "display_name": "Erin \ud83d\udcbd\u2728",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-02-12T00:00:00.000Z",
+        "note": "immigrant | software engineer in card payments<br>liker of ISO 8583, the 8051, ASN.1, SS7 and EBCDIC.<br>30-something who's grew up online and has seen it all. sometimes an optimist, sometimes nostalgic.<br><br>I wrote the ActivityPub initial draft, so this social network is in some way my fault. These days I spend a lot of time studying social dynamics and thinking about how we build social systems which foster a healthier culture.<br><br>Profile Picture is FALKE from Signalis (you should play it). See also: <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://akko.erincandescent.net/users/erinfluorescent\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erinfluorescent</span></a></span>",
+        "url": "https://akko.erincandescent.net/users/erincandescent",
+        "uri": "https://akko.erincandescent.net/users/erincandescent",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "followers_count": 2779,
+        "following_count": 494,
+        "statuses_count": 5502,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Autonomous-System-Number:",
+            "value": "212068",
+            "verified_at": null
+          },
+          {
+            "name": "Accept-Language:",
+            "value": "en_GB, en;q=0.9, de;q=0.7, fr;q=0.1",
+            "verified_at": null
+          },
+          {
+            "name": "Pronouns:",
+            "value": "they/them, she/her",
+            "verified_at": null
+          },
+          {
+            "name": "Pronomen:",
+            "value": "sie/ihre",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676142636318376",
+      "created_at": "2025-06-13T12:51:10.993Z",
+      "in_reply_to_id": "114676127328173848",
+      "in_reply_to_account_id": "111917734559633743",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114676142636318376",
+      "url": "https://mastodon.social/@pid_eins/114676142636318376",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\">@<span>erincandescent</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> on nss there&#39;s a strict order which is encoded in nsswitch.conf, and the first one wins. But it&#39;s a frickin mess, because it also supports &quot;merging&quot; group records, and then it just squashes the stack of modules.</p><p>I am very strongly of the opinion that merging records is broken, and that a conflict doesn&#39;t stop being a conflict just because you let one side win on the local system.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        },
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676156914794859",
+      "created_at": "2025-06-13T12:54:42.189Z",
+      "in_reply_to_id": "114676142636318376",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://akko.erincandescent.net/objects/ebd3f6f1-4d6e-41aa-86ea-9065a015b2d4",
+      "url": "https://akko.erincandescent.net/objects/ebd3f6f1-4d6e-41aa-86ea-9065a015b2d4",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<span class=\"h-card\"><a class=\"u-url mention\" href=\"https://mastodon.social/@pid_eins\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://infosec.exchange/@firstyear\" rel=\"nofollow noopener\" target=\"_blank\">@<span>firstyear</span></a></span> generally agreed. <br><br>There's probably useful things we should do like collect a list of common system groups and users so admin tools can warn when someone is about to make an accidental collision <br><br>But there's limits to what you can do within the Unix user system because it was just not built for this",
+      "reblog": null,
+      "account": {
+        "id": "111917734559633743",
+        "username": "erincandescent",
+        "acct": "erincandescent@erincandescent.net",
+        "display_name": "Erin \ud83d\udcbd\u2728",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-02-12T00:00:00.000Z",
+        "note": "immigrant | software engineer in card payments<br>liker of ISO 8583, the 8051, ASN.1, SS7 and EBCDIC.<br>30-something who's grew up online and has seen it all. sometimes an optimist, sometimes nostalgic.<br><br>I wrote the ActivityPub initial draft, so this social network is in some way my fault. These days I spend a lot of time studying social dynamics and thinking about how we build social systems which foster a healthier culture.<br><br>Profile Picture is FALKE from Signalis (you should play it). See also: <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://akko.erincandescent.net/users/erinfluorescent\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erinfluorescent</span></a></span>",
+        "url": "https://akko.erincandescent.net/users/erincandescent",
+        "uri": "https://akko.erincandescent.net/users/erincandescent",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "followers_count": 2779,
+        "following_count": 494,
+        "statuses_count": 5502,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Autonomous-System-Number:",
+            "value": "212068",
+            "verified_at": null
+          },
+          {
+            "name": "Accept-Language:",
+            "value": "en_GB, en;q=0.9, de;q=0.7, fr;q=0.1",
+            "verified_at": null
+          },
+          {
+            "name": "Pronouns:",
+            "value": "they/them, she/her",
+            "verified_at": null
+          },
+          {
+            "name": "Pronomen:",
+            "value": "sie/ihre",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676241592735871",
+      "created_at": "2025-06-13T13:16:20.000Z",
+      "in_reply_to_id": "114676127328173848",
+      "in_reply_to_account_id": "111917734559633743",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/grawity/statuses/114676241566245362",
+      "url": "https://social.treehouse.systems/@grawity/114676241566245362",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-06-13T13:17:09.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erincandescent</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>firstyear</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> both nss_ldap and nss_sss have a minimum_uid option to guard against bad data on the server. We've always used min_uid=1000 or similar.</p><p>There's nss_nonlocal (from MIT Athena) to do the same filtering in a generic way.</p>",
+      "reblog": null,
+      "account": {
+        "id": "108265903700930509",
+        "username": "grawity",
+        "acct": "grawity@treehouse.systems",
+        "display_name": "grawity",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-04-27T00:00:00.000Z",
+        "note": "<p>hobbyist sysadmin and tech support person, still occasionally seen on IRC</p><p>interests: windows 98, macos 9/8, plan9, systemd, athena, x.25, all kinds of 80s-00s \"retro\" computing &amp; networking</p><p>\u2728\ufe0e no, I really don't have a good profile picture \u2728\ufe0e</p>",
+        "url": "https://social.treehouse.systems/@grawity",
+        "uri": "https://social.treehouse.systems/users/grawity",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/108/265/903/700/930/509/original/f5a60f881b8b1dc2.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/108/265/903/700/930/509/original/f5a60f881b8b1dc2.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 360,
+        "following_count": 109,
+        "statuses_count": 3113,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Location",
+            "value": "<a href=\"https://nullroute.lt\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">nullroute.lt</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Location",
+            "value": "Lithuania",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        },
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676565893551017",
+      "created_at": "2025-06-13T14:38:36.447Z",
+      "in_reply_to_id": "114676241592735871",
+      "in_reply_to_account_id": "108265903700930509",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://akko.erincandescent.net/objects/df50dccc-c6a7-4434-a489-94de7ce02d8d",
+      "url": "https://akko.erincandescent.net/objects/df50dccc-c6a7-4434-a489-94de7ce02d8d",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<span class=\"h-card\"><a class=\"u-url mention\" href=\"https://social.treehouse.systems/@grawity\" rel=\"nofollow noopener\" target=\"_blank\">@<span>grawity</span></a></span> <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://infosec.exchange/@firstyear\" rel=\"nofollow noopener\" target=\"_blank\">@<span>firstyear</span></a></span> <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://mastodon.social/@pid_eins\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> ...and the corresponding UserDB service implementation could do the same check...",
+      "reblog": null,
+      "account": {
+        "id": "111917734559633743",
+        "username": "erincandescent",
+        "acct": "erincandescent@erincandescent.net",
+        "display_name": "Erin \ud83d\udcbd\u2728",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-02-12T00:00:00.000Z",
+        "note": "immigrant | software engineer in card payments<br>liker of ISO 8583, the 8051, ASN.1, SS7 and EBCDIC.<br>30-something who's grew up online and has seen it all. sometimes an optimist, sometimes nostalgic.<br><br>I wrote the ActivityPub initial draft, so this social network is in some way my fault. These days I spend a lot of time studying social dynamics and thinking about how we build social systems which foster a healthier culture.<br><br>Profile Picture is FALKE from Signalis (you should play it). See also: <span class=\"h-card\"><a class=\"u-url mention\" href=\"https://akko.erincandescent.net/users/erinfluorescent\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erinfluorescent</span></a></span>",
+        "url": "https://akko.erincandescent.net/users/erincandescent",
+        "uri": "https://akko.erincandescent.net/users/erincandescent",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/917/734/559/633/743/original/5f3c08a9776feaa8.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/917/734/559/633/743/original/aae1657356de9b11.jpg",
+        "followers_count": 2779,
+        "following_count": 494,
+        "statuses_count": 5502,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Autonomous-System-Number:",
+            "value": "212068",
+            "verified_at": null
+          },
+          {
+            "name": "Accept-Language:",
+            "value": "en_GB, en;q=0.9, de;q=0.7, fr;q=0.1",
+            "verified_at": null
+          },
+          {
+            "name": "Pronouns:",
+            "value": "they/them, she/her",
+            "verified_at": null
+          },
+          {
+            "name": "Pronomen:",
+            "value": "sie/ihre",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "108265903700930509",
+          "username": "grawity",
+          "url": "https://social.treehouse.systems/@grawity",
+          "acct": "grawity@treehouse.systems"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676589042241572",
+      "created_at": "2025-06-13T14:44:42.000Z",
+      "in_reply_to_id": "114676565893551017",
+      "in_reply_to_account_id": "111917734559633743",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/grawity/statuses/114676589016379269",
+      "url": "https://social.treehouse.systems/@grawity/114676589016379269",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://akko.erincandescent.net/users/erincandescent\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>erincandescent</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>firstyear</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> yeah I was assuming that's what Lennart meant, having such limits in userdb_sss or something like that</p>",
+      "reblog": null,
+      "account": {
+        "id": "108265903700930509",
+        "username": "grawity",
+        "acct": "grawity@treehouse.systems",
+        "display_name": "grawity",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-04-27T00:00:00.000Z",
+        "note": "<p>hobbyist sysadmin and tech support person, still occasionally seen on IRC</p><p>interests: windows 98, macos 9/8, plan9, systemd, athena, x.25, all kinds of 80s-00s \"retro\" computing &amp; networking</p><p>\u2728\ufe0e no, I really don't have a good profile picture \u2728\ufe0e</p>",
+        "url": "https://social.treehouse.systems/@grawity",
+        "uri": "https://social.treehouse.systems/users/grawity",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/108/265/903/700/930/509/original/f5a60f881b8b1dc2.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/108/265/903/700/930/509/original/f5a60f881b8b1dc2.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 360,
+        "following_count": 109,
+        "statuses_count": 3113,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Location",
+            "value": "<a href=\"https://nullroute.lt\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">nullroute.lt</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Location",
+            "value": "Lithuania",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111917734559633743",
+          "username": "erincandescent",
+          "url": "https://akko.erincandescent.net/users/erincandescent",
+          "acct": "erincandescent@erincandescent.net"
+        },
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676036751918737",
+      "created_at": "2025-06-13T12:24:15.326Z",
+      "in_reply_to_id": "114675619945637490",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114676036751918737",
+      "url": "https://mastodon.social/@pid_eins/114676036751918737",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> if you have a setup where user names clash, then that#s your bug, and userdb is *waaaayy* too late in the chain to do anything about it. Fix your setup. It&#39;s *always* going to be a total mess if some tools think user record X is right and others think user record Y is right, and userdb is not going to possibly solve that.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676029292635636",
+      "created_at": "2025-06-13T12:22:21.504Z",
+      "in_reply_to_id": "114675604367763420",
+      "in_reply_to_account_id": "109306005036021489",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114676029292635636",
+      "url": "https://mastodon.social/@pid_eins/114676029292635636",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@firstyear\" class=\"u-url mention\">@<span>firstyear</span></a></span> Sorry, but this is really to fix for the backends. userdb is really not the place.</p><p>If you have conflicting user names or UIDs, then yes, that&#39;s problematic. But I am strongly of the opinion that userdb would be the wrong place to deal with it: it&#39;s the backends which are responsible for this. If the deed is already done it&#39;s *never* going to be reliable to try to polish the burning pile of shit in userdb.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109306005036021489",
+          "username": "firstyear",
+          "url": "https://infosec.exchange/@firstyear",
+          "acct": "firstyear@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114676040466234442",
+      "created_at": "2025-06-13T12:25:11.000Z",
+      "in_reply_to_id": "114676029292635636",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/firstyear/statuses/114676040444209054",
+      "url": "https://infosec.exchange/@firstyear/114676040444209054",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Okay thanks for explaining.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109306005036021489",
+        "username": "firstyear",
+        "acct": "firstyear@infosec.exchange",
+        "display_name": "Firstyear",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-04T00:00:00.000Z",
+        "note": "<p>Senior LDAP/IDM Tech Debt Collector <br>@SUSE. Supermarket Thought Leader. Author of Kanidm, concread and webauthn-rs. he/him</p>",
+        "url": "https://infosec.exchange/@firstyear",
+        "uri": "https://infosec.exchange/users/firstyear",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/306/005/036/021/489/original/1e40a35b896fcb0c.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/306/005/036/021/489/original/cd0310658a51a387.jpeg",
+        "followers_count": 767,
+        "following_count": 216,
+        "statuses_count": 2203,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114677449662494483",
+      "created_at": "2025-06-13T18:23:34.000Z",
+      "in_reply_to_id": "114674986512614072",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "sv",
+      "uri": "https://mastodon.nu/users/levitte/statuses/114677449627407671",
+      "url": "https://mastodon.nu/@levitte/114677449627407671",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Hmm, but with the hack thing people did, you could have multiple username/password pairs for the same UID. I guess that possibility is lost with this new userdb?</p>",
+      "reblog": null,
+      "account": {
+        "id": "110252054202221869",
+        "username": "levitte",
+        "acct": "levitte@mastodon.nu",
+        "display_name": "Richard Levitte",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-04-24T00:00:00.000Z",
+        "note": "<p>I write software.  I play with software.<br>I take pictures, photographic pictures.<br>I dance; tango, Swedish and continental folk, medieval inspired.<br>Sometimes, I also participate in <a href=\"https://mastodon.nu/tags/queer\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>queer</span></a>, <a href=\"https://mastodon.nu/tags/gsrm\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>gsrm</span></a>, and primarily <a href=\"https://mastodon.nu/tags/polyamory\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>polyamory</span></a> / <a href=\"https://mastodon.nu/tags/relationshipanarchy\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>relationshipanarchy</span></a> spaces.</p><p>Sometimes, people refer to me by nickname.  <a href=\"https://mastodon.nu/tags/Wolfie\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Wolfie</span></a> <a href=\"https://mastodon.nu/tags/GrayFox\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>GrayFox</span></a></p><p>What I express here are personal opinions, unless I clearly mark them otherwise.</p>",
+        "url": "https://mastodon.nu/@levitte",
+        "uri": "https://mastodon.nu/users/levitte",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/252/054/202/221/869/original/372db3f3f9323de6.webp",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/252/054/202/221/869/original/372db3f3f9323de6.webp",
+        "header": "https://files.mastodon.social/cache/accounts/headers/110/252/054/202/221/869/original/7de4c2b0de25cd09.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/110/252/054/202/221/869/original/7de4c2b0de25cd09.jpg",
+        "followers_count": 84,
+        "following_count": 81,
+        "statuses_count": 847,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Gravatar",
+            "value": "<a href=\"https://gravatar.com/levitte\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">gravatar.com/levitte</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T16:27:39.503+00:00"
+          },
+          {
+            "name": "ATmosphere (BlueSky)",
+            "value": "<a href=\"https://mastodon.nu/@richard.levitte.org@bsky.brid.gy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">mastodon.nu/@richard.levitte.o</span><span class=\"invisible\">rg@bsky.brid.gy</span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675596828855653",
+      "created_at": "2025-06-13T10:32:22.628Z",
+      "in_reply_to_id": "114674961878143749",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pwithnall/statuses/114675596828855653",
+      "url": "https://mastodon.social/@pwithnall/114675596828855653",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> *eternal screaming*</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "108250266651323248",
+        "username": "pwithnall",
+        "acct": "pwithnall",
+        "display_name": "Philip Withnall",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-05-05T00:00:00.000Z",
+        "note": "<p>Software developer, fell runner, caver.</p><p>Interested in the outdoors, environment, software maintenance, and copious photos of stiles and industrial heritage.</p>",
+        "url": "https://mastodon.social/@pwithnall",
+        "uri": "https://mastodon.social/users/pwithnall",
+        "avatar": "https://files.mastodon.social/accounts/avatars/108/250/266/651/323/248/original/ef769f4cfc8d1208.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/108/250/266/651/323/248/original/ef769f4cfc8d1208.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 288,
+        "following_count": 216,
+        "statuses_count": 1529,
+        "last_status_at": "2025-12-17",
+        "hide_collections": true,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://tecnocode.co.uk\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">tecnocode.co.uk</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2022-11-10T14:42:12.249+00:00"
+          },
+          {
+            "name": "Pronouns",
+            "value": "he/him",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114675407832998030",
+      "created_at": "2025-06-13T09:44:18.000Z",
+      "in_reply_to_id": "114674946522038928",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/grawity/statuses/114675407811625652",
+      "url": "https://social.treehouse.systems/@grawity/114675407811625652",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-06-13T09:45:22.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> does OpenSSH support the new aliases or are they local only? I think I saw recent openssh commits that seemed to be specifically against PAM being able to do this?</p>",
+      "reblog": null,
+      "account": {
+        "id": "108265903700930509",
+        "username": "grawity",
+        "acct": "grawity@treehouse.systems",
+        "display_name": "grawity",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-04-27T00:00:00.000Z",
+        "note": "<p>hobbyist sysadmin and tech support person, still occasionally seen on IRC</p><p>interests: windows 98, macos 9/8, plan9, systemd, athena, x.25, all kinds of 80s-00s \"retro\" computing &amp; networking</p><p>\u2728\ufe0e no, I really don't have a good profile picture \u2728\ufe0e</p>",
+        "url": "https://social.treehouse.systems/@grawity",
+        "uri": "https://social.treehouse.systems/users/grawity",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/108/265/903/700/930/509/original/f5a60f881b8b1dc2.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/108/265/903/700/930/509/original/f5a60f881b8b1dc2.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 360,
+        "following_count": 109,
+        "statuses_count": 3113,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Location",
+            "value": "<a href=\"https://nullroute.lt\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">nullroute.lt</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Location",
+            "value": "Lithuania",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114695657128075818",
+      "created_at": "2025-06-16T23:33:58.000Z",
+      "in_reply_to_id": "114675407832998030",
+      "in_reply_to_account_id": "108265903700930509",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://fosstodon.org/users/3v1n0/statuses/114695657106720465",
+      "url": "https://fosstodon.org/@3v1n0/114695657106720465",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-06-16T23:34:51.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.treehouse.systems/@grawity\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>grawity</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> do you refer to <a href=\"https://github.com/openssh/openssh-portable/commit/140bae1df2b7246bb43439d039bf994159973585\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/openssh/openssh-por</span><span class=\"invisible\">table/commit/140bae1df2b7246bb43439d039bf994159973585</span></a> ?</p><p>If yes, that's something also other utilities do, but it's up to the pam stack to just return aways the actual user ID for a given user.<br>I mean if you start the pam session with \"foo\" (alias of \"foobar\"), it's up to the stack to set the user to the same value that matches the actual passwd item (so setting it back to \"foobar\").</p>",
+      "reblog": null,
+      "account": {
+        "id": "110191690773867173",
+        "username": "3v1n0",
+        "acct": "3v1n0@fosstodon.org",
+        "display_name": "Marco Trevisan :ubuntu:",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-04-12T00:00:00.000Z",
+        "note": "<p>Marco \u00abTrevi\u00f1o\u00bb Trevisan: an Opensource Developer, Free Software advocate, <span class=\"h-card\" translate=\"no\"><a href=\"https://ubuntu.social/@ubuntu\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>ubuntu</span></a></span> :ubuntu: member, <span class=\"h-card\" translate=\"no\"><a href=\"https://framapiaf.org/@debian\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>debian</span></a></span> :debian: maintainer, Canonical and <span class=\"h-card\" translate=\"no\"><a href=\"https://floss.social/@gnome\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>gnome</span></a></span> :gnome: Software Engineer for Ubuntu Desktop!</p>",
+        "url": "https://fosstodon.org/@3v1n0",
+        "uri": "https://fosstodon.org/users/3v1n0",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/191/690/773/867/173/original/9c82e6a705669b86.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/191/690/773/867/173/original/9c82e6a705669b86.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/110/191/690/773/867/173/original/72435290d6f72bee.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/110/191/690/773/867/173/original/72435290d6f72bee.jpg",
+        "followers_count": 301,
+        "following_count": 289,
+        "statuses_count": 269,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "ubuntu",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/023/655/original/f38974148a186e06.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/023/655/static/f38974148a186e06.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "debian",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/023/original/d4f3f88e97899190.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/023/static/d4f3f88e97899190.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "gnome",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/958/original/8fd2a2a10752621c.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/958/static/8fd2a2a10752621c.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://3v1n0.net\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">3v1n0.net</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T07:45:36.105+00:00"
+          },
+          {
+            "name": "OpenPGP",
+            "value": "<a href=\"https://keyoxide.org/openpgp4fpr:D4C501DA48EB797A081750939449C2F50996635F\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">keyoxide.org/openpgp4fpr:D4C50</span><span class=\"invisible\">1DA48EB797A081750939449C2F50996635F</span></a>",
+            "verified_at": "2025-12-18T07:45:37.656+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/3v1n0\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/3v1n0</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T07:45:38.683+00:00"
+          },
+          {
+            "name": "Twitter Bridge (archive)",
+            "value": "<a href=\"https://fosstodon.org/@3v1n0@bird.makeup\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">fosstodon.org/@3v1n0@bird.make</span><span class=\"invisible\">up</span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "108265903700930509",
+          "username": "grawity",
+          "url": "https://social.treehouse.systems/@grawity",
+          "acct": "grawity@treehouse.systems"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/openssh/openssh-portable/commit/140bae1df2b7246bb43439d039bf994159973585",
+        "title": "auth-pam: Check the user didn't change during PAM transaction \u00b7 openssh/openssh-portable@140bae1",
+        "description": "PAM modules can change the user during their execution, in such case ssh\nwould still use the user that has been provided giving potentially\naccess to another user with the credentials of another on...",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "PAM modules can change the user during their execution, in such case ssh\nwould still use the user that has been provided giving potentially\naccess to another user with the credentials of another on...",
+        "embed_url": "",
+        "blurhash": "UURMb$M{t7%M%Mt7WBt7t7xaRjRj~qocWEWB",
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

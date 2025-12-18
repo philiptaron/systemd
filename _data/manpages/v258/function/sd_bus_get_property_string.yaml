@@ -1,0 +1,2 @@
+description:  Set or query D-Bus service properties
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_get_property_string.html

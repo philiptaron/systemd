@@ -1,0 +1,2132 @@
+{
+  "post": {
+    "id": "114991974361745422",
+    "created_at": "2025-08-08T07:31:20.670Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/114991974361745422",
+    "url": "https://mastodon.social/@pid_eins/114991974361745422",
+    "replies_count": 2,
+    "reblogs_count": 9,
+    "favourites_count": 15,
+    "quotes_count": 0,
+    "edited_at": "2025-08-08T07:40:29.206Z",
+    "content": "<p>3\ufe0f\u20e35\ufe0f\u20e3 Here&#39;s the 35th post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a> </p><p>In various stateless situations it makes sense to boot directly into a root file system that is downloaded as part of the boot process and placed into system RAM. With v258 there&#39;s now native support for this: a new rd.systemd.pull= kernel command line option may be used to download DDIs or tarballs into a tmpfs, optionally authenticate them, and then boot into them.</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "114991986441127571",
+      "created_at": "2025-08-08T07:34:24.984Z",
+      "in_reply_to_id": "114991974361745422",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114991986441127571",
+      "url": "https://mastodon.social/@pid_eins/114991986441127571",
+      "replies_count": 3,
+      "reblogs_count": 0,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-08-08T07:40:51.037Z",
+      "content": "<p>DDIs can be automatically attached to a loopback block device, to make this work (via the new generic systemd-loop@.service template service which just attaches a DDI to a loopback device), and tarballs can be unpacked automatically, too.</p><p>Here&#39;s an example for a kernel cmdline switch for booting into a DDI:</p><p>rd.systemd.pull=raw,machine,verify=no,blockdev:image:https://192.168.100.1:8081/image.raw root=/dev/disk/by-loop-ref/image.raw-part2</p><p>This example disables authentication\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114992320487290701",
+      "created_at": "2025-08-08T08:59:21.000Z",
+      "in_reply_to_id": "114991974361745422",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/mupuf/statuses/114992320469745281",
+      "url": "https://social.treehouse.systems/@mupuf/114992320469745281",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Nice!</p><p>Had this existed 5 years ago, I would not have started the boot2container project!</p><p>Do you think it could provide some sort of caching and avoid running fully from RAM, or is that reimplementing container runtimes too much?</p>",
+      "reblog": null,
+      "account": {
+        "id": "114409813739882307",
+        "username": "mupuf",
+        "acct": "mupuf@treehouse.systems",
+        "display_name": "Martin Roukala (n\u00e9 Peres)",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-04-26T00:00:00.000Z",
+        "note": "<p>Linux Graphics CI engineer and HW lover attempting to provide production-ready upstream drivers for Linux! Ex-Nouveau, ex-member of the X.Org board of directors.</p><p>Working on boot2container, CI-tron, Mesa, the Steam Deck, and other gaming-related projects.</p><p>searchable</p>",
+        "url": "https://social.treehouse.systems/@mupuf",
+        "uri": "https://social.treehouse.systems/users/mupuf",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/114/409/813/739/882/307/original/b5299c9e10895cec.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/114/409/813/739/882/307/original/b5299c9e10895cec.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 284,
+        "following_count": 182,
+        "statuses_count": 241,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://www.mupuf.org\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"\">mupuf.org</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T07:16:37.439+00:00"
+          },
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/GfxMupuf\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/GfxMupuf</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Freedesktop Gitlab",
+            "value": "<a href=\"https://gitlab.freedesktop.org/mupuf\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">gitlab.freedesktop.org/mupuf</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "114991999323263269",
+      "created_at": "2025-08-08T07:37:41.549Z",
+      "in_reply_to_id": "114991986441127571",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114991999323263269",
+      "url": "https://mastodon.social/@pid_eins/114991999323263269",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": "2025-08-08T07:41:40.569Z",
+      "content": "<p>\u2026(the verify=no is doing that), which sounds dangerous, but doesn&#39;t really have to be, if the referenced disk image is a proper DDI, i.e. carries Verity information and a signature for it.</p><p>There&#39;s one further twist to all this: the specified download URL can also be just a relative path, and the additional option &quot;bootorigin&quot; can be added. In that case the actual URL to download from is synthesized from UEFI HTTP boot source URL, in combination with the specified relative path.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114992007201389263",
+      "created_at": "2025-08-08T07:39:41.759Z",
+      "in_reply_to_id": "114991999323263269",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114992007201389263",
+      "url": "https://mastodon.social/@pid_eins/114992007201389263",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-08-08T07:42:01.392Z",
+      "content": "<p>Or in other words: this integrates really nicely with UEFI HTTP network boot, since the root fs image can be looked for automatically at the same place as the UKI that was booted from was downloaded from.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114995141863608734",
+      "created_at": "2025-08-08T20:56:52.912Z",
+      "in_reply_to_id": "114994997811196789",
+      "in_reply_to_account_id": "113877027601016344",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114995141863608734",
+      "url": "https://mastodon.social/@pid_eins/114995141863608734",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@philipmolloy\" class=\"u-url mention\">@<span>philipmolloy</span></a></span> yeah, mkosi only outputs DDIs.</p><p>If you want something more raw (i.e. just turn some pre-prepared directory tree into a DDI) use &quot;systemd-repart -P&quot;</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "113877027601016344",
+          "username": "philipmolloy",
+          "url": "https://mastodon.social/@philipmolloy",
+          "acct": "philipmolloy"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115015558212370887",
+      "created_at": "2025-08-12T11:29:01.674Z",
+      "in_reply_to_id": "115007921209006186",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115015558212370887",
+      "url": "https://mastodon.social/@pid_eins/115015558212370887",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> i dont really grok why that would be desirable though. Generally, Linux file systems must be authenticated before use (because kernel fs drivers are not robust against attacks via fs corruption), which you have to do via dm-verity/dm-crypt/dm-integrity pretty much. But once you did that then they are safe regardless which fs. Signing the part table is unnecessary too, given systemd&#39;s image policy logic, which protects things in a more flexible way, since it allows growing...</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115015611835927417",
+      "created_at": "2025-08-12T11:42:39.901Z",
+      "in_reply_to_id": "115015558212370887",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115015611835927417",
+      "url": "https://mastodon.social/@pid_eins/115015611835927417",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> ... partitions to allow for adapting to local systems/disk sizes. Moreover signing part tables would fixate part uuids too which means even writable fs for every deployed system would have the same identifiers, which is not just weird but also very broken?</p><p>(Signature partitions can already carry sigs for many root hashes/partitions, you already have that part hence, if you like)</p><p>I mean, not sure i grok your security model, but in mine signing part tables/fstypes...</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115015618463783440",
+      "created_at": "2025-08-12T11:44:21.039Z",
+      "in_reply_to_id": "115015611835927417",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115015618463783440",
+      "url": "https://mastodon.social/@pid_eins/115015618463783440",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> ... Is either counterproductive or even problematic.</p><p>(In one case systemd&#39;s gpt dissection logic hard pins an fstype btw: for the esp we enforce vfat, because esp is generally not protected cryptographically, and hence needs this kind of stricter logic)</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115020098920691981",
+      "created_at": "2025-08-13T06:43:47.381Z",
+      "in_reply_to_id": "115017949801414797",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115020098920691981",
+      "url": "https://mastodon.social/@pid_eins/115020098920691981",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> note that systemd&#39;s dissection logic is very restrictive with the fstypes it accepts and recognizes. Only the big Linux ones, i.e. ext4/btrfs/xfs/squashfs/erofs. I really don&#39;t see how it would be realistic to use a replay attack to change the fs signature from one of these 5 to another of these 5. </p><p>Also note that btrfs these days supports cryptographic checksumming too, and its even fairly efficient given native cpu support these days.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115020106096579348",
+      "created_at": "2025-08-13T06:45:36.882Z",
+      "in_reply_to_id": "115020098920691981",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115020106096579348",
+      "url": "https://mastodon.social/@pid_eins/115020106096579348",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> but dunno, what confuses me is why you think replay attacks could be avoided if gpt partition tables could be signed as a whole or the choice of fstype could be included in the signed data?</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114993355776265038",
+      "created_at": "2025-08-08T13:22:39.384Z",
+      "in_reply_to_id": "114992320487290701",
+      "in_reply_to_account_id": "114409813739882307",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114993355776265038",
+      "url": "https://mastodon.social/@pid_eins/114993355776265038",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.treehouse.systems/@mupuf\" class=\"u-url mention\">@<span>mupuf</span></a></span> you mean caching on a persistent disk? The thing kinda supports that already if you set up things correctly, but doesnt do version checks or so to see if cached image if it exists matches image to download, hence not sure how useful IRL.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "114409813739882307",
+          "username": "mupuf",
+          "url": "https://social.treehouse.systems/@mupuf",
+          "acct": "mupuf@treehouse.systems"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "114991986441127571",
+      "created_at": "2025-08-08T07:34:24.984Z",
+      "in_reply_to_id": "114991974361745422",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114991986441127571",
+      "url": "https://mastodon.social/@pid_eins/114991986441127571",
+      "replies_count": 3,
+      "reblogs_count": 0,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-08-08T07:40:51.037Z",
+      "content": "<p>DDIs can be automatically attached to a loopback block device, to make this work (via the new generic systemd-loop@.service template service which just attaches a DDI to a loopback device), and tarballs can be unpacked automatically, too.</p><p>Here&#39;s an example for a kernel cmdline switch for booting into a DDI:</p><p>rd.systemd.pull=raw,machine,verify=no,blockdev:image:https://192.168.100.1:8081/image.raw root=/dev/disk/by-loop-ref/image.raw-part2</p><p>This example disables authentication\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114991999323263269",
+      "created_at": "2025-08-08T07:37:41.549Z",
+      "in_reply_to_id": "114991986441127571",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114991999323263269",
+      "url": "https://mastodon.social/@pid_eins/114991999323263269",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": "2025-08-08T07:41:40.569Z",
+      "content": "<p>\u2026(the verify=no is doing that), which sounds dangerous, but doesn&#39;t really have to be, if the referenced disk image is a proper DDI, i.e. carries Verity information and a signature for it.</p><p>There&#39;s one further twist to all this: the specified download URL can also be just a relative path, and the additional option &quot;bootorigin&quot; can be added. In that case the actual URL to download from is synthesized from UEFI HTTP boot source URL, in combination with the specified relative path.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114992007201389263",
+      "created_at": "2025-08-08T07:39:41.759Z",
+      "in_reply_to_id": "114991999323263269",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114992007201389263",
+      "url": "https://mastodon.social/@pid_eins/114992007201389263",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-08-08T07:42:01.392Z",
+      "content": "<p>Or in other words: this integrates really nicely with UEFI HTTP network boot, since the root fs image can be looked for automatically at the same place as the UKI that was booted from was downloaded from.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114994997811196789",
+      "created_at": "2025-08-08T20:20:14.845Z",
+      "in_reply_to_id": "114991986441127571",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/philipmolloy/statuses/114994997811196789",
+      "url": "https://mastodon.social/@philipmolloy/114994997811196789",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> How can one generate a DDI? I don&#39;t see any reference to DDI, DPS or &quot;discover&quot; in the mkosi docs/. There&#39;s a 2023 Fedora article mentioning it in the intro, but then never again. Does `mkosi -t disk` always generate a DDI?</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "113877027601016344",
+        "username": "philipmolloy",
+        "acct": "philipmolloy",
+        "display_name": "Philip Molloy",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-01-23T00:00:00.000Z",
+        "note": "",
+        "url": "https://mastodon.social/@philipmolloy",
+        "uri": "https://mastodon.social/users/philipmolloy",
+        "avatar": "https://files.mastodon.social/accounts/avatars/113/877/027/601/016/344/original/b14971e071e8ece8.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/113/877/027/601/016/344/original/b14971e071e8ece8.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/113/877/027/601/016/344/original/b11764e92a9a23cc.webp",
+        "header_static": "https://files.mastodon.social/accounts/headers/113/877/027/601/016/344/original/b11764e92a9a23cc.webp",
+        "followers_count": 21,
+        "following_count": 40,
+        "statuses_count": 67,
+        "last_status_at": "2025-12-03",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Home",
+            "value": "<a href=\"https://philipmolloy.com/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">philipmolloy.com/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-01-23T09:56:31.448+00:00"
+          },
+          {
+            "name": "Home",
+            "value": "M\u00fcnchen",
+            "verified_at": null
+          },
+          {
+            "name": "Gitlab",
+            "value": "<a href=\"https://gitlab.com/pamolloy\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">gitlab.com/pamolloy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Github Sponsors",
+            "value": "<a href=\"https://github.com/sponsors/pamolloy\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/sponsors/pamolloy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114995141863608734",
+      "created_at": "2025-08-08T20:56:52.912Z",
+      "in_reply_to_id": "114994997811196789",
+      "in_reply_to_account_id": "113877027601016344",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114995141863608734",
+      "url": "https://mastodon.social/@pid_eins/114995141863608734",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@philipmolloy\" class=\"u-url mention\">@<span>philipmolloy</span></a></span> yeah, mkosi only outputs DDIs.</p><p>If you want something more raw (i.e. just turn some pre-prepared directory tree into a DDI) use &quot;systemd-repart -P&quot;</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "113877027601016344",
+          "username": "philipmolloy",
+          "url": "https://mastodon.social/@philipmolloy",
+          "acct": "philipmolloy"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115007921209006186",
+      "created_at": "2025-08-11T03:06:49.000Z",
+      "in_reply_to_id": "114991986441127571",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alwayscurious/statuses/115007921188175039",
+      "url": "https://infosec.exchange/@alwayscurious/115007921188175039",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I do wish that a DDI could include some signed metadata:</p><ul><li>Signature of the partition table</li><li>Filesystem types (to avoid having to guess, neeeded for writeable partitions)</li><li>Verity hashes of all the partitions (to avoid having to sign all of them separately)</li></ul>",
+      "reblog": null,
+      "account": {
+        "id": "109703431137549286",
+        "username": "alwayscurious",
+        "acct": "alwayscurious@infosec.exchange",
+        "display_name": "Demi Marie Obenour",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-01-17T00:00:00.000Z",
+        "note": "<p>Software developer and security researcher.  Currently working on Spectrum.  Follows are not endorsements.</p>",
+        "url": "https://infosec.exchange/@alwayscurious",
+        "uri": "https://infosec.exchange/users/alwayscurious",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 142,
+        "following_count": 132,
+        "statuses_count": 3271,
+        "last_status_at": "2025-12-17",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "She/her",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/DemiMarie\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/DemiMarie</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T16:02:05.879+00:00"
+          },
+          {
+            "name": "Matrix",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>alwayscurious</span></a></span>:matrix.org",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115015558212370887",
+      "created_at": "2025-08-12T11:29:01.674Z",
+      "in_reply_to_id": "115007921209006186",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115015558212370887",
+      "url": "https://mastodon.social/@pid_eins/115015558212370887",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> i dont really grok why that would be desirable though. Generally, Linux file systems must be authenticated before use (because kernel fs drivers are not robust against attacks via fs corruption), which you have to do via dm-verity/dm-crypt/dm-integrity pretty much. But once you did that then they are safe regardless which fs. Signing the part table is unnecessary too, given systemd&#39;s image policy logic, which protects things in a more flexible way, since it allows growing...</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115015611835927417",
+      "created_at": "2025-08-12T11:42:39.901Z",
+      "in_reply_to_id": "115015558212370887",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115015611835927417",
+      "url": "https://mastodon.social/@pid_eins/115015611835927417",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> ... partitions to allow for adapting to local systems/disk sizes. Moreover signing part tables would fixate part uuids too which means even writable fs for every deployed system would have the same identifiers, which is not just weird but also very broken?</p><p>(Signature partitions can already carry sigs for many root hashes/partitions, you already have that part hence, if you like)</p><p>I mean, not sure i grok your security model, but in mine signing part tables/fstypes...</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115015618463783440",
+      "created_at": "2025-08-12T11:44:21.039Z",
+      "in_reply_to_id": "115015611835927417",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115015618463783440",
+      "url": "https://mastodon.social/@pid_eins/115015618463783440",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> ... Is either counterproductive or even problematic.</p><p>(In one case systemd&#39;s gpt dissection logic hard pins an fstype btw: for the esp we enforce vfat, because esp is generally not protected cryptographically, and hence needs this kind of stricter logic)</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115017949801414797",
+      "created_at": "2025-08-12T21:37:14.000Z",
+      "in_reply_to_id": "115015611835927417",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alwayscurious/statuses/115017949778574449",
+      "url": "https://infosec.exchange/@alwayscurious/115017949778574449",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> For the purposes of this discussion, my security model is a server in a physically secure location using encrypted network storage that has writeable volumes and the OS on the same partition.  An attacker could modify the writeable volume and potentially cause it to be identified as the wrong filesystem type.  Furthermore, there is no proof (that I know of) that this cannot be done through unprivileged filesystem operations.</p><p>More generally, \u201cLinux file systems must be authenticated before use\u201d is <em>very</em> problematic for anything writeable, because dm-verity is read-only and dm-integrity is vulnerable to replay attacks.  The best answer I know of right now is BTRFS checksumming + LUKS, as scrambling a 128-bit block should cause a CRC32 checksum to fail with high probability.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109703431137549286",
+        "username": "alwayscurious",
+        "acct": "alwayscurious@infosec.exchange",
+        "display_name": "Demi Marie Obenour",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-01-17T00:00:00.000Z",
+        "note": "<p>Software developer and security researcher.  Currently working on Spectrum.  Follows are not endorsements.</p>",
+        "url": "https://infosec.exchange/@alwayscurious",
+        "uri": "https://infosec.exchange/users/alwayscurious",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 142,
+        "following_count": 132,
+        "statuses_count": 3271,
+        "last_status_at": "2025-12-17",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "She/her",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/DemiMarie\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/DemiMarie</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T16:02:05.879+00:00"
+          },
+          {
+            "name": "Matrix",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>alwayscurious</span></a></span>:matrix.org",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115020098920691981",
+      "created_at": "2025-08-13T06:43:47.381Z",
+      "in_reply_to_id": "115017949801414797",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115020098920691981",
+      "url": "https://mastodon.social/@pid_eins/115020098920691981",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> note that systemd&#39;s dissection logic is very restrictive with the fstypes it accepts and recognizes. Only the big Linux ones, i.e. ext4/btrfs/xfs/squashfs/erofs. I really don&#39;t see how it would be realistic to use a replay attack to change the fs signature from one of these 5 to another of these 5. </p><p>Also note that btrfs these days supports cryptographic checksumming too, and its even fairly efficient given native cpu support these days.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115020106096579348",
+      "created_at": "2025-08-13T06:45:36.882Z",
+      "in_reply_to_id": "115020098920691981",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115020106096579348",
+      "url": "https://mastodon.social/@pid_eins/115020106096579348",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> but dunno, what confuses me is why you think replay attacks could be avoided if gpt partition tables could be signed as a whole or the choice of fstype could be included in the signed data?</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115017935647155994",
+      "created_at": "2025-08-12T21:33:38.000Z",
+      "in_reply_to_id": "115015558212370887",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alwayscurious/statuses/115017935624827862",
+      "url": "https://infosec.exchange/@alwayscurious/115017935624827862",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> How should writeable storage be handled?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109703431137549286",
+        "username": "alwayscurious",
+        "acct": "alwayscurious@infosec.exchange",
+        "display_name": "Demi Marie Obenour",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-01-17T00:00:00.000Z",
+        "note": "<p>Software developer and security researcher.  Currently working on Spectrum.  Follows are not endorsements.</p>",
+        "url": "https://infosec.exchange/@alwayscurious",
+        "uri": "https://infosec.exchange/users/alwayscurious",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 142,
+        "following_count": 132,
+        "statuses_count": 3271,
+        "last_status_at": "2025-12-17",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "She/her",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/DemiMarie\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/DemiMarie</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T16:02:05.879+00:00"
+          },
+          {
+            "name": "Matrix",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>alwayscurious</span></a></span>:matrix.org",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114992320487290701",
+      "created_at": "2025-08-08T08:59:21.000Z",
+      "in_reply_to_id": "114991974361745422",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/mupuf/statuses/114992320469745281",
+      "url": "https://social.treehouse.systems/@mupuf/114992320469745281",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Nice!</p><p>Had this existed 5 years ago, I would not have started the boot2container project!</p><p>Do you think it could provide some sort of caching and avoid running fully from RAM, or is that reimplementing container runtimes too much?</p>",
+      "reblog": null,
+      "account": {
+        "id": "114409813739882307",
+        "username": "mupuf",
+        "acct": "mupuf@treehouse.systems",
+        "display_name": "Martin Roukala (n\u00e9 Peres)",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-04-26T00:00:00.000Z",
+        "note": "<p>Linux Graphics CI engineer and HW lover attempting to provide production-ready upstream drivers for Linux! Ex-Nouveau, ex-member of the X.Org board of directors.</p><p>Working on boot2container, CI-tron, Mesa, the Steam Deck, and other gaming-related projects.</p><p>searchable</p>",
+        "url": "https://social.treehouse.systems/@mupuf",
+        "uri": "https://social.treehouse.systems/users/mupuf",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/114/409/813/739/882/307/original/b5299c9e10895cec.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/114/409/813/739/882/307/original/b5299c9e10895cec.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 284,
+        "following_count": 182,
+        "statuses_count": 241,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://www.mupuf.org\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"\">mupuf.org</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T07:16:37.439+00:00"
+          },
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/GfxMupuf\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/GfxMupuf</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Freedesktop Gitlab",
+            "value": "<a href=\"https://gitlab.freedesktop.org/mupuf\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">gitlab.freedesktop.org/mupuf</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114993355776265038",
+      "created_at": "2025-08-08T13:22:39.384Z",
+      "in_reply_to_id": "114992320487290701",
+      "in_reply_to_account_id": "114409813739882307",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114993355776265038",
+      "url": "https://mastodon.social/@pid_eins/114993355776265038",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.treehouse.systems/@mupuf\" class=\"u-url mention\">@<span>mupuf</span></a></span> you mean caching on a persistent disk? The thing kinda supports that already if you set up things correctly, but doesnt do version checks or so to see if cached image if it exists matches image to download, hence not sure how useful IRL.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "114409813739882307",
+          "username": "mupuf",
+          "url": "https://social.treehouse.systems/@mupuf",
+          "acct": "mupuf@treehouse.systems"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114994060787359192",
+      "created_at": "2025-08-08T16:21:56.000Z",
+      "in_reply_to_id": "114993355776265038",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/mupuf/statuses/114994060738616177",
+      "url": "https://social.treehouse.systems/@mupuf/114994060738616177",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I see! Still a good start :)</p><p>Thanks!</p>",
+      "reblog": null,
+      "account": {
+        "id": "114409813739882307",
+        "username": "mupuf",
+        "acct": "mupuf@treehouse.systems",
+        "display_name": "Martin Roukala (n\u00e9 Peres)",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-04-26T00:00:00.000Z",
+        "note": "<p>Linux Graphics CI engineer and HW lover attempting to provide production-ready upstream drivers for Linux! Ex-Nouveau, ex-member of the X.Org board of directors.</p><p>Working on boot2container, CI-tron, Mesa, the Steam Deck, and other gaming-related projects.</p><p>searchable</p>",
+        "url": "https://social.treehouse.systems/@mupuf",
+        "uri": "https://social.treehouse.systems/users/mupuf",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/114/409/813/739/882/307/original/b5299c9e10895cec.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/114/409/813/739/882/307/original/b5299c9e10895cec.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 284,
+        "following_count": 182,
+        "statuses_count": 241,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://www.mupuf.org\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"\">mupuf.org</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T07:16:37.439+00:00"
+          },
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/GfxMupuf\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/GfxMupuf</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Freedesktop Gitlab",
+            "value": "<a href=\"https://gitlab.freedesktop.org/mupuf\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">gitlab.freedesktop.org/mupuf</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

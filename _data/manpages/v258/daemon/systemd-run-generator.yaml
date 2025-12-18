@@ -1,0 +1,2 @@
+description:  Generator for invoking commands specified on the kernel command line as system service
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-run-generator.html

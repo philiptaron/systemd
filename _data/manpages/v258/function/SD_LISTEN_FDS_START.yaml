@@ -1,0 +1,2 @@
+description:  Check for file descriptors passed by the system manager
+url: https://www.freedesktop.org/software/systemd/man/258/SD_LISTEN_FDS_START.html

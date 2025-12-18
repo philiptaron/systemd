@@ -1,0 +1,2 @@
+description:  Queue a D-Bus message for transfer
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_send_to.html

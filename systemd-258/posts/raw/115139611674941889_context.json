@@ -1,0 +1,2066 @@
+{
+  "post": {
+    "id": "115139611674941889",
+    "created_at": "2025-09-03T09:17:27.292Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/115139611674941889",
+    "url": "https://mastodon.social/@pid_eins/115139611674941889",
+    "replies_count": 1,
+    "reblogs_count": 5,
+    "favourites_count": 16,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>5\ufe0f\u20e31\ufe0f\u20e3 Here&#39;s the 51st post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>For a long time systemd has supported the &quot;ask-password&quot; protocol that allows system components (i.e. non-interactive, low-level stuff) to query passwords and other secrets interactively, during boot and runtime. The original usecase was disk encryption: early during boot, in the initrd, we must query the user for a disk unlock passphrase, and only then can transition into the\u2026</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "115139626628094278",
+      "created_at": "2025-09-03T09:21:15.451Z",
+      "in_reply_to_id": "115139611674941889",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139626628094278",
+      "url": "https://mastodon.social/@pid_eins/115139626628094278",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-09-03T09:21:26.527Z",
+      "content": "<p>\u2026encrypted root file system. This protocol never relied on D-Bus, because D-Bus is a late boot thing, and not really usable for early boot stuff. The protocol is documented here, and is basically unmodified since day 1:</p><p><a href=\"https://systemd.io/PASSWORD_AGENTS/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">systemd.io/PASSWORD_AGENTS/</span><span class=\"invisible\"></span></a></p><p>As you might see it&#39;s quite unlike most APIs: a request is not made via IPC or so, but by dropping a short-lived file into some dir. Implementing this properly requires some care to be taken, as such files need to be created atomically and be properly\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://systemd.io/PASSWORD_AGENTS/",
+        "title": "Password Agents",
+        "description": "",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "115139643341683157",
+      "created_at": "2025-09-03T09:25:30.481Z",
+      "in_reply_to_id": "115139626628094278",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139643341683157",
+      "url": "https://mastodon.social/@pid_eins/115139643341683157",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026lifecycled.</p><p>With v257 support for this protocol was extended to per-user services too: services that run under the logged-in user&#39;s identity can now also query passwords, the same way.</p><p>With v258 we take the concept one step further: there&#39;s now a Varlink API to request a password: simply call the io.systemd.AskPassword.Ask method on the /run/systemd/io.systemd.AskPassword socket and there you go.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139644536400257",
+      "created_at": "2025-09-03T09:25:48.711Z",
+      "in_reply_to_id": "115139643341683157",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139644536400257",
+      "url": "https://mastodon.social/@pid_eins/115139644536400257",
+      "replies_count": 3,
+      "reblogs_count": 1,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": "2025-09-03T09:27:00.322Z",
+      "content": "<p>Or in other words: the protocol can be used in a less special way now, it&#39;s now a simply IPC call like any other, and we made a bit more progress towards Varlinkifying the world.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139776239926015",
+      "created_at": "2025-09-03T09:59:18.355Z",
+      "in_reply_to_id": "115139679747641384",
+      "in_reply_to_account_id": "1295117",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139776239926015",
+      "url": "https://mastodon.social/@pid_eins/115139776239926015",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://is.badat.dev/users/Mae\" class=\"u-url mention\">@<span>Mae</span></a></span> yeah, agents need to implement the old api. clients can use varlink.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1295117",
+          "username": "Mae",
+          "url": "https://is.badat.dev/users/Mae",
+          "acct": "Mae@is.badat.dev"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139924788623842",
+      "created_at": "2025-09-03T10:37:05.027Z",
+      "in_reply_to_id": "115139821045670582",
+      "in_reply_to_account_id": "109593519684227524",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139924788623842",
+      "url": "https://mastodon.social/@pid_eins/115139924788623842",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@dazo\" class=\"u-url mention\">@<span>dazo</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://is.badat.dev/users/Mae\" class=\"u-url mention\">@<span>Mae</span></a></span> nah, the old stuff remains the protocol underneath all. No need to change anything.</p><p>But then again, the varlink service has some benefits, since it is hooked up with polkit, so you could even ask for pws from a state where you already dropped various privs.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109593519684227524",
+          "username": "dazo",
+          "url": "https://infosec.exchange/@dazo",
+          "acct": "dazo@infosec.exchange"
+        },
+        {
+          "id": "1295117",
+          "username": "Mae",
+          "url": "https://is.badat.dev/users/Mae",
+          "acct": "Mae@is.badat.dev"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115152263565459275",
+      "created_at": "2025-09-05T14:54:59.819Z",
+      "in_reply_to_id": "115140184690207867",
+      "in_reply_to_account_id": "111669937972599954",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115152263565459275",
+      "url": "https://mastodon.social/@pid_eins/115152263565459275",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.grimmauld.de/@grimmauld\" class=\"u-url mention\">@<span>grimmauld</span></a></span> run0 also starts a tty pw agent during initialization and stops it once the session is fully up, if you specify --pty-late.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111669937972599954",
+          "username": "grimmauld",
+          "url": "https://mastodon.grimmauld.de/@grimmauld",
+          "acct": "grimmauld@mastodon.grimmauld.de"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115148038159288275",
+      "created_at": "2025-09-04T21:00:25.237Z",
+      "in_reply_to_id": "115147859576334059",
+      "in_reply_to_account_id": "1316450",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115148038159288275",
+      "url": "https://mastodon.social/@pid_eins/115148038159288275",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.anoxinon.de/@eichehome\" class=\"u-url mention\">@<span>eichehome</span></a></span> both</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1316450",
+          "username": "eichehome",
+          "url": "https://social.anoxinon.de/@eichehome",
+          "acct": "eichehome@social.anoxinon.de"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115152246912027532",
+      "created_at": "2025-09-05T14:50:45.707Z",
+      "in_reply_to_id": "115148046766394596",
+      "in_reply_to_account_id": "1316450",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115152246912027532",
+      "url": "https://mastodon.social/@pid_eins/115152246912027532",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.anoxinon.de/@eichehome\" class=\"u-url mention\">@<span>eichehome</span></a></span> the per-user askpw stuff and the per-system askpw stuff use a different entrypoint socket.</p><p>the askpw per-system socket is /run/systemd/io.systemd.AskPassword</p><p>the askpw per-user socket is $XDG_RUNTIME_DIR/systemd/io.systemd.AskPassword.</p><p>The protocol spoken on both is the same, you just end up with pw prompts direct to different sets of people: if you talk to the system one, any user and the boot time UI will get the request. if you tlak to the user one, only that user.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1316450",
+          "username": "eichehome",
+          "url": "https://social.anoxinon.de/@eichehome",
+          "acct": "eichehome@social.anoxinon.de"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "115139626628094278",
+      "created_at": "2025-09-03T09:21:15.451Z",
+      "in_reply_to_id": "115139611674941889",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139626628094278",
+      "url": "https://mastodon.social/@pid_eins/115139626628094278",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-09-03T09:21:26.527Z",
+      "content": "<p>\u2026encrypted root file system. This protocol never relied on D-Bus, because D-Bus is a late boot thing, and not really usable for early boot stuff. The protocol is documented here, and is basically unmodified since day 1:</p><p><a href=\"https://systemd.io/PASSWORD_AGENTS/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">systemd.io/PASSWORD_AGENTS/</span><span class=\"invisible\"></span></a></p><p>As you might see it&#39;s quite unlike most APIs: a request is not made via IPC or so, but by dropping a short-lived file into some dir. Implementing this properly requires some care to be taken, as such files need to be created atomically and be properly\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://systemd.io/PASSWORD_AGENTS/",
+        "title": "Password Agents",
+        "description": "",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139643341683157",
+      "created_at": "2025-09-03T09:25:30.481Z",
+      "in_reply_to_id": "115139626628094278",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139643341683157",
+      "url": "https://mastodon.social/@pid_eins/115139643341683157",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026lifecycled.</p><p>With v257 support for this protocol was extended to per-user services too: services that run under the logged-in user&#39;s identity can now also query passwords, the same way.</p><p>With v258 we take the concept one step further: there&#39;s now a Varlink API to request a password: simply call the io.systemd.AskPassword.Ask method on the /run/systemd/io.systemd.AskPassword socket and there you go.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139644536400257",
+      "created_at": "2025-09-03T09:25:48.711Z",
+      "in_reply_to_id": "115139643341683157",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139644536400257",
+      "url": "https://mastodon.social/@pid_eins/115139644536400257",
+      "replies_count": 3,
+      "reblogs_count": 1,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": "2025-09-03T09:27:00.322Z",
+      "content": "<p>Or in other words: the protocol can be used in a less special way now, it&#39;s now a simply IPC call like any other, and we made a bit more progress towards Varlinkifying the world.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139679747641384",
+      "created_at": "2025-09-03T09:34:43.086Z",
+      "in_reply_to_id": "115139644536400257",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://is.badat.dev/objects/b1499306-00dc-4a0f-82f9-291c6836f49d",
+      "url": "https://is.badat.dev/objects/b1499306-00dc-4a0f-82f9-291c6836f49d",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<span class=\"h-card\"><a class=\"u-url mention\" href=\"https://mastodon.social/@pid_eins\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> does this affect password agents, or should they just implement the old API to stay compatible with older systemd releases?",
+      "reblog": null,
+      "account": {
+        "id": "1295117",
+        "username": "Mae",
+        "acct": "Mae@is.badat.dev",
+        "display_name": "Mae",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-10-14T00:00:00.000Z",
+        "note": "Not a minor<br>Timezone: UTC+2<br><br>Alleged milf, might be an angle<br>I like shiny,,",
+        "url": "https://is.badat.dev/users/Mae",
+        "uri": "https://is.badat.dev/users/Mae",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/001/295/117/original/e20368881807e8ef.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/001/295/117/original/e20368881807e8ef.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/001/295/117/original/5a50c4b48e5eead7.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/001/295/117/original/5a50c4b48e5eead7.jpg",
+        "followers_count": 380,
+        "following_count": 468,
+        "statuses_count": 45670,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "pro nouns",
+            "value": "she/her",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139776239926015",
+      "created_at": "2025-09-03T09:59:18.355Z",
+      "in_reply_to_id": "115139679747641384",
+      "in_reply_to_account_id": "1295117",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139776239926015",
+      "url": "https://mastodon.social/@pid_eins/115139776239926015",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://is.badat.dev/users/Mae\" class=\"u-url mention\">@<span>Mae</span></a></span> yeah, agents need to implement the old api. clients can use varlink.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1295117",
+          "username": "Mae",
+          "url": "https://is.badat.dev/users/Mae",
+          "acct": "Mae@is.badat.dev"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139821045670582",
+      "created_at": "2025-09-03T10:10:41.000Z",
+      "in_reply_to_id": "115139776239926015",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/dazo/statuses/115139821027977039",
+      "url": "https://infosec.exchange/@dazo/115139821027977039",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": "2025-09-03T10:12:24.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> </p><p>Should clients start migrating to the varlink approach?  In both OpenVPN 2.x and OpenVPN 3 Linux, we kick off the <code>systemd-ask-password</code> binary, in particular when starting a VPN session and not being in a logged in session (typically during boot, or via systemd unit files).</p><p>Just wondering if we need to plan for this change anytime soon.</p><p><span class=\"h-card\" translate=\"no\"><a href=\"https://is.badat.dev/users/Mae\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>Mae</span></a></span></p>",
+      "reblog": null,
+      "account": {
+        "id": "109593519684227524",
+        "username": "dazo",
+        "acct": "dazo@infosec.exchange",
+        "display_name": "\ud83d\udd17 David Sommerseth",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-12-28T00:00:00.000Z",
+        "note": "<p>F/OSS hacker, mostly working on <a href=\"https://infosec.exchange/tags/OpenVPN\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>OpenVPN</span></a><br>- speaks only for himself.<br>ex-Twitter account (now inaccessible): <a href=\"https://twitter.com/DavidSommerseth\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/DavidSommerseth</span><span class=\"invisible\"></span></a></p><p>\"Don't aim to be someone. DO something.\"</p><p><a href=\"https://infosec.exchange/tags/nobridge\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>nobridge</span></a> - because I believe in the real <a href=\"https://infosec.exchange/tags/fediverse\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>fediverse</span></a>, and I don't want my own views/data to be abused by yet another \"closed-service which can do whatever it wants for profit\".</p><p>**If you want to follow me**, you now **MUST** have some content on your profile where we have some common ground on interests.  I will no longer accept random profiles wanting to follow with no toots or no other follows or followers in the same interest sphere.</p>",
+        "url": "https://infosec.exchange/@dazo",
+        "uri": "https://infosec.exchange/users/dazo",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/593/519/684/227/524/original/d379209112be1f01.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/593/519/684/227/524/original/d379209112be1f01.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/593/519/684/227/524/original/bebdd4e68045fbc0.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/593/519/684/227/524/original/bebdd4e68045fbc0.jpg",
+        "followers_count": 270,
+        "following_count": 361,
+        "statuses_count": 6681,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Contact",
+            "value": "<a href=\"https://david.sommerseth.email/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">david.sommerseth.email/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T21:40:43.176+00:00"
+          },
+          {
+            "name": "PGP Fingerprint",
+            "value": "690D B606 E838 182F A8F9 018C 755A 3AB9 4530 7622",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "1295117",
+          "username": "Mae",
+          "url": "https://is.badat.dev/users/Mae",
+          "acct": "Mae@is.badat.dev"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139924788623842",
+      "created_at": "2025-09-03T10:37:05.027Z",
+      "in_reply_to_id": "115139821045670582",
+      "in_reply_to_account_id": "109593519684227524",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115139924788623842",
+      "url": "https://mastodon.social/@pid_eins/115139924788623842",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@dazo\" class=\"u-url mention\">@<span>dazo</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://is.badat.dev/users/Mae\" class=\"u-url mention\">@<span>Mae</span></a></span> nah, the old stuff remains the protocol underneath all. No need to change anything.</p><p>But then again, the varlink service has some benefits, since it is hooked up with polkit, so you could even ask for pws from a state where you already dropped various privs.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109593519684227524",
+          "username": "dazo",
+          "url": "https://infosec.exchange/@dazo",
+          "acct": "dazo@infosec.exchange"
+        },
+        {
+          "id": "1295117",
+          "username": "Mae",
+          "url": "https://is.badat.dev/users/Mae",
+          "acct": "Mae@is.badat.dev"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115139938960821771",
+      "created_at": "2025-09-03T10:40:40.000Z",
+      "in_reply_to_id": "115139924788623842",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/dazo/statuses/115139938937566793",
+      "url": "https://infosec.exchange/@dazo/115139938937566793",
+      "replies_count": 0,
+      "reblogs_count": 1,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> </p><p>Ahh, okay.  Good to know!</p><p>The privilege separation is already handled in the OpenVPN 3 Linux stack (it's built on D-Bus services).</p><p>The OpenVPN 2.x is still very simplistic here and may be in a state where privileges has been dropped when requesting user credentials for the VPN session.</p><p><span class=\"h-card\" translate=\"no\"><a href=\"https://is.badat.dev/users/Mae\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>Mae</span></a></span></p>",
+      "reblog": null,
+      "account": {
+        "id": "109593519684227524",
+        "username": "dazo",
+        "acct": "dazo@infosec.exchange",
+        "display_name": "\ud83d\udd17 David Sommerseth",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-12-28T00:00:00.000Z",
+        "note": "<p>F/OSS hacker, mostly working on <a href=\"https://infosec.exchange/tags/OpenVPN\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>OpenVPN</span></a><br>- speaks only for himself.<br>ex-Twitter account (now inaccessible): <a href=\"https://twitter.com/DavidSommerseth\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/DavidSommerseth</span><span class=\"invisible\"></span></a></p><p>\"Don't aim to be someone. DO something.\"</p><p><a href=\"https://infosec.exchange/tags/nobridge\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>nobridge</span></a> - because I believe in the real <a href=\"https://infosec.exchange/tags/fediverse\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>fediverse</span></a>, and I don't want my own views/data to be abused by yet another \"closed-service which can do whatever it wants for profit\".</p><p>**If you want to follow me**, you now **MUST** have some content on your profile where we have some common ground on interests.  I will no longer accept random profiles wanting to follow with no toots or no other follows or followers in the same interest sphere.</p>",
+        "url": "https://infosec.exchange/@dazo",
+        "uri": "https://infosec.exchange/users/dazo",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/593/519/684/227/524/original/d379209112be1f01.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/593/519/684/227/524/original/d379209112be1f01.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/593/519/684/227/524/original/bebdd4e68045fbc0.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/593/519/684/227/524/original/bebdd4e68045fbc0.jpg",
+        "followers_count": 270,
+        "following_count": 361,
+        "statuses_count": 6681,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Contact",
+            "value": "<a href=\"https://david.sommerseth.email/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">david.sommerseth.email/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T21:40:43.176+00:00"
+          },
+          {
+            "name": "PGP Fingerprint",
+            "value": "690D B606 E838 182F A8F9 018C 755A 3AB9 4530 7622",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "1295117",
+          "username": "Mae",
+          "url": "https://is.badat.dev/users/Mae",
+          "acct": "Mae@is.badat.dev"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115140184690207867",
+      "created_at": "2025-09-03T11:43:04.000Z",
+      "in_reply_to_id": "115139644536400257",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.grimmauld.de/users/grimmauld/statuses/115140184286147580",
+      "url": "https://mastodon.grimmauld.de/@grimmauld/115140184286147580",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> What about from the other perspective? `sudo` allows passing password by stdin, while `run0` insists on the ask-password (now varlink) call. How viable would it be to somehow pass a password to run0 via stdin, either by systemd supporting that or by shimming run0 to call a \"fake-varlink\" which just returns the password passed via stdin to the shim?</p>",
+      "reblog": null,
+      "account": {
+        "id": "111669937972599954",
+        "username": "grimmauld",
+        "acct": "grimmauld@mastodon.grimmauld.de",
+        "display_name": "grimmauld",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2025-07-16T00:00:00.000Z",
+        "note": "<p>Probably Procrastinating<br>I sometimes just spend way too long making tools no one will use, or tweaking my NixOS configuration.</p><p>I have a [gpg key](<a href=\"https://grimmauld.de/grimmauld.gpg\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">grimmauld.de/grimmauld.gpg</span><span class=\"invisible\"></span></a>) you can use to verify me or write me encrypted messages.</p><p>\"has such hyperactive little creature vibes\" - <a href=\"https://mk.absturztau.be/@iro_miya\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">mk.absturztau.be/@iro_miya</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://mastodon.grimmauld.de/@grimmauld",
+        "uri": "https://mastodon.grimmauld.de/users/grimmauld",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/669/937/972/599/954/original/17e416d6f32b275c.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/669/937/972/599/954/original/17e416d6f32b275c.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 91,
+        "following_count": 95,
+        "statuses_count": 177,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "grimmauld.de",
+            "verified_at": null
+          },
+          {
+            "name": "Github",
+            "value": "github.com/LordGrimmauld",
+            "verified_at": null
+          },
+          {
+            "name": "Forgejo",
+            "value": "<a href=\"https://git.grimmauld.de/Grimmauld\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">git.grimmauld.de/Grimmauld</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Pronouns",
+            "value": "any/all",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115140264688591157",
+      "created_at": "2025-09-03T12:03:26.000Z",
+      "in_reply_to_id": "115140184690207867",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.grimmauld.de/users/grimmauld/statuses/115140264377698480",
+      "url": "https://mastodon.grimmauld.de/@grimmauld/115140264377698480",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> related: `systemd-ask-password --no-tty` is a thing that exists, and toghether with setting `XDG_RUNTIME_DIR`, `systemd-ask-password` can be successfully shimmed on systemd 257+. However, this still doesn't work for run0, as i can't pass `--no-tty` to run0.</p>",
+      "reblog": null,
+      "account": {
+        "id": "111669937972599954",
+        "username": "grimmauld",
+        "acct": "grimmauld@mastodon.grimmauld.de",
+        "display_name": "grimmauld",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2025-07-16T00:00:00.000Z",
+        "note": "<p>Probably Procrastinating<br>I sometimes just spend way too long making tools no one will use, or tweaking my NixOS configuration.</p><p>I have a [gpg key](<a href=\"https://grimmauld.de/grimmauld.gpg\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">grimmauld.de/grimmauld.gpg</span><span class=\"invisible\"></span></a>) you can use to verify me or write me encrypted messages.</p><p>\"has such hyperactive little creature vibes\" - <a href=\"https://mk.absturztau.be/@iro_miya\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">mk.absturztau.be/@iro_miya</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://mastodon.grimmauld.de/@grimmauld",
+        "uri": "https://mastodon.grimmauld.de/users/grimmauld",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/669/937/972/599/954/original/17e416d6f32b275c.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/669/937/972/599/954/original/17e416d6f32b275c.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 91,
+        "following_count": 95,
+        "statuses_count": 177,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "grimmauld.de",
+            "verified_at": null
+          },
+          {
+            "name": "Github",
+            "value": "github.com/LordGrimmauld",
+            "verified_at": null
+          },
+          {
+            "name": "Forgejo",
+            "value": "<a href=\"https://git.grimmauld.de/Grimmauld\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">git.grimmauld.de/Grimmauld</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Pronouns",
+            "value": "any/all",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115152263565459275",
+      "created_at": "2025-09-05T14:54:59.819Z",
+      "in_reply_to_id": "115140184690207867",
+      "in_reply_to_account_id": "111669937972599954",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115152263565459275",
+      "url": "https://mastodon.social/@pid_eins/115152263565459275",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.grimmauld.de/@grimmauld\" class=\"u-url mention\">@<span>grimmauld</span></a></span> run0 also starts a tty pw agent during initialization and stops it once the session is fully up, if you specify --pty-late.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111669937972599954",
+          "username": "grimmauld",
+          "url": "https://mastodon.grimmauld.de/@grimmauld",
+          "acct": "grimmauld@mastodon.grimmauld.de"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115147859576334059",
+      "created_at": "2025-09-04T20:14:59.000Z",
+      "in_reply_to_id": "115139644536400257",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.anoxinon.de/users/eichehome/statuses/115147859505095074",
+      "url": "https://social.anoxinon.de/@eichehome/115147859505095074",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Does this is only for privileged Services or also for user services?</p>",
+      "reblog": null,
+      "account": {
+        "id": "1316450",
+        "username": "eichehome",
+        "acct": "eichehome@social.anoxinon.de",
+        "display_name": "eiche :anxde: :fedora: :tux:",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-11-04T00:00:00.000Z",
+        "note": "<p>Ich interessiere mich f\u00fcr ein dezentrales Netz, welches der Gemeinschaft geh\u00f6rt :matrix: :xmpp: In meiner Freizeit besch\u00e4ftige ich mich mit Self-Hosting von FLOSS-Diensten wie :nxc: und aus dem Umfeld des Fediverse :fediverse:, des Datenschutzes :spiral_notebook: und \u00e4hnlichem.</p>",
+        "url": "https://social.anoxinon.de/@eichehome",
+        "uri": "https://social.anoxinon.de/users/eichehome",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/001/316/450/original/cd926e9d7569dd82.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/001/316/450/original/cd926e9d7569dd82.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/001/316/450/original/5a9cd3d23350824c.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/001/316/450/original/5a9cd3d23350824c.jpeg",
+        "followers_count": 22,
+        "following_count": 218,
+        "statuses_count": 161,
+        "last_status_at": "2025-11-20",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "matrix",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/099/017/original/53980bed0530d566.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/099/017/static/53980bed0530d566.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "xmpp",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/053/101/original/4258e696d94d99cc.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/053/101/static/4258e696d94d99cc.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "nxc",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/059/219/original/046b6a81bd907bbc.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/059/219/static/046b6a81bd907bbc.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "fediverse",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/098/049/original/ff2176b9deca495c.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/098/049/static/ff2176b9deca495c.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "spiral_notebook",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/444/original/d37792900d2162f1.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/444/static/d37792900d2162f1.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "anxde",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/031/789/original/28d27190c3c03a75.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/031/789/static/28d27190c3c03a75.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "fedora",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/445/original/cf56a7ed4d5bd698.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/445/static/cf56a7ed4d5bd698.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "tux",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/865/original/c1e4f970232f3ed9.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/865/static/c1e4f970232f3ed9.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Kontakt",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://social.anoxinon.de/@eichehome\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>eichehome</span></a></span>:envs.net on Matrix",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115148038159288275",
+      "created_at": "2025-09-04T21:00:25.237Z",
+      "in_reply_to_id": "115147859576334059",
+      "in_reply_to_account_id": "1316450",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115148038159288275",
+      "url": "https://mastodon.social/@pid_eins/115148038159288275",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.anoxinon.de/@eichehome\" class=\"u-url mention\">@<span>eichehome</span></a></span> both</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1316450",
+          "username": "eichehome",
+          "url": "https://social.anoxinon.de/@eichehome",
+          "acct": "eichehome@social.anoxinon.de"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115148046766394596",
+      "created_at": "2025-09-04T21:02:36.000Z",
+      "in_reply_to_id": "115148038159288275",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.anoxinon.de/users/eichehome/statuses/115148046735358692",
+      "url": "https://social.anoxinon.de/@eichehome/115148046735358692",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-09-04T21:03:15.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Thanks! Is there a diference on how to call it from unprivileged code?</p>",
+      "reblog": null,
+      "account": {
+        "id": "1316450",
+        "username": "eichehome",
+        "acct": "eichehome@social.anoxinon.de",
+        "display_name": "eiche :anxde: :fedora: :tux:",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-11-04T00:00:00.000Z",
+        "note": "<p>Ich interessiere mich f\u00fcr ein dezentrales Netz, welches der Gemeinschaft geh\u00f6rt :matrix: :xmpp: In meiner Freizeit besch\u00e4ftige ich mich mit Self-Hosting von FLOSS-Diensten wie :nxc: und aus dem Umfeld des Fediverse :fediverse:, des Datenschutzes :spiral_notebook: und \u00e4hnlichem.</p>",
+        "url": "https://social.anoxinon.de/@eichehome",
+        "uri": "https://social.anoxinon.de/users/eichehome",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/001/316/450/original/cd926e9d7569dd82.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/001/316/450/original/cd926e9d7569dd82.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/001/316/450/original/5a9cd3d23350824c.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/001/316/450/original/5a9cd3d23350824c.jpeg",
+        "followers_count": 22,
+        "following_count": 218,
+        "statuses_count": 161,
+        "last_status_at": "2025-11-20",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "matrix",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/099/017/original/53980bed0530d566.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/099/017/static/53980bed0530d566.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "xmpp",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/053/101/original/4258e696d94d99cc.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/053/101/static/4258e696d94d99cc.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "nxc",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/059/219/original/046b6a81bd907bbc.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/059/219/static/046b6a81bd907bbc.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "fediverse",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/098/049/original/ff2176b9deca495c.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/098/049/static/ff2176b9deca495c.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "spiral_notebook",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/444/original/d37792900d2162f1.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/444/static/d37792900d2162f1.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "anxde",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/031/789/original/28d27190c3c03a75.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/031/789/static/28d27190c3c03a75.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "fedora",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/445/original/cf56a7ed4d5bd698.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/445/static/cf56a7ed4d5bd698.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "tux",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/865/original/c1e4f970232f3ed9.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/865/static/c1e4f970232f3ed9.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Kontakt",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://social.anoxinon.de/@eichehome\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>eichehome</span></a></span>:envs.net on Matrix",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115152246912027532",
+      "created_at": "2025-09-05T14:50:45.707Z",
+      "in_reply_to_id": "115148046766394596",
+      "in_reply_to_account_id": "1316450",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115152246912027532",
+      "url": "https://mastodon.social/@pid_eins/115152246912027532",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.anoxinon.de/@eichehome\" class=\"u-url mention\">@<span>eichehome</span></a></span> the per-user askpw stuff and the per-system askpw stuff use a different entrypoint socket.</p><p>the askpw per-system socket is /run/systemd/io.systemd.AskPassword</p><p>the askpw per-user socket is $XDG_RUNTIME_DIR/systemd/io.systemd.AskPassword.</p><p>The protocol spoken on both is the same, you just end up with pw prompts direct to different sets of people: if you talk to the system one, any user and the boot time UI will get the request. if you tlak to the user one, only that user.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1316450",
+          "username": "eichehome",
+          "url": "https://social.anoxinon.de/@eichehome",
+          "acct": "eichehome@social.anoxinon.de"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115152252140478305",
+      "created_at": "2025-09-05T14:52:05.000Z",
+      "in_reply_to_id": "115152246912027532",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.anoxinon.de/users/eichehome/statuses/115152252113692221",
+      "url": "https://social.anoxinon.de/@eichehome/115152252113692221",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Thanks</p>",
+      "reblog": null,
+      "account": {
+        "id": "1316450",
+        "username": "eichehome",
+        "acct": "eichehome@social.anoxinon.de",
+        "display_name": "eiche :anxde: :fedora: :tux:",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-11-04T00:00:00.000Z",
+        "note": "<p>Ich interessiere mich f\u00fcr ein dezentrales Netz, welches der Gemeinschaft geh\u00f6rt :matrix: :xmpp: In meiner Freizeit besch\u00e4ftige ich mich mit Self-Hosting von FLOSS-Diensten wie :nxc: und aus dem Umfeld des Fediverse :fediverse:, des Datenschutzes :spiral_notebook: und \u00e4hnlichem.</p>",
+        "url": "https://social.anoxinon.de/@eichehome",
+        "uri": "https://social.anoxinon.de/users/eichehome",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/001/316/450/original/cd926e9d7569dd82.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/001/316/450/original/cd926e9d7569dd82.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/001/316/450/original/5a9cd3d23350824c.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/001/316/450/original/5a9cd3d23350824c.jpeg",
+        "followers_count": 22,
+        "following_count": 218,
+        "statuses_count": 161,
+        "last_status_at": "2025-11-20",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "matrix",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/099/017/original/53980bed0530d566.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/099/017/static/53980bed0530d566.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "xmpp",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/053/101/original/4258e696d94d99cc.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/053/101/static/4258e696d94d99cc.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "nxc",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/059/219/original/046b6a81bd907bbc.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/059/219/static/046b6a81bd907bbc.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "fediverse",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/098/049/original/ff2176b9deca495c.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/098/049/static/ff2176b9deca495c.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "spiral_notebook",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/444/original/d37792900d2162f1.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/444/static/d37792900d2162f1.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "anxde",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/031/789/original/28d27190c3c03a75.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/031/789/static/28d27190c3c03a75.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "fedora",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/445/original/cf56a7ed4d5bd698.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/282/445/static/cf56a7ed4d5bd698.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "tux",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/865/original/c1e4f970232f3ed9.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/865/static/c1e4f970232f3ed9.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Kontakt",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://social.anoxinon.de/@eichehome\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>eichehome</span></a></span>:envs.net on Matrix",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

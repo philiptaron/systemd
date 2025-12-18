@@ -1,0 +1,2 @@
+description:  Access an array of elements in a message
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_read_array.html

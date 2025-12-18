@@ -1,0 +1,2 @@
+description:  UNIX user and group name resolution for user/group lookup via Varlink
+url: https://www.freedesktop.org/software/systemd/man/258/libnss_systemd.so.2.html

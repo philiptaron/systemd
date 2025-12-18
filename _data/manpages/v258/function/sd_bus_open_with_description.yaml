@@ -1,0 +1,2 @@
+description:  Acquire a connection to a system or user bus
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_open_with_description.html

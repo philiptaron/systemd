@@ -1,0 +1,74 @@
+{
+  "id": "114584855720355892",
+  "created_at": "2025-05-28T09:55:43.197Z",
+  "in_reply_to_id": null,
+  "in_reply_to_account_id": null,
+  "sensitive": false,
+  "spoiler_text": "",
+  "visibility": "public",
+  "language": "en",
+  "uri": "https://mastodon.social/users/pid_eins/statuses/114584855720355892",
+  "url": "https://mastodon.social/@pid_eins/114584855720355892",
+  "replies_count": 3,
+  "reblogs_count": 20,
+  "favourites_count": 42,
+  "quotes_count": 0,
+  "edited_at": null,
+  "content": "<p>5\ufe0f\u20e3 Here&#39;s the 5th post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>On modern Linux systems the persistent hostname is configured in /etc/hostname. Linux people treating their devices like pets tend to come up with nice, imaginative names for their hosts.</p><p>But this doesn&#39;t scale: if you have a large number of devices to manage (i.e. &quot;cattle&quot;) then you typically want something more automatic: the hostnames used should follow some specific pattern, \u2026</p>",
+  "reblog": null,
+  "application": {
+    "name": "Web",
+    "website": null
+  },
+  "account": {
+    "id": "109248059314089584",
+    "username": "pid_eins",
+    "acct": "pid_eins",
+    "display_name": "Lennart Poettering",
+    "locked": false,
+    "bot": false,
+    "discoverable": null,
+    "indexable": false,
+    "group": false,
+    "created_at": "2022-10-28T00:00:00.000Z",
+    "note": "<p>\u26f5 I write software. \u26f5</p>",
+    "url": "https://mastodon.social/@pid_eins",
+    "uri": "https://mastodon.social/users/pid_eins",
+    "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+    "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+    "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+    "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+    "followers_count": 8188,
+    "following_count": 343,
+    "statuses_count": 2260,
+    "last_status_at": "2025-12-18",
+    "hide_collections": null,
+    "noindex": false,
+    "emojis": [],
+    "roles": [],
+    "fields": [
+      {
+        "name": "Web",
+        "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+        "verified_at": null
+      }
+    ]
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [
+    {
+      "name": "systemd258",
+      "url": "https://mastodon.social/tags/systemd258"
+    }
+  ],
+  "emojis": [],
+  "quote": null,
+  "card": null,
+  "poll": null,
+  "quote_approval": {
+    "automatic": [],
+    "manual": [],
+    "current_user": "denied"
+  }
+}

@@ -1,0 +1,2 @@
+description:  Add an I/O event source to an event loop
+url: https://www.freedesktop.org/software/systemd/man/258/sd_event_source.html

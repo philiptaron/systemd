@@ -1,0 +1,2 @@
+description:  Retrieve or set device attributes
+url: https://www.freedesktop.org/software/systemd/man/258/udev_device_get_property_value.html

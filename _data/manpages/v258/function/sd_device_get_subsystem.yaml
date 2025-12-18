@@ -1,0 +1,2 @@
+description:  Returns various fields of device objects
+url: https://www.freedesktop.org/software/systemd/man/258/sd_device_get_subsystem.html

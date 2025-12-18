@@ -1,0 +1,1463 @@
+{
+  "post": {
+    "id": "114827645185448224",
+    "created_at": "2025-07-10T07:00:16.449Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/114827645185448224",
+    "url": "https://mastodon.social/@pid_eins/114827645185448224",
+    "replies_count": 2,
+    "reblogs_count": 12,
+    "favourites_count": 22,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>3\ufe0f\u20e31\ufe0f\u20e3 Here&#39;s the 31st post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>In v256 we added &quot;systemd-ssh-generator&quot;, which \u2013 among other things \u2013 would bind sshd to an AF_VSOCK socket if that is supported on the system, i.e. if booted inside a VMM that supports AF_VSOCK communication. It greatly simplifies talking to a VM from the host, in environments that support this.</p><p>Except of course, it&#39;s not quite as easy as it might appear conceptually:</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "114827661201214578",
+      "created_at": "2025-07-10T07:04:20.808Z",
+      "in_reply_to_id": "114827645185448224",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827661201214578",
+      "url": "https://mastodon.social/@pid_eins/114827661201214578",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": "2025-07-10T07:13:54.783Z",
+      "content": "<p>In order to be able to connect to such a VM via ssh-over-AF_VSOCK one needs to know the VM&#39;s address, i.e. the AF_VSOCK &quot;CID&quot;. That&#39;s some 32bit value that basically plays the role of an IP addresses, except for AF_VSOCK rather than AF_INET.</p><p>How do you actually figure out the CID of your VM though? That&#39;s a really good question. The systemd-ssh-generator tool actually logs it during early boot, but that typically has long scrolled away once the system is booted up.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114830026676339566",
+      "created_at": "2025-07-10T17:05:54.000Z",
+      "in_reply_to_id": "114827645185448224",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://fosstodon.org/users/matttbe/statuses/114830026651101221",
+      "url": "https://fosstodon.org/@matttbe/114830026651101221",
+      "replies_count": 0,
+      "reblogs_count": 3,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": "2025-07-10T17:06:16.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> thanks! Talking about SSH and VSOCK: this v258 also adds scp and rsync support by using the % separator instead of /, e.g.</p><p>    scp /etc/machine-id vsock%2222:.</p><p><a href=\"https://github.com/systemd/systemd/pull/37035\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/pul</span><span class=\"invisible\">l/37035</span></a><br><a href=\"https://github.com/systemd/systemd/pull/37191\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/pul</span><span class=\"invisible\">l/37191</span></a></p>",
+      "reblog": null,
+      "account": {
+        "id": "109262157656414887",
+        "username": "matttbe",
+        "acct": "matttbe@fosstodon.org",
+        "display_name": "Matthieu Baerts",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-31T00:00:00.000Z",
+        "note": "<p><a href=\"https://fosstodon.org/tags/MPTCP\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>MPTCP</span></a> community, <a href=\"https://fosstodon.org/tags/FOSS\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>FOSS</span></a> enthusiast, <a href=\"https://fosstodon.org/tags/NGIZero\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>NGIZero</span></a> Core, previously at <a href=\"https://fosstodon.org/tags/Tessares\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Tessares</span></a>, Belgium \ud83c\udde7\ud83c\uddea\ud83c\udde6\ud83c\uddfa</p>",
+        "url": "https://fosstodon.org/@matttbe",
+        "uri": "https://fosstodon.org/users/matttbe",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/262/157/656/414/887/original/6f1a21d04e1052ac.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/262/157/656/414/887/original/6f1a21d04e1052ac.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/262/157/656/414/887/original/63f05400544a0e01.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/262/157/656/414/887/original/63f05400544a0e01.jpeg",
+        "followers_count": 105,
+        "following_count": 104,
+        "statuses_count": 160,
+        "last_status_at": "2025-11-12",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/matttbe\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/matttbe</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-29T22:48:23.871+00:00"
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.mptcp.dev\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.mptcp.dev</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-29T22:48:24.307+00:00"
+          },
+          {
+            "name": "LibrePay",
+            "value": "<a href=\"https://liberapay.com/matttbe\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">liberapay.com/matttbe</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-29T22:48:24.543+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/systemd/pull/37035",
+        "title": "ssh-proxy: add scp and rsync support by matttbe \u00b7 Pull Request #37035 \u00b7 systemd/systemd",
+        "description": "ssh-generator and ssh-proxy from #30777 are great features, it is very handy to be able to do:\nssh vsock/1\n\nBut, because of the / used as a separator, scp and rsync don't interpret vsock/<CI...",
+        "language": "en",
+        "type": "link",
+        "author_name": "matttbe",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "ssh-generator and ssh-proxy from #30777 are great features, it is very handy to be able to do:\nssh vsock/1\n\nBut, because of the / used as a separator, scp and rsync don&#39;t interpret vsock/&lt;CI...",
+        "embed_url": "",
+        "blurhash": "UWRysgWCt7xu%MkCofkBWBofRjWB~qoeRjWB",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "matttbe",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "114827677625147425",
+      "created_at": "2025-07-10T07:08:31.417Z",
+      "in_reply_to_id": "114827661201214578",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827677625147425",
+      "url": "https://mastodon.social/@pid_eins/114827677625147425",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>It&#39;s also part of the &quot;hostnamectl&quot; status output that shows basic information about the host. But you&#39;ll only get to that once you logged in.</p><p>Wouldn&#39;t it be great if the system would actually show it prominently on the console once it booted up, so that you can immediately see it when the system is ready to take your connections?</p><p>Precisely that has been implemented in v258. The .socket units that bind the AF_VSOCK will now call a tiny new tool systemd-ssh-issue that will generate\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827688160066389",
+      "created_at": "2025-07-10T07:11:12.166Z",
+      "in_reply_to_id": "114827677625147425",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827688160066389",
+      "url": "https://mastodon.social/@pid_eins/114827688160066389",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026a drop-in file /run/issue.d/50-ssh-vsock.issue that contains one brief sentence with the command line to use to connect to the VM, including the CID.</p><p>The files in /run/issue.d/*.issue are shown by the &quot;login&quot; process that is responsibly on Linux to show the login prompt. Or in other words: when you get the console login prompt on a VM system you&#39;ll now also get a suggestion how to log into it via ssh-over-AF_VSOCK as alternative means.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827692048537389",
+      "created_at": "2025-07-10T07:12:11.502Z",
+      "in_reply_to_id": "114827688160066389",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827692048537389",
+      "url": "https://mastodon.social/@pid_eins/114827692048537389",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Note that this line is only shown if all of the below apply:</p><p>* the system runs in a VM</p><p>* AF_VSOCK is available</p><p>* sshd is installed</p><p>* And sshd actually has been successfully bound to a AF_VSOCK socket.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827695586874666",
+      "created_at": "2025-07-10T07:13:05.483Z",
+      "in_reply_to_id": "114827692048537389",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827695586874666",
+      "url": "https://mastodon.social/@pid_eins/114827695586874666",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>In the longer run we intend to make it possible to log into our VMs via AF_VSOCK already by VM name (rather than cryptic CID), but that&#39;s not quite feasible yet, because of various privilege issues.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114828067406525887",
+      "created_at": "2025-07-10T08:47:39.029Z",
+      "in_reply_to_id": "114827963055810554",
+      "in_reply_to_account_id": "268326",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114828067406525887",
+      "url": "https://mastodon.social/@pid_eins/114828067406525887",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://functional.cafe/@arianvp\" class=\"u-url mention\">@<span>arianvp</span></a></span> it already does that. but the machinery is not fully in place yet for unpriv vms, which we usually should do. wip.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "268326",
+          "username": "arianvp",
+          "url": "https://functional.cafe/@arianvp",
+          "acct": "arianvp@functional.cafe"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "114827661201214578",
+      "created_at": "2025-07-10T07:04:20.808Z",
+      "in_reply_to_id": "114827645185448224",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827661201214578",
+      "url": "https://mastodon.social/@pid_eins/114827661201214578",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": "2025-07-10T07:13:54.783Z",
+      "content": "<p>In order to be able to connect to such a VM via ssh-over-AF_VSOCK one needs to know the VM&#39;s address, i.e. the AF_VSOCK &quot;CID&quot;. That&#39;s some 32bit value that basically plays the role of an IP addresses, except for AF_VSOCK rather than AF_INET.</p><p>How do you actually figure out the CID of your VM though? That&#39;s a really good question. The systemd-ssh-generator tool actually logs it during early boot, but that typically has long scrolled away once the system is booted up.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827677625147425",
+      "created_at": "2025-07-10T07:08:31.417Z",
+      "in_reply_to_id": "114827661201214578",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827677625147425",
+      "url": "https://mastodon.social/@pid_eins/114827677625147425",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>It&#39;s also part of the &quot;hostnamectl&quot; status output that shows basic information about the host. But you&#39;ll only get to that once you logged in.</p><p>Wouldn&#39;t it be great if the system would actually show it prominently on the console once it booted up, so that you can immediately see it when the system is ready to take your connections?</p><p>Precisely that has been implemented in v258. The .socket units that bind the AF_VSOCK will now call a tiny new tool systemd-ssh-issue that will generate\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827688160066389",
+      "created_at": "2025-07-10T07:11:12.166Z",
+      "in_reply_to_id": "114827677625147425",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827688160066389",
+      "url": "https://mastodon.social/@pid_eins/114827688160066389",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026a drop-in file /run/issue.d/50-ssh-vsock.issue that contains one brief sentence with the command line to use to connect to the VM, including the CID.</p><p>The files in /run/issue.d/*.issue are shown by the &quot;login&quot; process that is responsibly on Linux to show the login prompt. Or in other words: when you get the console login prompt on a VM system you&#39;ll now also get a suggestion how to log into it via ssh-over-AF_VSOCK as alternative means.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827692048537389",
+      "created_at": "2025-07-10T07:12:11.502Z",
+      "in_reply_to_id": "114827688160066389",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827692048537389",
+      "url": "https://mastodon.social/@pid_eins/114827692048537389",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Note that this line is only shown if all of the below apply:</p><p>* the system runs in a VM</p><p>* AF_VSOCK is available</p><p>* sshd is installed</p><p>* And sshd actually has been successfully bound to a AF_VSOCK socket.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827695586874666",
+      "created_at": "2025-07-10T07:13:05.483Z",
+      "in_reply_to_id": "114827692048537389",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114827695586874666",
+      "url": "https://mastodon.social/@pid_eins/114827695586874666",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>In the longer run we intend to make it possible to log into our VMs via AF_VSOCK already by VM name (rather than cryptic CID), but that&#39;s not quite feasible yet, because of various privilege issues.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827827172386225",
+      "created_at": "2025-07-10T07:46:32.000Z",
+      "in_reply_to_id": "114827695586874666",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alwayscurious/statuses/114827827147770102",
+      "url": "https://infosec.exchange/@alwayscurious/114827827147770102",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Could you go farther and allow logging into the VM from the host without authentication, so long as you are root or another user with privilege over the VM?  Could you also ensure that you are guaranteed to be connected to the correct VM, so there is no need for the VM to maintain host keys?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109703431137549286",
+        "username": "alwayscurious",
+        "acct": "alwayscurious@infosec.exchange",
+        "display_name": "Demi Marie Obenour",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-01-17T00:00:00.000Z",
+        "note": "<p>Software developer and security researcher.  Currently working on Spectrum.  Follows are not endorsements.</p>",
+        "url": "https://infosec.exchange/@alwayscurious",
+        "uri": "https://infosec.exchange/users/alwayscurious",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 142,
+        "following_count": 132,
+        "statuses_count": 3271,
+        "last_status_at": "2025-12-17",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "She/her",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/DemiMarie\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/DemiMarie</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T16:02:05.879+00:00"
+          },
+          {
+            "name": "Matrix",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>alwayscurious</span></a></span>:matrix.org",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114829929040932194",
+      "created_at": "2025-07-10T16:41:05.303Z",
+      "in_reply_to_id": "114827827172386225",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/never_released/statuses/114829929040932194",
+      "url": "https://mastodon.social/@never_released/114829929040932194",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> in a world where confidential computing is a thing, not sure that&#39;s the right way to go</p><p>(Some cloud providers have hacks like EC2 Instance Connect however)</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tusky",
+        "website": "https://tusky.app"
+      },
+      "account": {
+        "id": "108190255758699693",
+        "username": "never_released",
+        "acct": "never_released",
+        "display_name": "Longhorn",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-04-25T00:00:00.000Z",
+        "note": "<p>Kernel/hypervisor engineer, Amazon EC2.\u2029</p>",
+        "url": "https://mastodon.social/@never_released",
+        "uri": "https://mastodon.social/users/never_released",
+        "avatar": "https://files.mastodon.social/accounts/avatars/108/190/255/758/699/693/original/562a201faa79cdca.jpeg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/108/190/255/758/699/693/original/562a201faa79cdca.jpeg",
+        "header": "https://files.mastodon.social/accounts/headers/108/190/255/758/699/693/original/7a64cf313ce76c94.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/108/190/255/758/699/693/original/7a64cf313ce76c94.jpeg",
+        "followers_count": 2726,
+        "following_count": 110,
+        "statuses_count": 2301,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://threedots.ovh/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">threedots.ovh/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/never_released\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/never_released</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114830051980867063",
+      "created_at": "2025-07-10T17:12:17.000Z",
+      "in_reply_to_id": "114827827172386225",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://nixos.paris/users/raito/statuses/114830051755122498",
+      "url": "https://nixos.paris/@raito/114830051755122498",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>alwayscurious</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> yeah, that's something I have done by hacking enough openssh on my side on NixOS hypervisors I manage</p><p>I am the hypervisor so ultimate trust\u2026</p>",
+      "reblog": null,
+      "account": {
+        "id": "109254243286365905",
+        "username": "raito",
+        "acct": "raito@nixos.paris",
+        "display_name": "Raito Bezarius",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-29T00:00:00.000Z",
+        "note": "<p><a href=\"https://nixos.paris/tags/Lix\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lix</span></a> developer, <a href=\"https://nixos.paris/tags/NixOS\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>NixOS</span></a> developer, <a href=\"https://nixos.paris/tags/Lean\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lean</span></a> theorem prover user.</p><p>My interests revolve around formal verification, evolutions of the Nix model, firmware platform security, public policies and (geo)politics.</p><p>Alternatively, I enjoy Japanese animation and culture.</p><p>My DMs are open for anything and everything.</p>",
+        "url": "https://nixos.paris/@raito",
+        "uri": "https://nixos.paris/users/raito",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "followers_count": 1018,
+        "following_count": 830,
+        "statuses_count": 5491,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/Ra1t0_Bezar1us\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/Ra1t0_Bezar1us</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/RaitoBezarius\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/RaitoBezarius</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.347+00:00"
+          },
+          {
+            "name": "Website FR",
+            "value": "<a href=\"https://ryan.lahfa.xyz/fr/about-me.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">ryan.lahfa.xyz/fr/about-me.html</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.532+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114827963055810554",
+      "created_at": "2025-07-10T08:21:04.000Z",
+      "in_reply_to_id": "114827695586874666",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://functional.cafe/users/arianvp/statuses/114827962920249071",
+      "url": "https://functional.cafe/@arianvp/114827962920249071",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-07-10T08:21:18.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> hmm yeh I just wanted to ask. Why does the VMM not just register the CID with machined?  I guess that's what you're referring to here?</p>",
+      "reblog": null,
+      "account": {
+        "id": "268326",
+        "username": "arianvp",
+        "acct": "arianvp@functional.cafe",
+        "display_name": "Arian",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2017-12-29T00:00:00.000Z",
+        "note": "<p>Functionele dingen</p>",
+        "url": "https://functional.cafe/@arianvp",
+        "uri": "https://functional.cafe/users/arianvp",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/000/268/326/original/87e6f92a768d3907.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/000/268/326/original/87e6f92a768d3907.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 715,
+        "following_count": 150,
+        "statuses_count": 1141,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/ProgrammerDude\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/ProgrammerDude</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/arianvp\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/arianvp</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T22:02:01.239+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114828067406525887",
+      "created_at": "2025-07-10T08:47:39.029Z",
+      "in_reply_to_id": "114827963055810554",
+      "in_reply_to_account_id": "268326",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114828067406525887",
+      "url": "https://mastodon.social/@pid_eins/114828067406525887",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://functional.cafe/@arianvp\" class=\"u-url mention\">@<span>arianvp</span></a></span> it already does that. but the machinery is not fully in place yet for unpriv vms, which we usually should do. wip.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "268326",
+          "username": "arianvp",
+          "url": "https://functional.cafe/@arianvp",
+          "acct": "arianvp@functional.cafe"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114830026676339566",
+      "created_at": "2025-07-10T17:05:54.000Z",
+      "in_reply_to_id": "114827645185448224",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://fosstodon.org/users/matttbe/statuses/114830026651101221",
+      "url": "https://fosstodon.org/@matttbe/114830026651101221",
+      "replies_count": 0,
+      "reblogs_count": 3,
+      "favourites_count": 7,
+      "quotes_count": 0,
+      "edited_at": "2025-07-10T17:06:16.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> thanks! Talking about SSH and VSOCK: this v258 also adds scp and rsync support by using the % separator instead of /, e.g.</p><p>    scp /etc/machine-id vsock%2222:.</p><p><a href=\"https://github.com/systemd/systemd/pull/37035\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/pul</span><span class=\"invisible\">l/37035</span></a><br><a href=\"https://github.com/systemd/systemd/pull/37191\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/pul</span><span class=\"invisible\">l/37191</span></a></p>",
+      "reblog": null,
+      "account": {
+        "id": "109262157656414887",
+        "username": "matttbe",
+        "acct": "matttbe@fosstodon.org",
+        "display_name": "Matthieu Baerts",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-31T00:00:00.000Z",
+        "note": "<p><a href=\"https://fosstodon.org/tags/MPTCP\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>MPTCP</span></a> community, <a href=\"https://fosstodon.org/tags/FOSS\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>FOSS</span></a> enthusiast, <a href=\"https://fosstodon.org/tags/NGIZero\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>NGIZero</span></a> Core, previously at <a href=\"https://fosstodon.org/tags/Tessares\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Tessares</span></a>, Belgium \ud83c\udde7\ud83c\uddea\ud83c\udde6\ud83c\uddfa</p>",
+        "url": "https://fosstodon.org/@matttbe",
+        "uri": "https://fosstodon.org/users/matttbe",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/262/157/656/414/887/original/6f1a21d04e1052ac.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/262/157/656/414/887/original/6f1a21d04e1052ac.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/262/157/656/414/887/original/63f05400544a0e01.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/262/157/656/414/887/original/63f05400544a0e01.jpeg",
+        "followers_count": 105,
+        "following_count": 104,
+        "statuses_count": 160,
+        "last_status_at": "2025-11-12",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/matttbe\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/matttbe</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-29T22:48:23.871+00:00"
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.mptcp.dev\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.mptcp.dev</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-29T22:48:24.307+00:00"
+          },
+          {
+            "name": "LibrePay",
+            "value": "<a href=\"https://liberapay.com/matttbe\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">liberapay.com/matttbe</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-29T22:48:24.543+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/systemd/pull/37035",
+        "title": "ssh-proxy: add scp and rsync support by matttbe \u00b7 Pull Request #37035 \u00b7 systemd/systemd",
+        "description": "ssh-generator and ssh-proxy from #30777 are great features, it is very handy to be able to do:\nssh vsock/1\n\nBut, because of the / used as a separator, scp and rsync don't interpret vsock/<CI...",
+        "language": "en",
+        "type": "link",
+        "author_name": "matttbe",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "ssh-generator and ssh-proxy from #30777 are great features, it is very handy to be able to do:\nssh vsock/1\n\nBut, because of the / used as a separator, scp and rsync don&#39;t interpret vsock/&lt;CI...",
+        "embed_url": "",
+        "blurhash": "UWRysgWCt7xu%MkCofkBWBofRjWB~qoeRjWB",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "matttbe",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

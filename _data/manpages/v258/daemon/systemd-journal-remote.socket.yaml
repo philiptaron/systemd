@@ -1,0 +1,2 @@
+description:  Receive journal messages over the network
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-journal-remote.socket.html

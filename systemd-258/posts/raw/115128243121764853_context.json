@@ -1,0 +1,2725 @@
+{
+  "post": {
+    "id": "115128243121764853",
+    "created_at": "2025-09-01T09:06:16.936Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/115128243121764853",
+    "url": "https://mastodon.social/@pid_eins/115128243121764853",
+    "replies_count": 1,
+    "reblogs_count": 8,
+    "favourites_count": 24,
+    "quotes_count": 0,
+    "edited_at": "2025-09-01T09:14:06.335Z",
+    "content": "<p>4\ufe0f\u20e39\ufe0f\u20e3 Here&#39;s the 49th post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>One of the key features of systemd from day 1 on is socket activation, i.e. a mechanism where systemd binds sockets on behalf of services, watches them and only activates the services themselves later, possibly only at the moment they are actively used.</p><p>This has various benefits, for example reduces ahead of time cost of running a large number of services (which improves boot times).</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "115128256578352445",
+      "created_at": "2025-09-01T09:09:42.262Z",
+      "in_reply_to_id": "115128243121764853",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128256578352445",
+      "url": "https://mastodon.social/@pid_eins/115128256578352445",
+      "replies_count": 1,
+      "reblogs_count": 3,
+      "favourites_count": 13,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>But one facet of it is particularly nice: it allows (mostly) getting rid of startup ordering dependencies between services: if all sockets are bound in one early step, then services can just talk to any other service they like at any time, and if that other service is not running yet, this will not cause a failure (as it would on systems without socket activation where ordering is not respected) but instead the will cause activation of the service, and \u2013 at worst \u2013 the client will wait a bit\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "115128267545865557",
+      "created_at": "2025-09-01T09:12:29.613Z",
+      "in_reply_to_id": "115128256578352445",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128267545865557",
+      "url": "https://mastodon.social/@pid_eins/115128267545865557",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:48:34.401Z",
+      "content": "<p>\u2026longer for the request to be fulfilled.</p><p>systemd&#39;s own services are largely socket activated, in particular since we adopted Varlink (since Varlink services are built on listener sockets, unlike D-Bus services where both clients and providers of services connect to the central broker, and never listen on sockets on their own) for many of our services. And all those socket units typically don&#39;t carry any ordering deps hence.</p><p>Except of course, that things aren&#39;t *that* simple.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128307883035336",
+      "created_at": "2025-09-01T09:22:45.108Z",
+      "in_reply_to_id": "115128267545865557",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128307883035336",
+      "url": "https://mastodon.social/@pid_eins/115128307883035336",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:49:07.910Z",
+      "content": "<p>Socket activation works great of processes that actually are of the kind that binds a socket and listens on it for client requests. But during early boot and late shutdown things are quite different. systemd-sysusers, systemd-tmpfiles, systemd-binfmt, sysemd-sysctl, systemd-rfkill, fsck, and so on, are quite different: they do not really stick around, their startup has to be scheduled precisely, after something and before something else. Where those somethings can be other services, or\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128315316997024",
+      "created_at": "2025-09-01T09:24:38.544Z",
+      "in_reply_to_id": "115128307883035336",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128315316997024",
+      "url": "https://mastodon.social/@pid_eins/115128315316997024",
+      "replies_count": 2,
+      "reblogs_count": 1,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026devices popping up or various other things.</p><p>Because of that systemd always followed a hybrid approach: for regular daemons socket activation is recommended, but we have dependencies too, to cover in particular the earlier boot phases, and the final shutdown phases. </p><p>(Of course, quite unfortunately there are still too many 3rd party services that do not use socket activation and really should, but that&#39;s another story...)</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128334877003590",
+      "created_at": "2025-09-01T09:29:37.004Z",
+      "in_reply_to_id": "115128315316997024",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128334877003590",
+      "url": "https://mastodon.social/@pid_eins/115128334877003590",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:32:17.716Z",
+      "content": "<p>With the advent of soft-reboots (remember: this kind of new-style userspace reboot, where systemd shuts down all of userspace again, then reexecs and starts up again, without actually rebooting the kernel) things become a bit more complex on the socket-activation vs. dependencies situation: one thing soft-reboot is supposed to allow is to exclude some select services from shutdown during soft-reboot in order to optimize grey-out times.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128343348238795",
+      "created_at": "2025-09-01T09:31:46.264Z",
+      "in_reply_to_id": "115128334877003590",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128343348238795",
+      "url": "https://mastodon.social/@pid_eins/115128343348238795",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>But that means that the previously simple logic of saying &quot;use deps for early boot and late shutdown, prefer socket activation for the main runtime&quot; doesn&#39;t work anymore, because if select services shall stay up during soft-reboot, then for them the regular runtime and the system&#39;s shutdown phase are concurrent. And similar, after the soft-reboot reexec the new boot&#39;s startup phase and the regular runtime of the select services is concurrent too.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128374442696319",
+      "created_at": "2025-09-01T09:39:40.729Z",
+      "in_reply_to_id": "115128343348238795",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128374442696319",
+      "url": "https://mastodon.social/@pid_eins/115128374442696319",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T10:17:37.448Z",
+      "content": "<p>And that actually creates problems: what if a service tries to talk to some other service while the system is going through the shutdown phase of a soft-reboot cycle, and the target service cannot be activated at that time, because after all stuff is supposed to be stopped, not started?</p><p>With v258 there are two new mechanisms to deal with this:</p><p>First of all there is a new job mode. (Job modes you can use to tweak how systemd enqueues your unit start/stop/reload/\u2026 requests and the deps of it, \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128390013327478",
+      "created_at": "2025-09-01T09:43:38.318Z",
+      "in_reply_to_id": "115128374442696319",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128390013327478",
+      "url": "https://mastodon.social/@pid_eins/115128390013327478",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:55:41.922Z",
+      "content": "<p>\u2026you can control it via systemctl&#39;s --job-mode= switch for example). The new job mode is called &quot;lenient&quot;. If used and the job you want to enqueue would in any way contradict what is already enqueued, then the operation will fail. It will never reverse any already enqueued job hence.</p><p>The other new mechanism is a setting in .socket files: DeferTrigger= can be used to potentially defer triggering of the associated service if its activation cannot be enqueued immediately due to conflicts.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128399759493504",
+      "created_at": "2025-09-01T09:46:07.033Z",
+      "in_reply_to_id": "115128390013327478",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128399759493504",
+      "url": "https://mastodon.social/@pid_eins/115128399759493504",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:51:27.665Z",
+      "content": "<p>This makes use of the new &quot;lenient&quot; job mode: the service is always triggered in this job mode, and as long as it fails its activation is deferred to a later point where hopefully it won&#39;t fail anymore, because conflicting jobs have been processed and hence don&#39;t conflict anymore. Activation is only deferred to some point though, a time-out for that can be configured via DeferTriggerMaxSec=.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128404434684449",
+      "created_at": "2025-09-01T09:47:18.370Z",
+      "in_reply_to_id": "115128399759493504",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128404434684449",
+      "url": "https://mastodon.social/@pid_eins/115128404434684449",
+      "replies_count": 0,
+      "reblogs_count": 1,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Long story short: with these two new mechanisms it&#39;s now possible to have socket activated services do something somewhat reasonable during the shutdown phase of the system, so that a service that stays around during soft-reboot can just use it without any special handling that deals with the fact that the system goes through this cycle.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128362664853411",
+      "created_at": "2025-09-01T09:36:41.020Z",
+      "in_reply_to_id": "115128323005704815",
+      "in_reply_to_account_id": "109254243286365905",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128362664853411",
+      "url": "https://mastodon.social/@pid_eins/115128362664853411",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\">@<span>raito</span></a></span> oh god, that&#39;s a sad read. Pretty sure the devs don&#39;t really understand what socket activation really means... (probably stuck in inetd thinking too much?).</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "115128256578352445",
+      "created_at": "2025-09-01T09:09:42.262Z",
+      "in_reply_to_id": "115128243121764853",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128256578352445",
+      "url": "https://mastodon.social/@pid_eins/115128256578352445",
+      "replies_count": 1,
+      "reblogs_count": 3,
+      "favourites_count": 13,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>But one facet of it is particularly nice: it allows (mostly) getting rid of startup ordering dependencies between services: if all sockets are bound in one early step, then services can just talk to any other service they like at any time, and if that other service is not running yet, this will not cause a failure (as it would on systems without socket activation where ordering is not respected) but instead the will cause activation of the service, and \u2013 at worst \u2013 the client will wait a bit\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128267545865557",
+      "created_at": "2025-09-01T09:12:29.613Z",
+      "in_reply_to_id": "115128256578352445",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128267545865557",
+      "url": "https://mastodon.social/@pid_eins/115128267545865557",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:48:34.401Z",
+      "content": "<p>\u2026longer for the request to be fulfilled.</p><p>systemd&#39;s own services are largely socket activated, in particular since we adopted Varlink (since Varlink services are built on listener sockets, unlike D-Bus services where both clients and providers of services connect to the central broker, and never listen on sockets on their own) for many of our services. And all those socket units typically don&#39;t carry any ordering deps hence.</p><p>Except of course, that things aren&#39;t *that* simple.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128307883035336",
+      "created_at": "2025-09-01T09:22:45.108Z",
+      "in_reply_to_id": "115128267545865557",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128307883035336",
+      "url": "https://mastodon.social/@pid_eins/115128307883035336",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:49:07.910Z",
+      "content": "<p>Socket activation works great of processes that actually are of the kind that binds a socket and listens on it for client requests. But during early boot and late shutdown things are quite different. systemd-sysusers, systemd-tmpfiles, systemd-binfmt, sysemd-sysctl, systemd-rfkill, fsck, and so on, are quite different: they do not really stick around, their startup has to be scheduled precisely, after something and before something else. Where those somethings can be other services, or\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128315316997024",
+      "created_at": "2025-09-01T09:24:38.544Z",
+      "in_reply_to_id": "115128307883035336",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128315316997024",
+      "url": "https://mastodon.social/@pid_eins/115128315316997024",
+      "replies_count": 2,
+      "reblogs_count": 1,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026devices popping up or various other things.</p><p>Because of that systemd always followed a hybrid approach: for regular daemons socket activation is recommended, but we have dependencies too, to cover in particular the earlier boot phases, and the final shutdown phases. </p><p>(Of course, quite unfortunately there are still too many 3rd party services that do not use socket activation and really should, but that&#39;s another story...)</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128334877003590",
+      "created_at": "2025-09-01T09:29:37.004Z",
+      "in_reply_to_id": "115128315316997024",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128334877003590",
+      "url": "https://mastodon.social/@pid_eins/115128334877003590",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:32:17.716Z",
+      "content": "<p>With the advent of soft-reboots (remember: this kind of new-style userspace reboot, where systemd shuts down all of userspace again, then reexecs and starts up again, without actually rebooting the kernel) things become a bit more complex on the socket-activation vs. dependencies situation: one thing soft-reboot is supposed to allow is to exclude some select services from shutdown during soft-reboot in order to optimize grey-out times.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128343348238795",
+      "created_at": "2025-09-01T09:31:46.264Z",
+      "in_reply_to_id": "115128334877003590",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128343348238795",
+      "url": "https://mastodon.social/@pid_eins/115128343348238795",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>But that means that the previously simple logic of saying &quot;use deps for early boot and late shutdown, prefer socket activation for the main runtime&quot; doesn&#39;t work anymore, because if select services shall stay up during soft-reboot, then for them the regular runtime and the system&#39;s shutdown phase are concurrent. And similar, after the soft-reboot reexec the new boot&#39;s startup phase and the regular runtime of the select services is concurrent too.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128374442696319",
+      "created_at": "2025-09-01T09:39:40.729Z",
+      "in_reply_to_id": "115128343348238795",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128374442696319",
+      "url": "https://mastodon.social/@pid_eins/115128374442696319",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T10:17:37.448Z",
+      "content": "<p>And that actually creates problems: what if a service tries to talk to some other service while the system is going through the shutdown phase of a soft-reboot cycle, and the target service cannot be activated at that time, because after all stuff is supposed to be stopped, not started?</p><p>With v258 there are two new mechanisms to deal with this:</p><p>First of all there is a new job mode. (Job modes you can use to tweak how systemd enqueues your unit start/stop/reload/\u2026 requests and the deps of it, \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128390013327478",
+      "created_at": "2025-09-01T09:43:38.318Z",
+      "in_reply_to_id": "115128374442696319",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128390013327478",
+      "url": "https://mastodon.social/@pid_eins/115128390013327478",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:55:41.922Z",
+      "content": "<p>\u2026you can control it via systemctl&#39;s --job-mode= switch for example). The new job mode is called &quot;lenient&quot;. If used and the job you want to enqueue would in any way contradict what is already enqueued, then the operation will fail. It will never reverse any already enqueued job hence.</p><p>The other new mechanism is a setting in .socket files: DeferTrigger= can be used to potentially defer triggering of the associated service if its activation cannot be enqueued immediately due to conflicts.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128399759493504",
+      "created_at": "2025-09-01T09:46:07.033Z",
+      "in_reply_to_id": "115128390013327478",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128399759493504",
+      "url": "https://mastodon.social/@pid_eins/115128399759493504",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T09:51:27.665Z",
+      "content": "<p>This makes use of the new &quot;lenient&quot; job mode: the service is always triggered in this job mode, and as long as it fails its activation is deferred to a later point where hopefully it won&#39;t fail anymore, because conflicting jobs have been processed and hence don&#39;t conflict anymore. Activation is only deferred to some point though, a time-out for that can be configured via DeferTriggerMaxSec=.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128404434684449",
+      "created_at": "2025-09-01T09:47:18.370Z",
+      "in_reply_to_id": "115128399759493504",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128404434684449",
+      "url": "https://mastodon.social/@pid_eins/115128404434684449",
+      "replies_count": 0,
+      "reblogs_count": 1,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Long story short: with these two new mechanisms it&#39;s now possible to have socket activated services do something somewhat reasonable during the shutdown phase of the system, so that a service that stays around during soft-reboot can just use it without any special handling that deals with the fact that the system goes through this cycle.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128323005704815",
+      "created_at": "2025-09-01T09:26:31.000Z",
+      "in_reply_to_id": "115128315316997024",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://nixos.paris/users/raito/statuses/115128322735153665",
+      "url": "https://nixos.paris/@raito/115128322735153665",
+      "replies_count": 2,
+      "reblogs_count": 2,
+      "favourites_count": 3,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> and some won't for sEcUrItY reasons: <a href=\"https://github.com/kanidm/kanidm/pull/3781\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/kanidm/kanidm/pull/</span><span class=\"invisible\">3781</span></a></p>",
+      "reblog": null,
+      "account": {
+        "id": "109254243286365905",
+        "username": "raito",
+        "acct": "raito@nixos.paris",
+        "display_name": "Raito Bezarius",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-29T00:00:00.000Z",
+        "note": "<p><a href=\"https://nixos.paris/tags/Lix\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lix</span></a> developer, <a href=\"https://nixos.paris/tags/NixOS\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>NixOS</span></a> developer, <a href=\"https://nixos.paris/tags/Lean\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lean</span></a> theorem prover user.</p><p>My interests revolve around formal verification, evolutions of the Nix model, firmware platform security, public policies and (geo)politics.</p><p>Alternatively, I enjoy Japanese animation and culture.</p><p>My DMs are open for anything and everything.</p>",
+        "url": "https://nixos.paris/@raito",
+        "uri": "https://nixos.paris/users/raito",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "followers_count": 1018,
+        "following_count": 830,
+        "statuses_count": 5491,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/Ra1t0_Bezar1us\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/Ra1t0_Bezar1us</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/RaitoBezarius\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/RaitoBezarius</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.347+00:00"
+          },
+          {
+            "name": "Website FR",
+            "value": "<a href=\"https://ryan.lahfa.xyz/fr/about-me.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">ryan.lahfa.xyz/fr/about-me.html</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.532+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/kanidm/kanidm/pull/3781",
+        "title": "Support Unix sockets and systemd socket activation by networkException \u00b7 Pull Request #3781 \u00b7 kanidm/kanidm",
+        "description": "Change summary\n\nbindaddress can now be set to a path, binding the web server to a unix domain socket\nA TCP or Unix socket provided using ListenStream= will now be inherited by Kanidm, if the addres...",
+        "language": "en",
+        "type": "link",
+        "author_name": "networkException",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "Change summary\n\nbindaddress can now be set to a path, binding the web server to a unix domain socket\nA TCP or Unix socket provided using ListenStream= will now be inherited by Kanidm, if the addres...",
+        "embed_url": "",
+        "blurhash": "URRymPNGt6-;x]oze.og-UxuM{RQ_NaxWCRj",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "networkException",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128362664853411",
+      "created_at": "2025-09-01T09:36:41.020Z",
+      "in_reply_to_id": "115128323005704815",
+      "in_reply_to_account_id": "109254243286365905",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115128362664853411",
+      "url": "https://mastodon.social/@pid_eins/115128362664853411",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\">@<span>raito</span></a></span> oh god, that&#39;s a sad read. Pretty sure the devs don&#39;t really understand what socket activation really means... (probably stuck in inetd thinking too much?).</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128376607147036",
+      "created_at": "2025-09-01T09:40:11.000Z",
+      "in_reply_to_id": "115128362664853411",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://nixos.paris/users/raito/statuses/115128376467236655",
+      "url": "https://nixos.paris/@raito/115128376467236655",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> yeah, multiple people tried to explain them but they decided to blanket wontfix it under \"maintenance reasons\" and various vague rationales</p><p>I think it's just \"I don't vibe with that socket activation thing, I won't do it\"</p>",
+      "reblog": null,
+      "account": {
+        "id": "109254243286365905",
+        "username": "raito",
+        "acct": "raito@nixos.paris",
+        "display_name": "Raito Bezarius",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-29T00:00:00.000Z",
+        "note": "<p><a href=\"https://nixos.paris/tags/Lix\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lix</span></a> developer, <a href=\"https://nixos.paris/tags/NixOS\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>NixOS</span></a> developer, <a href=\"https://nixos.paris/tags/Lean\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lean</span></a> theorem prover user.</p><p>My interests revolve around formal verification, evolutions of the Nix model, firmware platform security, public policies and (geo)politics.</p><p>Alternatively, I enjoy Japanese animation and culture.</p><p>My DMs are open for anything and everything.</p>",
+        "url": "https://nixos.paris/@raito",
+        "uri": "https://nixos.paris/users/raito",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "followers_count": 1018,
+        "following_count": 830,
+        "statuses_count": 5491,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/Ra1t0_Bezar1us\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/Ra1t0_Bezar1us</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/RaitoBezarius\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/RaitoBezarius</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.347+00:00"
+          },
+          {
+            "name": "Website FR",
+            "value": "<a href=\"https://ryan.lahfa.xyz/fr/about-me.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">ryan.lahfa.xyz/fr/about-me.html</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.532+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128516996043264",
+      "created_at": "2025-09-01T10:15:55.000Z",
+      "in_reply_to_id": "115128323005704815",
+      "in_reply_to_account_id": "109254243286365905",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/leftpaddotpy/statuses/115128516955075130",
+      "url": "https://hachyderm.io/@leftpaddotpy/115128516955075130",
+      "replies_count": 3,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>raito</span></a></span> every time i hear more about kanidm opinions makes me want to remove it from my infrastructure and replace it with keycloak more.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109974997488206701",
+        "username": "leftpaddotpy",
+        "acct": "leftpaddotpy@hachyderm.io",
+        "display_name": "systemd-jaded.scope",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-03-06T00:00:00.000Z",
+        "note": "<p>purely dysfunctional programmer, soft and snuggly version; they/she.</p>",
+        "url": "https://hachyderm.io/@leftpaddotpy",
+        "uri": "https://hachyderm.io/users/leftpaddotpy",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/974/997/488/206/701/original/cec901990ae8866d.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/974/997/488/206/701/original/cec901990ae8866d.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 782,
+        "following_count": 362,
+        "statuses_count": 9397,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "webbed site",
+            "value": "<a href=\"https://jade.fyi\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">jade.fyi</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:17:58.137+00:00"
+          },
+          {
+            "name": "cohost",
+            "value": "<a href=\"https://cohost.org/leftpaddotpy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">cohost.org/leftpaddotpy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "place",
+            "value": "Vancouver, BC, Canada",
+            "verified_at": null
+          },
+          {
+            "name": "bird website",
+            "value": "<a href=\"https://twitter.com/leftpaddotpy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/leftpaddotpy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128518066441041",
+      "created_at": "2025-09-01T10:16:08.000Z",
+      "in_reply_to_id": "115128516996043264",
+      "in_reply_to_account_id": "109974997488206701",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://nixos.paris/users/raito/statuses/115128517810106864",
+      "url": "https://nixos.paris/@raito/115128517810106864",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@leftpaddotpy\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>leftpaddotpy</span></a></span> yes i'm in that process as well\u2026</p>",
+      "reblog": null,
+      "account": {
+        "id": "109254243286365905",
+        "username": "raito",
+        "acct": "raito@nixos.paris",
+        "display_name": "Raito Bezarius",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-29T00:00:00.000Z",
+        "note": "<p><a href=\"https://nixos.paris/tags/Lix\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lix</span></a> developer, <a href=\"https://nixos.paris/tags/NixOS\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>NixOS</span></a> developer, <a href=\"https://nixos.paris/tags/Lean\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lean</span></a> theorem prover user.</p><p>My interests revolve around formal verification, evolutions of the Nix model, firmware platform security, public policies and (geo)politics.</p><p>Alternatively, I enjoy Japanese animation and culture.</p><p>My DMs are open for anything and everything.</p>",
+        "url": "https://nixos.paris/@raito",
+        "uri": "https://nixos.paris/users/raito",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "followers_count": 1018,
+        "following_count": 830,
+        "statuses_count": 5491,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/Ra1t0_Bezar1us\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/Ra1t0_Bezar1us</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/RaitoBezarius\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/RaitoBezarius</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.347+00:00"
+          },
+          {
+            "name": "Website FR",
+            "value": "<a href=\"https://ryan.lahfa.xyz/fr/about-me.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">ryan.lahfa.xyz/fr/about-me.html</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.532+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109974997488206701",
+          "username": "leftpaddotpy",
+          "url": "https://hachyderm.io/@leftpaddotpy",
+          "acct": "leftpaddotpy@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128524688120933",
+      "created_at": "2025-09-01T10:17:52.000Z",
+      "in_reply_to_id": "115128518066441041",
+      "in_reply_to_account_id": "109254243286365905",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/leftpaddotpy/statuses/115128524660554730",
+      "url": "https://hachyderm.io/@leftpaddotpy/115128524660554730",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>raito</span></a></span> do you want my wip migration hacks? i didn't finish them several months ago when i got mad the first time around. it's possible to migrate and keep working passkeys.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109974997488206701",
+        "username": "leftpaddotpy",
+        "acct": "leftpaddotpy@hachyderm.io",
+        "display_name": "systemd-jaded.scope",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-03-06T00:00:00.000Z",
+        "note": "<p>purely dysfunctional programmer, soft and snuggly version; they/she.</p>",
+        "url": "https://hachyderm.io/@leftpaddotpy",
+        "uri": "https://hachyderm.io/users/leftpaddotpy",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/974/997/488/206/701/original/cec901990ae8866d.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/974/997/488/206/701/original/cec901990ae8866d.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 782,
+        "following_count": 362,
+        "statuses_count": 9397,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "webbed site",
+            "value": "<a href=\"https://jade.fyi\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">jade.fyi</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:17:58.137+00:00"
+          },
+          {
+            "name": "cohost",
+            "value": "<a href=\"https://cohost.org/leftpaddotpy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">cohost.org/leftpaddotpy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "place",
+            "value": "Vancouver, BC, Canada",
+            "verified_at": null
+          },
+          {
+            "name": "bird website",
+            "value": "<a href=\"https://twitter.com/leftpaddotpy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/leftpaddotpy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115128526632497801",
+      "created_at": "2025-09-01T10:18:18.000Z",
+      "in_reply_to_id": "115128524688120933",
+      "in_reply_to_account_id": "109974997488206701",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://nixos.paris/users/raito/statuses/115128526359285121",
+      "url": "https://nixos.paris/@raito/115128526359285121",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-09-01T10:18:32.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@leftpaddotpy\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>leftpaddotpy</span></a></span> it will be unlikely i'm going to touch that migration for the next 3 months, i'm more at the staging process of it</p><p>but i will ping you once i start</p>",
+      "reblog": null,
+      "account": {
+        "id": "109254243286365905",
+        "username": "raito",
+        "acct": "raito@nixos.paris",
+        "display_name": "Raito Bezarius",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-29T00:00:00.000Z",
+        "note": "<p><a href=\"https://nixos.paris/tags/Lix\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lix</span></a> developer, <a href=\"https://nixos.paris/tags/NixOS\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>NixOS</span></a> developer, <a href=\"https://nixos.paris/tags/Lean\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Lean</span></a> theorem prover user.</p><p>My interests revolve around formal verification, evolutions of the Nix model, firmware platform security, public policies and (geo)politics.</p><p>Alternatively, I enjoy Japanese animation and culture.</p><p>My DMs are open for anything and everything.</p>",
+        "url": "https://nixos.paris/@raito",
+        "uri": "https://nixos.paris/users/raito",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/254/243/286/365/905/original/f2d279a35302e732.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/254/243/286/365/905/original/8f0fa0913bedd507.jpeg",
+        "followers_count": 1018,
+        "following_count": 830,
+        "statuses_count": 5491,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/Ra1t0_Bezar1us\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/Ra1t0_Bezar1us</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/RaitoBezarius\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/RaitoBezarius</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.347+00:00"
+          },
+          {
+            "name": "Website FR",
+            "value": "<a href=\"https://ryan.lahfa.xyz/fr/about-me.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">ryan.lahfa.xyz/fr/about-me.html</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:13:17.532+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109974997488206701",
+          "username": "leftpaddotpy",
+          "url": "https://hachyderm.io/@leftpaddotpy",
+          "acct": "leftpaddotpy@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115147369572328430",
+      "created_at": "2025-09-04T18:10:22.000Z",
+      "in_reply_to_id": "115128516996043264",
+      "in_reply_to_account_id": "109974997488206701",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://chaos.social/users/networkexception/statuses/115147369514369895",
+      "url": "https://chaos.social/@networkexception/115147369514369895",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@leftpaddotpy\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>leftpaddotpy</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>raito</span></a></span> the socket activation was one thing, everything in the just unix socket PR <a href=\"https://github.com/kanidm/kanidm/pull/3782\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/kanidm/kanidm/pull/</span><span class=\"invisible\">3782</span></a> really killed it for me..</p>",
+      "reblog": null,
+      "account": {
+        "id": "1170435",
+        "username": "networkexception",
+        "acct": "networkexception@chaos.social",
+        "display_name": "networkException",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-02-08T00:00:00.000Z",
+        "note": "<p>Queer (as in gender and everything else) german developer, sysadmin, train-, privacy-, security nerd and open source {distro,browser} maintainer - does GG Art. 91c F\u00f6derale Verwaltungsdigitalisierung at work</p><p>Macht \"Alles gleichzeitig und deswegen gar nichts\"</p><p>See the pinned posts for detailed pronouns and a list of my other fediverse accounts</p><p>Header image CC-BY <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@jtbx\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>jtbx</span></a></span></p><p><a href=\"https://chaos.social/tags/matrix\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>matrix</span></a> <a href=\"https://chaos.social/tags/nixos\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>nixos</span></a> <a href=\"https://chaos.social/tags/t2linux\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>t2linux</span></a> <a href=\"https://chaos.social/tags/serenityos\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>serenityos</span></a> <a href=\"https://chaos.social/tags/libweb\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>libweb</span></a> <a href=\"https://chaos.social/tags/browsers\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>browsers</span></a> <a href=\"https://chaos.social/tags/ungoogledchromium\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>ungoogledchromium</span></a><br><a href=\"https://chaos.social/tags/markbrandis\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>markbrandis</span></a> <a href=\"https://chaos.social/tags/perryrhodan\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>perryrhodan</span></a></p><p>:nonbinary_flag:</p>",
+        "url": "https://chaos.social/@networkexception",
+        "uri": "https://chaos.social/users/networkexception",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/001/170/435/original/c75d99e1748cd6eb.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/001/170/435/original/c75d99e1748cd6eb.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/001/170/435/original/17199824a399df0a.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/001/170/435/original/17199824a399df0a.jpg",
+        "followers_count": 870,
+        "following_count": 1599,
+        "statuses_count": 3921,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "nonbinary_flag",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/749/original/fe4fb5d458a2d10b.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/749/static/fe4fb5d458a2d10b.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://nwex.de\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">nwex.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:54:57.480+00:00"
+          },
+          {
+            "name": "Pronouns",
+            "value": "she/they (see pinned post for details)",
+            "verified_at": null
+          },
+          {
+            "name": "Timezone",
+            "value": "<a href=\"https://timezone.nwex.de\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">timezone.nwex.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Hackspace",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@cccffm\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>cccffm</span></a></span>, <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@RaumZeitLabor\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>RaumZeitLabor</span></a></span>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109974997488206701",
+          "username": "leftpaddotpy",
+          "url": "https://hachyderm.io/@leftpaddotpy",
+          "acct": "leftpaddotpy@hachyderm.io"
+        },
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/kanidm/kanidm/pull/3782",
+        "title": "Support binding on Unix sockets by networkException \u00b7 Pull Request #3782 \u00b7 kanidm/kanidm",
+        "description": "Change summary\n\nbindaddress can now be set to a path, binding the web server to a unix domain socket\n\nFixes #2771\nSupersedes #3781\nChecklist\n\n This PR contains no AI generated code\n book chapter in...",
+        "language": "en",
+        "type": "link",
+        "author_name": "networkException",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "Change summary\n\nbindaddress can now be set to a path, binding the web server to a unix domain socket\n\nFixes #2771\nSupersedes #3781\nChecklist\n\n This PR contains no AI generated code\n book chapter in...",
+        "embed_url": "",
+        "blurhash": "UUS6JUW=oL%MtSkWjZofr=t7RjWB_NoLWBRj",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "networkException",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115147371246193525",
+      "created_at": "2025-09-04T18:10:47.000Z",
+      "in_reply_to_id": "115147369572328430",
+      "in_reply_to_account_id": "109974997488206701",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://chaos.social/users/networkexception/statuses/115147371162835346",
+      "url": "https://chaos.social/@networkexception/115147371162835346",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@leftpaddotpy\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>leftpaddotpy</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>raito</span></a></span> I guess I'm used to carrying patches indefinitely</p>",
+      "reblog": null,
+      "account": {
+        "id": "1170435",
+        "username": "networkexception",
+        "acct": "networkexception@chaos.social",
+        "display_name": "networkException",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-02-08T00:00:00.000Z",
+        "note": "<p>Queer (as in gender and everything else) german developer, sysadmin, train-, privacy-, security nerd and open source {distro,browser} maintainer - does GG Art. 91c F\u00f6derale Verwaltungsdigitalisierung at work</p><p>Macht \"Alles gleichzeitig und deswegen gar nichts\"</p><p>See the pinned posts for detailed pronouns and a list of my other fediverse accounts</p><p>Header image CC-BY <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@jtbx\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>jtbx</span></a></span></p><p><a href=\"https://chaos.social/tags/matrix\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>matrix</span></a> <a href=\"https://chaos.social/tags/nixos\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>nixos</span></a> <a href=\"https://chaos.social/tags/t2linux\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>t2linux</span></a> <a href=\"https://chaos.social/tags/serenityos\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>serenityos</span></a> <a href=\"https://chaos.social/tags/libweb\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>libweb</span></a> <a href=\"https://chaos.social/tags/browsers\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>browsers</span></a> <a href=\"https://chaos.social/tags/ungoogledchromium\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>ungoogledchromium</span></a><br><a href=\"https://chaos.social/tags/markbrandis\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>markbrandis</span></a> <a href=\"https://chaos.social/tags/perryrhodan\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>perryrhodan</span></a></p><p>:nonbinary_flag:</p>",
+        "url": "https://chaos.social/@networkexception",
+        "uri": "https://chaos.social/users/networkexception",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/001/170/435/original/c75d99e1748cd6eb.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/001/170/435/original/c75d99e1748cd6eb.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/001/170/435/original/17199824a399df0a.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/001/170/435/original/17199824a399df0a.jpg",
+        "followers_count": 870,
+        "following_count": 1599,
+        "statuses_count": 3921,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "nonbinary_flag",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/749/original/fe4fb5d458a2d10b.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/749/static/fe4fb5d458a2d10b.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://nwex.de\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">nwex.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:54:57.480+00:00"
+          },
+          {
+            "name": "Pronouns",
+            "value": "she/they (see pinned post for details)",
+            "verified_at": null
+          },
+          {
+            "name": "Timezone",
+            "value": "<a href=\"https://timezone.nwex.de\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">timezone.nwex.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Hackspace",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@cccffm\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>cccffm</span></a></span>, <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@RaumZeitLabor\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>RaumZeitLabor</span></a></span>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109974997488206701",
+          "username": "leftpaddotpy",
+          "url": "https://hachyderm.io/@leftpaddotpy",
+          "acct": "leftpaddotpy@hachyderm.io"
+        },
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115147534506459012",
+      "created_at": "2025-09-04T18:52:19.000Z",
+      "in_reply_to_id": "115147369572328430",
+      "in_reply_to_account_id": "1170435",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://chaos.social/users/luj/statuses/115147534445445460",
+      "url": "https://chaos.social/@luj/115147534445445460",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@networkexception\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>networkexception</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@leftpaddotpy\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>leftpaddotpy</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>raito</span></a></span> Lovely how they just close and lock to prevent any discussion\u2026</p>",
+      "reblog": null,
+      "account": {
+        "id": "113804623320473328",
+        "username": "luj",
+        "acct": "luj@chaos.social",
+        "display_name": "Luj",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-01-10T00:00:00.000Z",
+        "note": "<p>Julien aka Luj.</p><p>PhD Student in Software Supply Chain Security.</p><p>NixOS enthusiast and contributor. Emacs nerd. NixOS Steering Committee member.</p><p>Other interests include functional programming languages, software security, formal verification.</p><p>Available for freelance projects.</p><p>He/Him</p><p>May occasionally toot in french.</p>",
+        "url": "https://chaos.social/@luj",
+        "uri": "https://chaos.social/users/luj",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/113/804/623/320/473/328/original/effc92ac0e5ec6be.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/113/804/623/320/473/328/original/effc92ac0e5ec6be.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/113/804/623/320/473/328/original/cfcefe684ad367b7.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/113/804/623/320/473/328/original/cfcefe684ad367b7.jpg",
+        "followers_count": 402,
+        "following_count": 454,
+        "statuses_count": 668,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "homepage",
+            "value": "<a href=\"https://luj.fr\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">luj.fr</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:24:40.010+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1170435",
+          "username": "networkexception",
+          "url": "https://chaos.social/@networkexception",
+          "acct": "networkexception@chaos.social"
+        },
+        {
+          "id": "109974997488206701",
+          "username": "leftpaddotpy",
+          "url": "https://hachyderm.io/@leftpaddotpy",
+          "acct": "leftpaddotpy@hachyderm.io"
+        },
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115147547643577062",
+      "created_at": "2025-09-04T18:55:39.000Z",
+      "in_reply_to_id": "115147534506459012",
+      "in_reply_to_account_id": "113804623320473328",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://chaos.social/users/networkexception/statuses/115147547597864935",
+      "url": "https://chaos.social/@networkexception/115147547597864935",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@luj\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>luj</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@leftpaddotpy\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>leftpaddotpy</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>raito</span></a></span> it continued on Matrix a bit, same pattern though. I guess I would've been fine with them just telling me that they don't want a feature because they don't understand / use it. But some of this security bullshit bingo is just frustrating</p>",
+      "reblog": null,
+      "account": {
+        "id": "1170435",
+        "username": "networkexception",
+        "acct": "networkexception@chaos.social",
+        "display_name": "networkException",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-02-08T00:00:00.000Z",
+        "note": "<p>Queer (as in gender and everything else) german developer, sysadmin, train-, privacy-, security nerd and open source {distro,browser} maintainer - does GG Art. 91c F\u00f6derale Verwaltungsdigitalisierung at work</p><p>Macht \"Alles gleichzeitig und deswegen gar nichts\"</p><p>See the pinned posts for detailed pronouns and a list of my other fediverse accounts</p><p>Header image CC-BY <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@jtbx\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>jtbx</span></a></span></p><p><a href=\"https://chaos.social/tags/matrix\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>matrix</span></a> <a href=\"https://chaos.social/tags/nixos\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>nixos</span></a> <a href=\"https://chaos.social/tags/t2linux\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>t2linux</span></a> <a href=\"https://chaos.social/tags/serenityos\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>serenityos</span></a> <a href=\"https://chaos.social/tags/libweb\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>libweb</span></a> <a href=\"https://chaos.social/tags/browsers\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>browsers</span></a> <a href=\"https://chaos.social/tags/ungoogledchromium\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>ungoogledchromium</span></a><br><a href=\"https://chaos.social/tags/markbrandis\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>markbrandis</span></a> <a href=\"https://chaos.social/tags/perryrhodan\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>perryrhodan</span></a></p><p>:nonbinary_flag:</p>",
+        "url": "https://chaos.social/@networkexception",
+        "uri": "https://chaos.social/users/networkexception",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/001/170/435/original/c75d99e1748cd6eb.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/001/170/435/original/c75d99e1748cd6eb.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/001/170/435/original/17199824a399df0a.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/001/170/435/original/17199824a399df0a.jpg",
+        "followers_count": 870,
+        "following_count": 1599,
+        "statuses_count": 3921,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "nonbinary_flag",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/749/original/fe4fb5d458a2d10b.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/749/static/fe4fb5d458a2d10b.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://nwex.de\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">nwex.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:54:57.480+00:00"
+          },
+          {
+            "name": "Pronouns",
+            "value": "she/they (see pinned post for details)",
+            "verified_at": null
+          },
+          {
+            "name": "Timezone",
+            "value": "<a href=\"https://timezone.nwex.de\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">timezone.nwex.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Hackspace",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@cccffm\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>cccffm</span></a></span>, <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@RaumZeitLabor\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>RaumZeitLabor</span></a></span>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "113804623320473328",
+          "username": "luj",
+          "url": "https://chaos.social/@luj",
+          "acct": "luj@chaos.social"
+        },
+        {
+          "id": "109974997488206701",
+          "username": "leftpaddotpy",
+          "url": "https://hachyderm.io/@leftpaddotpy",
+          "acct": "leftpaddotpy@hachyderm.io"
+        },
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115150144700445657",
+      "created_at": "2025-09-05T05:56:08.000Z",
+      "in_reply_to_id": "115147547643577062",
+      "in_reply_to_account_id": "1170435",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/leftpaddotpy/statuses/115150144670647922",
+      "url": "https://hachyderm.io/@leftpaddotpy/115150144670647922",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@networkexception\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>networkexception</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@luj\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>luj</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>raito</span></a></span> kanidm is the best advertisement I've ever seen for keycloak</p>",
+      "reblog": null,
+      "account": {
+        "id": "109974997488206701",
+        "username": "leftpaddotpy",
+        "acct": "leftpaddotpy@hachyderm.io",
+        "display_name": "systemd-jaded.scope",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-03-06T00:00:00.000Z",
+        "note": "<p>purely dysfunctional programmer, soft and snuggly version; they/she.</p>",
+        "url": "https://hachyderm.io/@leftpaddotpy",
+        "uri": "https://hachyderm.io/users/leftpaddotpy",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/974/997/488/206/701/original/cec901990ae8866d.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/974/997/488/206/701/original/cec901990ae8866d.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 782,
+        "following_count": 362,
+        "statuses_count": 9397,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "webbed site",
+            "value": "<a href=\"https://jade.fyi\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">jade.fyi</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:17:58.137+00:00"
+          },
+          {
+            "name": "cohost",
+            "value": "<a href=\"https://cohost.org/leftpaddotpy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">cohost.org/leftpaddotpy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "place",
+            "value": "Vancouver, BC, Canada",
+            "verified_at": null
+          },
+          {
+            "name": "bird website",
+            "value": "<a href=\"https://twitter.com/leftpaddotpy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/leftpaddotpy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "1170435",
+          "username": "networkexception",
+          "url": "https://chaos.social/@networkexception",
+          "acct": "networkexception@chaos.social"
+        },
+        {
+          "id": "113804623320473328",
+          "username": "luj",
+          "url": "https://chaos.social/@luj",
+          "acct": "luj@chaos.social"
+        },
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115151103364805406",
+      "created_at": "2025-09-05T09:59:56.000Z",
+      "in_reply_to_id": "115128516996043264",
+      "in_reply_to_account_id": "109974997488206701",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://chaos.social/users/gd2/statuses/115151103331411835",
+      "url": "https://chaos.social/@gd2/115151103331411835",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@leftpaddotpy\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>leftpaddotpy</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://nixos.paris/@raito\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>raito</span></a></span> I believe when I evaluated kanidm some time ago it didn't check the UV flag on Fido passwordless authentication. If this is still the case (and I am not misremembering things) that would be another reason to switch...</p><p>I mean, having non-UV login as an option is fine, I do it with SSH all the time, but you should make that explicit for single factor authentication and not just implicitly accept it...</p>",
+      "reblog": null,
+      "account": {
+        "id": "108203363904246046",
+        "username": "gd2",
+        "acct": "gd2@chaos.social",
+        "display_name": "GD2",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-04-27T00:00:00.000Z",
+        "note": "<p>he/him | Breaker of Harddrives, First of his name | Addicted to tiling window managers but deeply disappointed by their (lack of) vision.</p>",
+        "url": "https://chaos.social/@gd2",
+        "uri": "https://chaos.social/users/gd2",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/108/203/363/904/246/046/original/1581bdb569c81480.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/108/203/363/904/246/046/original/1581bdb569c81480.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/108/203/363/904/246/046/original/7beb7dc64673fb1b.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/108/203/363/904/246/046/original/7beb7dc64673fb1b.png",
+        "followers_count": 51,
+        "following_count": 127,
+        "statuses_count": 1628,
+        "last_status_at": "2025-12-07",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "he/him | er/ihm",
+            "verified_at": null
+          },
+          {
+            "name": "Web",
+            "value": "<a href=\"https://gd2.dev\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">gd2.dev</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T15:44:36.814+00:00"
+          },
+          {
+            "name": "Matrix",
+            "value": "@gigadoc2:revreso.de",
+            "verified_at": null
+          },
+          {
+            "name": "Secure Boot",
+            "value": "Enabled \u2713",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109974997488206701",
+          "username": "leftpaddotpy",
+          "url": "https://hachyderm.io/@leftpaddotpy",
+          "acct": "leftpaddotpy@hachyderm.io"
+        },
+        {
+          "id": "109254243286365905",
+          "username": "raito",
+          "url": "https://nixos.paris/@raito",
+          "acct": "raito@nixos.paris"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

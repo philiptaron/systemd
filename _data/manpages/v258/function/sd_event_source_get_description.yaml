@@ -1,0 +1,2 @@
+description:  Set or retrieve descriptive names of event sources
+url: https://www.freedesktop.org/software/systemd/man/258/sd_event_source_get_description.html

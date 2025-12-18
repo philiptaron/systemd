@@ -1,0 +1,2228 @@
+{
+  "post": {
+    "id": "114545892813068498",
+    "created_at": "2025-05-21T12:46:56.414Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/114545892813068498",
+    "url": "https://mastodon.social/@pid_eins/114545892813068498",
+    "replies_count": 2,
+    "reblogs_count": 94,
+    "favourites_count": 117,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>It&#39;s that time again! The systemd v258 release is coming closer. Let&#39;s restart the &quot;what&#39;s new&quot; series of posts for this iteration! Hence:</p><p>1\ufe0f\u20e3 Here&#39;s the 1st post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>As most of you probably know &quot;systemctl start&quot; is how you manually start a systemd unit. Starting a unit can fail, and systemd tracks that for you and tells you this. When you encounter such a failure the next thing you&#39;d typically do\u2026</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "114545904768094738",
+      "created_at": "2025-05-21T12:49:58.827Z",
+      "in_reply_to_id": "114545892813068498",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545904768094738",
+      "url": "https://mastodon.social/@pid_eins/114545904768094738",
+      "replies_count": 8,
+      "reblogs_count": 81,
+      "favourites_count": 190,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026is check the logs for the unit, i.e. run &quot;journalctl -u \u2026&quot; on the unit. </p><p>With v258 there&#39;s now a combined way to do this. If you add the -v switch to your &quot;systemctl start&quot; invocation, &quot;verbose&quot; mode will be invoked, which means the logs will displayed &quot;live&quot; covering the time span when the start operation is started until the start operation completed. </p><p>This has been a much requested feature \u2013 I figure some of you probably even looked for this feature personally already.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546722123261677",
+      "created_at": "2025-05-21T16:17:50.000Z",
+      "in_reply_to_id": "114545892813068498",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://tyrol.social/users/tfld/statuses/114546722096101653",
+      "url": "https://tyrol.social/@tfld/114546722096101653",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> That's a nice QOL improvement. Is there an environment variable for it or any other way to make this behaviour the default (without recompiling)?</p><p>Also I'm very happy to see this series returning, I really like it!</p>",
+      "reblog": null,
+      "account": {
+        "id": "112620952624639751",
+        "username": "tfld",
+        "acct": "tfld@tyrol.social",
+        "display_name": "TeFiLeDo",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-06-15T00:00:00.000Z",
+        "note": "",
+        "url": "https://tyrol.social/@tfld",
+        "uri": "https://tyrol.social/users/tfld",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/112/620/952/624/639/751/original/512a7632746d4c78.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/112/620/952/624/639/751/original/512a7632746d4c78.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 6,
+        "following_count": 12,
+        "statuses_count": 44,
+        "last_status_at": "2025-11-28",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://tfld.dev\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">tfld.dev</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-28T15:55:53.404+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/TeFiLeDo\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/TeFiLeDo</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-28T15:55:54.442+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "114545915445888097",
+      "created_at": "2025-05-21T12:52:41.756Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545915445888097",
+      "url": "https://mastodon.social/@pid_eins/114545915445888097",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 20,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Thus you might ask: why did it take so long to actually implement this? Well, simply because it&#39;s really hard to to implement, much harder than it might sound on the surface at first:</p><p>in order to make the logic work correctly we need to ensure two things: first, the live log output must be fully established by the time the start operation is enqueued. That&#39;s relatively easy to make sure. But the other thing is that we must continue the log output until the the start operation completed\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545923974315004",
+      "created_at": "2025-05-21T12:54:51.890Z",
+      "in_reply_to_id": "114545915445888097",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545923974315004",
+      "url": "https://mastodon.social/@pid_eins/114545923974315004",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 17,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026and all log messages queued at that point are fully processed and shown. And only once that part is complete, systemctl start -v may exit.</p><p>And the last part is the nasty bit: ensuring that all log messages enqueued at the moment the start operation completed are fully processed before we stop the log output. That&#39;s because journald takes log stream from a multitude of sources: classic syslog AF_UNIX, modern systemd AF_UNIX, stdout/stderr stream sockets, kernel kmsg and more.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545932704361864",
+      "created_at": "2025-05-21T12:57:05.101Z",
+      "in_reply_to_id": "114545923974315004",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545932704361864",
+      "url": "https://mastodon.social/@pid_eins/114545932704361864",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 19,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>And for each of these inputs journald needs to track synchronization requests so that we can properly report when all pending log messages up to a certain point are processed, but not more. And that&#39;s a bit messy, since each of these mechanisms have very different properties and functionalities.</p><p>For example for AF_UNIX datagram sockets we can track the realtime timestamp of incoming messages, and wait until we processed all messages with a timestamp older than the service start completion.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545940037207373",
+      "created_at": "2025-05-21T12:58:56.990Z",
+      "in_reply_to_id": "114545932704361864",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545940037207373",
+      "url": "https://mastodon.social/@pid_eins/114545940037207373",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 17,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>For AF_UNIX stream sockets otoh we don&#39;t have that. But we can track the number of pending readable bytes in the sockets the moment that the service start completed, and process that many more bytes before being done with the logging.</p><p>But then there&#39;s also AF_UNIX stream sockets that have just connected but have not been accepted yet. Turns out we can get statistics about that too via the obscure &quot;sockdiag&quot; Linux netlink protocol. </p><p>For kernel kmsg we have CLOCK_BOOTTIME timestamps, \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545944769966876",
+      "created_at": "2025-05-21T13:00:09.208Z",
+      "in_reply_to_id": "114545940037207373",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545944769966876",
+      "url": "https://mastodon.social/@pid_eins/114545944769966876",
+      "replies_count": 0,
+      "reblogs_count": 8,
+      "favourites_count": 60,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026 which we can use similar to the AF_UNIX datagram timestamps.</p><p>So yikes, to properly synchronize on log processing, we need 4 different completel different mechanisms, and we have a lot of sockets to listen on. Uff!</p><p>But anyway, it&#39;s implemented now, and it works. </p><p>Enjoy your new &quot;systemctl start -v&quot;!</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546416316448207",
+      "created_at": "2025-05-21T15:00:04.442Z",
+      "in_reply_to_id": "114546070830682655",
+      "in_reply_to_account_id": "110638115595191107",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114546416316448207",
+      "url": "https://mastodon.social/@pid_eins/114546416316448207",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@mxey\" class=\"u-url mention\">@<span>mxey</span></a></span> yes, it does.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "110638115595191107",
+          "username": "mxey",
+          "url": "https://hachyderm.io/@mxey",
+          "acct": "mxey@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550399080635580",
+      "created_at": "2025-05-22T07:52:56.600Z",
+      "in_reply_to_id": "114550083192512886",
+      "in_reply_to_account_id": "263621",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550399080635580",
+      "url": "https://mastodon.social/@pid_eins/114550399080635580",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.chinwag.org/@mike\" class=\"u-url mention\">@<span>mike</span></a></span> yeah, should just work.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "263621",
+          "username": "mike",
+          "url": "https://social.chinwag.org/@mike",
+          "acct": "mike@chinwag.org"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546821175381459",
+      "created_at": "2025-05-21T16:43:02.111Z",
+      "in_reply_to_id": "114546722123261677",
+      "in_reply_to_account_id": "112620952624639751",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114546821175381459",
+      "url": "https://mastodon.social/@pid_eins/114546821175381459",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://tyrol.social/@tfld\" class=\"u-url mention\">@<span>tfld</span></a></span> in the shell: alias systemctl=&quot;systemctl -v&quot;</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112620952624639751",
+          "username": "tfld",
+          "url": "https://tyrol.social/@tfld",
+          "acct": "tfld@tyrol.social"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "114545904768094738",
+      "created_at": "2025-05-21T12:49:58.827Z",
+      "in_reply_to_id": "114545892813068498",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545904768094738",
+      "url": "https://mastodon.social/@pid_eins/114545904768094738",
+      "replies_count": 8,
+      "reblogs_count": 81,
+      "favourites_count": 190,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026is check the logs for the unit, i.e. run &quot;journalctl -u \u2026&quot; on the unit. </p><p>With v258 there&#39;s now a combined way to do this. If you add the -v switch to your &quot;systemctl start&quot; invocation, &quot;verbose&quot; mode will be invoked, which means the logs will displayed &quot;live&quot; covering the time span when the start operation is started until the start operation completed. </p><p>This has been a much requested feature \u2013 I figure some of you probably even looked for this feature personally already.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545915445888097",
+      "created_at": "2025-05-21T12:52:41.756Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545915445888097",
+      "url": "https://mastodon.social/@pid_eins/114545915445888097",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 20,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>Thus you might ask: why did it take so long to actually implement this? Well, simply because it&#39;s really hard to to implement, much harder than it might sound on the surface at first:</p><p>in order to make the logic work correctly we need to ensure two things: first, the live log output must be fully established by the time the start operation is enqueued. That&#39;s relatively easy to make sure. But the other thing is that we must continue the log output until the the start operation completed\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545923974315004",
+      "created_at": "2025-05-21T12:54:51.890Z",
+      "in_reply_to_id": "114545915445888097",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545923974315004",
+      "url": "https://mastodon.social/@pid_eins/114545923974315004",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 17,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026and all log messages queued at that point are fully processed and shown. And only once that part is complete, systemctl start -v may exit.</p><p>And the last part is the nasty bit: ensuring that all log messages enqueued at the moment the start operation completed are fully processed before we stop the log output. That&#39;s because journald takes log stream from a multitude of sources: classic syslog AF_UNIX, modern systemd AF_UNIX, stdout/stderr stream sockets, kernel kmsg and more.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545932704361864",
+      "created_at": "2025-05-21T12:57:05.101Z",
+      "in_reply_to_id": "114545923974315004",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545932704361864",
+      "url": "https://mastodon.social/@pid_eins/114545932704361864",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 19,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>And for each of these inputs journald needs to track synchronization requests so that we can properly report when all pending log messages up to a certain point are processed, but not more. And that&#39;s a bit messy, since each of these mechanisms have very different properties and functionalities.</p><p>For example for AF_UNIX datagram sockets we can track the realtime timestamp of incoming messages, and wait until we processed all messages with a timestamp older than the service start completion.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545940037207373",
+      "created_at": "2025-05-21T12:58:56.990Z",
+      "in_reply_to_id": "114545932704361864",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545940037207373",
+      "url": "https://mastodon.social/@pid_eins/114545940037207373",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 17,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>For AF_UNIX stream sockets otoh we don&#39;t have that. But we can track the number of pending readable bytes in the sockets the moment that the service start completed, and process that many more bytes before being done with the logging.</p><p>But then there&#39;s also AF_UNIX stream sockets that have just connected but have not been accepted yet. Turns out we can get statistics about that too via the obscure &quot;sockdiag&quot; Linux netlink protocol. </p><p>For kernel kmsg we have CLOCK_BOOTTIME timestamps, \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114545944769966876",
+      "created_at": "2025-05-21T13:00:09.208Z",
+      "in_reply_to_id": "114545940037207373",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114545944769966876",
+      "url": "https://mastodon.social/@pid_eins/114545944769966876",
+      "replies_count": 0,
+      "reblogs_count": 8,
+      "favourites_count": 60,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026 which we can use similar to the AF_UNIX datagram timestamps.</p><p>So yikes, to properly synchronize on log processing, we need 4 different completel different mechanisms, and we have a lot of sockets to listen on. Uff!</p><p>But anyway, it&#39;s implemented now, and it works. </p><p>Enjoy your new &quot;systemctl start -v&quot;!</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546066118904336",
+      "created_at": "2025-05-21T13:31:00.847Z",
+      "in_reply_to_id": "114545915445888097",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/yeahdudebitch/statuses/114546066118904336",
+      "url": "https://mastodon.social/@yeahdudebitch/114546066118904336",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> people a lot smarter than me call you &quot;more stubborn than hard-headed&quot;</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "108044994705515169",
+        "username": "yeahdudebitch",
+        "acct": "yeahdudebitch",
+        "display_name": "jana roosje luserova",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-03-30T00:00:00.000Z",
+        "note": "<p>wouldnt wanna be the kind of person that puts their diagnoses in their bio. a warmhearted warning just for you though: i really am that retard</p>",
+        "url": "https://mastodon.social/@yeahdudebitch",
+        "uri": "https://mastodon.social/users/yeahdudebitch",
+        "avatar": "https://files.mastodon.social/accounts/avatars/108/044/994/705/515/169/original/2f1c54c1c05f9754.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/108/044/994/705/515/169/original/2f1c54c1c05f9754.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/108/044/994/705/515/169/original/4ff58685c98db46e.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/108/044/994/705/515/169/original/4ff58685c98db46e.jpg",
+        "followers_count": 18,
+        "following_count": 83,
+        "statuses_count": 170,
+        "last_status_at": "2025-08-17",
+        "hide_collections": false,
+        "noindex": true,
+        "emojis": [],
+        "roles": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546070830682655",
+      "created_at": "2025-05-21T13:32:12.000Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/mxey/statuses/114546070809633705",
+      "url": "https://hachyderm.io/@mxey/114546070809633705",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> This is so cool. Does it also work for stop and restart?</p>",
+      "reblog": null,
+      "account": {
+        "id": "110638115595191107",
+        "username": "mxey",
+        "acct": "mxey@hachyderm.io",
+        "display_name": "mxey",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-07-01T00:00:00.000Z",
+        "note": "",
+        "url": "https://hachyderm.io/@mxey",
+        "uri": "https://hachyderm.io/users/mxey",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/638/115/595/191/107/original/408f4004646aa24d.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/638/115/595/191/107/original/408f4004646aa24d.jpeg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 52,
+        "following_count": 182,
+        "statuses_count": 4113,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546416316448207",
+      "created_at": "2025-05-21T15:00:04.442Z",
+      "in_reply_to_id": "114546070830682655",
+      "in_reply_to_account_id": "110638115595191107",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114546416316448207",
+      "url": "https://mastodon.social/@pid_eins/114546416316448207",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@mxey\" class=\"u-url mention\">@<span>mxey</span></a></span> yes, it does.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "110638115595191107",
+          "username": "mxey",
+          "url": "https://hachyderm.io/@mxey",
+          "acct": "mxey@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546472107267469",
+      "created_at": "2025-05-21T15:14:12.000Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://goto.fully-synthetic.net/users/obsidian/statuses/01JVSPHHR7740Z8S8KBRNC2HHW",
+      "url": "https://goto.fully-synthetic.net/@obsidian/statuses/01JVSPHHR7740Z8S8KBRNC2HHW",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> so cool!!! :bc_bongo: :bc_jitter: :love:</p>",
+      "reblog": null,
+      "account": {
+        "id": "114476577937621835",
+        "username": "obsidian",
+        "acct": "obsidian@fully-synthetic.net",
+        "display_name": "obsidian",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2018-11-02T00:00:00.000Z",
+        "note": "<p>girlthing (80% device, 20% girl). permanence kink. robot rated most sporty and compact for 2023.</p><p>identified by:</p><ul><li>id <strong>1BSP5</strong></li><li>name <strong>obsidian</strong></li><li>name <strong>obsidian polymer</strong> for disambiguation. this is an atomic phrase; no part is a surname.</li></ul><p>:flag_neutrois: :flag_demifemme: :flag_lesbian: :flag_latex: <a href=\"https://goto.fully-synthetic.net/tags/nomouthclub\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>NoMouthClub</span></a></p>",
+        "url": "https://goto.fully-synthetic.net/@obsidian",
+        "uri": "https://goto.fully-synthetic.net/users/obsidian",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/114/476/577/937/621/835/original/db7f2a6ac2841465.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/114/476/577/937/621/835/original/db7f2a6ac2841465.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/114/476/577/937/621/835/original/9e635b92f11a91b4.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/114/476/577/937/621/835/original/9e635b92f11a91b4.jpeg",
+        "followers_count": 1,
+        "following_count": 29,
+        "statuses_count": 842,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [
+          {
+            "shortcode": "flag_neutrois",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/534/original/7ce653a7c6bf4621.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/534/static/7ce653a7c6bf4621.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "flag_demifemme",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/535/original/30a51b62c331bf2c.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/535/static/30a51b62c331bf2c.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "flag_lesbian",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/536/original/3456ba9d74b2c9dc.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/536/static/3456ba9d74b2c9dc.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "flag_latex",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/537/original/c266ca081a0e28d5.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/537/static/c266ca081a0e28d5.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "3rd person",
+            "value": "it / its / that thing",
+            "verified_at": null
+          },
+          {
+            "name": "2nd person",
+            "value": "you",
+            "verified_at": null
+          },
+          {
+            "name": "metal collar since",
+            "value": "2013",
+            "verified_at": null
+          },
+          {
+            "name": "collared continuously since",
+            "value": "2019",
+            "verified_at": null
+          },
+          {
+            "name": "where",
+            "value": "seattle",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "bc_bongo",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/001/187/776/original/189e4f22bdc91e70.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/001/187/776/static/189e4f22bdc91e70.png",
+          "visible_in_picker": true
+        },
+        {
+          "shortcode": "bc_jitter",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/001/187/777/original/c0715c11f9370fcf.gif",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/001/187/777/static/c0715c11f9370fcf.png",
+          "visible_in_picker": true
+        },
+        {
+          "shortcode": "love",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/498/original/223eae002991dbfa.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/001/176/498/static/223eae002991dbfa.png",
+          "visible_in_picker": true
+        }
+      ],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546499645926900",
+      "created_at": "2025-05-21T15:21:15.000Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/leftpaddotpy/statuses/114546499599323918",
+      "url": "https://hachyderm.io/@leftpaddotpy/114546499599323918",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> YESSSSSS</p>",
+      "reblog": null,
+      "account": {
+        "id": "109974997488206701",
+        "username": "leftpaddotpy",
+        "acct": "leftpaddotpy@hachyderm.io",
+        "display_name": "systemd-jaded.scope",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-03-06T00:00:00.000Z",
+        "note": "<p>purely dysfunctional programmer, soft and snuggly version; they/she.</p>",
+        "url": "https://hachyderm.io/@leftpaddotpy",
+        "uri": "https://hachyderm.io/users/leftpaddotpy",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/974/997/488/206/701/original/cec901990ae8866d.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/974/997/488/206/701/original/cec901990ae8866d.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 782,
+        "following_count": 362,
+        "statuses_count": 9397,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "webbed site",
+            "value": "<a href=\"https://jade.fyi\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">jade.fyi</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T20:17:58.137+00:00"
+          },
+          {
+            "name": "cohost",
+            "value": "<a href=\"https://cohost.org/leftpaddotpy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">cohost.org/leftpaddotpy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "place",
+            "value": "Vancouver, BC, Canada",
+            "verified_at": null
+          },
+          {
+            "name": "bird website",
+            "value": "<a href=\"https://twitter.com/leftpaddotpy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/leftpaddotpy</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546648639805360",
+      "created_at": "2025-05-21T15:59:07.247Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://is.badat.dev/objects/b93d0e3c-ada6-49a0-91c9-68e4f9023bed",
+      "url": "https://is.badat.dev/objects/b93d0e3c-ada6-49a0-91c9-68e4f9023bed",
+      "replies_count": 0,
+      "reblogs_count": 1,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<span class=\"h-card\"><a class=\"u-url mention\" href=\"https://mastodon.social/@pid_eins\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I love you Lennart Poettering",
+      "reblog": null,
+      "account": {
+        "id": "1295117",
+        "username": "Mae",
+        "acct": "Mae@is.badat.dev",
+        "display_name": "Mae",
+        "locked": true,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2020-10-14T00:00:00.000Z",
+        "note": "Not a minor<br>Timezone: UTC+2<br><br>Alleged milf, might be an angle<br>I like shiny,,",
+        "url": "https://is.badat.dev/users/Mae",
+        "uri": "https://is.badat.dev/users/Mae",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/001/295/117/original/e20368881807e8ef.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/001/295/117/original/e20368881807e8ef.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/001/295/117/original/5a50c4b48e5eead7.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/001/295/117/original/5a50c4b48e5eead7.jpg",
+        "followers_count": 380,
+        "following_count": 468,
+        "statuses_count": 45670,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "pro nouns",
+            "value": "she/her",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114548248448819015",
+      "created_at": "2025-05-21T22:46:00.000Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/gudenau/statuses/114548248425131470",
+      "url": "https://hachyderm.io/@gudenau/114548248425131470",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I'd like one that keeps going until I press Q or similar.</p>",
+      "reblog": null,
+      "account": {
+        "id": "114410111756747962",
+        "username": "gudenau",
+        "acct": "gudenau@hachyderm.io",
+        "display_name": "gudenau",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-04-27T00:00:00.000Z",
+        "note": "<p>Programming, computers and not wanting to fill this out again.</p><p><a href=\"https://hachyderm.io/tags/nobot\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>nobot</span></a></p>",
+        "url": "https://hachyderm.io/@gudenau",
+        "uri": "https://hachyderm.io/users/gudenau",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/114/410/111/756/747/962/original/182e880c593a3c94.webp",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/114/410/111/756/747/962/original/182e880c593a3c94.webp",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 151,
+        "following_count": 40,
+        "statuses_count": 391,
+        "last_status_at": "2025-12-17",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550083192512886",
+      "created_at": "2025-05-22T06:32:35.000Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.chinwag.org/users/mike/statuses/114550083127768991",
+      "url": "https://social.chinwag.org/@mike/114550083127768991",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> can this be used in conjunction with \"enable --now\"?</p>",
+      "reblog": null,
+      "account": {
+        "id": "263621",
+        "username": "mike",
+        "acct": "mike@chinwag.org",
+        "display_name": "Mike [SEC=OFFICIAL]",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2017-12-18T00:00:00.000Z",
+        "note": "<p>Chinwag admin, fan of open communication standards, maintainer of communities, male comedienne.</p><p>Winner of Time Magazine \"Person of the Year\" 2006 and will never get tired of that joke.</p><p>I talk about <a href=\"https://social.chinwag.org/tags/retrocomputing\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>retrocomputing</span></a> a lot. I also do a lot of <a href=\"https://social.chinwag.org/tags/gardening\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>gardening</span></a> and occasionally make <a href=\"https://social.chinwag.org/tags/bread\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>bread</span></a> and <a href=\"https://social.chinwag.org/tags/beer\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>beer</span></a>. I have been a Unix <a href=\"https://social.chinwag.org/tags/sysadmin\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>sysadmin</span></a> for about 30 years but I think I'll be OK.</p><p>I live in <a href=\"https://social.chinwag.org/tags/Melbourne\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Melbourne</span></a>, <a href=\"https://social.chinwag.org/tags/Australia\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Australia</span></a> and sometimes tell jokes on stages around here. I co-host a <a href=\"https://social.chinwag.org/tags/StarTrek\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>StarTrek</span></a> podcast with <span class=\"h-card\" translate=\"no\"><a href=\"https://social.chinwag.org/@ThePingMachine\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>ThePingMachine</span></a></span></p>",
+        "url": "https://social.chinwag.org/@mike",
+        "uri": "https://social.chinwag.org/users/mike",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/000/263/621/original/27265ab7c4021822.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/000/263/621/original/27265ab7c4021822.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/000/263/621/original/878ff88d5c3bedd8.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/000/263/621/original/878ff88d5c3bedd8.png",
+        "followers_count": 4460,
+        "following_count": 1229,
+        "statuses_count": 48398,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "My Bits",
+            "value": "<a href=\"https://patreon.com/mickbits\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">patreon.com/mickbits</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Personal",
+            "value": "<a href=\"https://bremensaki.com\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">bremensaki.com</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T17:35:26.630+00:00"
+          },
+          {
+            "name": "Also",
+            "value": "<a href=\"https://theblower.au/@mike\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">theblower.au/@mike</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T17:35:27.876+00:00"
+          },
+          {
+            "name": "Contribute",
+            "value": "<a href=\"https://liberapay.com/chinwag\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">liberapay.com/chinwag</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T17:35:28.206+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550399080635580",
+      "created_at": "2025-05-22T07:52:56.600Z",
+      "in_reply_to_id": "114550083192512886",
+      "in_reply_to_account_id": "263621",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550399080635580",
+      "url": "https://mastodon.social/@pid_eins/114550399080635580",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.chinwag.org/@mike\" class=\"u-url mention\">@<span>mike</span></a></span> yeah, should just work.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "263621",
+          "username": "mike",
+          "url": "https://social.chinwag.org/@mike",
+          "acct": "mike@chinwag.org"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114552486371996589",
+      "created_at": "2025-05-22T16:43:45.000Z",
+      "in_reply_to_id": "114545904768094738",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://shakedown.social/users/wdennis/statuses/114552486317852086",
+      "url": "https://shakedown.social/@wdennis/114552486317852086",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Yasssss! \ud83d\ude4c always wanted a way to say \u201cstart the unit &amp; report status\u201d in one systemctl cmd\u2026 Thanks for all your hard work on Systemd</p>",
+      "reblog": null,
+      "account": {
+        "id": "111235598162268241",
+        "username": "wdennis",
+        "acct": "wdennis@shakedown.social",
+        "display_name": "Will Dennis",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-10-14T00:00:00.000Z",
+        "note": "<p>Eggggggggggy!</p>",
+        "url": "https://shakedown.social/@wdennis",
+        "uri": "https://shakedown.social/users/wdennis",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/235/598/162/268/241/original/0a6854c404a41b68.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/235/598/162/268/241/original/0a6854c404a41b68.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 67,
+        "following_count": 40,
+        "statuses_count": 639,
+        "last_status_at": "2025-12-07",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546722123261677",
+      "created_at": "2025-05-21T16:17:50.000Z",
+      "in_reply_to_id": "114545892813068498",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://tyrol.social/users/tfld/statuses/114546722096101653",
+      "url": "https://tyrol.social/@tfld/114546722096101653",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> That's a nice QOL improvement. Is there an environment variable for it or any other way to make this behaviour the default (without recompiling)?</p><p>Also I'm very happy to see this series returning, I really like it!</p>",
+      "reblog": null,
+      "account": {
+        "id": "112620952624639751",
+        "username": "tfld",
+        "acct": "tfld@tyrol.social",
+        "display_name": "TeFiLeDo",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-06-15T00:00:00.000Z",
+        "note": "",
+        "url": "https://tyrol.social/@tfld",
+        "uri": "https://tyrol.social/users/tfld",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/112/620/952/624/639/751/original/512a7632746d4c78.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/112/620/952/624/639/751/original/512a7632746d4c78.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 6,
+        "following_count": 12,
+        "statuses_count": 44,
+        "last_status_at": "2025-11-28",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://tfld.dev\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">tfld.dev</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-28T15:55:53.404+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/TeFiLeDo\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/TeFiLeDo</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-28T15:55:54.442+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546821175381459",
+      "created_at": "2025-05-21T16:43:02.111Z",
+      "in_reply_to_id": "114546722123261677",
+      "in_reply_to_account_id": "112620952624639751",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114546821175381459",
+      "url": "https://mastodon.social/@pid_eins/114546821175381459",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://tyrol.social/@tfld\" class=\"u-url mention\">@<span>tfld</span></a></span> in the shell: alias systemctl=&quot;systemctl -v&quot;</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112620952624639751",
+          "username": "tfld",
+          "url": "https://tyrol.social/@tfld",
+          "acct": "tfld@tyrol.social"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114546863572658245",
+      "created_at": "2025-05-21T16:53:48.000Z",
+      "in_reply_to_id": "114546821175381459",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://tyrol.social/users/tfld/statuses/114546863530630261",
+      "url": "https://tyrol.social/@tfld/114546863530630261",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Thanks! </p><p>Please excuse me for a moment, I'll go looking for something to plug the shell alias shaped hole in my object permanence</p>",
+      "reblog": null,
+      "account": {
+        "id": "112620952624639751",
+        "username": "tfld",
+        "acct": "tfld@tyrol.social",
+        "display_name": "TeFiLeDo",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-06-15T00:00:00.000Z",
+        "note": "",
+        "url": "https://tyrol.social/@tfld",
+        "uri": "https://tyrol.social/users/tfld",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/112/620/952/624/639/751/original/512a7632746d4c78.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/112/620/952/624/639/751/original/512a7632746d4c78.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 6,
+        "following_count": 12,
+        "statuses_count": 44,
+        "last_status_at": "2025-11-28",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Website",
+            "value": "<a href=\"https://tfld.dev\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">tfld.dev</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-28T15:55:53.404+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/TeFiLeDo\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/TeFiLeDo</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-11-28T15:55:54.442+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

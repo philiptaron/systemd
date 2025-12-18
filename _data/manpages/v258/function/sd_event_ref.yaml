@@ -1,0 +1,2 @@
+description:  Acquire and release an event loop object
+url: https://www.freedesktop.org/software/systemd/man/258/sd_event_ref.html

@@ -1,0 +1,1149 @@
+{
+  "post": {
+    "id": "115064971230187209",
+    "created_at": "2025-08-21T04:55:24.489Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/115064971230187209",
+    "url": "https://mastodon.social/@pid_eins/115064971230187209",
+    "replies_count": 1,
+    "reblogs_count": 10,
+    "favourites_count": 25,
+    "quotes_count": 0,
+    "edited_at": "2025-08-21T04:59:42.523Z",
+    "content": "<p>4\ufe0f\u20e33\ufe0f\u20e3 Here&#39;s the 43rd post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>Back in v257 we added support for RestartMode=debug: if used and a service is automatically restarted due to Restart= a special environment variable DEBUG_INVOCATION=1 is set for the new invocation. This is then supposed to enable special logic in the service code that generates additional debug logging and other behaviour.</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "115064980446752645",
+      "created_at": "2025-08-21T04:57:45.116Z",
+      "in_reply_to_id": "115064971230187209",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115064980446752645",
+      "url": "https://mastodon.social/@pid_eins/115064980446752645",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>What precisely DEBUG_INVOCATION=1 will trigger in the service code is really up to the programmer of the service itself, and can vary wildly.</p><p>In systemd v257 the programmers of systemd&#39;s own services decided \u2026 to not honour it at all. That of course is quite a missed opportunity, given that we really should showcase our own service/service manager protocol features.</p><p>Hence with v258 this is fixed. All of systemd&#39;s own services will now automatically enable debug logging \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "115064986143951987",
+      "created_at": "2025-08-21T04:59:12.048Z",
+      "in_reply_to_id": "115064980446752645",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115064986143951987",
+      "url": "https://mastodon.social/@pid_eins/115064986143951987",
+      "replies_count": 3,
+      "reblogs_count": 1,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": "2025-08-21T06:19:34.235Z",
+      "content": "<p>\u2026 if started with DEBUG_INVOCATION=1 set, and thus, if you turn on Restart= + RestartMode=debug for any of them, something reasonable will happen: the initial activation is a regular one, but on automatic restart debug logging will be generated.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065449549174998",
+      "created_at": "2025-08-21T06:57:03.053Z",
+      "in_reply_to_id": "115064986143951987",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115065449549174998",
+      "url": "https://mastodon.social/@pid_eins/115065449549174998",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>And I forgot to mention GLib&#39;s logging infra is already doing this too, and in fact beat us to it:</p><p><a href=\"https://docs.gtk.org/glib/logging.html#debug-message-output\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">docs.gtk.org/glib/logging.html</span><span class=\"invisible\">#debug-message-output</span></a></p><p>I really hope to see similar logic added to the logging infra of the various programs and frameworks sooner or later!</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://docs.gtk.org/glib/logging.html#debug-message-output",
+        "title": "GLib: Message Logging",
+        "description": "Reference for GLib-2.0: Message Logging",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065285590234480",
+      "created_at": "2025-08-21T06:15:21.247Z",
+      "in_reply_to_id": "115065270237160333",
+      "in_reply_to_account_id": "109270387681378581",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115065285590234480",
+      "url": "https://mastodon.social/@pid_eins/115065285590234480",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://nerdculture.de/@fluchtkapsel\" class=\"u-url mention\">@<span>fluchtkapsel</span></a></span> only when restarted automatically.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109270387681378581",
+          "username": "fluchtkapsel",
+          "url": "https://nerdculture.de/@fluchtkapsel",
+          "acct": "fluchtkapsel@nerdculture.de"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065283079112938",
+      "created_at": "2025-08-21T06:14:42.925Z",
+      "in_reply_to_id": "115065271339824464",
+      "in_reply_to_account_id": "109307321824968796",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115065283079112938",
+      "url": "https://mastodon.social/@pid_eins/115065283079112938",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": "2025-08-21T06:14:58.616Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.rocketeer.be/@ruben\" class=\"u-url mention\">@<span>ruben</span></a></span> just a quick test to verify you all are paying attention ;-)</p><p>(Fixed now, thanks!)</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109307321824968796",
+          "username": "ruben",
+          "url": "https://social.rocketeer.be/@ruben",
+          "acct": "ruben@rocketeer.be"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "115064980446752645",
+      "created_at": "2025-08-21T04:57:45.116Z",
+      "in_reply_to_id": "115064971230187209",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115064980446752645",
+      "url": "https://mastodon.social/@pid_eins/115064980446752645",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>What precisely DEBUG_INVOCATION=1 will trigger in the service code is really up to the programmer of the service itself, and can vary wildly.</p><p>In systemd v257 the programmers of systemd&#39;s own services decided \u2026 to not honour it at all. That of course is quite a missed opportunity, given that we really should showcase our own service/service manager protocol features.</p><p>Hence with v258 this is fixed. All of systemd&#39;s own services will now automatically enable debug logging \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115064986143951987",
+      "created_at": "2025-08-21T04:59:12.048Z",
+      "in_reply_to_id": "115064980446752645",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115064986143951987",
+      "url": "https://mastodon.social/@pid_eins/115064986143951987",
+      "replies_count": 3,
+      "reblogs_count": 1,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": "2025-08-21T06:19:34.235Z",
+      "content": "<p>\u2026 if started with DEBUG_INVOCATION=1 set, and thus, if you turn on Restart= + RestartMode=debug for any of them, something reasonable will happen: the initial activation is a regular one, but on automatic restart debug logging will be generated.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065449549174998",
+      "created_at": "2025-08-21T06:57:03.053Z",
+      "in_reply_to_id": "115064986143951987",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115065449549174998",
+      "url": "https://mastodon.social/@pid_eins/115065449549174998",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>And I forgot to mention GLib&#39;s logging infra is already doing this too, and in fact beat us to it:</p><p><a href=\"https://docs.gtk.org/glib/logging.html#debug-message-output\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">docs.gtk.org/glib/logging.html</span><span class=\"invisible\">#debug-message-output</span></a></p><p>I really hope to see similar logic added to the logging infra of the various programs and frameworks sooner or later!</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://docs.gtk.org/glib/logging.html#debug-message-output",
+        "title": "GLib: Message Logging",
+        "description": "Reference for GLib-2.0: Message Logging",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065270237160333",
+      "created_at": "2025-08-21T06:11:24.000Z",
+      "in_reply_to_id": "115064986143951987",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://nerdculture.de/users/fluchtkapsel/statuses/115065270107723130",
+      "url": "https://nerdculture.de/@fluchtkapsel/115065270107723130",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Will this be triggered by `systemctl restart \u2026` or when a service gets restarted automatically?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109270387681378581",
+        "username": "fluchtkapsel",
+        "acct": "fluchtkapsel@nerdculture.de",
+        "display_name": "Fluchtkapsel",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-01T00:00:00.000Z",
+        "note": "<p>ally, intersectionalist, technology enthusiast, FLOSS evangelist, employed by Wikimedia Deutschland, priv. account</p><p>* Sci-Fi: Revelation, Expanse, Babylon 5, Farscape, Star Trek, Foundation<br>* Fantasy: Malazan Book of the Fallen, everything by Daniel Abraham, Joe Abercrombie<br>* Linux Gaming, emulated retro gaming<br>* RPG: Cypher System (Numenera, Invisible Sun), D&amp;D, Fate, Savage Worlds, World of Darkness<br>Meta: tootfinder. tfr, searchable <a href=\"https://www.tootfinder.ch\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://www.</span><span class=\"\">tootfinder.ch</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://nerdculture.de/@fluchtkapsel",
+        "uri": "https://nerdculture.de/users/fluchtkapsel",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/270/387/681/378/581/original/c3ea16613ce784e7.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/270/387/681/378/581/original/c3ea16613ce784e7.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/270/387/681/378/581/original/35af1ea21972b96c.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/270/387/681/378/581/original/35af1ea21972b96c.jpg",
+        "followers_count": 404,
+        "following_count": 1320,
+        "statuses_count": 9844,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "er/ihm, he/him, they/them",
+            "verified_at": null
+          },
+          {
+            "name": "Job",
+            "value": "IT System Administrator (Linux)",
+            "verified_at": null
+          },
+          {
+            "name": "Website",
+            "value": "<a href=\"https://masinad.github.io/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">masinad.github.io/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T19:04:57.497+00:00"
+          },
+          {
+            "name": "Twitter",
+            "value": "<a href=\"https://twitter.com/MasinAD\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/MasinAD</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065285590234480",
+      "created_at": "2025-08-21T06:15:21.247Z",
+      "in_reply_to_id": "115065270237160333",
+      "in_reply_to_account_id": "109270387681378581",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115065285590234480",
+      "url": "https://mastodon.social/@pid_eins/115065285590234480",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://nerdculture.de/@fluchtkapsel\" class=\"u-url mention\">@<span>fluchtkapsel</span></a></span> only when restarted automatically.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109270387681378581",
+          "username": "fluchtkapsel",
+          "url": "https://nerdculture.de/@fluchtkapsel",
+          "acct": "fluchtkapsel@nerdculture.de"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065271339824464",
+      "created_at": "2025-08-21T06:11:42.000Z",
+      "in_reply_to_id": "115064986143951987",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.rocketeer.be/users/ruben/statuses/01K35M2AMYWN5SPEH0HQ07KYPJ",
+      "url": "https://social.rocketeer.be/@ruben/statuses/01K35M2AMYWN5SPEH0HQ07KYPJ",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> =restart or =debug?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109307321824968796",
+        "username": "ruben",
+        "acct": "ruben@rocketeer.be",
+        "display_name": "Ruben Vermeersch",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-07T00:00:00.000Z",
+        "note": "<p>Product and company builder with a passion for excellent engineering, simracer, F1 fanatic, founder of Garage 61.<br></p>",
+        "url": "https://social.rocketeer.be/@ruben",
+        "uri": "https://social.rocketeer.be/users/ruben",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/307/321/824/968/796/original/1de9a5a2e4c41794.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/307/321/824/968/796/original/1de9a5a2e4c41794.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/307/321/824/968/796/original/37b32960b0f112c0.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/307/321/824/968/796/original/37b32960b0f112c0.jpeg",
+        "followers_count": 66,
+        "following_count": 77,
+        "statuses_count": 230,
+        "last_status_at": "2025-11-20",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Garage 61",
+            "value": "<a href=\"https://garage61.net\" rel=\"nofollow noopener\" target=\"_blank\">https://garage61.net</a>",
+            "verified_at": null
+          },
+          {
+            "name": "Personal",
+            "value": "<a href=\"https://rocketeer.be\" rel=\"nofollow noopener\" target=\"_blank\">https://rocketeer.be</a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065283079112938",
+      "created_at": "2025-08-21T06:14:42.925Z",
+      "in_reply_to_id": "115065271339824464",
+      "in_reply_to_account_id": "109307321824968796",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115065283079112938",
+      "url": "https://mastodon.social/@pid_eins/115065283079112938",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": "2025-08-21T06:14:58.616Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.rocketeer.be/@ruben\" class=\"u-url mention\">@<span>ruben</span></a></span> just a quick test to verify you all are paying attention ;-)</p><p>(Fixed now, thanks!)</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109307321824968796",
+          "username": "ruben",
+          "url": "https://social.rocketeer.be/@ruben",
+          "acct": "ruben@rocketeer.be"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065357111546659",
+      "created_at": "2025-08-21T06:33:32.000Z",
+      "in_reply_to_id": "115065283079112938",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://social.rocketeer.be/users/ruben/statuses/01K35NA9NYHD8TN3CN67A48FZ9",
+      "url": "https://social.rocketeer.be/@ruben/statuses/01K35NA9NYHD8TN3CN67A48FZ9",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> good feature btw!</p>",
+      "reblog": null,
+      "account": {
+        "id": "109307321824968796",
+        "username": "ruben",
+        "acct": "ruben@rocketeer.be",
+        "display_name": "Ruben Vermeersch",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-07T00:00:00.000Z",
+        "note": "<p>Product and company builder with a passion for excellent engineering, simracer, F1 fanatic, founder of Garage 61.<br></p>",
+        "url": "https://social.rocketeer.be/@ruben",
+        "uri": "https://social.rocketeer.be/users/ruben",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/307/321/824/968/796/original/1de9a5a2e4c41794.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/307/321/824/968/796/original/1de9a5a2e4c41794.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/307/321/824/968/796/original/37b32960b0f112c0.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/307/321/824/968/796/original/37b32960b0f112c0.jpeg",
+        "followers_count": 66,
+        "following_count": 77,
+        "statuses_count": 230,
+        "last_status_at": "2025-11-20",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Garage 61",
+            "value": "<a href=\"https://garage61.net\" rel=\"nofollow noopener\" target=\"_blank\">https://garage61.net</a>",
+            "verified_at": null
+          },
+          {
+            "name": "Personal",
+            "value": "<a href=\"https://rocketeer.be\" rel=\"nofollow noopener\" target=\"_blank\">https://rocketeer.be</a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115065985656184151",
+      "created_at": "2025-08-21T09:13:23.000Z",
+      "in_reply_to_id": "115065449549174998",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.treehouse.systems/users/grawity/statuses/115065985633618761",
+      "url": "https://social.treehouse.systems/@grawity/115065985633618761",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> One day I might be able to get rid of my ~/bin/verbose script which sets nearly 50 different FOO_DEBUG and BAR_VERBOSE environment variables</p>",
+      "reblog": null,
+      "account": {
+        "id": "108265903700930509",
+        "username": "grawity",
+        "acct": "grawity@treehouse.systems",
+        "display_name": "grawity",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-04-27T00:00:00.000Z",
+        "note": "<p>hobbyist sysadmin and tech support person, still occasionally seen on IRC</p><p>interests: windows 98, macos 9/8, plan9, systemd, athena, x.25, all kinds of 80s-00s \"retro\" computing &amp; networking</p><p>\u2728\ufe0e no, I really don't have a good profile picture \u2728\ufe0e</p>",
+        "url": "https://social.treehouse.systems/@grawity",
+        "uri": "https://social.treehouse.systems/users/grawity",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/108/265/903/700/930/509/original/f5a60f881b8b1dc2.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/108/265/903/700/930/509/original/f5a60f881b8b1dc2.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 360,
+        "following_count": 109,
+        "statuses_count": 3113,
+        "last_status_at": "2025-12-18",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Location",
+            "value": "<a href=\"https://nullroute.lt\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">nullroute.lt</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Location",
+            "value": "Lithuania",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

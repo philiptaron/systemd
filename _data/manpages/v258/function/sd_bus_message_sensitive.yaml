@@ -1,0 +1,2 @@
+description:  Mark a message object as containing sensitive data
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_sensitive.html

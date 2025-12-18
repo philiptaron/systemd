@@ -1,0 +1,2 @@
+description:  Read password from kernel keyring and set it as PAM authtok
+url: https://www.freedesktop.org/software/systemd/man/258/pam_systemd_loadkey.html

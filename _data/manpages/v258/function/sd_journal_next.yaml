@@ -1,0 +1,2 @@
+description:  Advance or set back the read pointer in the journal
+url: https://www.freedesktop.org/software/systemd/man/258/sd_journal_next.html

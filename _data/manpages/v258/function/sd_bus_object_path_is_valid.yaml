@@ -1,0 +1,2 @@
+description:  Check if a string is a valid bus name or object path
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_object_path_is_valid.html

@@ -1,0 +1,2 @@
+description:  Measure boot phase into TPM2 PCR 11, machine ID and file system identity into PCR 15
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-pcrextend.html

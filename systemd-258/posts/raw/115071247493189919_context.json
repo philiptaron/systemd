@@ -1,0 +1,2251 @@
+{
+  "post": {
+    "id": "115071247493189919",
+    "created_at": "2025-08-22T07:31:32.660Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/115071247493189919",
+    "url": "https://mastodon.social/@pid_eins/115071247493189919",
+    "replies_count": 1,
+    "reblogs_count": 9,
+    "favourites_count": 16,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>4\ufe0f\u20e34\ufe0f\u20e3 Here&#39;s the 44th post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>Back in episode 10 of this series we talked about about the new &quot;url-uki&quot; stanza in boot loader spec type 1 entries, which configures UKIs that are placed on a remote URL rather than stored locally in ESP/XBOOTLDR. This story already hinted that UEFI HTTP network boot of UKIs is actually a thing now.</p><p>Back in episode 35 we talked about booting into a DDI root fs\u2026</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "115071257935599975",
+      "created_at": "2025-08-22T07:34:11.993Z",
+      "in_reply_to_id": "115071247493189919",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115071257935599975",
+      "url": "https://mastodon.social/@pid_eins/115071257935599975",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026downloaded via HTTP inside the initrd and placed into memory. </p><p>These two things complement each other nicely: the firmware downloads the UKI and transitions into it, and the initrd in the UKI then downloads the rootfs and transitions into that.</p><p>To make this really nice there&#39;s value in being able to derive the rootfs URL from the UKI url, so that both files can be placed on the same server, and only the first URL has the be declared in full.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "115071270297628137",
+      "created_at": "2025-08-22T07:37:20.624Z",
+      "in_reply_to_id": "115071257935599975",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115071270297628137",
+      "url": "https://mastodon.social/@pid_eins/115071270297628137",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>To make this work systemd-stub learnt a new trick in v258: if it detects it is run as PE binary downloaded from HTTP, it will determine the source URL and then set the generic LoaderDeviceURL EFI variable to it. This EFI variable is part of the boot loader interface, and mirrors nicely the existing LoaderDevicePartUUID EFI variable that indicates the GPT partition UUID that the UKI was booted from. The former EFI variable hence is set for remote boots, the latter for local boots.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115071278619600387",
+      "created_at": "2025-08-22T07:39:27.607Z",
+      "in_reply_to_id": "115071270297628137",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115071278619600387",
+      "url": "https://mastodon.social/@pid_eins/115071278619600387",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-08-22T07:42:51.739Z",
+      "content": "<p>bootctl has been updated to show the new variable. But more importantly, the systemd.pull= kernel cmdline switch we talked about in episode 35 knows the new &quot;bootorigin&quot; flag now. If used the URL to download an image from can just be a relative path, which is then combined with the UKI URL reported by systemd-stub, to form a full URL.</p><p>Example:</p><p>rd.systemd.pull=raw,machine,verify=no,blockdev,bootorigin:rootdisk:image.raw.xz root=/dev/disk/by-loop-ref/rootdisk.raw-part2</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115071286033272019",
+      "created_at": "2025-08-22T07:41:20.732Z",
+      "in_reply_to_id": "115071278619600387",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115071286033272019",
+      "url": "https://mastodon.social/@pid_eins/115071286033272019",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>If such a switch is built into the command line of a UKI and that UKI is placed on a server <a href=\"http://example.com/foobar/uki.efi\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">example.com/foobar/uki.efi</span><span class=\"invisible\"></span></a> then this will result in the root disk being downloaded from <a href=\"http://example.com/foobar/image.raw.xz\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">example.com/foobar/image.raw.xz</span><span class=\"invisible\"></span></a>.</p><p>TLDR: it&#39;s now really nice to do UKI+DDI booting from UEFI HTTP.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115123262379493047",
+      "created_at": "2025-08-31T11:59:36.946Z",
+      "in_reply_to_id": "115117033186482673",
+      "in_reply_to_account_id": "111420321283674728",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115123262379493047",
+      "url": "https://mastodon.social/@pid_eins/115123262379493047",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TriMoon\" class=\"u-url mention\">@<span>TriMoon</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> <a href=\"https://github.com/systemd/particleos/pull/84\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/particleos/</span><span class=\"invisible\">pull/84</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111420321283674728",
+          "username": "TriMoon",
+          "url": "https://mastodon.social/@TriMoon",
+          "acct": "TriMoon"
+        },
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/particleos/pull/84",
+        "title": "debian: drop debian-specific pam.d line from tmpfiles.d by bluca \u00b7 Pull Request #84 \u00b7 systemd/particleos",
+        "description": "On Debian there are custom patches that break /usr/lib/pam.d/ so login doesn't work:\nAug 28 17:52:55 particle-6579-bbfd login[1260]: PAM _pam_load_conf_file: unable to open config for /etc/pam....",
+        "language": "en",
+        "type": "link",
+        "author_name": "bluca",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "On Debian there are custom patches that break /usr/lib/pam.d/ so login doesn&#39;t work:\nAug 28 17:52:55 particle-6579-bbfd login[1260]: PAM _pam_load_conf_file: unable to open config for /etc/pam....",
+        "embed_url": "",
+        "blurhash": "UURMl1RkoL%M$mt7WBt7yAxuM{Rj~XWBoMRj",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "bluca",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "115071257935599975",
+      "created_at": "2025-08-22T07:34:11.993Z",
+      "in_reply_to_id": "115071247493189919",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115071257935599975",
+      "url": "https://mastodon.social/@pid_eins/115071257935599975",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026downloaded via HTTP inside the initrd and placed into memory. </p><p>These two things complement each other nicely: the firmware downloads the UKI and transitions into it, and the initrd in the UKI then downloads the rootfs and transitions into that.</p><p>To make this really nice there&#39;s value in being able to derive the rootfs URL from the UKI url, so that both files can be placed on the same server, and only the first URL has the be declared in full.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115071270297628137",
+      "created_at": "2025-08-22T07:37:20.624Z",
+      "in_reply_to_id": "115071257935599975",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115071270297628137",
+      "url": "https://mastodon.social/@pid_eins/115071270297628137",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>To make this work systemd-stub learnt a new trick in v258: if it detects it is run as PE binary downloaded from HTTP, it will determine the source URL and then set the generic LoaderDeviceURL EFI variable to it. This EFI variable is part of the boot loader interface, and mirrors nicely the existing LoaderDevicePartUUID EFI variable that indicates the GPT partition UUID that the UKI was booted from. The former EFI variable hence is set for remote boots, the latter for local boots.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115071278619600387",
+      "created_at": "2025-08-22T07:39:27.607Z",
+      "in_reply_to_id": "115071270297628137",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115071278619600387",
+      "url": "https://mastodon.social/@pid_eins/115071278619600387",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-08-22T07:42:51.739Z",
+      "content": "<p>bootctl has been updated to show the new variable. But more importantly, the systemd.pull= kernel cmdline switch we talked about in episode 35 knows the new &quot;bootorigin&quot; flag now. If used the URL to download an image from can just be a relative path, which is then combined with the UKI URL reported by systemd-stub, to form a full URL.</p><p>Example:</p><p>rd.systemd.pull=raw,machine,verify=no,blockdev,bootorigin:rootdisk:image.raw.xz root=/dev/disk/by-loop-ref/rootdisk.raw-part2</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115071286033272019",
+      "created_at": "2025-08-22T07:41:20.732Z",
+      "in_reply_to_id": "115071278619600387",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115071286033272019",
+      "url": "https://mastodon.social/@pid_eins/115071286033272019",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>If such a switch is built into the command line of a UKI and that UKI is placed on a server <a href=\"http://example.com/foobar/uki.efi\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">example.com/foobar/uki.efi</span><span class=\"invisible\"></span></a> then this will result in the root disk being downloaded from <a href=\"http://example.com/foobar/image.raw.xz\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">example.com/foobar/image.raw.xz</span><span class=\"invisible\"></span></a>.</p><p>TLDR: it&#39;s now really nice to do UKI+DDI booting from UEFI HTTP.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115073411376531141",
+      "created_at": "2025-08-22T16:41:50.902Z",
+      "in_reply_to_id": "115071286033272019",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115073411376531141",
+      "url": "https://mastodon.social/@TriMoon/115073411376531141",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-08-22T16:45:07.352Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Looking forward for such a UKI to kickstart a base <a href=\"https://mastodon.social/tags/ParticleOS\" class=\"mention hashtag\" rel=\"tag\">#<span>ParticleOS</span></a> installer from which we can start an installation of a choosen distro...</p><p>I&#39;m currently still unable to test ParticleOS due to the requirement of an initial local build.<br />This step could be done after the above on the installed system if done well IMHO...</p><p>The only thing we would need is an UEFI menu entry pointing to the Online UKI that kickstarts this all...</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tuba",
+        "website": "https://github.com/GeopJr/Tuba"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [
+        {
+          "name": "particleos",
+          "url": "https://mastodon.social/tags/particleos"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115086107777114235",
+      "created_at": "2025-08-24T22:30:42.000Z",
+      "in_reply_to_id": "115073411376531141",
+      "in_reply_to_account_id": "111420321283674728",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://fosstodon.org/users/bluca/statuses/115086107745807499",
+      "url": "https://fosstodon.org/@bluca/115086107745807499",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TriMoon\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>TriMoon</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> we do build these images ready to use, but the network boot story is still very rough and doesn't work, lots of bugs to solve:</p><p><a href=\"https://github.com/systemd/particleos/issues/80\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/particleos/</span><span class=\"invisible\">issues/80</span></a></p><p>various particleos images are built and published under <a href=\"https://download.opensuse.org/repositories/system:/systemd/\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">download.opensuse.org/reposito</span><span class=\"invisible\">ries/system:/systemd/</span></a></p>",
+      "reblog": null,
+      "account": {
+        "id": "109301899036487229",
+        "username": "bluca",
+        "acct": "bluca@fosstodon.org",
+        "display_name": "bluca",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-05-22T00:00:00.000Z",
+        "note": "",
+        "url": "https://fosstodon.org/@bluca",
+        "uri": "https://fosstodon.org/users/bluca",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/301/899/036/487/229/original/f6a169300528ab3b.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/301/899/036/487/229/original/f6a169300528ab3b.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 472,
+        "following_count": 114,
+        "statuses_count": 1475,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/bluca\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">github.com/bluca</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Debian",
+            "value": "<a href=\"https://salsa.debian.org/bluca\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">salsa.debian.org/bluca</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111420321283674728",
+          "username": "TriMoon",
+          "url": "https://mastodon.social/@TriMoon",
+          "acct": "TriMoon"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/particleos/issues/80",
+        "title": "Blockers for ParticleOS remote builds + netboot via netesp \u00b7 Issue #80 \u00b7 systemd/particleos",
+        "description": "List of issues found when booting a netesp in vmspawn, and pointing to a uki-url that points to a particleos uki that sits next to a particleos ddi sd-repart does not work in the initrd when CopyBl...",
+        "language": "en",
+        "type": "link",
+        "author_name": "bluca",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "List of issues found when booting a netesp in vmspawn, and pointing to a uki-url that points to a particleos uki that sits next to a particleos ddi sd-repart does not work in the initrd when CopyBl...",
+        "embed_url": "",
+        "blurhash": "UVRfqORkV@%Mx0t7WBt7thxuRjRj~Xf6ofRj",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "bluca",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115097485734246253",
+      "created_at": "2025-08-26T22:44:16.450Z",
+      "in_reply_to_id": "115086107777114235",
+      "in_reply_to_account_id": "109301899036487229",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115097485734246253",
+      "url": "https://mastodon.social/@TriMoon/115097485734246253",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": "2025-08-26T22:45:43.870Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Thank you for working on that \ud83d\udc4d</p><p>Are any of those images usable as-is from an USB at moment to get started with <a href=\"https://mastodon.social/tags/ParticleOS\" class=\"mention hashtag\" rel=\"tag\">#<span>ParticleOS</span></a>?<br />If so could you write some documentation about the process wrt. which file to burn to USB to get what result in the README at <a href=\"https://github.com/systemd/particleos\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/systemd/particleos</span><span class=\"invisible\"></span></a></p><p>I&#39;m eager to test drive this \ud83d\ude09</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tuba",
+        "website": "https://github.com/GeopJr/Tuba"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [
+        {
+          "name": "particleos",
+          "url": "https://mastodon.social/tags/particleos"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/particleos",
+        "title": "GitHub - systemd/particleos",
+        "description": "Contribute to systemd/particleos development by creating an account on GitHub.",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "Contribute to systemd/particleos development by creating an account on GitHub.",
+        "embed_url": "",
+        "blurhash": "UNSPhFoLxuxu-YWBt7j[9rWBofj[~EkBWBaz",
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115097528261177655",
+      "created_at": "2025-08-26T22:55:04.000Z",
+      "in_reply_to_id": "115097485734246253",
+      "in_reply_to_account_id": "111420321283674728",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://fosstodon.org/users/bluca/statuses/115097528230511614",
+      "url": "https://fosstodon.org/@bluca/115097528230511614",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TriMoon\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>TriMoon</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> yes it works from usb, just dd the .raw image and follow the particleos readme</p>",
+      "reblog": null,
+      "account": {
+        "id": "109301899036487229",
+        "username": "bluca",
+        "acct": "bluca@fosstodon.org",
+        "display_name": "bluca",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-05-22T00:00:00.000Z",
+        "note": "",
+        "url": "https://fosstodon.org/@bluca",
+        "uri": "https://fosstodon.org/users/bluca",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/301/899/036/487/229/original/f6a169300528ab3b.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/301/899/036/487/229/original/f6a169300528ab3b.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 472,
+        "following_count": 114,
+        "statuses_count": 1475,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/bluca\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">github.com/bluca</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Debian",
+            "value": "<a href=\"https://salsa.debian.org/bluca\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">salsa.debian.org/bluca</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111420321283674728",
+          "username": "TriMoon",
+          "url": "https://mastodon.social/@TriMoon",
+          "acct": "TriMoon"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115099547445143720",
+      "created_at": "2025-08-27T07:28:35.680Z",
+      "in_reply_to_id": "115097528261177655",
+      "in_reply_to_account_id": "109301899036487229",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115099547445143720",
+      "url": "https://mastodon.social/@TriMoon/115099547445143720",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-08-27T08:10:31.500Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Excuse my noobiness but...</p><p>I still have no clue which raw image to try.<br />I tried downloading each  `*_images/netesp_x86-64.raw.img` together with it&#39;s `.sha256` file, but the checksums don&#39;t match even after trying multiple times using `wget`.<br />```<br />$  shasum -c netesp_x86-64.raw.img.sha256<br />netesp_x86-64.raw.img: FAILED<br />shasum: WARNING: 1 computed checksum did NOT match<br />```</p><p>So i&#39;m still unable to kickstart a fresh <a href=\"https://mastodon.social/tags/ParticleOS\" class=\"mention hashtag\" rel=\"tag\">#<span>ParticleOS</span></a> installation to get started with this all \ud83e\udd37\u200d\u2640\ufe0f</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tuba",
+        "website": "https://github.com/GeopJr/Tuba"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [
+        {
+          "name": "particleos",
+          "url": "https://mastodon.social/tags/particleos"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115099553470694890",
+      "created_at": "2025-08-27T07:30:07.605Z",
+      "in_reply_to_id": "115099547445143720",
+      "in_reply_to_account_id": "109301899036487229",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115099553470694890",
+      "url": "https://mastodon.social/@TriMoon/115099553470694890",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-08-27T07:41:43.249Z",
+      "content": "<p>What i&#39;m looking for as a fresh starter is something like this workflow:<br />1. Download a bootable image, Net-Install or Fixed-Distro-Variant, and put it on a USB.<br />2. Boot from the image and get prompted, via text or GUI, for disk to partition and install the <a href=\"https://mastodon.social/tags/ParticleOS\" class=\"mention hashtag\" rel=\"tag\">#<span>ParticleOS</span></a>.<br />3.  Ability to customize this install by building a new image from within this install which will be used to &quot;update&quot; the booted image.<br />This step includes adding new packages and a signing key for UEFI-SecureBoot</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tuba",
+        "website": "https://github.com/GeopJr/Tuba"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [
+        {
+          "name": "particleos",
+          "url": "https://mastodon.social/tags/particleos"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115099715525802093",
+      "created_at": "2025-08-27T08:11:19.000Z",
+      "in_reply_to_id": "115099547445143720",
+      "in_reply_to_account_id": "111420321283674728",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://fosstodon.org/users/bluca/statuses/115099715457634556",
+      "url": "https://fosstodon.org/@bluca/115099715457634556",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TriMoon\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>TriMoon</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> the ParticleOS image, they are named accordingly, eg: ParticleOS_x86-64.raw.zst</p>",
+      "reblog": null,
+      "account": {
+        "id": "109301899036487229",
+        "username": "bluca",
+        "acct": "bluca@fosstodon.org",
+        "display_name": "bluca",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-05-22T00:00:00.000Z",
+        "note": "",
+        "url": "https://fosstodon.org/@bluca",
+        "uri": "https://fosstodon.org/users/bluca",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/301/899/036/487/229/original/f6a169300528ab3b.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/301/899/036/487/229/original/f6a169300528ab3b.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 472,
+        "following_count": 114,
+        "statuses_count": 1475,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/bluca\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">github.com/bluca</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Debian",
+            "value": "<a href=\"https://salsa.debian.org/bluca\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">salsa.debian.org/bluca</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111420321283674728",
+          "username": "TriMoon",
+          "url": "https://mastodon.social/@TriMoon",
+          "acct": "TriMoon"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115099751926740211",
+      "created_at": "2025-08-27T08:20:35.802Z",
+      "in_reply_to_id": "115099715525802093",
+      "in_reply_to_account_id": "109301899036487229",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115099751926740211",
+      "url": "https://mastodon.social/@TriMoon/115099751926740211",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-08-27T08:53:38.539Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> <br />Ahhh i didn&#39;t notice there were other pages in that listing, that&#39;s why i downloaded the netesp images \ud83e\udd26\u200d\u2640\ufe0f</p><p>Ok im now DL&#39;ing the file you mentioned from the Debian_13_images dir, together with it&#39;s .sha256 file.<br />- Update: shasum went ok this time</p><p>Looking at the extension &quot;zst&quot; does this mean we need to uncompress the file using zstd before dd to USB? \ud83e\udd14<br />- Update: Yep seems we need to unzstd the file first \ud83d\udc4d</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tuba",
+        "website": "https://github.com/GeopJr/Tuba"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115100142678728711",
+      "created_at": "2025-08-27T09:59:58.213Z",
+      "in_reply_to_id": "115099751926740211",
+      "in_reply_to_account_id": "109301899036487229",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115100142678728711",
+      "url": "https://mastodon.social/@TriMoon/115100142678728711",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-08-27T10:03:28.512Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> </p><p><a href=\"https://mastodon.social/tags/ParticleOS\" class=\"mention hashtag\" rel=\"tag\">#<span>ParticleOS</span></a> - ParticleOS_9.1_x86-64.raw.zst<br />- <a href=\"https://download.opensuse.org/repositories/system:/systemd/Debian_13_images/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">download.opensuse.org/reposito</span><span class=\"invisible\">ries/system:/systemd/Debian_13_images/</span></a></p><p>After dd&#39;ing the uncompressed raw image to USB, i rebooted into the UEFI then set SecureBoot to setup mode and booted from the USB.<br />But seems something is going wrong, because it errors at the root device it seems...</p>",
+      "reblog": null,
+      "application": {
+        "name": "Tuba",
+        "website": "https://github.com/GeopJr/Tuba"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [
+        {
+          "id": "115100138078036705",
+          "type": "image",
+          "url": "https://files.mastodon.social/media_attachments/files/115/100/138/078/036/705/original/37e8765948dc7a93.jpeg",
+          "preview_url": "https://files.mastodon.social/media_attachments/files/115/100/138/078/036/705/small/37e8765948dc7a93.jpeg",
+          "remote_url": null,
+          "preview_remote_url": null,
+          "text_url": null,
+          "meta": {
+            "original": {
+              "width": 2500,
+              "height": 1245,
+              "size": "2500x1245",
+              "aspect": 2.0080321285140563
+            },
+            "small": {
+              "width": 680,
+              "height": 339,
+              "size": "680x339",
+              "aspect": 2.005899705014749
+            },
+            "focus": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          },
+          "description": "",
+          "blurhash": "UE9%uA?w%hxu^+t8bHoK-oWARjWB$%aebHfl"
+        },
+        {
+          "id": "115100138069363897",
+          "type": "image",
+          "url": "https://files.mastodon.social/media_attachments/files/115/100/138/069/363/897/original/b8ab5c5d90e042b0.jpeg",
+          "preview_url": "https://files.mastodon.social/media_attachments/files/115/100/138/069/363/897/small/b8ab5c5d90e042b0.jpeg",
+          "remote_url": null,
+          "preview_remote_url": null,
+          "text_url": null,
+          "meta": {
+            "original": {
+              "width": 2500,
+              "height": 1248,
+              "size": "2500x1248",
+              "aspect": 2.003205128205128
+            },
+            "small": {
+              "width": 679,
+              "height": 339,
+              "size": "679x339",
+              "aspect": 2.0029498525073746
+            },
+            "focus": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          },
+          "description": "",
+          "blurhash": "UC9Z}|_4.9%M_3tSkWbIxZInM{Rj%2WBayj["
+        }
+      ],
+      "mentions": [
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [
+        {
+          "name": "particleos",
+          "url": "https://mastodon.social/tags/particleos"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115116865906891692",
+      "created_at": "2025-08-30T08:52:54.441Z",
+      "in_reply_to_id": "115100142678728711",
+      "in_reply_to_account_id": "109301899036487229",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115116865906891692",
+      "url": "https://mastodon.social/@TriMoon/115116865906891692",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Because i got no response back to the above and there was some error on my side, i continue at: <a href=\"https://github.com/systemd/particleos/issues/85\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/particleos/</span><span class=\"invisible\">issues/85</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Tuba",
+        "website": "https://github.com/GeopJr/Tuba"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/particleos/issues/85",
+        "title": "Boot error in ParticleOS_9.1_x86-64.raw \u00b7 Issue #85 \u00b7 systemd/particleos",
+        "description": "@bluca I already posted about this at https://mastodon.social/@TriMoon/115100142678728711 but because i got no response back im posting it here in case you missed it... #ParticleOS - ParticleOS_9.1...",
+        "language": "en",
+        "type": "link",
+        "author_name": "TriMoon",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "@bluca I already posted about this at https://mastodon.social/@TriMoon/115100142678728711 but because i got no response back im posting it here in case you missed it... #ParticleOS - ParticleOS_9.1...",
+        "embed_url": "",
+        "blurhash": "UTR{=BM{WB%M$-WCj[ofXfxuayWB~Xt7RjRj",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "TriMoon",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115117033186482673",
+      "created_at": "2025-08-30T09:35:26.919Z",
+      "in_reply_to_id": "115116865906891692",
+      "in_reply_to_account_id": "109301899036487229",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115117033186482673",
+      "url": "https://mastodon.social/@TriMoon/115117033186482673",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-08-30T09:44:41.204Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Nope still not working...<br /><a href=\"https://mastodon.social/tags/ParticleOS\" class=\"mention hashtag\" rel=\"tag\">#<span>ParticleOS</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [
+        {
+          "id": "115117030177628856",
+          "type": "video",
+          "url": "https://files.mastodon.social/media_attachments/files/115/117/030/177/628/856/original/bd3d99ef653ac50e.mp4",
+          "preview_url": "https://files.mastodon.social/media_attachments/files/115/117/030/177/628/856/small/bd3d99ef653ac50e.png",
+          "remote_url": null,
+          "preview_remote_url": null,
+          "text_url": null,
+          "meta": {
+            "original": {
+              "width": 1280,
+              "height": 720,
+              "frame_rate": "7884000/264397",
+              "duration": 44.066167,
+              "bitrate": 6496257
+            },
+            "small": {
+              "width": 640,
+              "height": 360,
+              "size": "640x360",
+              "aspect": 1.7777777777777777
+            }
+          },
+          "description": null,
+          "blurhash": "U797bC_3_3?bE4%Mt6xu?FIUNGMx00xut7og"
+        }
+      ],
+      "mentions": [
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [
+        {
+          "name": "particleos",
+          "url": "https://mastodon.social/tags/particleos"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115123262379493047",
+      "created_at": "2025-08-31T11:59:36.946Z",
+      "in_reply_to_id": "115117033186482673",
+      "in_reply_to_account_id": "111420321283674728",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115123262379493047",
+      "url": "https://mastodon.social/@pid_eins/115123262379493047",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@TriMoon\" class=\"u-url mention\">@<span>TriMoon</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> <a href=\"https://github.com/systemd/particleos/pull/84\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/particleos/</span><span class=\"invisible\">pull/84</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111420321283674728",
+          "username": "TriMoon",
+          "url": "https://mastodon.social/@TriMoon",
+          "acct": "TriMoon"
+        },
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/particleos/pull/84",
+        "title": "debian: drop debian-specific pam.d line from tmpfiles.d by bluca \u00b7 Pull Request #84 \u00b7 systemd/particleos",
+        "description": "On Debian there are custom patches that break /usr/lib/pam.d/ so login doesn't work:\nAug 28 17:52:55 particle-6579-bbfd login[1260]: PAM _pam_load_conf_file: unable to open config for /etc/pam....",
+        "language": "en",
+        "type": "link",
+        "author_name": "bluca",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 678,
+        "height": 339,
+        "image": null,
+        "image_description": "On Debian there are custom patches that break /usr/lib/pam.d/ so login doesn&#39;t work:\nAug 28 17:52:55 particle-6579-bbfd login[1260]: PAM _pam_load_conf_file: unable to open config for /etc/pam....",
+        "embed_url": "",
+        "blurhash": "UURMl1RkoL%M$mt7WBt7yAxuM{Rj~XWBoMRj",
+        "published_at": null,
+        "authors": [
+          {
+            "name": "bluca",
+            "url": "",
+            "account": null
+          }
+        ]
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115123516725784632",
+      "created_at": "2025-08-31T13:04:17.856Z",
+      "in_reply_to_id": "115123262379493047",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115123516725784632",
+      "url": "https://mastodon.social/@TriMoon/115123516725784632",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> Thanks, I will try again with newer image when I&#39;m back home at PC \ud83d\udc4d</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115133857259481188",
+      "created_at": "2025-09-02T08:54:01.899Z",
+      "in_reply_to_id": "115123516725784632",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115133857259481188",
+      "url": "https://mastodon.social/@TriMoon/115133857259481188",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span><br /><span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> </p><p>Today I finally tried again, but whished I had not...</p><p>I KNOW it&#39;s my own FUCKING FAULT but argggg...</p><p>I have 2 NVME&#39;s in my system:<br />- NVME0 \u2192 Dedicated to test setups.<br />- NVME1 \u2192 My main working system.</p><p>Both with their own ESP&#39;s.<br />So far so good, all was working fine and I could boot each separately using the UEFI boot menu.</p><p>Until ofcourse i was DUMB enough to try <a href=\"https://mastodon.social/tags/ParticleOS\" class=\"mention hashtag\" rel=\"tag\">#<span>ParticleOS</span></a> WITHOUT removing my NVME1, containing my main system, from my hardware before doing this test. \ud83e\udd2c</p>",
+      "reblog": null,
+      "application": {
+        "name": "Fedilab",
+        "website": "https://fedilab.app"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        }
+      ],
+      "tags": [
+        {
+          "name": "particleos",
+          "url": "https://mastodon.social/tags/particleos"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115133857387356198",
+      "created_at": "2025-09-02T08:54:03.831Z",
+      "in_reply_to_id": "115133857259481188",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/TriMoon/statuses/115133857387356198",
+      "url": "https://mastodon.social/@TriMoon/115133857387356198",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span><br /><span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@bluca\" class=\"u-url mention\">@<span>bluca</span></a></span> </p><p>Because it COMPLETELY WRECKED and reformatted both NVME&#39;s. \ud83e\udd2f<br />Even though I instructed to use only `/dev/nvme0n1`<br />And now I&#39;m left with a PC without any working OS on it, because it didn&#39;t work anyhow...</p><p>Wish me strength to find energy to setup a new system *again* \ud83e\udd75<br /><a href=\"https://mastodon.social/tags/ParticleOS\" class=\"mention hashtag\" rel=\"tag\">#<span>ParticleOS</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Fedilab",
+        "website": "https://fedilab.app"
+      },
+      "account": {
+        "id": "111420321283674728",
+        "username": "TriMoon",
+        "acct": "TriMoon",
+        "display_name": "TriMoon",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-11-16T00:00:00.000Z",
+        "note": "<p>- I use Systemd btw \ud83d\ude02\ud83d\ude1c</p>",
+        "url": "https://mastodon.social/@TriMoon",
+        "uri": "https://mastodon.social/users/TriMoon",
+        "avatar": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/111/420/321/283/674/728/original/bf94e0d2509331c4.png",
+        "header": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "header_static": "https://files.mastodon.social/accounts/headers/111/420/321/283/674/728/original/d61df956c98f9a00.jpeg",
+        "followers_count": 2,
+        "following_count": 7,
+        "statuses_count": 102,
+        "last_status_at": "2025-10-13",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Next Sosyal",
+            "value": "<a href=\"https://sosyal.teknofest.app/@_trimoon_\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">sosyal.teknofest.app/@_trimoon_</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-23T05:14:15.562+00:00"
+          },
+          {
+            "name": "L\u0131nux Soc\u0131al",
+            "value": "<a href=\"https://linux.social/@TriMoon\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">linux.social/@TriMoon</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-08-10T10:54:54.205+00:00"
+          }
+        ]
+      },
+      "media_attachments": [
+        {
+          "id": "115133857347718190",
+          "type": "image",
+          "url": "https://files.mastodon.social/media_attachments/files/115/133/857/347/718/190/original/b40bf5d34c1c1b9a.jpg",
+          "preview_url": "https://files.mastodon.social/media_attachments/files/115/133/857/347/718/190/small/b40bf5d34c1c1b9a.jpg",
+          "remote_url": null,
+          "preview_remote_url": null,
+          "text_url": null,
+          "meta": {
+            "original": {
+              "width": 2500,
+              "height": 1119,
+              "size": "2500x1119",
+              "aspect": 2.234137622877569
+            },
+            "small": {
+              "width": 717,
+              "height": 321,
+              "size": "717x321",
+              "aspect": 2.2336448598130842
+            }
+          },
+          "description": null,
+          "blurhash": "UE9G]t_4?c-;%MkCbIbHxut6ofayRjM{RjWB"
+        }
+      ],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "109301899036487229",
+          "username": "bluca",
+          "url": "https://fosstodon.org/@bluca",
+          "acct": "bluca@fosstodon.org"
+        }
+      ],
+      "tags": [
+        {
+          "name": "particleos",
+          "url": "https://mastodon.social/tags/particleos"
+        }
+      ],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

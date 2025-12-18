@@ -1,0 +1,2 @@
+description:  Write audit and utmp updates at bootup and shutdown
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-update-utmp.html

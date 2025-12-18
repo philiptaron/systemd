@@ -1,0 +1,1137 @@
+{
+  "post": {
+    "id": "114556401535348313",
+    "created_at": "2025-05-23T09:19:26.789Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/114556401535348313",
+    "url": "https://mastodon.social/@pid_eins/114556401535348313",
+    "replies_count": 3,
+    "reblogs_count": 18,
+    "favourites_count": 36,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>3\ufe0f\u20e3 Here&#39;s the 3rd post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>systemd-resolved  is a local DNS cache, widely deployed on Linux systems. What makes it different from older solutions is that it manages DNS settings primarily as a per network interface setting, instead of a per system setting. This reflects today&#39;s world better where systems tend to be connected to multiple networks at different times (or continously), instead of\u2026</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "114556416384475176",
+      "created_at": "2025-05-23T09:23:13.363Z",
+      "in_reply_to_id": "114556401535348313",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114556416384475176",
+      "url": "https://mastodon.social/@pid_eins/114556416384475176",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026strictly remaining connected to a single network, of which they are considered to be part of \u2013 for good. This maps nicely to how DHCP leases work, i.e. that they are handed out individually for each network, have a lifecycle and so on.</p><p>This of course means that at any given time multiple DNS server configurations can be active at the same time, and queries must be routed to the right ones. One of resolved&#39;s strengths on this is that it accepts a certain level of ambiguity:</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114556883870796399",
+      "created_at": "2025-05-23T11:22:05.000Z",
+      "in_reply_to_id": "114556401535348313",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.online/users/quantum/statuses/114556883792756168",
+      "url": "https://mastodon.online/@quantum/114556883792756168",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> dns over https will it be enabled in this release?</p>",
+      "reblog": null,
+      "account": {
+        "id": "106701022658675782",
+        "username": "quantum",
+        "acct": "quantum@mastodon.online",
+        "display_name": "aritrasaha",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2021-08-05T00:00:00.000Z",
+        "note": "<p>&lt;\\Linux user&gt;<br>&lt;\\socialist&gt;<br>&lt;\\opensource contributor&gt;</p>",
+        "url": "https://mastodon.online/@quantum",
+        "uri": "https://mastodon.online/users/quantum",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/106/701/022/658/675/782/original/0cbdc043e31b42b3.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/106/701/022/658/675/782/original/0cbdc043e31b42b3.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/106/701/022/658/675/782/original/0ba079d81d5c1e3b.webp",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/106/701/022/658/675/782/original/0ba079d81d5c1e3b.webp",
+        "followers_count": 20,
+        "following_count": 253,
+        "statuses_count": 146,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "github",
+            "value": "<a href=\"https://github.com/olumolu/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/olumolu/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-12T21:40:49.280+00:00"
+          },
+          {
+            "name": "bluesky",
+            "value": "<a href=\"https://bsky.app/profile/aritrasaha.bsky.social\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">bsky.app/profile/aritrasaha.bs</span><span class=\"invisible\">ky.social</span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114557388005762311",
+      "created_at": "2025-05-23T13:30:17.000Z",
+      "in_reply_to_id": "114556401535348313",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://chaos.social/users/equinox/statuses/114557387905409004",
+      "url": "https://chaos.social/@equinox/114557387905409004",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> are you aware DNS settings have been made part of PvDs 10 years ago? RFC7556. The ultimate takeaway (after you follow down the rathole and discard overly complex/dead approaches) is that distinct IPv6 LL addresses advertising distinct prefixes in RA/PIOs need to be treated as distinct networks on the same interface.</p><p>Either way, you need multiple distinct sets per interface.</p><p>(Good that we're catching up from 20 years ago to 10 years ago, but can we get to now? \ud83d\ude05)</p>",
+      "reblog": null,
+      "account": {
+        "id": "109291195437707730",
+        "username": "equinox",
+        "acct": "equinox@chaos.social",
+        "display_name": "equi",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-05T00:00:00.000Z",
+        "note": "<p>he/him \u00b7 FRRouting \u00b7 Junisco &amp; Hp3Com slayer \u00b7 knows more about IP routing than is healthy \u00b7 moonlights in bullying electrons around a circuit board</p>",
+        "url": "https://chaos.social/@equinox",
+        "uri": "https://chaos.social/users/equinox",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/291/195/437/707/730/original/d73968a6a841d9d6.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/291/195/437/707/730/original/d73968a6a841d9d6.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 282,
+        "following_count": 120,
+        "statuses_count": 1768,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "github",
+            "value": "<a href=\"https://github.com/eqvinox\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/eqvinox</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T17:56:52.827+00:00"
+          },
+          {
+            "name": "threema",
+            "value": "95JJFCSA",
+            "verified_at": null
+          },
+          {
+            "name": "signal",
+            "value": "equinox.79",
+            "verified_at": null
+          },
+          {
+            "name": "pronouns",
+            "value": "he/him",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "114556426600380439",
+      "created_at": "2025-05-23T09:25:49.248Z",
+      "in_reply_to_id": "114556416384475176",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114556426600380439",
+      "url": "https://mastodon.social/@pid_eins/114556426600380439",
+      "replies_count": 1,
+      "reblogs_count": 4,
+      "favourites_count": 17,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>company networks/VPNs often serve their own non-public zones, and thus there is not just &quot;the one DNS&quot;, but many, and if in doubt we might need to ask multiple sources at the same time, and take what we can get.</p><p>With systemd v258 the query routing logic in systemd-resolved got substantially upgraded: in addition to routing queries to the DNS config of each interface (and optionaly one additional global one), there&#39;s now the ability to define arbitrary numbers of additional &quot;delegate zones&quot;:</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114556437709396360",
+      "created_at": "2025-05-23T09:28:38.757Z",
+      "in_reply_to_id": "114556426600380439",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114556437709396360",
+      "url": "https://mastodon.social/@pid_eins/114556437709396360",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 16,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>These are basically just combinations of DNS servers along with the domains to match queries with that shall be routed there.</p><p>For now this configuration is static (i.e. based on config files), but we hope to open this up to IPC too, i.e. that additional delegate zones can be added and removed any time.</p><p>In a way, delegate zones are like adding additional &quot;dummy&quot; network interfaces to the system that come with their own DNS config, but without any real connectivity.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114557653200869180",
+      "created_at": "2025-05-23T14:37:45.690Z",
+      "in_reply_to_id": "114557421639146510",
+      "in_reply_to_account_id": "109291195437707730",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114557653200869180",
+      "url": "https://mastodon.social/@pid_eins/114557653200869180",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@equinox\" class=\"u-url mention\">@<span>equinox</span></a></span> nah, this change shows that the config sets can relatively easily be made independent of interfaces.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109291195437707730",
+          "username": "equinox",
+          "url": "https://chaos.social/@equinox",
+          "acct": "equinox@chaos.social"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "114556416384475176",
+      "created_at": "2025-05-23T09:23:13.363Z",
+      "in_reply_to_id": "114556401535348313",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114556416384475176",
+      "url": "https://mastodon.social/@pid_eins/114556416384475176",
+      "replies_count": 1,
+      "reblogs_count": 1,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026strictly remaining connected to a single network, of which they are considered to be part of \u2013 for good. This maps nicely to how DHCP leases work, i.e. that they are handed out individually for each network, have a lifecycle and so on.</p><p>This of course means that at any given time multiple DNS server configurations can be active at the same time, and queries must be routed to the right ones. One of resolved&#39;s strengths on this is that it accepts a certain level of ambiguity:</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114556426600380439",
+      "created_at": "2025-05-23T09:25:49.248Z",
+      "in_reply_to_id": "114556416384475176",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114556426600380439",
+      "url": "https://mastodon.social/@pid_eins/114556426600380439",
+      "replies_count": 1,
+      "reblogs_count": 4,
+      "favourites_count": 17,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>company networks/VPNs often serve their own non-public zones, and thus there is not just &quot;the one DNS&quot;, but many, and if in doubt we might need to ask multiple sources at the same time, and take what we can get.</p><p>With systemd v258 the query routing logic in systemd-resolved got substantially upgraded: in addition to routing queries to the DNS config of each interface (and optionaly one additional global one), there&#39;s now the ability to define arbitrary numbers of additional &quot;delegate zones&quot;:</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114556437709396360",
+      "created_at": "2025-05-23T09:28:38.757Z",
+      "in_reply_to_id": "114556426600380439",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114556437709396360",
+      "url": "https://mastodon.social/@pid_eins/114556437709396360",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 16,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>These are basically just combinations of DNS servers along with the domains to match queries with that shall be routed there.</p><p>For now this configuration is static (i.e. based on config files), but we hope to open this up to IPC too, i.e. that additional delegate zones can be added and removed any time.</p><p>In a way, delegate zones are like adding additional &quot;dummy&quot; network interfaces to the system that come with their own DNS config, but without any real connectivity.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115577819731602611",
+      "created_at": "2025-11-19T18:39:31.594Z",
+      "in_reply_to_id": "114556437709396360",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/Velocifyer/statuses/115577819731602611",
+      "url": "https://mastodon.social/@Velocifyer/115577819731602611",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> is there a way to disable per-network DNS so network manager does not overide my DNS Over TLS?</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "114785205506839704",
+        "username": "Velocifyer",
+        "acct": "Velocifyer",
+        "display_name": "Velocifyer",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2025-07-02T00:00:00.000Z",
+        "note": "",
+        "url": "https://mastodon.social/@Velocifyer",
+        "uri": "https://mastodon.social/users/Velocifyer",
+        "avatar": "https://files.mastodon.social/accounts/avatars/114/785/205/506/839/704/original/37796ef064097e80.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/114/785/205/506/839/704/original/37796ef064097e80.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 1,
+        "following_count": 38,
+        "statuses_count": 56,
+        "last_status_at": "2025-12-09",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.velocifyer.com\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.velocifyer.com</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-09-15T22:40:33.696+00:00"
+          },
+          {
+            "name": "OpenPGP key",
+            "value": "1BA0 FC4B 80E0 F21B 0269 8CEE 634E BF87 40C7 48BE",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [
+          "public"
+        ],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114556883870796399",
+      "created_at": "2025-05-23T11:22:05.000Z",
+      "in_reply_to_id": "114556401535348313",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.online/users/quantum/statuses/114556883792756168",
+      "url": "https://mastodon.online/@quantum/114556883792756168",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> dns over https will it be enabled in this release?</p>",
+      "reblog": null,
+      "account": {
+        "id": "106701022658675782",
+        "username": "quantum",
+        "acct": "quantum@mastodon.online",
+        "display_name": "aritrasaha",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2021-08-05T00:00:00.000Z",
+        "note": "<p>&lt;\\Linux user&gt;<br>&lt;\\socialist&gt;<br>&lt;\\opensource contributor&gt;</p>",
+        "url": "https://mastodon.online/@quantum",
+        "uri": "https://mastodon.online/users/quantum",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/106/701/022/658/675/782/original/0cbdc043e31b42b3.jpeg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/106/701/022/658/675/782/original/0cbdc043e31b42b3.jpeg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/106/701/022/658/675/782/original/0ba079d81d5c1e3b.webp",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/106/701/022/658/675/782/original/0ba079d81d5c1e3b.webp",
+        "followers_count": 20,
+        "following_count": 253,
+        "statuses_count": 146,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "github",
+            "value": "<a href=\"https://github.com/olumolu/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/olumolu/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-12T21:40:49.280+00:00"
+          },
+          {
+            "name": "bluesky",
+            "value": "<a href=\"https://bsky.app/profile/aritrasaha.bsky.social\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">bsky.app/profile/aritrasaha.bs</span><span class=\"invisible\">ky.social</span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114557388005762311",
+      "created_at": "2025-05-23T13:30:17.000Z",
+      "in_reply_to_id": "114556401535348313",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://chaos.social/users/equinox/statuses/114557387905409004",
+      "url": "https://chaos.social/@equinox/114557387905409004",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> are you aware DNS settings have been made part of PvDs 10 years ago? RFC7556. The ultimate takeaway (after you follow down the rathole and discard overly complex/dead approaches) is that distinct IPv6 LL addresses advertising distinct prefixes in RA/PIOs need to be treated as distinct networks on the same interface.</p><p>Either way, you need multiple distinct sets per interface.</p><p>(Good that we're catching up from 20 years ago to 10 years ago, but can we get to now? \ud83d\ude05)</p>",
+      "reblog": null,
+      "account": {
+        "id": "109291195437707730",
+        "username": "equinox",
+        "acct": "equinox@chaos.social",
+        "display_name": "equi",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-05T00:00:00.000Z",
+        "note": "<p>he/him \u00b7 FRRouting \u00b7 Junisco &amp; Hp3Com slayer \u00b7 knows more about IP routing than is healthy \u00b7 moonlights in bullying electrons around a circuit board</p>",
+        "url": "https://chaos.social/@equinox",
+        "uri": "https://chaos.social/users/equinox",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/291/195/437/707/730/original/d73968a6a841d9d6.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/291/195/437/707/730/original/d73968a6a841d9d6.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 282,
+        "following_count": 120,
+        "statuses_count": 1768,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "github",
+            "value": "<a href=\"https://github.com/eqvinox\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/eqvinox</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T17:56:52.827+00:00"
+          },
+          {
+            "name": "threema",
+            "value": "95JJFCSA",
+            "verified_at": null
+          },
+          {
+            "name": "signal",
+            "value": "equinox.79",
+            "verified_at": null
+          },
+          {
+            "name": "pronouns",
+            "value": "he/him",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114557421639146510",
+      "created_at": "2025-05-23T13:38:49.000Z",
+      "in_reply_to_id": "114557388005762311",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://chaos.social/users/equinox/statuses/114557421483775720",
+      "url": "https://chaos.social/@equinox/114557421483775720",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> (for more detail:) you need to read \u224810 more RFCs, some drafts, and follow IETF mailing lists to get to \"implicit PvDs by router's IPv6 LL address\" part, but \u2014 the real 'problem' here is that this is /actually needed/. The IETF is moving with its usual speed of molasses at this, but IPv6 multihoming needs to be solved, and this is the only viable way.</p><p>But if this systemd code is hard tied to interfaces conceptually\u2026 yeah, sorry, you'll need another refactor.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109291195437707730",
+        "username": "equinox",
+        "acct": "equinox@chaos.social",
+        "display_name": "equi",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-05T00:00:00.000Z",
+        "note": "<p>he/him \u00b7 FRRouting \u00b7 Junisco &amp; Hp3Com slayer \u00b7 knows more about IP routing than is healthy \u00b7 moonlights in bullying electrons around a circuit board</p>",
+        "url": "https://chaos.social/@equinox",
+        "uri": "https://chaos.social/users/equinox",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/291/195/437/707/730/original/d73968a6a841d9d6.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/291/195/437/707/730/original/d73968a6a841d9d6.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 282,
+        "following_count": 120,
+        "statuses_count": 1768,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "github",
+            "value": "<a href=\"https://github.com/eqvinox\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/eqvinox</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T17:56:52.827+00:00"
+          },
+          {
+            "name": "threema",
+            "value": "95JJFCSA",
+            "verified_at": null
+          },
+          {
+            "name": "signal",
+            "value": "equinox.79",
+            "verified_at": null
+          },
+          {
+            "name": "pronouns",
+            "value": "he/him",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114557653200869180",
+      "created_at": "2025-05-23T14:37:45.690Z",
+      "in_reply_to_id": "114557421639146510",
+      "in_reply_to_account_id": "109291195437707730",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114557653200869180",
+      "url": "https://mastodon.social/@pid_eins/114557653200869180",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@equinox\" class=\"u-url mention\">@<span>equinox</span></a></span> nah, this change shows that the config sets can relatively easily be made independent of interfaces.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109291195437707730",
+          "username": "equinox",
+          "url": "https://chaos.social/@equinox",
+          "acct": "equinox@chaos.social"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

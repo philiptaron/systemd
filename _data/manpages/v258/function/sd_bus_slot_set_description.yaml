@@ -1,0 +1,2 @@
+description:  Set or query the description of bus slot objects
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_slot_set_description.html

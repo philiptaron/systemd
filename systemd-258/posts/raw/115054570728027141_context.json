@@ -1,0 +1,1356 @@
+{
+  "post": {
+    "id": "115054570728027141",
+    "created_at": "2025-08-19T08:50:25.422Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/115054570728027141",
+    "url": "https://mastodon.social/@pid_eins/115054570728027141",
+    "replies_count": 2,
+    "reblogs_count": 6,
+    "favourites_count": 18,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>4\ufe0f\u20e31\ufe0f\u20e3 Here&#39;s the 41st post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>systemd-vmspawn is a wrapper around qemu, which makes it work more like systemd-nspawn, and provides various bits of integration with systemd (for example, to make really nice unpriv networking work thanks to systemd-nsresourced + systemd-networkd).</p><p>With v258 vmspawn gained a new --smbios11= switch. It&#39;s an easy way to add SMBIOS Type 11 vendor objects to the VM, or in other words:</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "115054587377778439",
+      "created_at": "2025-08-19T08:54:39.470Z",
+      "in_reply_to_id": "115054570728027141",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115054587377778439",
+      "url": "https://mastodon.social/@pid_eins/115054587377778439",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>you can use to parameterize the VM in a nice way.</p><p>For example, systemd-boot now takes the io.systemd.boot-entries.extra (see episode 14 of this series) SMBIOS Type #11 object for defining additional boot menu items. You can set these really nicely with the --smbios11= switch like so:</p><p>--smbios11=io.systemd.boot.entries-extra:particleos-current.conf=$&#39;title ParticleOS Current\\nuki-url <a href=\"http://example.com/somedir/uki.efi\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">example.com/somedir/uki.efi</span><span class=\"invisible\"></span></a>&#39;</p><p>This adds a new boot entry, defining it to download the specified UKI via UEFI\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115054765767746942",
+      "created_at": "2025-08-19T09:40:00.000Z",
+      "in_reply_to_id": "115054570728027141",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alexhaydock/statuses/115054765724249855",
+      "url": "https://infosec.exchange/@alexhaydock/115054765724249855",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Does the unpriv networking handle providing IPv6 to guests better than a standard qemu-system-x86_64 invocation with `-netdev user` does? :blobcatreading:</p>",
+      "reblog": null,
+      "account": {
+        "id": "109381006661831453",
+        "username": "alexhaydock",
+        "acct": "alexhaydock@infosec.exchange",
+        "display_name": "Alex \ud83d\udd1c 39c3",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-21T00:00:00.000Z",
+        "note": "<p>Security Engineer. Dismantler of Torment Nexuses. Friend of Bl\u00e5haj. Knows too much about IPv6.</p><p>Currently trying to help build a UK-centric chaos community over at <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@MinistryOfChaos\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>MinistryOfChaos</span></a></span>.</p><p>I also help run Tor relays for <span class=\"h-card\" translate=\"no\"><a href=\"https://disobey.net/@emeraldonion\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>emeraldonion</span></a></span>.</p><p>:rainbow_heart: :trans_heart:</p>",
+        "url": "https://infosec.exchange/@alexhaydock",
+        "uri": "https://infosec.exchange/users/alexhaydock",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "followers_count": 962,
+        "following_count": 2053,
+        "statuses_count": 569,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "rainbow_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/original/fb47f4ee3bf1b558.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/static/fb47f4ee3bf1b558.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "trans_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/original/b6af944acb765597.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/static/b6af944acb765597.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "he/him",
+            "verified_at": null
+          },
+          {
+            "name": "Locale",
+            "value": "en_GB",
+            "verified_at": null
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.infected.systems\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.132+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/alexhaydock\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/alexhaydock</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.573+00:00"
+          },
+          {
+            "name": "AS",
+            "value": "<a href=\"https://as215768.net\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">as215768.net</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Status",
+            "value": "<a href=\"https://status.infected.systems\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">status.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "blobcatreading",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/242/original/29dd27417c164718.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/242/static/29dd27417c164718.png",
+          "visible_in_picker": true
+        }
+      ],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "115054596000353231",
+      "created_at": "2025-08-19T08:56:51.039Z",
+      "in_reply_to_id": "115054587377778439",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115054596000353231",
+      "url": "https://mastodon.social/@pid_eins/115054596000353231",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026HTTP boot and booting into it. An orchestrator could use this to generically install a boot menu item in all its VMs that help with recovery, reset or backup of its VMs or s a similar logic.</p><p>Note that you can also pass system credentials via SMBIOS Type 11 to a VM, hence ou could set those via --smbios11= too. But it&#39;s kinda pointless given that we have explicit --set-credential=/--load-credential= knobs for that, which are more powerful.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115054602838595153",
+      "created_at": "2025-08-19T08:58:35.382Z",
+      "in_reply_to_id": "115054596000353231",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115054602838595153",
+      "url": "https://mastodon.social/@pid_eins/115054602838595153",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>We maintain a list of SMBIOS type 11 objects systemd cares for in a man page:</p><p><a href=\"https://www.freedesktop.org/software/systemd/man/devel/smbios-type-11.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"ellipsis\">freedesktop.org/software/syste</span><span class=\"invisible\">md/man/devel/smbios-type-11.html</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://www.freedesktop.org/software/systemd/man/devel/smbios-type-11.html",
+        "title": "smbios-type-11",
+        "description": "",
+        "language": null,
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115054780874401374",
+      "created_at": "2025-08-19T09:43:51.995Z",
+      "in_reply_to_id": "115054765767746942",
+      "in_reply_to_account_id": "109381006661831453",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115054780874401374",
+      "url": "https://mastodon.social/@pid_eins/115054780874401374",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alexhaydock\" class=\"u-url mention\">@<span>alexhaydock</span></a></span> I have no idea what &quot;better&quot; constitutes, but it just let&#39;s networkd configure the device, and this is the default config:</p><p><a href=\"https://github.com/systemd/systemd/blob/main/network/80-namespace-ns-tun.network\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/blo</span><span class=\"invisible\">b/main/network/80-namespace-ns-tun.network</span></a></p><p>i.e. it does ipv6 masquerading.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109381006661831453",
+          "username": "alexhaydock",
+          "url": "https://infosec.exchange/@alexhaydock",
+          "acct": "alexhaydock@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/systemd/blob/main/network/80-namespace-ns-tun.network",
+        "title": "systemd/network/80-namespace-ns-tun.network at main \u00b7 systemd/systemd",
+        "description": "The systemd System and Service Manager . Contribute to systemd/systemd development by creating an account on GitHub.",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 588,
+        "height": 392,
+        "image": null,
+        "image_description": "The systemd System and Service Manager . Contribute to systemd/systemd development by creating an account on GitHub.",
+        "embed_url": "",
+        "blurhash": "U9S?Gd%f%M$+-;j[j[ju~XepIUo|?bjaayj[",
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "115054587377778439",
+      "created_at": "2025-08-19T08:54:39.470Z",
+      "in_reply_to_id": "115054570728027141",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115054587377778439",
+      "url": "https://mastodon.social/@pid_eins/115054587377778439",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>you can use to parameterize the VM in a nice way.</p><p>For example, systemd-boot now takes the io.systemd.boot-entries.extra (see episode 14 of this series) SMBIOS Type #11 object for defining additional boot menu items. You can set these really nicely with the --smbios11= switch like so:</p><p>--smbios11=io.systemd.boot.entries-extra:particleos-current.conf=$&#39;title ParticleOS Current\\nuki-url <a href=\"http://example.com/somedir/uki.efi\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">example.com/somedir/uki.efi</span><span class=\"invisible\"></span></a>&#39;</p><p>This adds a new boot entry, defining it to download the specified UKI via UEFI\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115054596000353231",
+      "created_at": "2025-08-19T08:56:51.039Z",
+      "in_reply_to_id": "115054587377778439",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115054596000353231",
+      "url": "https://mastodon.social/@pid_eins/115054596000353231",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026HTTP boot and booting into it. An orchestrator could use this to generically install a boot menu item in all its VMs that help with recovery, reset or backup of its VMs or s a similar logic.</p><p>Note that you can also pass system credentials via SMBIOS Type 11 to a VM, hence ou could set those via --smbios11= too. But it&#39;s kinda pointless given that we have explicit --set-credential=/--load-credential= knobs for that, which are more powerful.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115054602838595153",
+      "created_at": "2025-08-19T08:58:35.382Z",
+      "in_reply_to_id": "115054596000353231",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115054602838595153",
+      "url": "https://mastodon.social/@pid_eins/115054602838595153",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 4,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>We maintain a list of SMBIOS type 11 objects systemd cares for in a man page:</p><p><a href=\"https://www.freedesktop.org/software/systemd/man/devel/smbios-type-11.html\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"ellipsis\">freedesktop.org/software/syste</span><span class=\"invisible\">md/man/devel/smbios-type-11.html</span></a></p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://www.freedesktop.org/software/systemd/man/devel/smbios-type-11.html",
+        "title": "smbios-type-11",
+        "description": "",
+        "language": null,
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115054765767746942",
+      "created_at": "2025-08-19T09:40:00.000Z",
+      "in_reply_to_id": "115054570728027141",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alexhaydock/statuses/115054765724249855",
+      "url": "https://infosec.exchange/@alexhaydock/115054765724249855",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Does the unpriv networking handle providing IPv6 to guests better than a standard qemu-system-x86_64 invocation with `-netdev user` does? :blobcatreading:</p>",
+      "reblog": null,
+      "account": {
+        "id": "109381006661831453",
+        "username": "alexhaydock",
+        "acct": "alexhaydock@infosec.exchange",
+        "display_name": "Alex \ud83d\udd1c 39c3",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-21T00:00:00.000Z",
+        "note": "<p>Security Engineer. Dismantler of Torment Nexuses. Friend of Bl\u00e5haj. Knows too much about IPv6.</p><p>Currently trying to help build a UK-centric chaos community over at <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@MinistryOfChaos\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>MinistryOfChaos</span></a></span>.</p><p>I also help run Tor relays for <span class=\"h-card\" translate=\"no\"><a href=\"https://disobey.net/@emeraldonion\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>emeraldonion</span></a></span>.</p><p>:rainbow_heart: :trans_heart:</p>",
+        "url": "https://infosec.exchange/@alexhaydock",
+        "uri": "https://infosec.exchange/users/alexhaydock",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "followers_count": 962,
+        "following_count": 2053,
+        "statuses_count": 569,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "rainbow_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/original/fb47f4ee3bf1b558.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/static/fb47f4ee3bf1b558.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "trans_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/original/b6af944acb765597.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/static/b6af944acb765597.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "he/him",
+            "verified_at": null
+          },
+          {
+            "name": "Locale",
+            "value": "en_GB",
+            "verified_at": null
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.infected.systems\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.132+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/alexhaydock\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/alexhaydock</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.573+00:00"
+          },
+          {
+            "name": "AS",
+            "value": "<a href=\"https://as215768.net\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">as215768.net</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Status",
+            "value": "<a href=\"https://status.infected.systems\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">status.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "blobcatreading",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/242/original/29dd27417c164718.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/242/static/29dd27417c164718.png",
+          "visible_in_picker": true
+        }
+      ],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115054780874401374",
+      "created_at": "2025-08-19T09:43:51.995Z",
+      "in_reply_to_id": "115054765767746942",
+      "in_reply_to_account_id": "109381006661831453",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/115054780874401374",
+      "url": "https://mastodon.social/@pid_eins/115054780874401374",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alexhaydock\" class=\"u-url mention\">@<span>alexhaydock</span></a></span> I have no idea what &quot;better&quot; constitutes, but it just let&#39;s networkd configure the device, and this is the default config:</p><p><a href=\"https://github.com/systemd/systemd/blob/main/network/80-namespace-ns-tun.network\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/blo</span><span class=\"invisible\">b/main/network/80-namespace-ns-tun.network</span></a></p><p>i.e. it does ipv6 masquerading.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109381006661831453",
+          "username": "alexhaydock",
+          "url": "https://infosec.exchange/@alexhaydock",
+          "acct": "alexhaydock@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://github.com/systemd/systemd/blob/main/network/80-namespace-ns-tun.network",
+        "title": "systemd/network/80-namespace-ns-tun.network at main \u00b7 systemd/systemd",
+        "description": "The systemd System and Service Manager . Contribute to systemd/systemd development by creating an account on GitHub.",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "GitHub",
+        "provider_url": "",
+        "html": "",
+        "width": 588,
+        "height": 392,
+        "image": null,
+        "image_description": "The systemd System and Service Manager . Contribute to systemd/systemd development by creating an account on GitHub.",
+        "embed_url": "",
+        "blurhash": "U9S?Gd%f%M$+-;j[j[ju~XepIUo|?bjaayj[",
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115054858484425643",
+      "created_at": "2025-08-19T10:03:35.000Z",
+      "in_reply_to_id": "115054780874401374",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alexhaydock/statuses/115054858458336525",
+      "url": "https://infosec.exchange/@alexhaydock/115054858458336525",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Maybe I'm looking for the functionality in the wrong place, but I was hoping we might get closer to the kind of behaviour you get from a bridge, but without all the pain of needing to set up a bridge interface (especially on WiFi).</p><p>i.e. Guests being able to pull an address from the same SLAAC or DHCPv6 pool as the host does.</p><p>Current behaviour seems to be to use the fec0::/10 range that RFC 3879 deprecated, meaning most applications inside a guest act as if they don't have v6 since they ignore it as per RFC 6724.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109381006661831453",
+        "username": "alexhaydock",
+        "acct": "alexhaydock@infosec.exchange",
+        "display_name": "Alex \ud83d\udd1c 39c3",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-21T00:00:00.000Z",
+        "note": "<p>Security Engineer. Dismantler of Torment Nexuses. Friend of Bl\u00e5haj. Knows too much about IPv6.</p><p>Currently trying to help build a UK-centric chaos community over at <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@MinistryOfChaos\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>MinistryOfChaos</span></a></span>.</p><p>I also help run Tor relays for <span class=\"h-card\" translate=\"no\"><a href=\"https://disobey.net/@emeraldonion\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>emeraldonion</span></a></span>.</p><p>:rainbow_heart: :trans_heart:</p>",
+        "url": "https://infosec.exchange/@alexhaydock",
+        "uri": "https://infosec.exchange/users/alexhaydock",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "followers_count": 962,
+        "following_count": 2053,
+        "statuses_count": 569,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "rainbow_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/original/fb47f4ee3bf1b558.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/static/fb47f4ee3bf1b558.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "trans_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/original/b6af944acb765597.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/static/b6af944acb765597.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "he/him",
+            "verified_at": null
+          },
+          {
+            "name": "Locale",
+            "value": "en_GB",
+            "verified_at": null
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.infected.systems\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.132+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/alexhaydock\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/alexhaydock</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.573+00:00"
+          },
+          {
+            "name": "AS",
+            "value": "<a href=\"https://as215768.net\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">as215768.net</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Status",
+            "value": "<a href=\"https://status.infected.systems\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">status.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115060377534335091",
+      "created_at": "2025-08-20T09:27:08.000Z",
+      "in_reply_to_id": "115054858484425643",
+      "in_reply_to_account_id": "109381006661831453",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://social.troll.academy/users/TobiX/statuses/115060377446241569",
+      "url": "https://social.troll.academy/@TobiX/115060377446241569",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alexhaydock\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>alexhaydock</span></a></span> You might want to take a look at passt, which works a lot more like this...</p>",
+      "reblog": null,
+      "account": {
+        "id": "109366977438417713",
+        "username": "TobiX",
+        "acct": "TobiX@social.troll.academy",
+        "display_name": "TobiX",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2022-11-18T00:00:00.000Z",
+        "note": "",
+        "url": "https://social.troll.academy/@TobiX",
+        "uri": "https://social.troll.academy/users/TobiX",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/366/977/438/417/713/original/9e4eef3cd9829b71.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/366/977/438/417/713/original/9e4eef3cd9829b71.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/366/977/438/417/713/original/65f7f3a08d6c9a82.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/366/977/438/417/713/original/65f7f3a08d6c9a82.jpeg",
+        "followers_count": 130,
+        "following_count": 369,
+        "statuses_count": 1508,
+        "last_status_at": "2025-12-11",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/TobiX/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/TobiX/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-15T02:08:14.542+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109381006661831453",
+          "username": "alexhaydock",
+          "url": "https://infosec.exchange/@alexhaydock",
+          "acct": "alexhaydock@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115060495128989904",
+      "created_at": "2025-08-20T09:57:04.000Z",
+      "in_reply_to_id": "115060377534335091",
+      "in_reply_to_account_id": "109366977438417713",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alexhaydock/statuses/115060495091550067",
+      "url": "https://infosec.exchange/@alexhaydock/115060495091550067",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.troll.academy/@TobiX\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>TobiX</span></a></span> I need to give it a try in action but thanks for showing me this \u2014 looks like it might be exactly what I need! And if not, still useful to learn about.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109381006661831453",
+        "username": "alexhaydock",
+        "acct": "alexhaydock@infosec.exchange",
+        "display_name": "Alex \ud83d\udd1c 39c3",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-21T00:00:00.000Z",
+        "note": "<p>Security Engineer. Dismantler of Torment Nexuses. Friend of Bl\u00e5haj. Knows too much about IPv6.</p><p>Currently trying to help build a UK-centric chaos community over at <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@MinistryOfChaos\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>MinistryOfChaos</span></a></span>.</p><p>I also help run Tor relays for <span class=\"h-card\" translate=\"no\"><a href=\"https://disobey.net/@emeraldonion\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>emeraldonion</span></a></span>.</p><p>:rainbow_heart: :trans_heart:</p>",
+        "url": "https://infosec.exchange/@alexhaydock",
+        "uri": "https://infosec.exchange/users/alexhaydock",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "followers_count": 962,
+        "following_count": 2053,
+        "statuses_count": 569,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "rainbow_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/original/fb47f4ee3bf1b558.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/static/fb47f4ee3bf1b558.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "trans_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/original/b6af944acb765597.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/static/b6af944acb765597.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "he/him",
+            "verified_at": null
+          },
+          {
+            "name": "Locale",
+            "value": "en_GB",
+            "verified_at": null
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.infected.systems\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.132+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/alexhaydock\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/alexhaydock</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.573+00:00"
+          },
+          {
+            "name": "AS",
+            "value": "<a href=\"https://as215768.net\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">as215768.net</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Status",
+            "value": "<a href=\"https://status.infected.systems\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">status.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109366977438417713",
+          "username": "TobiX",
+          "url": "https://social.troll.academy/@TobiX",
+          "acct": "TobiX@social.troll.academy"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "115074107210206482",
+      "created_at": "2025-08-22T19:38:47.000Z",
+      "in_reply_to_id": "115060495128989904",
+      "in_reply_to_account_id": "109366977438417713",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alexhaydock/statuses/115074107175630032",
+      "url": "https://infosec.exchange/@alexhaydock/115074107175630032",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://social.troll.academy/@TobiX\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>TobiX</span></a></span> Yep, this was exactly what I needed. All the benefits of a bridge without any of the pain. Thanks! :neocat_aww:</p><p>Going to see if I can get this landed in Quickemu (handy QEMU VM spawner I use) so that more people can benefit.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109381006661831453",
+        "username": "alexhaydock",
+        "acct": "alexhaydock@infosec.exchange",
+        "display_name": "Alex \ud83d\udd1c 39c3",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-21T00:00:00.000Z",
+        "note": "<p>Security Engineer. Dismantler of Torment Nexuses. Friend of Bl\u00e5haj. Knows too much about IPv6.</p><p>Currently trying to help build a UK-centric chaos community over at <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@MinistryOfChaos\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>MinistryOfChaos</span></a></span>.</p><p>I also help run Tor relays for <span class=\"h-card\" translate=\"no\"><a href=\"https://disobey.net/@emeraldonion\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>emeraldonion</span></a></span>.</p><p>:rainbow_heart: :trans_heart:</p>",
+        "url": "https://infosec.exchange/@alexhaydock",
+        "uri": "https://infosec.exchange/users/alexhaydock",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/381/006/661/831/453/original/7963e1e38e71c532.jpg",
+        "header": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/109/381/006/661/831/453/original/0502e8cde4e92372.png",
+        "followers_count": 962,
+        "following_count": 2053,
+        "statuses_count": 569,
+        "last_status_at": "2025-12-17",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "rainbow_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/original/fb47f4ee3bf1b558.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/479/589/static/fb47f4ee3bf1b558.png",
+            "visible_in_picker": true
+          },
+          {
+            "shortcode": "trans_heart",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/original/b6af944acb765597.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/457/111/static/b6af944acb765597.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "he/him",
+            "verified_at": null
+          },
+          {
+            "name": "Locale",
+            "value": "en_GB",
+            "verified_at": null
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://blog.infected.systems\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">blog.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.132+00:00"
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/alexhaydock\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/alexhaydock</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T04:46:02.573+00:00"
+          },
+          {
+            "name": "AS",
+            "value": "<a href=\"https://as215768.net\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">as215768.net</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Status",
+            "value": "<a href=\"https://status.infected.systems\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">status.infected.systems</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109366977438417713",
+          "username": "TobiX",
+          "url": "https://social.troll.academy/@TobiX",
+          "acct": "TobiX@social.troll.academy"
+        }
+      ],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "neocat_aww",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/987/692/original/ccf581d7bdb1bfa8.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/987/692/static/ccf581d7bdb1bfa8.png",
+          "visible_in_picker": true
+        }
+      ],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

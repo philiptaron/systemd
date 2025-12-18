@@ -1,0 +1,2 @@
+description:  Query bus client credentials
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_get_owner_creds.html

@@ -1,0 +1,3316 @@
+{
+  "post": {
+    "id": "114550305394053015",
+    "created_at": "2025-05-22T07:29:07.056Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/114550305394053015",
+    "url": "https://mastodon.social/@pid_eins/114550305394053015",
+    "replies_count": 2,
+    "reblogs_count": 26,
+    "favourites_count": 35,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p>2\ufe0f\u20e3 Here&#39;s the 2nd post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>On UNIX systems every user registered on a local user owns a private directory: the &quot;home&quot; directory, where the user&#39;s configuration and data is saved and stored. In systemd there&#39;s systemd-homed which can manage that home directory securely, encrypted with a key that is provided at login time.</p><p>In most cases having a single home directory for each user is enough.</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "114550318767141575",
+      "created_at": "2025-05-22T07:32:31.107Z",
+      "in_reply_to_id": "114550305394053015",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550318767141575",
+      "url": "https://mastodon.social/@pid_eins/114550318767141575",
+      "replies_count": 2,
+      "reblogs_count": 10,
+      "favourites_count": 15,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T07:48:51.364Z",
+      "content": "<p>But in various scenarios it is handy to have a single login account, but multiple home directories one can switch between, for example to maintain different configuration sets, or build environments, possibly for different hosts.</p><p>In v258 systemd-homed (and by extension the userdb logic) has a concept for maintaining multiple &quot;areas&quot; for each user account. Areas in this sense are simply subdirectories of the main home directory, below the ~/Areas/ hierarchy. A user can have as many of these, \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550334421792324",
+      "created_at": "2025-05-22T07:36:29.000Z",
+      "in_reply_to_id": "114550305394053015",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://masto.ai/users/xbezdick/statuses/114550334362298321",
+      "url": "https://masto.ai/@xbezdick/114550334362298321",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Im interested in trying this, does it work well with freeipa?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109373483758167961",
+        "username": "xbezdick",
+        "acct": "xbezdick@masto.ai",
+        "display_name": "xbezdick",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-20T00:00:00.000Z",
+        "note": "",
+        "url": "https://masto.ai/@xbezdick",
+        "uri": "https://masto.ai/users/xbezdick",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/373/483/758/167/961/original/8a69eb415bc8a7e7.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/373/483/758/167/961/original/8a69eb415bc8a7e7.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 39,
+        "following_count": 121,
+        "statuses_count": 2082,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "114550331485403415",
+      "created_at": "2025-05-22T07:35:45.173Z",
+      "in_reply_to_id": "114550318767141575",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550331485403415",
+      "url": "https://mastodon.social/@pid_eins/114550331485403415",
+      "replies_count": 1,
+      "reblogs_count": 7,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026, as they want, and easily switch between them, simply by logging in specifying a user name of &quot;username%areaname&quot; at login time, when the system asks for a username.</p><p>This will primarily do two things: if you log in as user &quot;foo&quot; with area &quot;bar&quot; (i.e. specify &quot;foo%bar&quot; at login time), you end up with $HOME set to /home/foo/Areas/bar; it will also do something similar for $XDG_RUNTIME_DIR, to give your session a separate runtime directory.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550344078634343",
+      "created_at": "2025-05-22T07:38:57.331Z",
+      "in_reply_to_id": "114550331485403415",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550344078634343",
+      "url": "https://mastodon.social/@pid_eins/114550344078634343",
+      "replies_count": 4,
+      "reblogs_count": 4,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T07:49:44.874Z",
+      "content": "<p>In order to create such an area anew you can simply call &quot;mkdir -p ~/Areas &amp;&amp; cp -av /etc/skel ~/Areas/mynewarea&quot;. To remove it again just do &quot;rm -rf ~/Areas/mynewarea&quot; \u2013 you get the idea.</p><p>Of course, since all areas are owned by the same underlying UID, and associated with the same user record you can easily move around between the areas and the main home directory, via &quot;cd&quot; and similar.</p><p>The simple concept of areas can be used in various quite powerful ways.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550357232745639",
+      "created_at": "2025-05-22T07:42:18.048Z",
+      "in_reply_to_id": "114550344078634343",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550357232745639",
+      "url": "https://mastodon.social/@pid_eins/114550357232745639",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>My personal usecase for this goes something like this: I regularly build disk images for VMs of different distributions on my host, for building and testing systemd and other stuff. And I want access to my host user&#39;s home dir in each when booting them up, but not necessarily log directly into my host&#39;s home directory, but keep a separate area for each such image, so that the build trees in it can be distinct, do not leak context into each other, and can be created anew and flushed out\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550365815187692",
+      "created_at": "2025-05-22T07:44:29.005Z",
+      "in_reply_to_id": "114550357232745639",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550365815187692",
+      "url": "https://mastodon.social/@pid_eins/114550365815187692",
+      "replies_count": 3,
+      "reblogs_count": 1,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T07:50:25.463Z",
+      "content": "<p>\u2026 easily. I also want full access to all my data from each such VM to simplify my work. And the area concept allows me to do all that.</p><p>Note that while this &#39;virtualizes&#39; $HOME and $XDG_RUNTIME_DIR nicely, it&#39;s not quite enough to run multiple full desktop environments in parallel for each user by giving them each an area of their own. That&#39;s because the per-user service manager only exists once right now, not in one instance per area.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550373067181529",
+      "created_at": "2025-05-22T07:46:19.661Z",
+      "in_reply_to_id": "114550365815187692",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550373067181529",
+      "url": "https://mastodon.social/@pid_eins/114550373067181529",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T07:51:11.234Z",
+      "content": "<p>But there&#39;s no reason for not supporting that properly besides of &quot;Lennart didn&#39;t find the time to make it work yet&quot;. I think we should totally support that too, so that each user can have one per-user service manager for the main area, and then one for each additional area. With that in place, you could have multiple parallel DE sessions, nicely separated in context (but not in privilege) in parallel, from the same home dir.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550378175037063",
+      "created_at": "2025-05-22T07:47:37.601Z",
+      "in_reply_to_id": "114550373067181529",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550378175037063",
+      "url": "https://mastodon.social/@pid_eins/114550378175037063",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>And before you ask: all this is a systemd-homed feature, it&#39;s not implemented for classic UNIX users (as systemd is not involved with managemen of them, and couldn&#39;t do the area management there), and it&#39;s unlikely it every will be. The user record extensions to make areas a thing are generic though.</p><p>And that&#39;s all for now.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573149204838605",
+      "created_at": "2025-05-26T08:18:35.944Z",
+      "in_reply_to_id": "114572939839443515",
+      "in_reply_to_account_id": "111261575240856522",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573149204838605",
+      "url": "https://mastodon.social/@pid_eins/114573149204838605",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@S1m\" class=\"u-url mention\">@<span>S1m</span></a></span> homed does not implement a sandbox.</p><p>I mean, it might make sense to one day maybe run each user&#39;s sessions inside a sandbox, but that should be independent of homed I&#39;d say.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111261575240856522",
+          "username": "S1m",
+          "url": "https://infosec.exchange/@S1m",
+          "acct": "S1m@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551053058613762",
+      "created_at": "2025-05-22T10:39:15.511Z",
+      "in_reply_to_id": "114551045793753717",
+      "in_reply_to_account_id": "112971489947435684",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114551053058613762",
+      "url": "https://mastodon.social/@pid_eins/114551053058613762",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> it was lowercase, i changed on request from reviewers to uppercase to match the default naming of the xdg user dirs spec, i.e. &quot;Documents&quot;, &quot;Templates&quot;, &quot;Pictures&quot; and so on.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551064813852510",
+      "created_at": "2025-05-22T10:42:14.883Z",
+      "in_reply_to_id": "114551056808450775",
+      "in_reply_to_account_id": "112971489947435684",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114551064813852510",
+      "url": "https://mastodon.social/@pid_eins/114551064813852510",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> yeah, we can make this configurable eventually, but do note it&#39;s never going to implement the xdg base dir spec, because after all the settings for the xdg base dir spec are stored in the home dir, but areas are about moving home dirs, hence cannot you cannot store the location where to store them in them...</p><p>but we could add a field for it in the user record. For now, to me this is more bikeshedding. there&#39;s more important stuff in my eyes.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551047691172035",
+      "created_at": "2025-05-22T10:37:53.610Z",
+      "in_reply_to_id": "114550868997348244",
+      "in_reply_to_account_id": "110252054202221869",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "sv",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114551047691172035",
+      "url": "https://mastodon.social/@pid_eins/114551047691172035",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.nu/@levitte\" class=\"u-url mention\">@<span>levitte</span></a></span> direnv is just about storing env var info in specific dirs?</p><p>that is a very different concept from homed&#39;s &quot;areas&quot;, which give you additional dirs you can get a somewhat full-blown session in.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "110252054202221869",
+          "username": "levitte",
+          "url": "https://mastodon.nu/@levitte",
+          "acct": "levitte@mastodon.nu"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550437912405150",
+      "created_at": "2025-05-22T08:02:49.127Z",
+      "in_reply_to_id": "114550432783824045",
+      "in_reply_to_account_id": "114009872200668616",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550437912405150",
+      "url": "https://mastodon.social/@pid_eins/114550437912405150",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mstdn.social/@quite\" class=\"u-url mention\">@<span>quite</span></a></span> It&#39;s not a sandboxing feature, it&#39;s in fact expressly not about privilege.</p><p>If you want privilege separation then just create a separate user?</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "114009872200668616",
+          "username": "quite",
+          "url": "https://mstdn.social/@quite",
+          "acct": "quite@mstdn.social"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550396969650709",
+      "created_at": "2025-05-22T07:52:24.389Z",
+      "in_reply_to_id": "114550334421792324",
+      "in_reply_to_account_id": "109373483758167961",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550396969650709",
+      "url": "https://mastodon.social/@pid_eins/114550396969650709",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://masto.ai/@xbezdick\" class=\"u-url mention\">@<span>xbezdick</span></a></span> No, I am talking about systemd-homed managed users, not IPA managed users. If you are looking for IPA features, ask he IPA community for help, I am not the right person for that.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109373483758167961",
+          "username": "xbezdick",
+          "url": "https://masto.ai/@xbezdick",
+          "acct": "xbezdick@masto.ai"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "114550318767141575",
+      "created_at": "2025-05-22T07:32:31.107Z",
+      "in_reply_to_id": "114550305394053015",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550318767141575",
+      "url": "https://mastodon.social/@pid_eins/114550318767141575",
+      "replies_count": 2,
+      "reblogs_count": 10,
+      "favourites_count": 15,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T07:48:51.364Z",
+      "content": "<p>But in various scenarios it is handy to have a single login account, but multiple home directories one can switch between, for example to maintain different configuration sets, or build environments, possibly for different hosts.</p><p>In v258 systemd-homed (and by extension the userdb logic) has a concept for maintaining multiple &quot;areas&quot; for each user account. Areas in this sense are simply subdirectories of the main home directory, below the ~/Areas/ hierarchy. A user can have as many of these, \u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550331485403415",
+      "created_at": "2025-05-22T07:35:45.173Z",
+      "in_reply_to_id": "114550318767141575",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550331485403415",
+      "url": "https://mastodon.social/@pid_eins/114550331485403415",
+      "replies_count": 1,
+      "reblogs_count": 7,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026, as they want, and easily switch between them, simply by logging in specifying a user name of &quot;username%areaname&quot; at login time, when the system asks for a username.</p><p>This will primarily do two things: if you log in as user &quot;foo&quot; with area &quot;bar&quot; (i.e. specify &quot;foo%bar&quot; at login time), you end up with $HOME set to /home/foo/Areas/bar; it will also do something similar for $XDG_RUNTIME_DIR, to give your session a separate runtime directory.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550344078634343",
+      "created_at": "2025-05-22T07:38:57.331Z",
+      "in_reply_to_id": "114550331485403415",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550344078634343",
+      "url": "https://mastodon.social/@pid_eins/114550344078634343",
+      "replies_count": 4,
+      "reblogs_count": 4,
+      "favourites_count": 9,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T07:49:44.874Z",
+      "content": "<p>In order to create such an area anew you can simply call &quot;mkdir -p ~/Areas &amp;&amp; cp -av /etc/skel ~/Areas/mynewarea&quot;. To remove it again just do &quot;rm -rf ~/Areas/mynewarea&quot; \u2013 you get the idea.</p><p>Of course, since all areas are owned by the same underlying UID, and associated with the same user record you can easily move around between the areas and the main home directory, via &quot;cd&quot; and similar.</p><p>The simple concept of areas can be used in various quite powerful ways.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550357232745639",
+      "created_at": "2025-05-22T07:42:18.048Z",
+      "in_reply_to_id": "114550344078634343",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550357232745639",
+      "url": "https://mastodon.social/@pid_eins/114550357232745639",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>My personal usecase for this goes something like this: I regularly build disk images for VMs of different distributions on my host, for building and testing systemd and other stuff. And I want access to my host user&#39;s home dir in each when booting them up, but not necessarily log directly into my host&#39;s home directory, but keep a separate area for each such image, so that the build trees in it can be distinct, do not leak context into each other, and can be created anew and flushed out\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550365815187692",
+      "created_at": "2025-05-22T07:44:29.005Z",
+      "in_reply_to_id": "114550357232745639",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550365815187692",
+      "url": "https://mastodon.social/@pid_eins/114550365815187692",
+      "replies_count": 3,
+      "reblogs_count": 1,
+      "favourites_count": 6,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T07:50:25.463Z",
+      "content": "<p>\u2026 easily. I also want full access to all my data from each such VM to simplify my work. And the area concept allows me to do all that.</p><p>Note that while this &#39;virtualizes&#39; $HOME and $XDG_RUNTIME_DIR nicely, it&#39;s not quite enough to run multiple full desktop environments in parallel for each user by giving them each an area of their own. That&#39;s because the per-user service manager only exists once right now, not in one instance per area.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550373067181529",
+      "created_at": "2025-05-22T07:46:19.661Z",
+      "in_reply_to_id": "114550365815187692",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550373067181529",
+      "url": "https://mastodon.social/@pid_eins/114550373067181529",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 10,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T07:51:11.234Z",
+      "content": "<p>But there&#39;s no reason for not supporting that properly besides of &quot;Lennart didn&#39;t find the time to make it work yet&quot;. I think we should totally support that too, so that each user can have one per-user service manager for the main area, and then one for each additional area. With that in place, you could have multiple parallel DE sessions, nicely separated in context (but not in privilege) in parallel, from the same home dir.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550378175037063",
+      "created_at": "2025-05-22T07:47:37.601Z",
+      "in_reply_to_id": "114550373067181529",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550378175037063",
+      "url": "https://mastodon.social/@pid_eins/114550378175037063",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 8,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>And before you ask: all this is a systemd-homed feature, it&#39;s not implemented for classic UNIX users (as systemd is not involved with managemen of them, and couldn&#39;t do the area management there), and it&#39;s unlikely it every will be. The user record extensions to make areas a thing are generic though.</p><p>And that&#39;s all for now.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114572939839443515",
+      "created_at": "2025-05-26T07:25:20.000Z",
+      "in_reply_to_id": "114550378175037063",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/S1m/statuses/114572939815897600",
+      "url": "https://infosec.exchange/@S1m/114572939815897600",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-05-26T07:25:59.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Do you think systemd-homed areas could be extended to:</p><ul><li>Restrict access to the system</li><li>Restrict access to the <em>root home</em> (<code>/home/myuser/</code>) and to the other areas</li><li>Restrict access to the user and areas runtime directories</li><li>Bind the content of the <em>root home</em> (inaccessible, RO, or RW)</li><li>Define group of directories and configure how areas mount them (RO/RW) or not</li></ul><p>For the context: <a href=\"https://infosec.exchange/@S1m/114572842204280197\" translate=\"no\" rel=\"nofollow noopener\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">infosec.exchange/@S1m/11457284</span><span class=\"invisible\">2204280197</span></a></p>",
+      "reblog": null,
+      "account": {
+        "id": "111261575240856522",
+        "username": "S1m",
+        "acct": "S1m@infosec.exchange",
+        "display_name": "S1m",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-10-19T00:00:00.000Z",
+        "note": "<p>FR/EN</p><p>Account dedicated to <a href=\"https://infosec.exchange/tags/Offsec\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Offsec</span></a>/#Infosec/digital stuff</p><p>Involved in<br><a href=\"https://infosec.exchange/tags/UnifiedPush\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>UnifiedPush</span></a> <a href=\"https://infosec.exchange/tags/MollyIm\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>MollyIm</span></a></p>",
+        "url": "https://infosec.exchange/@S1m",
+        "uri": "https://infosec.exchange/users/S1m",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/261/575/240/856/522/original/61ebb63fdc518a50.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/261/575/240/856/522/original/61ebb63fdc518a50.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 215,
+        "following_count": 118,
+        "statuses_count": 644,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/p1gp1g\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/p1gp1g</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T22:14:13.258+00:00"
+          },
+          {
+            "name": "Codeberg",
+            "value": "<a href=\"https://codeberg.org/s1m/\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">codeberg.org/s1m/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Liberapay",
+            "value": "<a href=\"https://liberapay.com/S1m/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">liberapay.com/S1m/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T22:14:13.695+00:00"
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://s1m.fr\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">s1m.fr</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T22:14:13.843+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": {
+        "url": "https://infosec.exchange/@S1m/114572842204280197",
+        "title": "S1m (@S1m@infosec.exchange)",
+        "description": "To avoid the easy *bashrc backdoor*, having tens of new hidden directories created with different dev tools, messing with virtual environments and user packages, and so on, I need different terminal environments, one for admin tasks, others to work.\n\nhttps://s1m.fr/termenv/",
+        "language": "en",
+        "type": "link",
+        "author_name": "",
+        "author_url": "",
+        "provider_name": "Infosec Exchange",
+        "provider_url": "",
+        "html": "",
+        "width": 0,
+        "height": 0,
+        "image": null,
+        "image_description": "",
+        "embed_url": "",
+        "blurhash": null,
+        "published_at": null,
+        "authors": []
+      },
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573149204838605",
+      "created_at": "2025-05-26T08:18:35.944Z",
+      "in_reply_to_id": "114572939839443515",
+      "in_reply_to_account_id": "111261575240856522",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114573149204838605",
+      "url": "https://mastodon.social/@pid_eins/114573149204838605",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@S1m\" class=\"u-url mention\">@<span>S1m</span></a></span> homed does not implement a sandbox.</p><p>I mean, it might make sense to one day maybe run each user&#39;s sessions inside a sandbox, but that should be independent of homed I&#39;d say.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "111261575240856522",
+          "username": "S1m",
+          "url": "https://infosec.exchange/@S1m",
+          "acct": "S1m@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114574850192669324",
+      "created_at": "2025-05-26T15:31:10.000Z",
+      "in_reply_to_id": "114573149204838605",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/S1m/statuses/114574850144349261",
+      "url": "https://infosec.exchange/@S1m/114574850144349261",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I just know that before I started isolating the different sessions, I just wanted to get a different HOME directory for my development sessions. And this is what homed areas is doing</p><p>With homed areas or differently, I think the sandbox of different sessions is the direction things are going.</p>",
+      "reblog": null,
+      "account": {
+        "id": "111261575240856522",
+        "username": "S1m",
+        "acct": "S1m@infosec.exchange",
+        "display_name": "S1m",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-10-19T00:00:00.000Z",
+        "note": "<p>FR/EN</p><p>Account dedicated to <a href=\"https://infosec.exchange/tags/Offsec\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Offsec</span></a>/#Infosec/digital stuff</p><p>Involved in<br><a href=\"https://infosec.exchange/tags/UnifiedPush\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>UnifiedPush</span></a> <a href=\"https://infosec.exchange/tags/MollyIm\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>MollyIm</span></a></p>",
+        "url": "https://infosec.exchange/@S1m",
+        "uri": "https://infosec.exchange/users/S1m",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/261/575/240/856/522/original/61ebb63fdc518a50.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/261/575/240/856/522/original/61ebb63fdc518a50.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 215,
+        "following_count": 118,
+        "statuses_count": 644,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/p1gp1g\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/p1gp1g</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T22:14:13.258+00:00"
+          },
+          {
+            "name": "Codeberg",
+            "value": "<a href=\"https://codeberg.org/s1m/\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">codeberg.org/s1m/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Liberapay",
+            "value": "<a href=\"https://liberapay.com/S1m/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">liberapay.com/S1m/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T22:14:13.695+00:00"
+          },
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://s1m.fr\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">s1m.fr</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T22:14:13.843+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550457232916594",
+      "created_at": "2025-05-22T08:07:43.000Z",
+      "in_reply_to_id": "114550365815187692",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://troet.cafe/users/pixelschubsi/statuses/114550457205364177",
+      "url": "https://troet.cafe/@pixelschubsi/114550457205364177",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> It does allow me to temporarily run a session of KDE (even if not in parallel) without KDE completely screwing up my GTK configuration such that after switching back the GNOME, things won't work properly anymore. That's already a huge plus.</p>",
+      "reblog": null,
+      "account": {
+        "id": "112808600218341310",
+        "username": "pixelschubsi",
+        "acct": "pixelschubsi@troet.cafe",
+        "display_name": "pixelschubsi",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-07-18T00:00:00.000Z",
+        "note": "",
+        "url": "https://troet.cafe/@pixelschubsi",
+        "uri": "https://troet.cafe/users/pixelschubsi",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 19,
+        "following_count": 1,
+        "statuses_count": 615,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551038372976050",
+      "created_at": "2025-05-22T10:35:31.000Z",
+      "in_reply_to_id": "114550365815187692",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/arrieseveneight/statuses/114551038355314322",
+      "url": "https://hachyderm.io/@arrieseveneight/114551038355314322",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> this is genuinely one of the coolest features i\u2019ve seen developed for the linux ecosystem, excited for 258!</p><p>i wonder if this could be made into some sort of xdg specification.. it\u2019d be nice if the login manager booted up different DEs in different areas</p>",
+      "reblog": null,
+      "account": {
+        "id": "112971489947435684",
+        "username": "arrieseveneight",
+        "acct": "arrieseveneight@hachyderm.io",
+        "display_name": "arrie",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-08-16T00:00:00.000Z",
+        "note": "<p>mastodon lurker</p>",
+        "url": "https://hachyderm.io/@arrieseveneight",
+        "uri": "https://hachyderm.io/users/arrieseveneight",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "followers_count": 3,
+        "following_count": 56,
+        "statuses_count": 328,
+        "last_status_at": "2025-12-16",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "real",
+            "value": "nerdshit",
+            "verified_at": null
+          },
+          {
+            "name": "pronouns",
+            "value": "they | she",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551045793753717",
+      "created_at": "2025-05-22T10:37:24.000Z",
+      "in_reply_to_id": "114551038372976050",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/arrieseveneight/statuses/114551045771011612",
+      "url": "https://hachyderm.io/@arrieseveneight/114551045771011612",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> also a really minor nitpick but the uppercase directory doesn\u2019t feel very \u201clinux-y\u201d; would it be possible to make the folder configurable?</p>",
+      "reblog": null,
+      "account": {
+        "id": "112971489947435684",
+        "username": "arrieseveneight",
+        "acct": "arrieseveneight@hachyderm.io",
+        "display_name": "arrie",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-08-16T00:00:00.000Z",
+        "note": "<p>mastodon lurker</p>",
+        "url": "https://hachyderm.io/@arrieseveneight",
+        "uri": "https://hachyderm.io/users/arrieseveneight",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "followers_count": 3,
+        "following_count": 56,
+        "statuses_count": 328,
+        "last_status_at": "2025-12-16",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "real",
+            "value": "nerdshit",
+            "verified_at": null
+          },
+          {
+            "name": "pronouns",
+            "value": "they | she",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551053058613762",
+      "created_at": "2025-05-22T10:39:15.511Z",
+      "in_reply_to_id": "114551045793753717",
+      "in_reply_to_account_id": "112971489947435684",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114551053058613762",
+      "url": "https://mastodon.social/@pid_eins/114551053058613762",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 2,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> it was lowercase, i changed on request from reviewers to uppercase to match the default naming of the xdg user dirs spec, i.e. &quot;Documents&quot;, &quot;Templates&quot;, &quot;Pictures&quot; and so on.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551056808450775",
+      "created_at": "2025-05-22T10:40:12.000Z",
+      "in_reply_to_id": "114551053058613762",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/arrieseveneight/statuses/114551056791248803",
+      "url": "https://hachyderm.io/@arrieseveneight/114551056791248803",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> oh ok.. i\u2019d personally like to configure it to something like `.areas/`</p>",
+      "reblog": null,
+      "account": {
+        "id": "112971489947435684",
+        "username": "arrieseveneight",
+        "acct": "arrieseveneight@hachyderm.io",
+        "display_name": "arrie",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-08-16T00:00:00.000Z",
+        "note": "<p>mastodon lurker</p>",
+        "url": "https://hachyderm.io/@arrieseveneight",
+        "uri": "https://hachyderm.io/users/arrieseveneight",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "followers_count": 3,
+        "following_count": 56,
+        "statuses_count": 328,
+        "last_status_at": "2025-12-16",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "real",
+            "value": "nerdshit",
+            "verified_at": null
+          },
+          {
+            "name": "pronouns",
+            "value": "they | she",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551064813852510",
+      "created_at": "2025-05-22T10:42:14.883Z",
+      "in_reply_to_id": "114551056808450775",
+      "in_reply_to_account_id": "112971489947435684",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114551064813852510",
+      "url": "https://mastodon.social/@pid_eins/114551064813852510",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> yeah, we can make this configurable eventually, but do note it&#39;s never going to implement the xdg base dir spec, because after all the settings for the xdg base dir spec are stored in the home dir, but areas are about moving home dirs, hence cannot you cannot store the location where to store them in them...</p><p>but we could add a field for it in the user record. For now, to me this is more bikeshedding. there&#39;s more important stuff in my eyes.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573394301611466",
+      "created_at": "2025-05-26T09:20:55.839Z",
+      "in_reply_to_id": "114551053058613762",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "unlisted",
+      "language": "en",
+      "uri": "https://mastodon.social/users/purpleidea/statuses/114573394301611466",
+      "url": "https://mastodon.social/@purpleidea/114573394301611466",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> Nobody liked those capitalizations either \ud83d\ude05</p>",
+      "reblog": null,
+      "account": {
+        "id": "42879",
+        "username": "purpleidea",
+        "acct": "purpleidea",
+        "display_name": "James Just James",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2017-04-04T00:00:00.000Z",
+        "note": "<p>devops/golang/mentoring/config mgmt hacker, mgmtconfig architect, and physiologist. hi</p><p>formerly AWS, Red Hat, Montreal MNI, McGill University</p>",
+        "url": "https://mastodon.social/@purpleidea",
+        "uri": "https://mastodon.social/users/purpleidea",
+        "avatar": "https://files.mastodon.social/accounts/avatars/000/042/879/original/fced8dc69513109e.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/000/042/879/original/fced8dc69513109e.png",
+        "header": "https://files.mastodon.social/accounts/headers/000/042/879/original/9997765919eb6192.png",
+        "header_static": "https://files.mastodon.social/accounts/headers/000/042/879/original/9997765919eb6192.png",
+        "followers_count": 752,
+        "following_count": 514,
+        "statuses_count": 3380,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "website",
+            "value": "<a href=\"https://purpleidea.com/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">purpleidea.com/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2022-11-15T06:54:36.614+00:00"
+          },
+          {
+            "name": "github",
+            "value": "<a href=\"https://github.com/purpleidea/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/purpleidea/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2022-11-15T07:01:43.901+00:00"
+          },
+          {
+            "name": "twitter",
+            "value": "<a href=\"https://twitter.com/purpleidea/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/purpleidea/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "mgmt config",
+            "value": "<a href=\"https://github.com/purpleidea/mgmt/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/purpleidea/mgmt/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550868997348244",
+      "created_at": "2025-05-22T09:52:26.000Z",
+      "in_reply_to_id": "114550344078634343",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "sv",
+      "uri": "https://mastodon.nu/users/levitte/statuses/114550868947949804",
+      "url": "https://mastodon.nu/@levitte/114550868947949804",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I already have a sort of virtualization with direnv. Is what you propose supposed to kinda replace direnv, or do you rather see them work in tandem?</p>",
+      "reblog": null,
+      "account": {
+        "id": "110252054202221869",
+        "username": "levitte",
+        "acct": "levitte@mastodon.nu",
+        "display_name": "Richard Levitte",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-04-24T00:00:00.000Z",
+        "note": "<p>I write software.  I play with software.<br>I take pictures, photographic pictures.<br>I dance; tango, Swedish and continental folk, medieval inspired.<br>Sometimes, I also participate in <a href=\"https://mastodon.nu/tags/queer\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>queer</span></a>, <a href=\"https://mastodon.nu/tags/gsrm\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>gsrm</span></a>, and primarily <a href=\"https://mastodon.nu/tags/polyamory\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>polyamory</span></a> / <a href=\"https://mastodon.nu/tags/relationshipanarchy\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>relationshipanarchy</span></a> spaces.</p><p>Sometimes, people refer to me by nickname.  <a href=\"https://mastodon.nu/tags/Wolfie\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Wolfie</span></a> <a href=\"https://mastodon.nu/tags/GrayFox\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>GrayFox</span></a></p><p>What I express here are personal opinions, unless I clearly mark them otherwise.</p>",
+        "url": "https://mastodon.nu/@levitte",
+        "uri": "https://mastodon.nu/users/levitte",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/252/054/202/221/869/original/372db3f3f9323de6.webp",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/252/054/202/221/869/original/372db3f3f9323de6.webp",
+        "header": "https://files.mastodon.social/cache/accounts/headers/110/252/054/202/221/869/original/7de4c2b0de25cd09.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/110/252/054/202/221/869/original/7de4c2b0de25cd09.jpg",
+        "followers_count": 84,
+        "following_count": 81,
+        "statuses_count": 847,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Gravatar",
+            "value": "<a href=\"https://gravatar.com/levitte\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">gravatar.com/levitte</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T16:27:39.503+00:00"
+          },
+          {
+            "name": "ATmosphere (BlueSky)",
+            "value": "<a href=\"https://mastodon.nu/@richard.levitte.org@bsky.brid.gy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">mastodon.nu/@richard.levitte.o</span><span class=\"invisible\">rg@bsky.brid.gy</span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551047691172035",
+      "created_at": "2025-05-22T10:37:53.610Z",
+      "in_reply_to_id": "114550868997348244",
+      "in_reply_to_account_id": "110252054202221869",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "sv",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114551047691172035",
+      "url": "https://mastodon.social/@pid_eins/114551047691172035",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.nu/@levitte\" class=\"u-url mention\">@<span>levitte</span></a></span> direnv is just about storing env var info in specific dirs?</p><p>that is a very different concept from homed&#39;s &quot;areas&quot;, which give you additional dirs you can get a somewhat full-blown session in.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "110252054202221869",
+          "username": "levitte",
+          "url": "https://mastodon.nu/@levitte",
+          "acct": "levitte@mastodon.nu"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114551628018152558",
+      "created_at": "2025-05-22T13:05:28.000Z",
+      "in_reply_to_id": "114551047691172035",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "sv",
+      "uri": "https://mastodon.nu/users/levitte/statuses/114551627981298096",
+      "url": "https://mastodon.nu/@levitte/114551627981298096",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.nu/@levitte\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>levitte</span></a></span> Yeah, got that. What got me thinking of direnv was you saying that you can still cd between areas, and was trying to understand how what would affect</p>",
+      "reblog": null,
+      "account": {
+        "id": "110252054202221869",
+        "username": "levitte",
+        "acct": "levitte@mastodon.nu",
+        "display_name": "Richard Levitte",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-04-24T00:00:00.000Z",
+        "note": "<p>I write software.  I play with software.<br>I take pictures, photographic pictures.<br>I dance; tango, Swedish and continental folk, medieval inspired.<br>Sometimes, I also participate in <a href=\"https://mastodon.nu/tags/queer\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>queer</span></a>, <a href=\"https://mastodon.nu/tags/gsrm\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>gsrm</span></a>, and primarily <a href=\"https://mastodon.nu/tags/polyamory\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>polyamory</span></a> / <a href=\"https://mastodon.nu/tags/relationshipanarchy\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>relationshipanarchy</span></a> spaces.</p><p>Sometimes, people refer to me by nickname.  <a href=\"https://mastodon.nu/tags/Wolfie\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>Wolfie</span></a> <a href=\"https://mastodon.nu/tags/GrayFox\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>GrayFox</span></a></p><p>What I express here are personal opinions, unless I clearly mark them otherwise.</p>",
+        "url": "https://mastodon.nu/@levitte",
+        "uri": "https://mastodon.nu/users/levitte",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/252/054/202/221/869/original/372db3f3f9323de6.webp",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/252/054/202/221/869/original/372db3f3f9323de6.webp",
+        "header": "https://files.mastodon.social/cache/accounts/headers/110/252/054/202/221/869/original/7de4c2b0de25cd09.jpg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/110/252/054/202/221/869/original/7de4c2b0de25cd09.jpg",
+        "followers_count": 84,
+        "following_count": 81,
+        "statuses_count": 847,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Gravatar",
+            "value": "<a href=\"https://gravatar.com/levitte\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">gravatar.com/levitte</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-18T16:27:39.503+00:00"
+          },
+          {
+            "name": "ATmosphere (BlueSky)",
+            "value": "<a href=\"https://mastodon.nu/@richard.levitte.org@bsky.brid.gy\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">mastodon.nu/@richard.levitte.o</span><span class=\"invisible\">rg@bsky.brid.gy</span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        },
+        {
+          "id": "110252054202221869",
+          "username": "levitte",
+          "url": "https://mastodon.nu/@levitte",
+          "acct": "levitte@mastodon.nu"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573370386122920",
+      "created_at": "2025-05-26T09:14:50.910Z",
+      "in_reply_to_id": "114550344078634343",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/purpleidea/statuses/114573370386122920",
+      "url": "https://mastodon.social/@purpleidea/114573370386122920",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> Neat, will have to try this out, but to bikeshed a bit, since when is Capitalization a thing, and why not put this in ~/.areas/ or something instead?</p>",
+      "reblog": null,
+      "account": {
+        "id": "42879",
+        "username": "purpleidea",
+        "acct": "purpleidea",
+        "display_name": "James Just James",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2017-04-04T00:00:00.000Z",
+        "note": "<p>devops/golang/mentoring/config mgmt hacker, mgmtconfig architect, and physiologist. hi</p><p>formerly AWS, Red Hat, Montreal MNI, McGill University</p>",
+        "url": "https://mastodon.social/@purpleidea",
+        "uri": "https://mastodon.social/users/purpleidea",
+        "avatar": "https://files.mastodon.social/accounts/avatars/000/042/879/original/fced8dc69513109e.png",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/000/042/879/original/fced8dc69513109e.png",
+        "header": "https://files.mastodon.social/accounts/headers/000/042/879/original/9997765919eb6192.png",
+        "header_static": "https://files.mastodon.social/accounts/headers/000/042/879/original/9997765919eb6192.png",
+        "followers_count": 752,
+        "following_count": 514,
+        "statuses_count": 3380,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "website",
+            "value": "<a href=\"https://purpleidea.com/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">purpleidea.com/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2022-11-15T06:54:36.614+00:00"
+          },
+          {
+            "name": "github",
+            "value": "<a href=\"https://github.com/purpleidea/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/purpleidea/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2022-11-15T07:01:43.901+00:00"
+          },
+          {
+            "name": "twitter",
+            "value": "<a href=\"https://twitter.com/purpleidea/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/purpleidea/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "mgmt config",
+            "value": "<a href=\"https://github.com/purpleidea/mgmt/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/purpleidea/mgmt/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114573381738454979",
+      "created_at": "2025-05-26T09:17:43.000Z",
+      "in_reply_to_id": "114573370386122920",
+      "in_reply_to_account_id": "42879",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://chaos.social/users/HeNeArXn/statuses/114573381675427513",
+      "url": "https://chaos.social/@HeNeArXn/114573381675427513",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@purpleidea\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>purpleidea</span></a></span> <a href=\"https://mastodon.social/@pid_eins/114551053058613762\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">mastodon.social/@pid_eins/1145</span><span class=\"invisible\">51053058613762</span></a></p>",
+      "reblog": null,
+      "account": {
+        "id": "108373033366655140",
+        "username": "HeNeArXn",
+        "acct": "HeNeArXn@chaos.social",
+        "display_name": "Sven",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-05-22T00:00:00.000Z",
+        "note": "<p>Berlin. Potsdamer Chaos(treff) <span class=\"h-card\" translate=\"no\"><a href=\"https://chaos.social/@cccp\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>cccp</span></a></span>. Software-foo. Indieweb. OSM contributor. (he/him)</p>",
+        "url": "https://chaos.social/@HeNeArXn",
+        "uri": "https://chaos.social/users/HeNeArXn",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/108/373/033/366/655/140/original/05fb95671599b92f.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/108/373/033/366/655/140/original/05fb95671599b92f.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 816,
+        "following_count": 2500,
+        "statuses_count": 6788,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "website",
+            "value": "<a href=\"https://www.svenknebel.de\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://www.</span><span class=\"\">svenknebel.de</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T16:24:29.176+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "42879",
+          "username": "purpleidea",
+          "url": "https://mastodon.social/@purpleidea",
+          "acct": "purpleidea"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114602164721374085",
+      "created_at": "2025-05-31T11:17:37.000Z",
+      "in_reply_to_id": "114550344078634343",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://lgbtqia.space/users/MxVerda/statuses/114602164683388974",
+      "url": "https://lgbtqia.space/@MxVerda/114602164683388974",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> how do I make the terminal play carameldanssen</p>",
+      "reblog": null,
+      "account": {
+        "id": "111543858640168242",
+        "username": "MxVerda",
+        "acct": "MxVerda@lgbtqia.space",
+        "display_name": "Mx Verda",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-12-07T00:00:00.000Z",
+        "note": "<p>I do art, games, and ranting. <a href=\"https://lgbtqia.space/tags/OortArtCloud\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>OortArtCloud</span></a> <br><a href=\"https://positive.news\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">positive.news</span><span class=\"invisible\"></span></a> has good stuff. I care about people. </p><p>I hate Long Covid. Wear your respirator properly. <a href=\"https://omnimask.com\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">omnimask.com</span><span class=\"invisible\"></span></a> and <a href=\"https://teenvogue.com\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">teenvogue.com</span><span class=\"invisible\"></span></a></p><p>I\u2019m AuHD. I often phrase things in ways people don\u2019t expect. (Apparently.)</p><p>Brits assume I\u2019m white american, but I\u2019m also latinx / latine. Make of it what you will.</p><p>Pfp is curly green hair. Banner is drawing of UK road intersection. <br>NSFW <a href=\"https://subscribestar.adult/mxverde\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">subscribestar.adult/mxverde</span><span class=\"invisible\"></span></a> <a href=\"https://lgbtqia.space/tags/vNSFW\" class=\"mention hashtag\" rel=\"nofollow noopener\" target=\"_blank\">#<span>vNSFW</span></a></p>",
+        "url": "https://lgbtqia.space/@MxVerda",
+        "uri": "https://lgbtqia.space/users/MxVerda",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/111/543/858/640/168/242/original/21566e4f809836e6.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/111/543/858/640/168/242/original/21566e4f809836e6.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/111/543/858/640/168/242/original/59d2d7d3c05bba12.jpeg",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/111/543/858/640/168/242/original/59d2d7d3c05bba12.jpeg",
+        "followers_count": 853,
+        "following_count": 1534,
+        "statuses_count": 88434,
+        "last_status_at": "2025-12-16",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "<a href=\"https://write.as/mxverda/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">write.as/mxverda/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T09:50:14.663+00:00"
+          },
+          {
+            "name": "Call me: vey, vem, ver -- rhyme of they, them, their",
+            "value": "<a href=\"https://pronouns.page/u/mxverda\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">pronouns.page/u/mxverda</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Opinionated Queer License v 1.2 or closest in jurisdiction",
+            "value": "<a href=\"https://oql.avris.it/license\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">oql.avris.it/license</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Website",
+            "value": "<a href=\"https://mxverda.neocities.org/\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">mxverda.neocities.org/</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T09:50:15.876+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550432783824045",
+      "created_at": "2025-05-22T08:01:30.000Z",
+      "in_reply_to_id": "114550318767141575",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mstdn.social/users/quite/statuses/114550432746529451",
+      "url": "https://mstdn.social/@quite/114550432746529451",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": "2025-05-22T08:02:25.000Z",
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Any chance it could allow logging on to specific %area in a way so that there is absolutely no way for my user to access files outside/above this area? -- Edit: one use case could be for running something that simply should not access all files in my main home</p>",
+      "reblog": null,
+      "account": {
+        "id": "114009872200668616",
+        "username": "quite",
+        "acct": "quite@mstdn.social",
+        "display_name": "daniel lublin",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-02-04T00:00:00.000Z",
+        "note": "<p>aka quitelost . born at 333 ppm.</p><p>previously <a href=\"https://mastodon.social/@quitelost\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">mastodon.social/@quitelost</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://mstdn.social/@quite",
+        "uri": "https://mstdn.social/users/quite",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/114/009/872/200/668/616/original/056735d26e488bc7.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/114/009/872/200/668/616/original/056735d26e488bc7.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 112,
+        "following_count": 311,
+        "statuses_count": 380,
+        "last_status_at": "2025-12-16",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "location",
+            "value": "Malm\u00f6",
+            "verified_at": null
+          },
+          {
+            "name": "web",
+            "value": "<a href=\"https://lublin.se\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">lublin.se</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T06:29:31.358+00:00"
+          },
+          {
+            "name": "it's",
+            "value": "him/them",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550437912405150",
+      "created_at": "2025-05-22T08:02:49.127Z",
+      "in_reply_to_id": "114550432783824045",
+      "in_reply_to_account_id": "114009872200668616",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550437912405150",
+      "url": "https://mastodon.social/@pid_eins/114550437912405150",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mstdn.social/@quite\" class=\"u-url mention\">@<span>quite</span></a></span> It&#39;s not a sandboxing feature, it&#39;s in fact expressly not about privilege.</p><p>If you want privilege separation then just create a separate user?</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "114009872200668616",
+          "username": "quite",
+          "url": "https://mstdn.social/@quite",
+          "acct": "quite@mstdn.social"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550443208286655",
+      "created_at": "2025-05-22T08:04:09.000Z",
+      "in_reply_to_id": "114550437912405150",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mstdn.social/users/quite/statuses/114550443165499712",
+      "url": "https://mstdn.social/@quite/114550443165499712",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Understand. Yes, I could do that, but then it's no longer me. But there is prob some way to run something in this way using some namespacing</p>",
+      "reblog": null,
+      "account": {
+        "id": "114009872200668616",
+        "username": "quite",
+        "acct": "quite@mstdn.social",
+        "display_name": "daniel lublin",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2025-02-04T00:00:00.000Z",
+        "note": "<p>aka quitelost . born at 333 ppm.</p><p>previously <a href=\"https://mastodon.social/@quitelost\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">mastodon.social/@quitelost</span><span class=\"invisible\"></span></a></p>",
+        "url": "https://mstdn.social/@quite",
+        "uri": "https://mstdn.social/users/quite",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/114/009/872/200/668/616/original/056735d26e488bc7.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/114/009/872/200/668/616/original/056735d26e488bc7.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 112,
+        "following_count": 311,
+        "statuses_count": 380,
+        "last_status_at": "2025-12-16",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "location",
+            "value": "Malm\u00f6",
+            "verified_at": null
+          },
+          {
+            "name": "web",
+            "value": "<a href=\"https://lublin.se\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">lublin.se</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T06:29:31.358+00:00"
+          },
+          {
+            "name": "it's",
+            "value": "him/them",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114557187108171000",
+      "created_at": "2025-05-23T12:39:11.000Z",
+      "in_reply_to_id": "114550443208286655",
+      "in_reply_to_account_id": "114009872200668616",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://kolektiva.social/users/sanana/statuses/114557186990550218",
+      "url": "https://kolektiva.social/@sanana/114557186990550218",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mstdn.social/@quite\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>quite</span></a></span> <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> I think what you're looking for is sub-UIDs which are already used by rootless container solutions like podman</p>",
+      "reblog": null,
+      "account": {
+        "id": "110310446117623627",
+        "username": "sanana",
+        "acct": "sanana@kolektiva.social",
+        "display_name": "sanana\ud83c\udff4\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": true,
+        "group": false,
+        "created_at": "2023-05-02T00:00:00.000Z",
+        "note": "<p>\ud83d\udda4\u2665\ufe0f 1312 \ud83d\udda4\ud83d\udc9c<br>jin j\u00eeyan azad\u00ee :QueerCatHeart_Trans:<br>\ud83c\uddf5\ud83c\uddf8</p><p>queer catgirl revolutionary from anatolia who loves blahaj<br>posts are usually in Turkish</p><p>My profile picture was drawn by <span class=\"h-card\" translate=\"no\"><a href=\"https://hear-me.social/@Kira\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>Kira</span></a></span>, much thanks!</p><p>Profile picture description: Grayscale pencil drawing of Lain from Serial Experiments Lain. She has straight hair and bangs. She's wearing a hoodie.</p><p>\u00c7ok s\u0131k boost yap\u0131yorum, <a href=\"https://justmytoots.com/@sanana@kolektiva.social\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">justmytoots.com/@sanana@kolekt</span><span class=\"invisible\">iva.social</span></a> ile yaln\u0131zca kendi tootlar\u0131m\u0131 g\u00f6rebilirsiniz.</p>",
+        "url": "https://kolektiva.social/@sanana",
+        "uri": "https://kolektiva.social/users/sanana",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/310/446/117/623/627/original/5db09a7e11d0fad0.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/310/446/117/623/627/original/5db09a7e11d0fad0.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/110/310/446/117/623/627/original/7009e7fd0baee9f3.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/110/310/446/117/623/627/original/7009e7fd0baee9f3.png",
+        "followers_count": 224,
+        "following_count": 533,
+        "statuses_count": 1795,
+        "last_status_at": "2025-11-09",
+        "hide_collections": false,
+        "emojis": [
+          {
+            "shortcode": "QueerCatHeart_Trans",
+            "url": "https://files.mastodon.social/cache/custom_emojis/images/000/385/912/original/60762cec4934ba3b.png",
+            "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/385/912/static/60762cec4934ba3b.png",
+            "visible_in_picker": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "pronouns",
+            "value": "she/her",
+            "verified_at": null
+          },
+          {
+            "name": "fedizen since",
+            "value": "dec 2021",
+            "verified_at": null
+          },
+          {
+            "name": "posts and boosts",
+            "value": "political",
+            "verified_at": null
+          },
+          {
+            "name": "webbed site",
+            "value": "<a href=\"https://rawr.fun\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">rawr.fun</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-16T23:06:39.482+00:00"
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "114009872200668616",
+          "username": "quite",
+          "url": "https://mstdn.social/@quite",
+          "acct": "quite@mstdn.social"
+        },
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550334421792324",
+      "created_at": "2025-05-22T07:36:29.000Z",
+      "in_reply_to_id": "114550305394053015",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://masto.ai/users/xbezdick/statuses/114550334362298321",
+      "url": "https://masto.ai/@xbezdick/114550334362298321",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Im interested in trying this, does it work well with freeipa?</p>",
+      "reblog": null,
+      "account": {
+        "id": "109373483758167961",
+        "username": "xbezdick",
+        "acct": "xbezdick@masto.ai",
+        "display_name": "xbezdick",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-11-20T00:00:00.000Z",
+        "note": "",
+        "url": "https://masto.ai/@xbezdick",
+        "uri": "https://masto.ai/users/xbezdick",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/373/483/758/167/961/original/8a69eb415bc8a7e7.jpg",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/373/483/758/167/961/original/8a69eb415bc8a7e7.jpg",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 39,
+        "following_count": 121,
+        "statuses_count": 2082,
+        "last_status_at": "2025-12-18",
+        "hide_collections": false,
+        "emojis": [],
+        "fields": []
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114550396969650709",
+      "created_at": "2025-05-22T07:52:24.389Z",
+      "in_reply_to_id": "114550334421792324",
+      "in_reply_to_account_id": "109373483758167961",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114550396969650709",
+      "url": "https://mastodon.social/@pid_eins/114550396969650709",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://masto.ai/@xbezdick\" class=\"u-url mention\">@<span>xbezdick</span></a></span> No, I am talking about systemd-homed managed users, not IPA managed users. If you are looking for IPA features, ask he IPA community for help, I am not the right person for that.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109373483758167961",
+          "username": "xbezdick",
+          "url": "https://masto.ai/@xbezdick",
+          "acct": "xbezdick@masto.ai"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

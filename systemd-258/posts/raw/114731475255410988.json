@@ -1,0 +1,74 @@
+{
+  "id": "114731475255410988",
+  "created_at": "2025-06-23T07:22:59.793Z",
+  "in_reply_to_id": null,
+  "in_reply_to_account_id": null,
+  "sensitive": false,
+  "spoiler_text": "",
+  "visibility": "public",
+  "language": "en",
+  "uri": "https://mastodon.social/users/pid_eins/statuses/114731475255410988",
+  "url": "https://mastodon.social/@pid_eins/114731475255410988",
+  "replies_count": 1,
+  "reblogs_count": 9,
+  "favourites_count": 15,
+  "quotes_count": 0,
+  "edited_at": "2025-06-23T07:45:14.546Z",
+  "content": "<p>2\ufe0f\u20e31\ufe0f\u20e3 Here&#39;s the 21st  post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>Earlier in this series I already wrote about &quot;userdb&quot;, systemd&#39;s user database logic, that extends the classic UNIX &quot;struct passwd&quot;-based user database in a flexible and powerful way, based on extensible JSON user records.</p><p>Besides implementing a Varlink-based IPC API there&#39;s also a second way to make user records available: there&#39;s a bunch of drop-in directories: /etc/userdb/, \u2026</p>",
+  "reblog": null,
+  "application": {
+    "name": "Web",
+    "website": null
+  },
+  "account": {
+    "id": "109248059314089584",
+    "username": "pid_eins",
+    "acct": "pid_eins",
+    "display_name": "Lennart Poettering",
+    "locked": false,
+    "bot": false,
+    "discoverable": null,
+    "indexable": false,
+    "group": false,
+    "created_at": "2022-10-28T00:00:00.000Z",
+    "note": "<p>\u26f5 I write software. \u26f5</p>",
+    "url": "https://mastodon.social/@pid_eins",
+    "uri": "https://mastodon.social/users/pid_eins",
+    "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+    "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+    "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+    "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+    "followers_count": 8188,
+    "following_count": 343,
+    "statuses_count": 2260,
+    "last_status_at": "2025-12-18",
+    "hide_collections": null,
+    "noindex": false,
+    "emojis": [],
+    "roles": [],
+    "fields": [
+      {
+        "name": "Web",
+        "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+        "verified_at": null
+      }
+    ]
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [
+    {
+      "name": "systemd258",
+      "url": "https://mastodon.social/tags/systemd258"
+    }
+  ],
+  "emojis": [],
+  "quote": null,
+  "card": null,
+  "poll": null,
+  "quote_approval": {
+    "automatic": [],
+    "manual": [],
+    "current_user": "denied"
+  }
+}

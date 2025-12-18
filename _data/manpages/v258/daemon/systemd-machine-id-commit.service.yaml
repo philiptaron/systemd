@@ -1,0 +1,2 @@
+description:  Commit a transient machine ID to disk
+url: https://www.freedesktop.org/software/systemd/man/258/systemd-machine-id-commit.service.html

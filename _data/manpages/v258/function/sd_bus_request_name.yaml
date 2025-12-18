@@ -1,0 +1,2 @@
+description:  Request or release a well-known service name on a bus
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_request_name.html

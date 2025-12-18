@@ -1,0 +1,2 @@
+description:  Reply with an error to a D-Bus method call
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_reply_method_errorf.html

@@ -1,0 +1,2 @@
+description:  Attach an array of strings to a message
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_append_strv.html

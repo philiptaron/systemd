@@ -1,0 +1,2 @@
+description:  Retrieve the sender timestamps and sequence number of a message
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_get_monotonic_usec.html

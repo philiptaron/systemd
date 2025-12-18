@@ -1,0 +1,2 @@
+description:  Close and flush a bus connection
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_flush.html

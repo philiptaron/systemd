@@ -1,0 +1,1263 @@
+{
+  "post": {
+    "id": "114850389356673130",
+    "created_at": "2025-07-14T07:24:24.942Z",
+    "in_reply_to_id": null,
+    "in_reply_to_account_id": null,
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/pid_eins/statuses/114850389356673130",
+    "url": "https://mastodon.social/@pid_eins/114850389356673130",
+    "replies_count": 1,
+    "reblogs_count": 7,
+    "favourites_count": 18,
+    "quotes_count": 0,
+    "edited_at": "2025-07-14T07:34:27.525Z",
+    "content": "<p>3\ufe0f\u20e32\ufe0f\u20e3 Here&#39;s the 32st post highlighting key new features of the upcoming v258 release of systemd. <a href=\"https://mastodon.social/tags/systemd258\" class=\"mention hashtag\" rel=\"tag\">#<span>systemd258</span></a></p><p>systemd-repart is systemd&#39;s dynamic repartitioner and disk image (DDIs) builder. One of its strengths is in the area of cryptographic protection: the ability to generate Verity enabled file systems + signing them, and including all that in the final image (file system + Verity data + signature for the top-level root hash).</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "109248059314089584",
+      "username": "pid_eins",
+      "acct": "pid_eins",
+      "display_name": "Lennart Poettering",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-10-28T00:00:00.000Z",
+      "note": "<p>\u26f5 I write software. \u26f5</p>",
+      "url": "https://mastodon.social/@pid_eins",
+      "uri": "https://mastodon.social/users/pid_eins",
+      "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+      "followers_count": 8188,
+      "following_count": 343,
+      "statuses_count": 2260,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": [
+        {
+          "name": "Web",
+          "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [],
+    "tags": [
+      {
+        "name": "systemd258",
+        "url": "https://mastodon.social/tags/systemd258"
+      }
+    ],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  "ancestors": [],
+  "replies": [
+    {
+      "id": "114850406617083097",
+      "created_at": "2025-07-14T07:28:48.312Z",
+      "in_reply_to_id": "114850389356673130",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114850406617083097",
+      "url": "https://mastodon.social/@pid_eins/114850406617083097",
+      "replies_count": 2,
+      "reblogs_count": 2,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-07-14T07:28:56.354Z",
+      "content": "<p>This kind of protection \u2013 so far \u2013 focused on block-level protection: not only the files are protected, but their whole arrangement in the data structures of the file system is too. Thus an fs driver can be reasonably sure that if a file system comes from a properly signed Verity-protected image it&#39;s structure is safe to access.</p><p>While I strongly believe in a security model where trust into file system images must be established before accessing it \u2013 in a way like the one describe above \u2013\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "lennart_followups": [
+    {
+      "id": "114850416985900956",
+      "created_at": "2025-07-14T07:31:26.527Z",
+      "in_reply_to_id": "114850406617083097",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114850416985900956",
+      "url": "https://mastodon.social/@pid_eins/114850416985900956",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026there are security models that differ from this, and focus on the protection of the files themselves only, not so much the data structures to access them. While the previously described Verity logic focuses on the block device layer, and is implemented in the kernel subsystem &quot;dm-verity&quot;, the latter security model can be implemented via the &quot;fs-verity&quot; subsystem of the kernel, which is available for various file systems, including ext4.</p><p>With v258 systemd-repart also supports generating\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114850427719737809",
+      "created_at": "2025-07-14T07:34:10.311Z",
+      "in_reply_to_id": "114850416985900956",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114850427719737809",
+      "url": "https://mastodon.social/@pid_eins/114850427719737809",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026images that make use of fs-verity rather than dm-verity. Or in other words: every file placed in generated images can be locked down with fs-verity, and made immutable. The CopyFiles= setting in repart.d/ drop-ins gained the new &quot;fsverity=&quot; option string, which may be used to enable this logic.</p><p>This is useful for building images for consumption by &quot;composefs&quot;, usually found in ostree deployments.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114987636916127145",
+      "created_at": "2025-08-07T13:08:16.501Z",
+      "in_reply_to_id": "114987273877888580",
+      "in_reply_to_account_id": "112971489947435684",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114987636916127145",
+      "url": "https://mastodon.social/@pid_eins/114987636916127145",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> modern file systems are some of the most complex, largest data structures of today&#39;s practical computing. If an attacker can alter them, this is a major attack avenue on the OS kernel, in particular as Linux file system engineers made repeatedly clear that they do not consider block-level attacks on file systems security issues, but regular bugs only \u2014 if at all. Thus, it&#39;s essential you authenticate the fs blocks *before* they reach the fs drivers.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114987642304015629",
+      "created_at": "2025-08-07T13:09:38.713Z",
+      "in_reply_to_id": "114987636916127145",
+      "in_reply_to_account_id": "112971489947435684",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114987642304015629",
+      "url": "https://mastodon.social/@pid_eins/114987642304015629",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> dm-verity provides that, fs-verity doesnt. To me this diminishes the usefulness of fs-verity drastically, i just dont see what precisely the security model behind it is.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114852456268751759",
+      "created_at": "2025-07-14T16:10:03.518Z",
+      "in_reply_to_id": "114852439708621872",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114852456268751759",
+      "url": "https://mastodon.social/@pid_eins/114852456268751759",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> fancier programming languages than C won&#39;t protect you from algorithmic attacks here, i.e. data structures that are purposefully invalid. </p><p>modern file systems are insanely complex data structures, some of the most complex data structures we deal with every day. which language you use to implement them won&#39;t change a bit about that\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ],
+  "all_descendants": [
+    {
+      "id": "114850406617083097",
+      "created_at": "2025-07-14T07:28:48.312Z",
+      "in_reply_to_id": "114850389356673130",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114850406617083097",
+      "url": "https://mastodon.social/@pid_eins/114850406617083097",
+      "replies_count": 2,
+      "reblogs_count": 2,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": "2025-07-14T07:28:56.354Z",
+      "content": "<p>This kind of protection \u2013 so far \u2013 focused on block-level protection: not only the files are protected, but their whole arrangement in the data structures of the file system is too. Thus an fs driver can be reasonably sure that if a file system comes from a properly signed Verity-protected image it&#39;s structure is safe to access.</p><p>While I strongly believe in a security model where trust into file system images must be established before accessing it \u2013 in a way like the one describe above \u2013\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114850416985900956",
+      "created_at": "2025-07-14T07:31:26.527Z",
+      "in_reply_to_id": "114850406617083097",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114850416985900956",
+      "url": "https://mastodon.social/@pid_eins/114850416985900956",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 5,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026there are security models that differ from this, and focus on the protection of the files themselves only, not so much the data structures to access them. While the previously described Verity logic focuses on the block device layer, and is implemented in the kernel subsystem &quot;dm-verity&quot;, the latter security model can be implemented via the &quot;fs-verity&quot; subsystem of the kernel, which is available for various file systems, including ext4.</p><p>With v258 systemd-repart also supports generating\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114850427719737809",
+      "created_at": "2025-07-14T07:34:10.311Z",
+      "in_reply_to_id": "114850416985900956",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114850427719737809",
+      "url": "https://mastodon.social/@pid_eins/114850427719737809",
+      "replies_count": 1,
+      "reblogs_count": 2,
+      "favourites_count": 11,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p>\u2026images that make use of fs-verity rather than dm-verity. Or in other words: every file placed in generated images can be locked down with fs-verity, and made immutable. The CopyFiles= setting in repart.d/ drop-ins gained the new &quot;fsverity=&quot; option string, which may be used to enable this logic.</p><p>This is useful for building images for consumption by &quot;composefs&quot;, usually found in ostree deployments.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114987273877888580",
+      "created_at": "2025-08-07T11:35:56.000Z",
+      "in_reply_to_id": "114850427719737809",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/arrieseveneight/statuses/114987273858644744",
+      "url": "https://hachyderm.io/@arrieseveneight/114987273858644744",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> sorry if this is necroposting, but what are the practical advantages to validating at the block device layer as opposed to the file layer? is it down to simplicity, are there any other types of attacks that it prevents, or?</p>",
+      "reblog": null,
+      "account": {
+        "id": "112971489947435684",
+        "username": "arrieseveneight",
+        "acct": "arrieseveneight@hachyderm.io",
+        "display_name": "arrie",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-08-16T00:00:00.000Z",
+        "note": "<p>mastodon lurker</p>",
+        "url": "https://hachyderm.io/@arrieseveneight",
+        "uri": "https://hachyderm.io/users/arrieseveneight",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "followers_count": 3,
+        "following_count": 56,
+        "statuses_count": 328,
+        "last_status_at": "2025-12-16",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "real",
+            "value": "nerdshit",
+            "verified_at": null
+          },
+          {
+            "name": "pronouns",
+            "value": "they | she",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114987636916127145",
+      "created_at": "2025-08-07T13:08:16.501Z",
+      "in_reply_to_id": "114987273877888580",
+      "in_reply_to_account_id": "112971489947435684",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114987636916127145",
+      "url": "https://mastodon.social/@pid_eins/114987636916127145",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> modern file systems are some of the most complex, largest data structures of today&#39;s practical computing. If an attacker can alter them, this is a major attack avenue on the OS kernel, in particular as Linux file system engineers made repeatedly clear that they do not consider block-level attacks on file systems security issues, but regular bugs only \u2014 if at all. Thus, it&#39;s essential you authenticate the fs blocks *before* they reach the fs drivers.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114987642304015629",
+      "created_at": "2025-08-07T13:09:38.713Z",
+      "in_reply_to_id": "114987636916127145",
+      "in_reply_to_account_id": "112971489947435684",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114987642304015629",
+      "url": "https://mastodon.social/@pid_eins/114987642304015629",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://hachyderm.io/@arrieseveneight\" class=\"u-url mention\">@<span>arrieseveneight</span></a></span> dm-verity provides that, fs-verity doesnt. To me this diminishes the usefulness of fs-verity drastically, i just dont see what precisely the security model behind it is.</p>",
+      "reblog": null,
+      "application": {
+        "name": "Mastodon for Android",
+        "website": "https://app.joinmastodon.org/android"
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "112971489947435684",
+          "username": "arrieseveneight",
+          "url": "https://hachyderm.io/@arrieseveneight",
+          "acct": "arrieseveneight@hachyderm.io"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114987873203200881",
+      "created_at": "2025-08-07T14:08:21.000Z",
+      "in_reply_to_id": "114987642304015629",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://hachyderm.io/users/arrieseveneight/statuses/114987873178143714",
+      "url": "https://hachyderm.io/@arrieseveneight/114987873178143714",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> thanks so much for explaining, that clears things up!</p>",
+      "reblog": null,
+      "account": {
+        "id": "112971489947435684",
+        "username": "arrieseveneight",
+        "acct": "arrieseveneight@hachyderm.io",
+        "display_name": "arrie",
+        "locked": false,
+        "bot": false,
+        "discoverable": false,
+        "indexable": false,
+        "group": false,
+        "created_at": "2024-08-16T00:00:00.000Z",
+        "note": "<p>mastodon lurker</p>",
+        "url": "https://hachyderm.io/@arrieseveneight",
+        "uri": "https://hachyderm.io/users/arrieseveneight",
+        "avatar": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/112/971/489/947/435/684/original/2c5b7cb3c226c441.png",
+        "header": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "header_static": "https://files.mastodon.social/cache/accounts/headers/112/971/489/947/435/684/original/56f7df1afb5c9e0f.png",
+        "followers_count": 3,
+        "following_count": 56,
+        "statuses_count": 328,
+        "last_status_at": "2025-12-16",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "real",
+            "value": "nerdshit",
+            "verified_at": null
+          },
+          {
+            "name": "pronouns",
+            "value": "they | she",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114852439708621872",
+      "created_at": "2025-07-14T16:05:50.000Z",
+      "in_reply_to_id": "114850406617083097",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alwayscurious/statuses/114852439682974719",
+      "url": "https://infosec.exchange/@alwayscurious/114852439682974719",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Wanting to access files on a filesystem that is not fully trusted, without having to copy the entire block device, is a valid use-case.  Sadly, current filesystem drivers do not support it, for which I blame the C language more then anything else.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109703431137549286",
+        "username": "alwayscurious",
+        "acct": "alwayscurious@infosec.exchange",
+        "display_name": "Demi Marie Obenour",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-01-17T00:00:00.000Z",
+        "note": "<p>Software developer and security researcher.  Currently working on Spectrum.  Follows are not endorsements.</p>",
+        "url": "https://infosec.exchange/@alwayscurious",
+        "uri": "https://infosec.exchange/users/alwayscurious",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 142,
+        "following_count": 132,
+        "statuses_count": 3271,
+        "last_status_at": "2025-12-17",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "She/her",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/DemiMarie\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/DemiMarie</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T16:02:05.879+00:00"
+          },
+          {
+            "name": "Matrix",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>alwayscurious</span></a></span>:matrix.org",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114852456268751759",
+      "created_at": "2025-07-14T16:10:03.518Z",
+      "in_reply_to_id": "114852439708621872",
+      "in_reply_to_account_id": "109703431137549286",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.social/users/pid_eins/statuses/114852456268751759",
+      "url": "https://mastodon.social/@pid_eins/114852456268751759",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\">@<span>alwayscurious</span></a></span> fancier programming languages than C won&#39;t protect you from algorithmic attacks here, i.e. data structures that are purposefully invalid. </p><p>modern file systems are insanely complex data structures, some of the most complex data structures we deal with every day. which language you use to implement them won&#39;t change a bit about that\u2026</p>",
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "acct": "pid_eins",
+        "display_name": "Lennart Poettering",
+        "locked": false,
+        "bot": false,
+        "discoverable": null,
+        "indexable": false,
+        "group": false,
+        "created_at": "2022-10-28T00:00:00.000Z",
+        "note": "<p>\u26f5 I write software. \u26f5</p>",
+        "url": "https://mastodon.social/@pid_eins",
+        "uri": "https://mastodon.social/users/pid_eins",
+        "avatar": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "avatar_static": "https://files.mastodon.social/accounts/avatars/109/248/059/314/089/584/original/3209dabfe3b87caa.jpg",
+        "header": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "header_static": "https://files.mastodon.social/accounts/headers/109/248/059/314/089/584/original/d4b7dfdc4c30890b.jpg",
+        "followers_count": 8188,
+        "following_count": 343,
+        "statuses_count": 2260,
+        "last_status_at": "2025-12-18",
+        "hide_collections": null,
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "Web",
+            "value": "<a href=\"http://0pointer.de/blog/\" target=\"_blank\" rel=\"nofollow noopener me\" translate=\"no\"><span class=\"invisible\">http://</span><span class=\"\">0pointer.de/blog/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109703431137549286",
+          "username": "alwayscurious",
+          "url": "https://infosec.exchange/@alwayscurious",
+          "acct": "alwayscurious@infosec.exchange"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    },
+    {
+      "id": "114852522408364030",
+      "created_at": "2025-07-14T16:26:52.000Z",
+      "in_reply_to_id": "114852456268751759",
+      "in_reply_to_account_id": "109248059314089584",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://infosec.exchange/users/alwayscurious/statuses/114852522393298939",
+      "url": "https://infosec.exchange/@alwayscurious/114852522393298939",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "quotes_count": 0,
+      "edited_at": null,
+      "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> What they <em>do</em> prevent is memory unsafety leading to code execution in the driver.  That said, Linux being a monolithic kernel is also a huge part of the problem.  If every filesystem used FUSE then the impact would be limited to driver for the filesystem, and microkernels have much faster IPC which should mitigate much of the performance impact.</p>",
+      "reblog": null,
+      "account": {
+        "id": "109703431137549286",
+        "username": "alwayscurious",
+        "acct": "alwayscurious@infosec.exchange",
+        "display_name": "Demi Marie Obenour",
+        "locked": true,
+        "bot": false,
+        "discoverable": true,
+        "indexable": false,
+        "group": false,
+        "created_at": "2023-01-17T00:00:00.000Z",
+        "note": "<p>Software developer and security researcher.  Currently working on Spectrum.  Follows are not endorsements.</p>",
+        "url": "https://infosec.exchange/@alwayscurious",
+        "uri": "https://infosec.exchange/users/alwayscurious",
+        "avatar": "https://mastodon.social/avatars/original/missing.png",
+        "avatar_static": "https://mastodon.social/avatars/original/missing.png",
+        "header": "https://mastodon.social/headers/original/missing.png",
+        "header_static": "https://mastodon.social/headers/original/missing.png",
+        "followers_count": 142,
+        "following_count": 132,
+        "statuses_count": 3271,
+        "last_status_at": "2025-12-17",
+        "hide_collections": true,
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Pronouns",
+            "value": "She/her",
+            "verified_at": null
+          },
+          {
+            "name": "GitHub",
+            "value": "<a href=\"https://github.com/DemiMarie\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/DemiMarie</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2025-12-17T16:02:05.879+00:00"
+          },
+          {
+            "name": "Matrix",
+            "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://infosec.exchange/@alwayscurious\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>alwayscurious</span></a></span>:matrix.org",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "109248059314089584",
+          "username": "pid_eins",
+          "url": "https://mastodon.social/@pid_eins",
+          "acct": "pid_eins"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "quote": null,
+      "card": null,
+      "poll": null,
+      "quote_approval": {
+        "automatic": [],
+        "manual": [],
+        "current_user": "denied"
+      }
+    }
+  ]
+}

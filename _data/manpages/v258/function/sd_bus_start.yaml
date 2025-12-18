@@ -1,0 +1,2 @@
+description:  Initiate a bus connection to the D-bus broker daemon
+url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_start.html
