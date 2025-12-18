@@ -108,7 +108,7 @@ title: systemd v258 Release Notes
 
 - Encrypted systemd service credentials are now available for user services too, including if locked to TPM. Previously, they could only be used for system services. (See [Lennart's commentary on user credentials and mount units](/systemd-258/posts/53-service-credentials/) for more details.)
 
-- Services instantiated for `Accept=yes` socket units will now include the Linux socket cookie (`SO_COOKIE`) in the instance name, as well as the PIDFD inode ID for the peer (the latter is only available for AF_UNIX sockets). This should make it easier to match specific service instances to the connections and peers they are associated with.
+- Services instantiated for `Accept=yes` socket units will now include the Linux socket cookie (`SO_COOKIE`) in the instance name, as well as the PIDFD inode ID for the peer (the latter is only available for `AF_UNIX` sockets). This should make it easier to match specific service instances to the connections and peers they are associated with.
 
 - The security rules enforced by the per-unit `AttachProcesses()` bus API call have been relaxed a bit: unprivileged clients may now use the call on arbitrary processes which run in any user namespace owned by the client's UID. Previously, a stricter rule applied that required the UIDs of the process to move and of the client to match exactly.
 
@@ -353,7 +353,7 @@ title: systemd v258 Release Notes
 
 - When a new user namespace is registered and a name for it must be supplied, this name may now optionally be mangled automatically so that it follows the naming rules for namespaces employed. This makes it easier to provide suitable identifiers to the service, without any client-side preparations or clean-ups, and thus ensures allocation of a userns can ultimately "just work".
 
-- A special, fixed UID/GID range has been defined called the "foreign" UID/GID range. It's intended to be used to persistently own bootable OS/container images on disk (i.e. OS trees that use a UID/GID assignments not local to the host, but "foreign", i.e. they have their own /etc/passwd + /etc/group table or similar database), so that they can be mapped to other user namespace UID/GID ranges at runtime through ID-mapped mounts.
+- A special, fixed UID/GID range has been defined called the "foreign" UID/GID range. It's intended to be used to persistently own bootable OS/container images on disk (i.e. OS trees that use a UID/GID assignments not local to the host, but "foreign", i.e. they have their own `/etc/passwd` + `/etc/group` table or similar database), so that they can be mapped to other user namespace UID/GID ranges at runtime through ID-mapped mounts.
 
 - systemd-mountfsd gained a new IPC call accessible to unprivileged clients for acquiring an ID-mapped mount for any OS/container directory tree which is itself owned by the foreign UID/GID range, and has a parent directory owned by the caller's UID. This means the systemd-nsresourced/systemd-mountfsd combination is now suitable for running unprivileged containers both from a disk image and from a directory tree.
 
@@ -439,19 +439,13 @@ title: systemd v258 Release Notes
 
 - If a user record has an initialized `realm` field, then the record may now be referenced via the primary user name or any alias name, suffixed with "@" and the realm, too.
 
-- User records gained new fields tmpLimit, tmpLimitScale, devShmLimit, devShmLimitScale which enforce quota on /tmp/ and /dev/shm/ at login time, either in absolute or in relative values. These values default to 80% for regular users, ensuring that a single user cannot easily DoS a local system by taking away all disk space in /tmp/. The homectl tool has been updated to make these new fields configurable.
+- User records gained new fields `tmpLimit`, `tmpLimitScale`, `devShmLimit`, `devShmLimitScale` which enforce quota on `/tmp/` and `/dev/shm/` at login time, either in absolute or in relative values. These values default to 80% for regular users, ensuring that a single user cannot easily DoS a local system by taking away all disk space in `/tmp/`. The homectl tool has been updated to make these new fields configurable.
 
 - The userdb Varlink interface has been extended to support server-side filtering by UID/GID min/max, fuzzy name matching and user disposition. Previously this was supported by the [`userdbctl`][userdbctl] client-side only. With this, userdb providers may now optionally implement this server-side too in order to optimize the lookups. (See [Lennart's commentary on userdb filtering improvements](/systemd-258/posts/28-userdb-filter/) for more details.)
 
-- User records now support a concept of home "areas", i.e. subdirectories of the primary $HOME directory that a user can log into. This is useful to maintain separate development environments or configuration contexts, but within the ownership of the same user. Support for this is implemented in systemd-homed, but is conceptually open to other backends, too. (See [Lennart's commentary on systemd-homed areas](/systemd-258/posts/02-homed-areas/) for more details.)
+- User records now support a concept of home "areas", i.e. subdirectories of the primary `$HOME` directory that a user can log into. This is useful to maintain separate development environments or configuration contexts, but within the ownership of the same user. Support for this is implemented in systemd-homed, but is conceptually open to other backends, too. (See [Lennart's commentary on systemd-homed areas](/systemd-258/posts/02-homed-areas/) for more details.)
 
-New home areas can be created via "mkdir -p ~/Areas/ && cp /etc/skel
-~/Areas/foo", or removed by "rm -rf ~/Areas/foo". Whenever prompted
-for login and a user name is requested, it is possible to enter a
-username suffixed by "%" and the area name in order to log into the
-specified area of the user. (e.g. "bar%foo"). Effectively this
-ensures that $HOME and $XDG_RUNTIME_DIR include the area choice after
-login. Note that at this moment it's not possible to log into a full
+New home areas can be created via `mkdir -p ~/Areas/ && cp /etc/skel ~/Areas/foo`, or removed by `rm -rf ~/Areas/foo`. Whenever prompted for login and a user name is requested, it is possible to enter a username suffixed by `%` and the area name in order to log into the specified area of the user. (e.g. `bar%foo`). Effectively this ensures that `$HOME` and `$XDG_RUNTIME_DIR` include the area choice after login. Note that at this moment it's not possible to log into a full
 graphical session with this, since we'd have to start a per-area user
 service manager for that, and we currently do not do this. But we
 hope to provide this in one of the next releases. In order to
@@ -491,7 +485,7 @@ which is configurable with homectl's `--default-area=` switch.
 
 - homectl gained a new `--match=` switch which allows to generate accounts with perMachine matching sections.
 
-- userdbctl gained a new verb `load-credentials`, with a service unit `systemd-userdb-load-credentials.service` which invokes it. When invoked this command will look for any passed credentials named userdb.user.* or userdb.group.*. These credentials may contain user/group records in JSON format. They will be copied into /run/userdb/ (where static userdb JSON records can be placed), with the appropriate symlink from the UID/GID added in, as any membership relationships between user/groups replicated as .membership files. Or in other words: it's very easy to provision a complete user/group record in an invoked system, by providing the user/group JSON record as system credential. Note that these credentials are unrelated to similar credentials supported by systemd-homed. `userdb load-credentials` creates "static" user records via drop-in files in `/run/userdb/` (and thus covers system users and suchlike) while systemd-homed creates only systemd-homed managed use (i.e. only regular users). (See [Lennart's commentary on userdb drop-in directories](/systemd-258/posts/21-userdb-dropins/) for more details.)
+- userdbctl gained a new verb `load-credentials`, with a service unit `systemd-userdb-load-credentials.service` which invokes it. When invoked this command will look for any passed credentials named `userdb.user.*` or `userdb.group.*`. These credentials may contain user/group records in JSON format. They will be copied into `/run/userdb/` (where static userdb JSON records can be placed), with the appropriate symlink from the UID/GID added in, as any membership relationships between user/groups replicated as `.membership` files. Or in other words: it's very easy to provision a complete user/group record in an invoked system, by providing the user/group JSON record as system credential. Note that these credentials are unrelated to similar credentials supported by systemd-homed. `userdb load-credentials` creates "static" user records via drop-in files in `/run/userdb/` (and thus covers system users and suchlike) while systemd-homed creates only systemd-homed managed use (i.e. only regular users). (See [Lennart's commentary on userdb drop-in directories](/systemd-258/posts/21-userdb-dropins/) for more details.)
 
 - User/group records gained a new `uuid` field that may be used to place an identifying UUID in the record.
 
@@ -652,7 +646,7 @@ which is configurable with homectl's `--default-area=` switch.
 
 - systemd-fstab-auto-generator and systemd-gpt-auto-generator now understand `root=off` on the kernel command line which may be used to turn off any automatic or non-automatic mounting of the root file system. This is useful in scenarios where a boot process shall never transition from initrd context into host context.
 
-- [`systemd-ssh-proxy`][systemd-ssh-proxy] now supports an alternative syntax for connecting to SSH-over-AF_VSOCK, in order to support scp and rsync better: "scp foo.txt vsock%4711:" should work now. (The pre-existing syntax used "/" instead of "%" as separator, which is ambiguous in scp/rsync context even if not for ssh itself.) (See [Lennart's commentary on SSH over AF_VSOCK](/systemd-258/posts/31-ssh-vsock/) for more details.)
+- [`systemd-ssh-proxy`][systemd-ssh-proxy] now supports an alternative syntax for connecting to SSH-over-`AF_VSOCK`, in order to support scp and rsync better: "scp foo.txt vsock%4711:" should work now. (The pre-existing syntax used "/" instead of "%" as separator, which is ambiguous in scp/rsync context even if not for ssh itself.) (See [Lennart's commentary on SSH over AF_VSOCK](/systemd-258/posts/31-ssh-vsock/) for more details.)
 
 - `systemctl start` and related verbs now support a new `--verbose` mode. If specified the live log output of the units operated on is shown as long as the operation lasts. (See [Lennart's commentary on systemctl --verbose mode](/systemd-258/posts/01-systemctl-verbose/) for more details.)
 
@@ -668,7 +662,7 @@ which is configurable with homectl's `--default-area=` switch.
 
 - [`systemd-socket-activate`][systemd-socket-activate] gained a new `--now` switch which ensures the specified binary is immediately invoked, and not delayed until a connection comes in.
 
-- [`systemd-ssh-generator`][systemd-ssh-generator] will now generate the AF_VSOCK ssh listener .socket unit, so that a tiny new helper "[`systemd-ssh-issue`][systemd-ssh-issue]" is invoked when the socket is bound, that generates a drop-in file /run/issue.d/50-ssh-vsock.issue that is shown by "login" and other subsystems at login time. The file reports the AF_VSOCK CID of the system, along with very brief information how to connect to the system via ssh-over-AF_VSOCK. Or in other words: if the system is booted up in an AF_VSOCK capable VM the console login screen shown once boot-up is complete will tell you how to connect to the system via SSH, if that's available.
+- [`systemd-ssh-generator`][systemd-ssh-generator] will now generate the `AF_VSOCK` ssh listener `.socket` unit, so that a tiny new helper "[`systemd-ssh-issue`][systemd-ssh-issue]" is invoked when the socket is bound, that generates a drop-in file `/run/issue.d/50-ssh-vsock.issue` that is shown by `login` and other subsystems at login time. The file reports the `AF_VSOCK` CID of the system, along with very brief information how to connect to the system via ssh-over-`AF_VSOCK`. Or in other words: if the system is booted up in an `AF_VSOCK` capable VM the console login screen shown once boot-up is complete will tell you how to connect to the system via SSH, if that's available.
 
 - [`systemd-fsck`][systemd-fsck] gained `fsck.mode` and `fsck.repair` credentials support to control the execution mode of fsck.
 
