@@ -1,0 +1,16 @@
+# v259 Feature Highlight #10
+
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
+**Posted:** 2025-12-01 20:57 UTC
+**Original:** [https://mastodon.social/@pid_eins/115646310576910417](https://mastodon.social/@pid_eins/115646310576910417)
+
+---
+
+1️⃣0️⃣ Here's the 10th post highlighting key new features of the upcoming v259 release of systemd. [#systemd259](https://mastodon.social/tags/systemd259) [#systemd](https://mastodon.social/tags/systemd)
+
+This one is quick, and basically just a continuation of the previous episode: in order to show the current  state of the NvPCRs, you may now use "systemd-analyze nvpcrs". This closely mirrors the existing "systemd-analyze pcrs" that shows you the current state of all regular PCRs.
+
+
+---
+
+*Source: [Mastodon](https://mastodon.social/@pid_eins/115646310576910417)*
