@@ -22,7 +22,7 @@ And that's already it for today.
 >
 > Is there a plan for systemd-sysupdate and incremental updates from one version to the next in GNOME OS?
 
-**[@jaminsamuel18](https://mastodon.social/@jaminsamuel18)** yes there is. and it is being worked on right now.
+Yes there is. And it is being worked on right now.
 
 ---
 

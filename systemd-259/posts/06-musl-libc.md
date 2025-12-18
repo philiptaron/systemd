@@ -20,9 +20,9 @@ Hence, make of this what you want. But my recommendation continues to be: just u
 
 ---
 
-> **[@TheDragon](https://hachyderm.io/@TheDragon)** kinda curious, given the major drawbacks of using these two together + the hostility.. why has this support even been added?
+> **[@TheDragon](https://hachyderm.io/@TheDragon)** Kinda curious, given the major drawbacks of using these two together + the hostility.. why has this support even been added?
 
-**[@TheDragon](https://hachyderm.io/@TheDragon)** postmarketos made the fateful decision to adopt musl, and now they are stuck with it. We like the pmos people.
+postmarketOS made the fateful decision to adopt musl, and now they are stuck with it. We like the pmos people.
 
 But a lot of other people asked for it too.
 
@@ -30,11 +30,11 @@ But a lot of other people asked for it too.
 >
 > Because if not it'd be quite sensible for that to be a no-op.
 
-**[@Atemu](https://darmstadt.social/@Atemu)** well, that would mean they ask the kernel for memory piecemeal for every single page they need. And return each page that is empty back to the kernel immediately. Which is formally correct of course but also prohibitively slow because memory mappings flush TLBs and stuff. So malloc implementations generally allocate memory in larger chunks to make things fast. But if you do that you should really have a way to return unused pages of a chunk to the kernel under pressure. Glibc has that.
+Well, that would mean they ask the kernel for memory piecemeal for every single page they need. And return each page that is empty back to the kernel immediately. Which is formally correct of course but also prohibitively slow because memory mappings flush TLBs and stuff. So malloc implementations generally allocate memory in larger chunks to make things fast. But if you do that you should really have a way to return unused pages of a chunk to the kernel under pressure. Glibc has that.
 
 > **[@valpackett](https://social.treehouse.systems/@valpackett)** I've heard that malloc_trim() only makes sense with glibc's old-fashioned heavily-sbrk()-using allocator, and not at all with fully mmap() based allocators. Is that not true?! Does malloc_trim() actually do something with mmap()ed memory?
 
-**[@valpackett](https://social.treehouse.systems/@valpackett) [@Atemu](https://darmstadt.social/@Atemu)** glibc calls madvise MADV_DONTNEED on the space it doesn't need.
+glibc calls madvise MADV_DONTNEED on the space it doesn't need.
 
 ---
 

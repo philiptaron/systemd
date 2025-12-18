@@ -36,21 +36,21 @@ Or maybe let me add one more thing. systemd is of course not only the really fun
 >
 > And then you call s6 a "dependency hog" because in the worst possible case, one s6 program has an ldd output with 3 shared libraries in addition to the libc. Dude. Come on.
 
-**[@ska](https://social.treehouse.systems/@ska)** Hey, I am just trolling you…
+Hey, I am just trolling you…
 
-> **[@pemensik](https://fosstodon.org/@pemensik)** please stop hiding real dependencies of libsystemd. Instead split libsystemd into more libraries, with basic and more extensive dependencies. When people use it only for DBus interface, they should not load journal dependencies. Allow linking only to parts user needs. I want real dependencies visible in rpm generated packages. Those will become invisible, but might be required for some functionality. It moves burden to libsystemd users.
+> **[@pemensik](https://fosstodon.org/@pemensik)** Please stop hiding real dependencies of libsystemd. Instead split libsystemd into more libraries, with basic and more extensive dependencies. When people use it only for DBus interface, they should not load journal dependencies. Allow linking only to parts user needs. I want real dependencies visible in rpm generated packages. Those will become invisible, but might be required for some functionality. It moves burden to libsystemd users.
 
-**[@pemensik](https://fosstodon.org/@pemensik)** it used to be split out a long time ago. it was a fricking nightmare of deps and came with so many restrictions, because ELF cannot distinguish between public APIs to everyone, and public APIs towards a certain set of of libraries. i.e. anything a library exports is *always* public for anyone, thus you can never provide a simple helper for your own higher level libraries only, you must *always* commit to it's ABI stability if you do.
+It used to be split out a long time ago. It was a fricking nightmare of deps and came with so many restrictions, because ELF cannot distinguish between public APIs to everyone, and public APIs towards a certain set of of libraries. i.e. anything a library exports is *always* public for anyone, thus you can never provide a simple helper for your own higher level libraries only, you must *always* commit to it's ABI stability if you do.
 
 Hence, sorry, fuck no. Never again.
 
-> **[@pemensik](https://fosstodon.org/@pemensik)** you can use static library internally to share common parts between your shared libraries. That way the code is shared and public shared libraries export only truly public symbols. But I think exporting public functions by publishing header files only for supported calls would be sufficient. In any case, how are dlopen deps handled at packaging level then?
+> **[@pemensik](https://fosstodon.org/@pemensik)** You can use static library internally to share common parts between your shared libraries. That way the code is shared and public shared libraries export only truly public symbols. But I think exporting public functions by publishing header files only for supported calls would be sufficient. In any case, how are dlopen deps handled at packaging level then?
 
-**[@pemensik](https://fosstodon.org/@pemensik)** static libs doesn't work for this. The main reason why systemd's size footprint is actually quite OK for everything it does, is primarily because we do not use static linking, and hence duplication of code in many ELF objects, but are pretty good and minimizing that and placing any shared code in a common object file.
+Static libs doesn't work for this. The main reason why systemd's size footprint is actually quite OK for everything it does, is primarily because we do not use static linking, and hence duplication of code in many ELF objects, but are pretty good and minimizing that and placing any shared code in a common object file.
 
 And if you export something to the public you must keep ABI stable, no matter what.
 
-**[@pemensik](https://fosstodon.org/@pemensik)** rpm and dpkg extract the dlopen deps when building packages and turn them into Suggests/Recommends packaging deps.
+rpm and dpkg extract the dlopen deps when building packages and turn them into Suggests/Recommends packaging deps.
 
 > **[@3v1n0](https://fosstodon.org/@3v1n0)** This is nice and with @pwithnall, @ebassi and other GLib maintainers we're discussing (https://gitlab.gnome.org/GNOME/glib/-/issues/3831) to follow this approach and drop libpcre2 direct dependency from GLib too.
 >
@@ -58,9 +58,9 @@ And if you export something to the public you must keep ABI stable, no matter wh
 >
 > Now, I'm wondering, would be relevant to move the dlfcn-util.h and friends to a shared repository to be easy re-usable through a meson subproject in the various projects that would like to take a similar approach?
 
-**[@3v1n0](https://fosstodon.org/@3v1n0) [@pwithnall](https://mastodon.social/@pwithnall) [@ebassi](https://mastodon.social/@ebassi)** Ah! it would be lovely if glib would do this too.
+Ah! It would be lovely if glib would do this too.
 
-[@bluca](https://fosstodon.org/@bluca) wanted to move the spec into the uapi group anyway. maybe at the same time we could provide the relevant C macros as a drop-in .C file too, in some associated repo.
+[@bluca](https://fosstodon.org/@bluca) wanted to move the spec into the uapi group anyway. Maybe at the same time we could provide the relevant C macros as a drop-in .C file too, in some associated repo.
 
 [@bluca](https://fosstodon.org/@bluca) hey, here's one more thing to put on your plate! ;-)
 

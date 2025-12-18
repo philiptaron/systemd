@@ -18,9 +18,9 @@ And that's is already.
 
 ---
 
-> **[@pemensik](https://fosstodon.org/@pemensik)** yes. But I am more interested in how app linking to libsystemd will generate their mandatory requires. When it uses sd_dbus, what it requires? If calls sd_journal*, what then? This hiding makes all libraries used detection very hard.
+> **[@pemensik](https://fosstodon.org/@pemensik)** Yes. But I am more interested in how app linking to libsystemd will generate their mandatory requires. When it uses sd_dbus, what it requires? If calls sd_journal*, what then? This hiding makes all libraries used detection very hard.
 
-**[@pemensik](https://fosstodon.org/@pemensik)** well, it's more complex that that. libsystemd.so itself mostly has deps on compression libs, and those are needed by the journal code. And the journal code only needs the compression libs if you actually have journal files with fields compressed with them. In most cases all your files will only have the same compression alg used, because journald allows you to pick only one when generating them.
+Well, it's more complex that that. libsystemd.so itself mostly has deps on compression libs, and those are needed by the journal code. And the journal code only needs the compression libs if you actually have journal files with fields compressed with them. In most cases all your files will only have the same compression alg used, because journald allows you to pick only one when generating them.
 
 Hence, it doesn't depend so much purely on the tool calling into the lib, but on the files you process with the lib.
 
