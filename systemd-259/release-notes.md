@@ -27,7 +27,7 @@ title: systemd v259 Release Notes
   - libseccomp >= 2.4.0,
   - python >= 3.9.0.
 
-- The parsing of RootImageOptions= and the mount image parameters of ExtensionImages= and MountImages= will be changed in the next version so that the last duplicated definition for a given partition wins and is applied, rather than the first, to keep these options coherent with other unit settings.
+- The parsing of `RootImageOptions=` and the mount image parameters of `ExtensionImages=` and `MountImages=` will be changed in the next version so that the last duplicated definition for a given partition wins and is applied, rather than the first, to keep these options coherent with other unit settings.
 
 ## Feature Removals and Incompatible Changes:
 
@@ -55,7 +55,7 @@ title: systemd v259 Release Notes
 
 - The LUKS volume label string set by [`systemd-repart`][systemd-repart] no longer defaults to the literal same as the partition and file system label, but is prefixed with `luks-`.
   This is done so that on LUKS enabled images a conflict between /dev/disk/by-label/ symlinks is removed, as this symlink is generated both for file system and LUKS superblock labels.
-  There's a new VolumeLabel= setting for partitions that can be used to explicitly choose a LUKS superblock label, which can be used to explicitly revert to the old naming, if required.
+  There's a new `VolumeLabel=` setting for partitions that can be used to explicitly choose a LUKS superblock label, which can be used to explicitly revert to the old naming, if required.
 
 ## Service manager/PID1:
 
@@ -73,12 +73,12 @@ title: systemd v259 Release Notes
 
 - A new pair of properties OOMKills and ManagedOOMKills are now exposed on service units (and other unit types that spawn processes) that count the number of process kills made by the kernel or systemd-oomd.
 
-- The service manager gained support for a new RootDirectoryFileDescriptor= property when creating transient service units.
-  It is similar to RootDirectory= but takes a file descriptor rather than a path to the new root directory to use.
+- The service manager gained support for a new `RootDirectoryFileDescriptor=` property when creating transient service units.
+  It is similar to `RootDirectory=` but takes a file descriptor rather than a path to the new root directory to use.
 
-- The service manager now supports a new UserNamespacePath= setting which mirrors the existing IPCNamespacePath= and NetworkNamespacePath= options, but applies to Linux user namespaces.
+- The service manager now supports a new `UserNamespacePath=` setting which mirrors the existing `IPCNamespacePath=` and `NetworkNamespacePath=` options, but applies to Linux user namespaces.
 
-- The service manager gained a new ExecReloadPost= setting to configure commands to execute after reloading of the configuration of the service has completed.
+- The service manager gained a new `ExecReloadPost=` setting to configure commands to execute after reloading of the configuration of the service has completed.
 
 - Service manager job activation transactions now get a per-system unique 64-bit numeric ID assigned.
   This ID is logged as an additional log field for in messages related to the transaction.
@@ -100,7 +100,7 @@ title: systemd v259 Release Notes
   This makes it very easy to reference the right media in case many block devices from files are attached to the same VM via the /dev/disk/by-id/… links in the VM.
   *See also: [Lennart's explanation](posts/12-vmspawn-disk.md)*
 
-- [`systemd-nspawn`][systemd-nspawn]'s .nspawn file gained support for a new NamespacePath= setting in the [Network] section which takes a path to a network namespace inode, and which ensures the container is run inside that when booted. (This was previously only available via a command line switch.)
+- [`systemd-nspawn`][systemd-nspawn]'s .nspawn file gained support for a new `NamespacePath=` setting in the [Network] section which takes a path to a network namespace inode, and which ensures the container is run inside that when booted. (This was previously only available via a command line switch.)
 
 - [`systemd-vmspawn`][systemd-vmspawn] gained two new switches `--bind-user=`/`--bind-user-shell=` which mirror the switches of the same name in [`systemd-nspawn`][systemd-nspawn], and allow sharing a user account from the host inside the VM in a simple one-step operation.
   *See also: [Lennart's explanation](posts/05-vmspawn-bind-user.md)*
@@ -113,9 +113,9 @@ title: systemd v259 Release Notes
 
 ## systemd-repart:
 
-- repart.d/ drop-ins gained support for a new TPM2PCRs= setting, which can be used to configure the set of TPM2 PCRs to bind disk encryption to, in case TPM2-bound encryption is used.
+- repart.d/ drop-ins gained support for a new `TPM2PCRs=` setting, which can be used to configure the set of TPM2 PCRs to bind disk encryption to, in case TPM2-bound encryption is used.
   This was previously only settable via the [`systemd-repart`][systemd-repart] command line.
-  Similarly, KeyFile= has been added to configure a binary LUKS key file to use.
+  Similarly, `KeyFile=` has been added to configure a binary LUKS key file to use.
 
 - [`systemd-repart`][systemd-repart]'s functionality is now accessible via Varlink IPC.
   *See also: [Lennart's explanation](posts/11-repart-varlink.md)*
@@ -124,11 +124,11 @@ title: systemd v259 Release Notes
   Instead of operating on a block device this will just determine the minimum block device size required to apply the defined partitions and exit.
   *See also: [Lennart's explanation](posts/07-repart-size-calc.md)*
 
-- [`systemd-repart`][systemd-repart] gained two new switches `--defer-partitions-empty=yes` and `--defer-partitions-factory-reset=yes` which are similar to `--defer-partitions=` but instead of expecting a list of partitions to defer will defer all partitions marked via Format=empty or FactoryReset=yes.
+- [`systemd-repart`][systemd-repart] gained two new switches `--defer-partitions-empty=yes` and `--defer-partitions-factory-reset=yes` which are similar to `--defer-partitions=` but instead of expecting a list of partitions to defer will defer all partitions marked via `Format=empty` or `FactoryReset=yes`.
   This functionality is useful for installers, as partitions marked empty or marked for factory reset should typically be left out at install time, but not on first boot.
   *See also: [Lennart's explanation](posts/13-defer-partitions.md)*
 
-- The Subvolumes= values in repart.d/ drop-ins may now be suffixed with :nodatacow, in order to create subvolumes with data Copy-on-Write disabled.
+- The `Subvolumes=` values in repart.d/ drop-ins may now be suffixed with `:nodatacow`, in order to create subvolumes with data Copy-on-Write disabled.
 
 ## systemd-udevd:
 
@@ -170,7 +170,7 @@ title: systemd v259 Release Notes
 
 - [`sd-varlink`][sd-varlink]'s sd_varlink_server_new() call learned two new flags SD_VARLINK_SERVER_HANDLE_SIGTERM + SD_VARLINK_SERVER_HANDLE_SIGINT, which are honoured by sd_varlink_server_loop_auto() and will cause it to exit processing cleanly once SIGTERM/SIGINT are received.
 
-- [`varlinkctl`][varlinkctl] in `--more` mode will now send a READY=1 sd_notify() message once it receives the first reply.
+- [`varlinkctl`][varlinkctl] in `--more` mode will now send a `READY=1` sd_notify() message once it receives the first reply.
   This is useful for tools or scripts that wrap it (and implement the $NOTIFY_SOCKET protocol) to know when a first confirmation of success is received.
 
 - [`sd-varlink`][sd-varlink] gained a new sd_varlink_is_connected() call which reports whether a Varlink connection is currently connected.
@@ -238,8 +238,8 @@ title: systemd v259 Release Notes
 
 ## systemd-networkd:
 
-- [`systemd-networkd`][systemd-networkd]'s DHCP sever support gained two settings EmitDomain= and Domain= for controlling whether leases handed out should report a domain, and which.
-  It also gained a per-static lease Hostname= setting for the hostname of the client.
+- [`systemd-networkd`][systemd-networkd]'s DHCP sever support gained two settings `EmitDomain=` and `Domain=` for controlling whether leases handed out should report a domain, and which.
+  It also gained a per-static lease `Hostname=` setting for the hostname of the client.
 
 - [`systemd-networkd`][systemd-networkd] now exposes a Describe() method call to show network interface properties.
 
@@ -334,7 +334,7 @@ title: systemd v259 Release Notes
 - system-alloc-{uid,gid}-min are now exported in systemd.pc.
 
 - Incomplete support for musl libc is now available by setting the `libc` meson option to `musl`.
-  Note that systemd compiled with musl has various limitations: since NSS or equivalent functionality is not available, nss-systemd, nss-resolve, DynamicUser=, [`systemd-homed`][systemd-homed], [`systemd-userdbd`][systemd-userdbd], the foreign UID ID, unprivileged [`systemd-nspawn`][systemd-nspawn], [`systemd-nsresourced`][systemd-nsresourced], and so on will not work.
+  Note that systemd compiled with musl has various limitations: since NSS or equivalent functionality is not available, nss-systemd, nss-resolve, `DynamicUser=`, [`systemd-homed`][systemd-homed], [`systemd-userdbd`][systemd-userdbd], the foreign UID ID, unprivileged [`systemd-nspawn`][systemd-nspawn], [`systemd-nsresourced`][systemd-nsresourced], and so on will not work.
   Also, the usual memory pressure behaviour of long-running systemd services has no effect on musl.
   We also implemented a bunch of shims and workarounds to support compiling and running with musl.
   Caveat emptor.
