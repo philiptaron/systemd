@@ -352,8 +352,6 @@ Serrador, Felix Pehla, Fletcher Woodruff, Florian, Francesco Valla, Franck Bui, 
 
 — Edinburgh, 2025/12/17
 
-## References
-
 [homectl]: https://www.freedesktop.org/software/systemd/man/259/homectl.html
 [importctl]: https://www.freedesktop.org/software/systemd/man/259/importctl.html
 [journalctl]: https://www.freedesktop.org/software/systemd/man/259/journalctl.html
