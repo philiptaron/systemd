@@ -11,10 +11,10 @@ title: systemd v258 Release Notes
 
 - The minimum kernel baseline version has been bumped to v5.4 (released in 2019), with the recommended version now going up to v5.7. Consult the README file for a list of required kernel APIs.
 
-- The default access mode of tty/pts device nodes has been changed to 0600, which was 0620 in the older releases, due to general security concerns about terminals being written to by other users. To restore the old default access mode, use the `-Dtty-mode=0620` meson build option. (This effectively means "mesg n" is now the default, rather than "mesg y", see mesg(1) man page for help.)
+- The default access mode of tty/pts device nodes has been changed to 0600, which was 0620 in the older releases, due to general security concerns about terminals being written to by other users. To restore the old default access mode, use the `-Dtty-mode=0620` meson build option. (This effectively means `mesg n` is now the default, rather than `mesg y`, see mesg(1) man page for help.)
 
-- ACLs for device nodes requested by "uaccess" udev tag are now always applied/updated by [`systemd-udevd`][systemd-udevd] through "uaccess" udev builtin, and [`systemd-logind`][systemd-logind] no longer applies/updates ACLs but triggers "change" uevents to make systemd-udevd apply/update ACLs.
-  Hence, the "uaccess" udev tag should be set not only on "add" action but also on "change" action, and it is highly recommended that the rule is applied all actions except for "remove" action.
+- ACLs for device nodes requested by `uaccess` udev tag are now always applied/updated by [`systemd-udevd`][systemd-udevd] through `uaccess` udev builtin, and [`systemd-logind`][systemd-logind] no longer applies/updates ACLs but triggers `change` uevents to make systemd-udevd apply/update ACLs.
+  Hence, the `uaccess` udev tag should be set not only on `add` action but also on `change` action, and it is highly recommended that the rule is applied all actions except for `remove` action.
   Recommended example:
 
       ACTION!="remove", SUBSYSTEM=="hidraw", TAG+="uaccess"
@@ -25,7 +25,7 @@ title: systemd v258 Release Notes
 
 - [`systemd-run`][systemd-run]'s `--expand-environment=` switch, which was disabled by default when combined with `--scope`, has been changed to be enabled by default. This brings cmdline expansion of transient scopes on par with services.
 
-- systemd-logind PAM sessions that previously were automatically determined to be of class "background", and which are owned by root or system accounts, will now automatically be set to class "background-light" instead. PAM sessions that previously were automatically determined to be of class "user", and which are owned by non-root system users, will now automatically be set to class "user-light" instead. This effectively means that cron jobs or FTP sessions (i.e. all PAM sessions that have no TTY assigned and neither are graphical) for system users no longer pull in a service manager by default. This behaviour can be changed by explicitly setting the session class (for example via the `class=` parameter to `pam_systemd.so`, or by setting the `$XDG_SESSION_CLASS` environment variable as input for the service's PAM stack). This change does not affect graphical sessions, nor does it affect regular users. This is an incompatible change of sorts, since per-user services will typically not be available for such PAM sessions of system users.
+- systemd-logind PAM sessions that previously were automatically determined to be of class `background`, and which are owned by root or system accounts, will now automatically be set to class `background-light` instead. PAM sessions that previously were automatically determined to be of class `user`, and which are owned by non-root system users, will now automatically be set to class `user-light` instead. This effectively means that cron jobs or FTP sessions (i.e. all PAM sessions that have no TTY assigned and neither are graphical) for system users no longer pull in a service manager by default. This behaviour can be changed by explicitly setting the session class (for example via the `class=` parameter to `pam_systemd.so`, or by setting the `$XDG_SESSION_CLASS` environment variable as input for the service's PAM stack). This change does not affect graphical sessions, nor does it affect regular users. This is an incompatible change of sorts, since per-user services will typically not be available for such PAM sessions of system users.
 
 - systemd-udevd ignores `OWNER=`/`GROUP=` settings with a non-system user/group specified in udev rules files, to avoid device nodes being owned by a non-system user/group. It is recommended to check udev rules files with '[`udevadm`][udevadm] verify' and/or `udevadm test` commands if the specified user/group in `OWNER=`/`GROUP=` are valid. Similarly, [`systemd-networkd`][systemd-networkd] refuses `User=`/`Group=` settings with a non-system user/group specified in `.netdev` files for Tun/Tap interfaces.
 
@@ -48,7 +48,7 @@ title: systemd v258 Release Notes
 
 - systemd-networkd previously emitted the machine ID as chassis ID through LLDP protocol, but now emits a deterministic ID, cryptographically derived from the machine ID as chassis ID. If you want to use the previous behavior, please set `SYSTEMD_LLDP_SEND_MACHINE_ID=1` environment variable for systemd-networkd.
 
-- Support for the `!!` command line prefix on `ExecStart=` lines (and related) has been removed, and if specified will be ignored. The concept was supposed to provide compatibility with kernels that predated the introduction of "ambient" process capabilities. However, the kernel baseline of the systemd project is now far beyond any kernels that lacked support for it, hence the prefix serves no purpose anymore.
+- Support for the `!!` command line prefix on `ExecStart=` lines (and related) has been removed, and if specified will be ignored. The concept was supposed to provide compatibility with kernels that predated the introduction of ambient process capabilities. However, the kernel baseline of the systemd project is now far beyond any kernels that lacked support for it, hence the prefix serves no purpose anymore.
 
 - The default keyring for systemd-importd and related tools, shipped in `/usr/lib/systemd/`, has been renamed from `import-pubring.gpg` to `import-pubring.pgp`, as it is supported by other PGP tools as well as GPG. The local keyring `/etc/systemd/import-pubring.gpg` is still parsed if present, to preserve backward compatibility.
 
@@ -98,9 +98,9 @@ title: systemd v258 Release Notes
 
 ## Service manager/PID1:
 
-- The `PrivateUsers=` unit setting now accepts a new value "full", which is similar to "identity", but maps the whole 32bit UID range instead of just the first 2¹⁶. (See [Lennart's commentary on PrivateUsers sandboxing](/systemd-258/posts/52-privateusers/) for more details.)
+- The `PrivateUsers=` unit setting now accepts a new value `full`, which is similar to `identity`, but maps the whole 32bit UID range instead of just the first 2¹⁶. (See [Lennart's commentary on PrivateUsers sandboxing](/systemd-258/posts/52-privateusers/) for more details.)
 
-- The `ProtectHostname=` unit setting now accepts a new value "private", which is similar to "yes", but allows the unit's processes to modify the hostname. Since a UTC namespace is allocated for the unit this hostname change remains local to the unit, and does not affect the system as a whole. Optionally, the "private" string may be suffixed by a colon and a literal hostname specification, which is then used to initialize the hostname of the namespace to. (See [Lennart's commentary on ProtectHostname sandboxing](/systemd-258/posts/46-protect-hostname/) for more details.)
+- The `ProtectHostname=` unit setting now accepts a new value `private`, which is similar to `yes`, but allows the unit's processes to modify the hostname. Since a UTC namespace is allocated for the unit this hostname change remains local to the unit, and does not affect the system as a whole. Optionally, the `private` string may be suffixed by a colon and a literal hostname specification, which is then used to initialize the hostname of the namespace to. (See [Lennart's commentary on ProtectHostname sandboxing](/systemd-258/posts/46-protect-hostname/) for more details.)
 
 - `.mount` units now also support systemd credentials (i.e. `SetCredential=`/`LoadCredential=`/`ImportCredential=` and related settings). Previously this was available for service units only. (See [Lennart's commentary on user credentials and mount units](/systemd-258/posts/53-service-credentials/) for more details.)
 
@@ -114,7 +114,7 @@ title: systemd v258 Release Notes
 
 - A new per-unit `RemoveSubgroup()` D-Bus API call has been added that makes the service manager attempt to remove a sub-cgroup of units with cgroup delegation enabled. This is useful for unprivileged user namespace operation, where subgroups might be owned by user IDs that do not match the user ID the unit was delegated to, as is typical in user namespace scenarios. Per-user service managers will use this new call provided by the per-system service manager to clean up user units that contain cgroups owned by user namespace UIDs. (See [Lennart's commentary on user namespaces and cgroups](/systemd-258/posts/50-user-namespaces/) for more details.)
 
-- `.mount` units gained support for a special `x-systemd.graceful-option=` pseudo-mount option, which may be used to list additional mount options that shall be used for the mount when it is established, under the condition the local kernel supports them. If the local kernel does not, they are automatically removed from the option string. This only works for kernel-level mount options, not for those implemented in userspace. This is useful for various purposes, for example to include "usrquota" for tmpfs mount options where that's supported. (See [Lennart's commentary on graceful mount options](/systemd-258/posts/20-mount-options/) for more details.)
+- `.mount` units gained support for a special `x-systemd.graceful-option=` pseudo-mount option, which may be used to list additional mount options that shall be used for the mount when it is established, under the condition the local kernel supports them. If the local kernel does not, they are automatically removed from the option string. This only works for kernel-level mount options, not for those implemented in userspace. This is useful for various purposes, for example to include `usrquota` for tmpfs mount options where that's supported. (See [Lennart's commentary on graceful mount options](/systemd-258/posts/20-mount-options/) for more details.)
 
 - Per-user quota is now enabled on `/dev/shm/` and `/tmp/` (the latter only if backed by tmpfs). (See [Lennart's commentary on /tmp/ security hardening](/systemd-258/posts/06-tmp-security/) for more details.)
 
@@ -148,9 +148,9 @@ title: systemd v258 Release Notes
 
 - `.socket` units gained a new `PassPIDFD=` setting that controls the new `SO_PASSPIDFD` socket option for `AF_UNIX` socket. There's also a new setting `AcceptFileDescriptors=` that controls the new `SO_PASSRIGHTS`. (See [Lennart's commentary on socket credentials](/systemd-258/posts/33-socket-credentials/) for more details.)
 
-- A new job type "lenient" has been added, that is similar to the existing "fail" job mode, and which will fail the submitted transaction immediately if it would stop any currently running unit.
+- A new job type `lenient` has been added, that is similar to the existing `fail` job mode, and which will fail the submitted transaction immediately if it would stop any currently running unit.
 
-- `.socket` units gained a new pair of settings `DeferTrigger=` and `DeferTriggerMaxSec=` which modify triggering behaviour of the socket. When used this will cause the triggered unit to be enqueued with the new "lenient" job mode, and if the submission of the transaction fails it is later retried to be submitted (up to a configurable timeout), whenever a unit is stopped. (See [Lennart's detailed commentary on soft-reboot and socket activation](/systemd-258/posts/49-soft-reboot-sockets/) for more details.)
+- `.socket` units gained a new pair of settings `DeferTrigger=` and `DeferTriggerMaxSec=` which modify triggering behaviour of the socket. When used this will cause the triggered unit to be enqueued with the new `lenient` job mode, and if the submission of the transaction fails it is later retried to be submitted (up to a configurable timeout), whenever a unit is stopped. (See [Lennart's detailed commentary on soft-reboot and socket activation](/systemd-258/posts/49-soft-reboot-sockets/) for more details.)
 
 - The "preset" logic has been extended so that there are now three preset directories: one that declares the default enablement state for per-system services run on the host, one for per-user services, and – now new – one for per-system services that are run in the initrd. This reflects the fact that in many cases services that shall be enabled by default on the host should not be enabled by default in the initrd, or vice versa. Note that while the regular per-system preset policy defaults to enabled, the one for the initrd defaults to disabled.
 
@@ -199,7 +199,7 @@ title: systemd v258 Release Notes
 
 - `udevadm test` gained a new `--verbose` switch for generating additional debug output for the test.
 
-- The `OPTIONS=` udev expression now supports the new "dump" value, which will result in the current event's status to be logged at the moment the expression is processed. This is useful for debugging udev rules.
+- The `OPTIONS=` udev expression now supports the new `dump` value, which will result in the current event's status to be logged at the moment the expression is processed. This is useful for debugging udev rules.
 
 - A new kernel command line option `udev.trace=` has been added that allows enabling udev's tracing logic while booting an OS. `udevadm control` gained a new `--trace=` switch to change the same setting at runtime.
 
@@ -221,7 +221,7 @@ title: systemd v258 Release Notes
 
 - Android debug USB interfaces (ADB DbC, ADB, Fastboot) are now automatically marked for unprivileged access, generically via a new `ID_DEBUG_APPLIANCE=` udev property. Or in other words, running `adb` again your Android phone connected via USB, set to debug mode should just work without any additional rules. (See [Lennart's commentary on Android USB debugging support](/systemd-258/posts/40-android-usb/) for more details.)
 
-- A new standard group "clock" has been introduced that is now used by default for PTP and RTC device nodes in `/dev/`.
+- A new standard group `clock` has been introduced that is now used by default for PTP and RTC device nodes in `/dev/`.
 
 ## systemd-networkd:
 
@@ -233,7 +233,7 @@ title: systemd v258 Release Notes
 
 - A system-wide default for `ClientIdentifier=` may now be set in `networkd.conf`. (Previously this had to be configured individually in each `.network` file.)
 
-- `PersistLeases=` setting in `[DHCPServer]` section now also accepts "runtime", to make the DHCP server saves and loads bound leases on the runtime storage.
+- `PersistLeases=` setting in `[DHCPServer]` section now also accepts `runtime`, to make the DHCP server saves and loads bound leases on the runtime storage.
 
 - A new `Preference=` setting has been added to the `[IPv6RoutePrefix]` section to configure the route preference field.
 
@@ -247,7 +247,7 @@ title: systemd v258 Release Notes
 
 - The DHCPv4 client in systemd-networkd now also supports BOOTP (via a new `BOOTP=` setting).
 
-- The `Local=` setting in `[Tunnel]` section gained a new "dhcp_pd" value to allow setting the local address based on dhcp-pd addresses.
+- The `Local=` setting in `[Tunnel]` section gained a new `dhcp_pd` value to allow setting the local address based on dhcp-pd addresses.
 
 ## [`sd-varlink`][sd-varlink] & [`sd-json`][sd-json]:
 
@@ -291,9 +291,9 @@ title: systemd v258 Release Notes
 
 - A new configuration knob `WallMessages=` has been added to `logind.conf`, which may be used to control whether wall(1) style messages shall be sent to all consoles when the system goes down.
 
-- A new pseudo session class "none" has been defined. This may be used with the `class=` parameter of `pam_systemd.so` (and some other places) to disable allocation of a systemd-logind session for a specific session. Note that this is not a recommended mode of operation, as such "ghost" sessions will not be properly accounted for, and are excluded from the per-user/per-session resource accounting.
+- A new pseudo session class `none` has been defined. This may be used with the `class=` parameter of `pam_systemd.so` (and some other places) to disable allocation of a systemd-logind session for a specific session. Note that this is not a recommended mode of operation, as such "ghost" sessions will not be properly accounted for, and are excluded from the per-user/per-session resource accounting.
 
-- Two new session classes "user-light"/"user-early-light" have been added, that are just like the regular "user"/"user-early" session classes, but differ in one way: they do not cause activation of the per-user service manager. These new session classes are now used for logins of non-regular users which are used in a non-interactive way.
+- Two new session classes `user-light`/`user-early-light` have been added, that are just like the regular `user`/`user-early` session classes, but differ in one way: they do not cause activation of the per-user service manager. These new session classes are now used for logins of non-regular users which are used in a non-interactive way.
 
 - The pidfd inode ID of a session's leader process is now exposed as D-Bus property for session objects, in addition to the PID. The inode ID is a 64bit unique identifier for a process that is not vulnerable to recycling issues. (See [Lennart's commentary on PID file descriptor identifiers](/systemd-258/posts/42-pidfd-identifiers/) for more details.)
 
@@ -327,13 +327,13 @@ title: systemd v258 Release Notes
 
 - When systemd-stub is invoked through a network boot provided UKI, it will now query the source URL and write it to the `LoaderDeviceURL` EFI variable. This may then be used by Linux userspace to look for further resources (such as a root disk image) at the same location.
 
-- systemd-boot now understands two new Boot Loader Specification Type #1 stanzas: "uki" and "uki-url", which is very similar to "efi" and "linux", and references an UKI, the latter on a remote HTTP/HTTPS server. The latter is particularly relevant for implementing a fully UKI based boot process, but with network provided UKI images. (See Lennart's commentary on [HTTP boot with systemd-boot](/systemd-258/posts/10-http-boot/) and [UKI HTTP boot](/systemd-258/posts/44-uki-http-boot/) for more details.)
+- systemd-boot now understands two new Boot Loader Specification Type #1 stanzas: `uki` and `uki-url`, which is very similar to `efi` and `linux`, and references an UKI, the latter on a remote HTTP/HTTPS server. The latter is particularly relevant for implementing a fully UKI based boot process, but with network provided UKI images. (See Lennart's commentary on [HTTP boot with systemd-boot](/systemd-258/posts/10-http-boot/) and [UKI HTTP boot](/systemd-258/posts/44-uki-http-boot/) for more details.)
 
 - systemd-boot now looks for the special SMBIOS Type #11 vendor strings `io.systemd.boot.entries-extra=`, and synthesizes additional boot menu entries from the provided data. This is useful with systemd-vmspawn's `--smbios11=` switch, see below. (See Lennart's commentary on [stub credentials and boot entries](/systemd-258/posts/14-stub-credentials/) and [vmspawn SMBIOS Type 11](/systemd-258/posts/41-vmspawn-smbios/) for more details.)
 
 - systemd-stub now defaults to a minimum of 120 available PE sections, instead of the previous default of 30. This reflects the fact that multi-profile UKI typically require a lot more sections than traditional single-profile UKIs. Note that this is just a compile-time default, downstream distributions might choose to raise this further – in particular on ARM systems where many Devicetree blobs shall be embedded into an UKI.
 
-- systemd-boot's `loader.conf` configuration file gained a new "reboot-on-error" setting which controls what to do if booting a selected entry fails, i.e. whether to reboot or just show the menu again.
+- systemd-boot's `loader.conf` configuration file gained a new `reboot-on-error` setting which controls what to do if booting a selected entry fails, i.e. whether to reboot or just show the menu again.
 
 - `bootctl`'s `--no-variables` switch has been replaced by `--variables=yes/no`. By setting `--variables=yes` modification of EFI variables can be forced now in environments where we'd previously automatically turn this off (e.g. in `chroot()` contexts).
 
@@ -341,9 +341,9 @@ title: systemd v258 Release Notes
 
 - systemd-stub gained support for a couple of "extension" CHIDs, that are not part of the Microsoft's original spec, and which include EDID display identification information in the hash. This may be used to match Devicetree blobs in UKIs. "[`systemd-analyze`][systemd-analyze] chid" has been updated to support these extension CHIDs, too. (They are clearly marked as extensions CHIDs, to emphasize they are systemd's own invention, and not based on the Windows CHID spec.) (See [Lennart's commentary on the CHID lookup tool](/systemd-258/posts/37-chid-lookup/) for more details.)
 
-- systemd-boot's `loader.conf` configuration file gained a new `secure-boot-enroll-action` setting which controls the action to take once automatic Secure Boot keys have been enrolled, i.e. whether to reboot or whether to shut down the system.
+- systemd-boot's `loader.conf` configuration file gained a new `secure-boot-enroll-action=` setting which controls the action to take once automatic Secure Boot keys have been enrolled, i.e. whether to reboot or whether to shut down the system.
 
-- Userspace may set a new `LoaderSysFail` EFI variable. It is used by systemd-boot: when set and the system firmware reports some kind of system failure (for now this is pretty much only about failed firmware updates), systemd-boot will use the specified entry instead of following the usual fallback entry selection logic. `bootctl` gained a new "set-sysfail" verb to set this variable.
+- Userspace may set a new `LoaderSysFail` EFI variable. It is used by systemd-boot: when set and the system firmware reports some kind of system failure (for now this is pretty much only about failed firmware updates), systemd-boot will use the specified entry instead of following the usual fallback entry selection logic. `bootctl` gained a new `set-sysfail` verb to set this variable.
 
 - systemd-boot will now set `LoaderTpm2ActivePcrBanks` EFI variable to let the userspace know which TPM2 PCR banks are available. This is more reliable then trying to figure this out through sysfs.
 
@@ -369,7 +369,7 @@ title: systemd v258 Release Notes
 
 - Support for unprivileged invocation of container images stored in plain directories has been added, using the new IPC APIs provided by "systemd-mountfsd", see above.
 
-- systemd-nspawn's `--private-users=` switch now supports a new value "managed", which will ensure allocation of a userns via systemd-nsresourced, even if run privileged.
+- systemd-nspawn's `--private-users=` switch now supports a new value `managed`, which will ensure allocation of a userns via systemd-nsresourced, even if run privileged.
 
 - If systemd-nspawn is used interactively, two new special key sequences can be used to trigger an immediate clean shutdown or reboot of the container with systemd running as PID 1: '^]^]p' for shutdown and '^]^]r' for reboot. This is in addition to the previously supported '^]^]^]' which triggers immediate shutdown without going through the usual shutdown logic. (See [Lennart's commentary on systemd-nspawn hotkeys](/systemd-258/posts/25-nspawn-hotkeys/) for more details.)
 
@@ -409,7 +409,7 @@ title: systemd v258 Release Notes
 
 ## [`systemd-measure`][systemd-measure], ukify, [`systemd-keyutil`][systemd-keyutil], [`systemd-sbsign`][systemd-sbsign]:
 
-- systemd-measure gained a new "policy-digest" verb. It's a lot like "sign" but instead of calculating the right TPM policy digest for a specific UKI to sign and then signing it, it leaves the latter step out. This is useful to implement offline signing of the policy digest of UKIS. ukify gained a `--policy-digest` option that exposes this logic.
+- systemd-measure gained a new `policy-digest` verb. It's a lot like `sign` but instead of calculating the right TPM policy digest for a specific UKI to sign and then signing it, it leaves the latter step out. This is useful to implement offline signing of the policy digest of UKIS. ukify gained a `--policy-digest` option that exposes this logic.
 
 - ukify gained a new `--sign-profile=` switch for signing a specific UKI profile (to support multi-profile UKIs).
 
@@ -417,7 +417,7 @@ title: systemd v258 Release Notes
 
 - ukify gained a new `--pcr-certificate=` switch that takes the path to an X.509 certificate to use in place of a PEM public key, as provided via the existing `--pcr-public=`.
 
-- systemd-keyutil gained a new verb "pkcs7" which can be used to convert between PKCS#1 and PKCS#7 signatures. The `--content=` switch may be used to generate inline signatures (as opposed to the default of detached signatures). It also gained a new `--hash-algorithm=` switch to select the hash algorithm for signatures.
+- systemd-keyutil gained a new verb `pkcs7` which can be used to convert between PKCS#1 and PKCS#7 signatures. The `--content=` switch may be used to generate inline signatures (as opposed to the default of detached signatures). It also gained a new `--hash-algorithm=` switch to select the hash algorithm for signatures.
 
 - systemd-sbsign learnt support for offline SecureBoot signing via `--prepare-offline-signing`, `--signed-data=`, `--signed-data-signature=`.
 
@@ -431,13 +431,13 @@ title: systemd v258 Release Notes
 
 - If [`systemd-pcrextend`][systemd-pcrextend] (i.e. the tool making the various userspace TPM PCR measurements) fails to do its thing, an immediate reboot is now triggered, ensuring that somehow making PCR extensions fails cannot be used to gain access to TPM objects to which access should have been blocked already via PCR measurements.
 
-- systemd-pcrlock gained a new "is-supported" verb that determines whether local TPM and system provide all necessary functionality for systemd-pcrlock to work. It does a superset of the checks "systemd-analyze has-tpm2" does, and additionally ensures that the TPM supports PolicyAuthorizeNV and SHA-256.
+- systemd-pcrlock gained a new `is-supported` verb that determines whether local TPM and system provide all necessary functionality for systemd-pcrlock to work. It does a superset of the checks `systemd-analyze has-tpm2` does, and additionally ensures that the TPM supports PolicyAuthorizeNV and SHA-256.
 
 ## [`systemd-userdbd`][systemd-userdbd] & systemd-homed:
 
-- User records now support a new field "aliases" that may list additional names the user record shall be accessible under. Any string listed in the "aliases" array may be used wherever and whenever the primary name may be used too, for example when logging in. systemd-homed and in particular [`homectl`][homectl] have been updated to support configuration of such alias names. (See [Lennart's commentary on userdb aliases](/systemd-258/posts/16-userdb-aliases/) for more details.)
+- User records now support a new field `aliases` that may list additional names the user record shall be accessible under. Any string listed in the `aliases` array may be used wherever and whenever the primary name may be used too, for example when logging in. systemd-homed and in particular [`homectl`][homectl] have been updated to support configuration of such alias names. (See [Lennart's commentary on userdb aliases](/systemd-258/posts/16-userdb-aliases/) for more details.)
 
-- If a user record has an initialized "realm" field, then the record may now be referenced via the primary user name or any alias name, suffixed with "@" and the realm, too.
+- If a user record has an initialized `realm` field, then the record may now be referenced via the primary user name or any alias name, suffixed with "@" and the realm, too.
 
 - User records gained new fields tmpLimit, tmpLimitScale, devShmLimit, devShmLimitScale which enforce quota on /tmp/ and /dev/shm/ at login time, either in absolute or in relative values. These values default to 80% for regular users, ensuring that a single user cannot easily DoS a local system by taking away all disk space in /tmp/. The homectl tool has been updated to make these new fields configurable.
 
@@ -455,7 +455,7 @@ login. Note that at this moment it's not possible to log into a full
 graphical session with this, since we'd have to start a per-area user
 service manager for that, and we currently do not do this. But we
 hope to provide this in one of the next releases. In order to
-implement all this user records gained a new "defaultArea" field,
+implement all this user records gained a new `defaultArea` field,
 which is configurable with homectl's `--default-area=` switch.
 
 - An explicit MIME type application/x.systemd-home is now used for all LUKS *.home files managed by systemd.
@@ -464,7 +464,7 @@ which is configurable with homectl's `--default-area=` switch.
 
 - systemd-homed gained D-Bus API calls for listing, adding, removing and showing use record signing keys.
 
-- homectl gained the verbs "list-signing-keys", "get-signing-key", "add-signing-key", "remove-signing-key" and a switch `--key-name=`. These may be used to easily make a single home directory usable on multiple systems. A system credential `home.add-signing-key.*` has been added that allows provisioning such user record signing keys at boot. (See [Lennart's commentary on systemd-homed signing keys](/systemd-258/posts/38-homed-signing/) for more details.)
+- homectl gained the verbs `list-signing-keys`, `get-signing-key`, `add-signing-key`, `remove-signing-key` and a switch `--key-name=`. These may be used to easily make a single home directory usable on multiple systems. A system credential `home.add-signing-key.*` has been added that allows provisioning such user record signing keys at boot. (See [Lennart's commentary on systemd-homed signing keys](/systemd-258/posts/38-homed-signing/) for more details.)
 
 - homectl gained a new switch `--dry-run` which can be used when registering/creating users, and which will show the user record data before it's submitted to systemd-homed. The tool will then terminate before the submission.
 
@@ -473,7 +473,7 @@ which is configurable with homectl's `--default-area=` switch.
 - systemd-homed gained a bus API call AdoptHome() for "adopting" a .home file or .homedir directory from a foreign system locally. homectl added a verb "adopt" exposing the new call. Together with the signing key management functionality described above it makes it very easy to migrate homes between systems. (See [Lennart's commentary on homectl adopt and register](/systemd-258/posts/47-homectl-adopt/) for more details.)
 
 - systemd-homed gained two new bus API calls RegisterHome() and UnregisterHome() for registering a home locally by providing just the user record, without any logic to actually create the home directory.
-  homectl gained "register" and "unregister" verbs exposing this.
+  homectl gained `register` and `unregister` verbs exposing this.
   This is useful for registering network user accounts locally, i.e. where some foreign user record and home directory already exists on some server, and just need to be registered locally.
   This can be used to make a local systemd-homed home directory securely accessible from some other system:
 
@@ -487,13 +487,13 @@ which is configurable with homectl's `--default-area=` switch.
 
   There's also a new system credential 'home.register.*' that causes registration for the provided user record automatically at boot.
 
-- homectl gained a new switch `--seize=` taking a boolean argument. If true when used together with the "create" or "register" verbs any cryptographic signature information is stripped from the user record, taking over the user record for local ownership. This switch is useful when migrating a home directory to a different host, without retaining the relationship to the originating host.
+- homectl gained a new switch `--seize=` taking a boolean argument. If true when used together with the `create` or `register` verbs any cryptographic signature information is stripped from the user record, taking over the user record for local ownership. This switch is useful when migrating a home directory to a different host, without retaining the relationship to the originating host.
 
 - homectl gained a new `--match=` switch which allows to generate accounts with perMachine matching sections.
 
-- userdbctl gained a new verb "load-credentials", with a service unit systemd-userdb-load-credentials.service which invokes it. When invoked this command will look for any passed credentials named userdb.user.* or userdb.group.*. These credentials may contain user/group records in JSON format. They will be copied into /run/userdb/ (where static userdb JSON records can be placed), with the appropriate symlink from the UID/GID added in, as any membership relationships between user/groups replicated as .membership files. Or in other words: it's very easy to provision a complete user/group record in an invoked system, by providing the user/group JSON record as system credential. Note that these credentials are unrelated to similar credentials supported by systemd-homed. "userdb load-credentials" creates "static" user records via drop-in files in /run/userdb/ (and thus covers system users and suchlike) while systemd-homed creates only systemd-homed managed use (i.e. only regular users). (See [Lennart's commentary on userdb drop-in directories](/systemd-258/posts/21-userdb-dropins/) for more details.)
+- userdbctl gained a new verb `load-credentials`, with a service unit `systemd-userdb-load-credentials.service` which invokes it. When invoked this command will look for any passed credentials named userdb.user.* or userdb.group.*. These credentials may contain user/group records in JSON format. They will be copied into /run/userdb/ (where static userdb JSON records can be placed), with the appropriate symlink from the UID/GID added in, as any membership relationships between user/groups replicated as .membership files. Or in other words: it's very easy to provision a complete user/group record in an invoked system, by providing the user/group JSON record as system credential. Note that these credentials are unrelated to similar credentials supported by systemd-homed. `userdb load-credentials` creates "static" user records via drop-in files in `/run/userdb/` (and thus covers system users and suchlike) while systemd-homed creates only systemd-homed managed use (i.e. only regular users). (See [Lennart's commentary on userdb drop-in directories](/systemd-258/posts/21-userdb-dropins/) for more details.)
 
-- User/group records gained a new "uuid" field that may be used to place an identifying UUID in the record.
+- User/group records gained a new `uuid` field that may be used to place an identifying UUID in the record.
 
 ## systemd-run and [`run0`][run0]:
 
@@ -586,13 +586,13 @@ which is configurable with homectl's `--default-area=` switch.
 
 ##     systemd-analyze:
 
-- systemd-analyze gained a new "chid" verb, which shows the "Computer Hardware IDs" (CHIDs) of the local system. This is useful for preparing CHID-to-DeviceTree mappings when building UKIs.
+- systemd-analyze gained a new `chid` verb, which shows the Computer Hardware IDs (CHIDs) of the local system. This is useful for preparing CHID-to-DeviceTree mappings when building UKIs.
 
-- systemd-analyze gained a new "transient-settings" verb, which shows all unit settings one can configure dynamically via the `--property=`/`-p` switch when invoking transient units.
+- systemd-analyze gained a new `transient-settings` verb, which shows all unit settings one can configure dynamically via the `--property=`/`-p` switch when invoking transient units.
 
-- systemd-analyze gained a new "unit-shell" verb that invokes an interactive shell inside the namespaces of the main process of a specified unit. This is useful for debugging unit sandboxes, and getting an idea how things look like from the "inside" of a service. (See [Lennart's commentary on service sandbox debugging](/systemd-258/posts/30-unit-shell/) for more details.)
+- systemd-analyze gained a new `unit-shell` verb that invokes an interactive shell inside the namespaces of the main process of a specified unit. This is useful for debugging unit sandboxes, and getting an idea how things look like from the "inside" of a service. (See [Lennart's commentary on service sandbox debugging](/systemd-258/posts/30-unit-shell/) for more details.)
 
-- systemd-analyze gained a new "unit-gdb" verb to attach a debugger to a unit.
+- systemd-analyze gained a new `unit-gdb` verb to attach a debugger to a unit.
 
 ## Other:
 
