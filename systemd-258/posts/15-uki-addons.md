@@ -1,0 +1,42 @@
+---
+layout: post
+title: "UKI Addons Support"
+date: 2025-06-12
+---
+
+Here's the 15th post highlighting key new features of the upcoming v258 release of systemd. [#systemd258](https://mastodon.social/tags/systemd258)
+
+In v257 we extended `systemd-stub` so that the UKI it is placed in can carry multiple Devicetree blobs, and that it can match the host's hardware against these blobs, and pass the right, matching one to the invoked kernel. The matching is based on Devicetree "compatible" strings, as well as SMBIOS metadata.
+
+This is quite powerful as it allows supercharging UKIs with system-specific low-level metadata, to create a truly universal UKI, that does the right thing on a wide variety of hardware.
+
+A very similar need came up in the area of Confidential Computing (CoCo). One of the fundamental ideas of CoCo is that the owner of a VM owns the entire code running in it, and that the host has no control whatsoever over it. This raises interesting problems, because on PCs (and VMs typically emulate those), there's a major chunk of code that comes with the PC (and hence the VM), and not with the OS (i.e. the payload of the system): and that's the firmware (sloppily just called "BIOS" by many, regardless if UEFI or not).
+
+On one hand the firmware is necessary to just be there, so that you can boot the VM like a PC, but on the other hand it shouldn't be there, because it would come from the VMM, and hence in a CoCo world you cannot trust it.
+
+The CoCo people came up with a solution to that: "Bring-Your-Own-Firmware" (BYOF). This means: as a CoCo VM ("CVM") boots up for the first time it might come with the original VMM provided firmware, but the OS then may issue an immediate firmware update, to a firmware version provided by the VM owner, and reboot. On the second boot now the system will come up with an owner provided firmware, and the CPU/TCB will prove to you that that's the case.
+
+With v258 `systemd-stub` has been extended to optionally support BYOF environments directly: a firmware may now be embedded into a UKI (just like a Devicetree blob can), and it can be matched against the local system (via SMBIOS, just like the Devicetree blobs can). If a matching firmware is found, the update is issued, and the system rebooted. Unless of course it can be proven that the firmware is already the right one.
+
+With that you can hence put together a truly universal UKI: if it finds itself in a suitable CoCo environment the UKI will ensure you also own the firmware, and only then progress into the Linux world.
+
+To me it is always particularly interesting to identify areas of common behaviour, that completely separate areas of the computing spectrum require. I.e. here we can leverage the exact same matching logic we need for Devicetree (i.e. more on the embedded side of things) also for CoCo environments (i.e. more on the server side of things), and maintain somewhat simple concepts across the spectrum, that nonetheless deliver what is necessary.
+
+---
+
+## Q&A
+
+> **What does 'UKI' stand for?**
+
+Unified Kernel Image.
+
+See this for a more detailed explanation: [https://uapi-group.org/specifications/specs/unified_kernel_image/](https://uapi-group.org/specifications/specs/unified_kernel_image/)
+
+---
+
+[systemd-stub]: https://www.freedesktop.org/software/systemd/man/258/systemd-stub.html
+[uapi-group-uki]: https://uapi-group.org/specifications/specs/unified_kernel_image/
+
+## Sources
+
+- [Original thread](https://mastodon.social/@pid_eins/114669334251141174) (2025-06-12)
