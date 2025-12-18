@@ -89,7 +89,7 @@ title: systemd v259 Release Notes
 
 - [`systemd-sysext`][systemd-sysext] and [`systemd-confext`][systemd-confext] now support configuration files /etc/systemd/systemd-sysext.conf and /etc/systemd/systemd-confext.conf, which can be used to configure mutability or the image policy to apply to DDI images.
 
-- [`systemd-sysext`][systemd-sysext]'s and [`systemd-confext`][systemd-confext]'s --mutable= switch now accepts a new value "help" for listing available mutability modes.
+- [`systemd-sysext`][systemd-sysext]'s and [`systemd-confext`][systemd-confext]'s `--mutable=` switch now accepts a new value "help" for listing available mutability modes.
 
 - [`systemd-sysext`][systemd-sysext] now supports configuring additional overlayfs mount settings via the $SYSTEMD_SYSEXT_OVERLAYFS_MOUNT_OPTIONS environment variable.
   Similarly [`systemd-confext`][systemd-confext] now supports $SYSTEMD_CONFEXT_OVERLAYFS_MOUNT_OPTIONS.
@@ -102,14 +102,14 @@ title: systemd v259 Release Notes
 
 - [`systemd-nspawn`][systemd-nspawn]'s .nspawn file gained support for a new NamespacePath= setting in the [Network] section which takes a path to a network namespace inode, and which ensures the container is run inside that when booted. (This was previously only available via a command line switch.)
 
-- [`systemd-vmspawn`][systemd-vmspawn] gained two new switches --bind-user=/--bind-user-shell= which mirror the switches of the same name in [`systemd-nspawn`][systemd-nspawn], and allow sharing a user account from the host inside the VM in a simple one-step operation.
+- [`systemd-vmspawn`][systemd-vmspawn] gained two new switches `--bind-user=`/`--bind-user-shell=` which mirror the switches of the same name in [`systemd-nspawn`][systemd-nspawn], and allow sharing a user account from the host inside the VM in a simple one-step operation.
   *See also: [Lennart's explanation](posts/05-vmspawn-bind-user.md)*
 
-- [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] gained a new --bind-user-group= switch to add a user bound via --bind-user= to the specified group (useful in particular for the 'wheel' or 'empower' groups).
+- [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] gained a new `--bind-user-group=` switch to add a user bound via `--bind-user=` to the specified group (useful in particular for the 'wheel' or 'empower' groups).
 
 - [`systemd-vmspawn`][systemd-vmspawn] now configures RSA4096 support in the vTPM, if swtpm supports it.
 
-- [`systemd-vmspawn`][systemd-vmspawn] now enables qemu guest agent via the org.qemu.guest_agent.0 protocol when started with --console=gui.
+- [`systemd-vmspawn`][systemd-vmspawn] now enables qemu guest agent via the org.qemu.guest_agent.0 protocol when started with `--console=gui`.
 
 ## systemd-repart:
 
@@ -124,7 +124,7 @@ title: systemd v259 Release Notes
   Instead of operating on a block device this will just determine the minimum block device size required to apply the defined partitions and exit.
   *See also: [Lennart's explanation](posts/07-repart-size-calc.md)*
 
-- [`systemd-repart`][systemd-repart] gained two new switches --defer-partitions-empty=yes and --defer-partitions-factory-reset=yes which are similar to --defer-partitions= but instead of expecting a list of partitions to defer will defer all partitions marked via Format=empty or FactoryReset=yes.
+- [`systemd-repart`][systemd-repart] gained two new switches `--defer-partitions-empty=yes` and `--defer-partitions-factory-reset=yes` which are similar to `--defer-partitions=` but instead of expecting a list of partitions to defer will defer all partitions marked via Format=empty or FactoryReset=yes.
   This functionality is useful for installers, as partitions marked empty or marked for factory reset should typically be left out at install time, but not on first boot.
   *See also: [Lennart's explanation](posts/13-defer-partitions.md)*
 
@@ -133,7 +133,7 @@ title: systemd v259 Release Notes
 ## systemd-udevd:
 
 - [`systemd-udevd`][systemd-udevd] rules gained support for OPTIONS="dump-json" to dump the current event status in JSON format.
-  This generates output similar to "udevadm test --json=short".
+  This generates output similar to `udevadm test --json=short`.
 
 - The net_id builtin for [`systemd-udevd`][systemd-udevd] now can generate predictable interface names for Wifi devices on DeviceTree systems.
 
@@ -149,10 +149,10 @@ title: systemd v259 Release Notes
 
 ## systemd-homed/homectl:
 
-- [`homectl`][homectl]'s --recovery-key= option may now be used with the "update" command to add recovery keys to existing user accounts.
+- [`homectl`][homectl]'s `--recovery-key=` option may now be used with the "update" command to add recovery keys to existing user accounts.
   Previously, recovery keys could only be configured during initial user creation.
 
-- Two new --prompt-shell= and --prompt-groups= options have been added to [`homectl`][homectl] to control whether to query the user interactively for a login shell and supplementary groups memberships when interactive firstboot operation is requested.
+- Two new `--prompt-shell=` and `--prompt-groups=` options have been added to [`homectl`][homectl] to control whether to query the user interactively for a login shell and supplementary groups memberships when interactive firstboot operation is requested.
   The invocation in systemd-homed-firstboot.service now turns both off by default.
 
 ## systemd-boot/systemd-stub:
@@ -170,7 +170,7 @@ title: systemd v259 Release Notes
 
 - [`sd-varlink`][sd-varlink]'s sd_varlink_server_new() call learned two new flags SD_VARLINK_SERVER_HANDLE_SIGTERM + SD_VARLINK_SERVER_HANDLE_SIGINT, which are honoured by sd_varlink_server_loop_auto() and will cause it to exit processing cleanly once SIGTERM/SIGINT are received.
 
-- [`varlinkctl`][varlinkctl] in --more mode will now send a READY=1 sd_notify() message once it receives the first reply.
+- [`varlinkctl`][varlinkctl] in `--more` mode will now send a READY=1 sd_notify() message once it receives the first reply.
   This is useful for tools or scripts that wrap it (and implement the $NOTIFY_SOCKET protocol) to know when a first confirmation of success is received.
 
 - [`sd-varlink`][sd-varlink] gained a new sd_varlink_is_connected() call which reports whether a Varlink connection is currently connected.
@@ -204,7 +204,7 @@ title: systemd v259 Release Notes
 - [`systemd-machined`][systemd-machined] gained support for RegisterMachineEx() + CreateMachineEx() method calls which operate like their counterparts without "Ex", but take a number of additional parameters, similar to what is already supported via the equivalent functionality in the Varlink APIs of [`systemd-machined`][systemd-machined].
   Most importantly, they support PIDFDs instead of PIDs.
 
-- [`systemd-machined`][systemd-machined] may now also run in a per-user instance, in addition to the per-system instance. [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] have been updated to register their invocations with both the calling user's instance of [`systemd-machined`][systemd-machined] and the system one, if permissions allow it. [`machinectl`][machinectl] now accepts --user and --system switches that control which daemon instance to operate on. [`systemd-ssh-proxy`][systemd-ssh-proxy] now will query both instances for the AF_VSOCK CID.
+- [`systemd-machined`][systemd-machined] may now also run in a per-user instance, in addition to the per-system instance. [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] have been updated to register their invocations with both the calling user's instance of [`systemd-machined`][systemd-machined] and the system one, if permissions allow it. [`machinectl`][machinectl] now accepts `--user` and `--system` switches that control which daemon instance to operate on. [`systemd-ssh-proxy`][systemd-ssh-proxy] now will query both instances for the AF_VSOCK CID.
 
 - [`systemd-machined`][systemd-machined] implements a resolve hook now, so that the names of local containers and VMs can be resolved locally to their respective IP addresses.
 
@@ -212,26 +212,26 @@ title: systemd v259 Release Notes
   This completes work begun earlier which already ported [`systemd-importd`][systemd-importd]'s tar generation.
 
 - [`systemd-importd`][systemd-importd] now may also be run as a per-user service, in addition to the existing per-system instance.
-  It will place the downloaded images in ~/.local/state/machines/ and similar directories. [`importctl`][importctl] gained --user/--system switches to control which instance to talk to.
+  It will place the downloaded images in ~/.local/state/machines/ and similar directories. [`importctl`][importctl] gained `--user`/`--system` switches to control which instance to talk to.
 
 ## systemd-firstboot:
 
 - [`systemd-firstboot`][systemd-firstboot]'s and [`homectl`][homectl]'s interactive boot-time interface have been updated to show a colored bar at the top and bottom of the screen, whose color can be configured via /etc/os-release.
-  The bar can be disabled via the new --chrome= switches to both tools.
+  The bar can be disabled via the new `--chrome=` switches to both tools.
 
 - [`systemd-firstboot`][systemd-firstboot]'s and [`homectl`][homectl]'s interactive boot-time interface will now temporarily mute the kernel's and PID1's own console output while running, in order to not mix the tool's own output with the other sources.
-  This logic can be controlled via the new --mute-console= switches to both tools.
+  This logic can be controlled via the new `--mute-console=` switches to both tools.
   This is implemented via a new [`systemd-mute-console`][systemd-mute-console] component (which provides a simple Varlink interface).
 
-- [`systemd-firstboot`][systemd-firstboot] gained a new switch --prompt-keymap-auto.
+- [`systemd-firstboot`][systemd-firstboot] gained a new switch `--prompt-keymap-auto`.
   When specified, the tool will interactively query the user for a keymap when running on a real local VT console (i.e. on a user device where the keymap would actually be respected), but not if invoked on other TTYs (such as a serial port, hypervisor console, SSH, …), where the keymap setting would have no effect anyway.
   The invocation in systemd-firstboot.service now uses this.
 
 ## systemd-creds:
 
-- [`systemd-creds`][systemd-creds]'s Varlink IPC API now supports a new "withKey" parameter on the Encrypt() method call, for selecting what to bind the encryption to precisely, matching the --with-key= switch on the command line.
+- [`systemd-creds`][systemd-creds]'s Varlink IPC API now supports a new "withKey" parameter on the Encrypt() method call, for selecting what to bind the encryption to precisely, matching the `--with-key=` switch on the command line.
 
-- [`systemd-creds`][systemd-creds] now allow explicit control of whether to accept encryption with a NULL key when decrypting, via the --allow-null and --refuse-null switches.
+- [`systemd-creds`][systemd-creds] now allow explicit control of whether to accept encryption with a NULL key when decrypting, via the `--allow-null` and `--refuse-null` switches.
   Previously only the former existed, but null keys were also accepted if UEFI SecureBoot was reported off.
   This automatism is retained, but only if neither of the two switches are specified.
   The [`systemd-creds`][systemd-creds] Varlink IPC API learned similar parameters on the Decrypt() call.
@@ -249,7 +249,7 @@ title: systemd v259 Release Notes
 ## systemd-resolved:
 
 - [`systemd-resolved`][systemd-resolved] gained a new Varlink IPC method call DumpDNSConfiguration() which returns the full DNS configuration in one reply.
-  This is exposed by [`resolvectl`][resolvectl] --json=.
+  This is exposed by [`resolvectl`][resolvectl] `--json=`.
 
 - [`systemd-resolved`][systemd-resolved] now allows local, privileged services to hook into local name resolution requests.
   For that a new directory /run/systemd/resolve.hook/ has been introduced.
@@ -291,15 +291,15 @@ title: systemd v259 Release Notes
 
 ## systemd-run/run0:
 
-- [`run0`][run0] gained a new --empower switch.
+- [`run0`][run0] gained a new `--empower` switch.
   It will invoke a new session with elevated privileges – without switching to the root user.
   Specifically, it sets the full ambient capabilities mask (including CAP_SYS_ADMIN), which ensures that privileged system calls will typically be permitted.
   Moreover, it adds the session processes to the new "empower" system group, which is respected by polkit and allows privileged access to most polkit actions.
-  This provides a much less invasive way to acquire privileges, as it will not change $HOME or the UID and hence risk creation of files owned by the wrong UID in the user's home. (Note that --empower might not work in all cases, as many programs still do access checks purely based on the UID, without Linux process capabilities or polkit policies having any effect on them.)
+  This provides a much less invasive way to acquire privileges, as it will not change $HOME or the UID and hence risk creation of files owned by the wrong UID in the user's home. (Note that `--empower` might not work in all cases, as many programs still do access checks purely based on the UID, without Linux process capabilities or polkit policies having any effect on them.)
   *See also: [Lennart's explanation](posts/04-run0-empower.md)*
 
-- [`systemd-run`][systemd-run] gained support for --root-directory= to invoke the service in the specified root directory.
-  It also gained --same-root-dir (with a short switch -R) for invoking the new service in the same root directory as the caller's. --same-root-dir has also been added to [`run0`][run0].
+- [`systemd-run`][systemd-run] gained support for `--root-directory=` to invoke the service in the specified root directory.
+  It also gained `--same-root-dir` (with a short switch `-R`) for invoking the new service in the same root directory as the caller's. `--same-root-dir` has also been added to [`run0`][run0].
 
 ## sd-event:
 
@@ -309,10 +309,10 @@ title: systemd v259 Release Notes
 
 ## Other:
 
-- User records gained a new UUID field, and the [`userdbctl`][userdbctl] tool gained the ability to search for user records by UUID, via the new --uuid= switch.
+- User records gained a new UUID field, and the [`userdbctl`][userdbctl] tool gained the ability to search for user records by UUID, via the new `--uuid=` switch.
   The userdb Varlink API has been extended to allow server-side searches for UUIDs.
 
-- [`systemd-sysctl`][systemd-sysctl] gained a new --inline switch, similar to the switch of the same name [`systemd-sysusers`][systemd-sysusers] already supports.
+- [`systemd-sysctl`][systemd-sysctl] gained a new `--inline` switch, similar to the switch of the same name [`systemd-sysusers`][systemd-sysusers] already supports.
 
 - [`systemd-cryptsetup`][systemd-cryptsetup] has been updated to understand a new tpm2-measure-keyslot-nvpcr= option which takes an NvPCR name to measure information about the used LUKS keyslot into. [`systemd-gpt-auto-generator`][systemd-gpt-auto-generator] now uses this for a new "cryptsetup" NvPCR.
 
@@ -324,12 +324,12 @@ title: systemd v259 Release Notes
 
 - `systemd-integrity-setup` now supports HMAC-SHA256, PHMAC-SHA256, PHMAC-SHA512.
 
-- [`systemd-stdio-bridge`][systemd-stdio-bridge] gained a new --quiet option.
+- [`systemd-stdio-bridge`][systemd-stdio-bridge] gained a new `--quiet` option.
 
 - [`systemd-mountfsd`][systemd-mountfsd]'s MountImage() call gained support for explicitly controlling whether to share dm-verity volumes between images that have the same root hashes.
   It also learned support for setting up bare file system images with separate Verity data files and signatures.
 
-- [`journalctl`][journalctl] learned a new short switch "-W" for the existing long switch "--no-hostname".
+- [`journalctl`][journalctl] learned a new short switch `-W` for the existing long switch `--no-hostname`.
 
 - system-alloc-{uid,gid}-min are now exported in systemd.pc.
 
