@@ -10,20 +10,15 @@
 
         {% if is_index %}
         <!-- Index page: show releases with section sublists -->
-        <h3>Releases</h3>
-        <ul class="toc-list">
-            {% for release_entry in site.data.releases %}
-            {% assign release = release_entry[1] %}
-            <li>
-                <a href="{{ site.baseurl }}{{ release.path }}">{{ release.title }}</a>
-                <ul class="toc-sublist">
-                    {% for section in release.sections %}
-                    <li><a href="{{ site.baseurl }}{{ release.release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
+        {% for release_entry in site.data.releases %}
+        {% assign release = release_entry[1] %}
+        <h3><a href="{{ site.baseurl }}{{ release.path }}">{{ release.title }}</a></h3>
+        <ol class="toc-list">
+            {% for section in release.sections %}
+            <li><a href="{{ site.baseurl }}{{ release.release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
             {% endfor %}
-        </ul>
+        </ol>
+        {% endfor %}
 
         {% elsif is_release %}
         <!-- Release page: show commentary + sections -->
