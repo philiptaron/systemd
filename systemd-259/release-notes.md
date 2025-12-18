@@ -31,12 +31,12 @@ title: systemd v259 Release Notes
 
 ## Feature Removals and Incompatible Changes:
 
-- The cgroup2 file system is now mounted with the "memory_hugetlb_accounting" mount option, supported since kernel 6.6.
+- The cgroup2 file system is now mounted with the `memory_hugetlb_accounting` mount option, supported since kernel 6.6.
   This means that HugeTLB memory usage is now counted towards the cgroup’s overall memory usage for the memory controller.
 
-- The default storage mode for the journal is now 'persistent'.
-  Previously, the default was 'auto', so the presence or lack of /var/log/journal determined the default storage mode, if no overriding configuration was provided.
-  The default can be changed with -Djournal-storage-default=.
+- The default storage mode for the journal is now `persistent`.
+  Previously, the default was `auto`, so the presence or lack of `/var/log/journal` determined the default storage mode, if no overriding configuration was provided.
+  The default can be changed with `-Djournal-storage-default=`.
 
 - [`systemd-networkd`][systemd-networkd] and [`systemd-nspawn`][systemd-nspawn] no longer support creating NAT rules via iptables/libiptc APIs; only nftables is now supported.
 
@@ -53,7 +53,7 @@ title: systemd v259 Release Notes
   They were already used to retain a pristine copy of the downloaded image, while modifications were made to a 2nd, local writable copy of the image.
   Hence, effectively they were read-only already, and this is now official.
 
-- The LUKS volume label string set by [`systemd-repart`][systemd-repart] no longer defaults to the literal same as the partition and file system label, but is prefixed with "luks-".
+- The LUKS volume label string set by [`systemd-repart`][systemd-repart] no longer defaults to the literal same as the partition and file system label, but is prefixed with `luks-`.
   This is done so that on LUKS enabled images a conflict between /dev/disk/by-label/ symlinks is removed, as this symlink is generated both for file system and LUKS superblock labels.
   There's a new VolumeLabel= setting for partitions that can be used to explicitly choose a LUKS superblock label, which can be used to explicitly revert to the old naming, if required.
 
@@ -89,14 +89,14 @@ title: systemd v259 Release Notes
 
 - [`systemd-sysext`][systemd-sysext] and [`systemd-confext`][systemd-confext] now support configuration files /etc/systemd/systemd-sysext.conf and /etc/systemd/systemd-confext.conf, which can be used to configure mutability or the image policy to apply to DDI images.
 
-- [`systemd-sysext`][systemd-sysext]'s and [`systemd-confext`][systemd-confext]'s `--mutable=` switch now accepts a new value "help" for listing available mutability modes.
+- [`systemd-sysext`][systemd-sysext]'s and [`systemd-confext`][systemd-confext]'s `--mutable=` switch now accepts a new value `help` for listing available mutability modes.
 
 - [`systemd-sysext`][systemd-sysext] now supports configuring additional overlayfs mount settings via the $SYSTEMD_SYSEXT_OVERLAYFS_MOUNT_OPTIONS environment variable.
   Similarly [`systemd-confext`][systemd-confext] now supports $SYSTEMD_CONFEXT_OVERLAYFS_MOUNT_OPTIONS.
 
 ## systemd-vmspawn/systemd-nspawn:
 
-- [`systemd-vmspawn`][systemd-vmspawn] will now initialize the "serial" fields of block devices attached to VMs to the filename of the file backing them on the host.
+- [`systemd-vmspawn`][systemd-vmspawn] will now initialize the `serial` fields of block devices attached to VMs to the filename of the file backing them on the host.
   This makes it very easy to reference the right media in case many block devices from files are attached to the same VM via the /dev/disk/by-id/… links in the VM.
   *See also: [Lennart's explanation](posts/12-vmspawn-disk.md)*
 
@@ -105,7 +105,7 @@ title: systemd v259 Release Notes
 - [`systemd-vmspawn`][systemd-vmspawn] gained two new switches `--bind-user=`/`--bind-user-shell=` which mirror the switches of the same name in [`systemd-nspawn`][systemd-nspawn], and allow sharing a user account from the host inside the VM in a simple one-step operation.
   *See also: [Lennart's explanation](posts/05-vmspawn-bind-user.md)*
 
-- [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] gained a new `--bind-user-group=` switch to add a user bound via `--bind-user=` to the specified group (useful in particular for the 'wheel' or 'empower' groups).
+- [`systemd-vmspawn`][systemd-vmspawn] and [`systemd-nspawn`][systemd-nspawn] gained a new `--bind-user-group=` switch to add a user bound via `--bind-user=` to the specified group (useful in particular for the `wheel` or `empower` groups).
 
 - [`systemd-vmspawn`][systemd-vmspawn] now configures RSA4096 support in the vTPM, if swtpm supports it.
 
@@ -120,7 +120,7 @@ title: systemd v259 Release Notes
 - [`systemd-repart`][systemd-repart]'s functionality is now accessible via Varlink IPC.
   *See also: [Lennart's explanation](posts/11-repart-varlink.md)*
 
-- [`systemd-repart`][systemd-repart] may now be invoked with a device node path specified as "-".
+- [`systemd-repart`][systemd-repart] may now be invoked with a device node path specified as `-`.
   Instead of operating on a block device this will just determine the minimum block device size required to apply the defined partitions and exit.
   *See also: [Lennart's explanation](posts/07-repart-size-calc.md)*
 
@@ -132,7 +132,7 @@ title: systemd v259 Release Notes
 
 ## systemd-udevd:
 
-- [`systemd-udevd`][systemd-udevd] rules gained support for OPTIONS="dump-json" to dump the current event status in JSON format.
+- [`systemd-udevd`][systemd-udevd] rules gained support for `OPTIONS="dump-json"` to dump the current event status in JSON format.
   This generates output similar to `udevadm test --json=short`.
 
 - The net_id builtin for [`systemd-udevd`][systemd-udevd] now can generate predictable interface names for Wifi devices on DeviceTree systems.
@@ -149,7 +149,7 @@ title: systemd v259 Release Notes
 
 ## systemd-homed/homectl:
 
-- [`homectl`][homectl]'s `--recovery-key=` option may now be used with the "update" command to add recovery keys to existing user accounts.
+- [`homectl`][homectl]'s `--recovery-key=` option may now be used with the `update` command to add recovery keys to existing user accounts.
   Previously, recovery keys could only be configured during initial user creation.
 
 - Two new `--prompt-shell=` and `--prompt-groups=` options have been added to [`homectl`][homectl] to control whether to query the user interactively for a login shell and supplementary groups memberships when interactive firstboot operation is requested.
@@ -158,11 +158,11 @@ title: systemd v259 Release Notes
 ## systemd-boot/systemd-stub:
 
 - [`systemd-boot`][systemd-boot] now supports log levels.
-  The level may be set via log-level= in loader.conf and via the SMBIOS Type 11 field 'io.systemd.boot.loglevel='.
+  The level may be set via `log-level=` in `loader.conf` and via the SMBIOS Type 11 field `io.systemd.boot.loglevel=`.
 
-- [`systemd-boot`][systemd-boot]'s loader.conf file gained support for configuring the SecureBoot key enrollment time-out via secure-boot-enroll-timeout-sec=.
+- [`systemd-boot`][systemd-boot]'s `loader.conf` file gained support for configuring the SecureBoot key enrollment time-out via `secure-boot-enroll-timeout-sec=`.
 
-- Boot Loader Specification Type #1 entries now support a "profile" field which may be used to explicitly select a profile in multi-profile UKIs invoked via the "uki" field.
+- Boot Loader Specification Type #1 entries now support a `profile` field which may be used to explicitly select a profile in multi-profile UKIs invoked via the `uki` field.
 
 ## sd-varlink/varlinkctl:
 
@@ -229,7 +229,7 @@ title: systemd v259 Release Notes
 
 ## systemd-creds:
 
-- [`systemd-creds`][systemd-creds]'s Varlink IPC API now supports a new "withKey" parameter on the Encrypt() method call, for selecting what to bind the encryption to precisely, matching the `--with-key=` switch on the command line.
+- [`systemd-creds`][systemd-creds]'s Varlink IPC API now supports a new `withKey` parameter on the Encrypt() method call, for selecting what to bind the encryption to precisely, matching the `--with-key=` switch on the command line.
 
 - [`systemd-creds`][systemd-creds] now allow explicit control of whether to accept encryption with a NULL key when decrypting, via the `--allow-null` and `--refuse-null` switches.
   Previously only the former existed, but null keys were also accepted if UEFI SecureBoot was reported off.
@@ -273,20 +273,20 @@ title: systemd v259 Release Notes
   This makes them predictable only if the result of the anchor measurement is known ahead of time, which will differ on each installed system.
   Initialization of defined NvPCRs is done in [`systemd-tpm2-setup`][systemd-tpm2-setup].service in the initrd.
   Information about the initialization of NvPCRs is measured into PCR 9, and finalized by a separator measurement.
-  The NV index base handle is configurable at build time via the "tpm2-nvpcr-base" meson setting.
+  The NV index base handle is configurable at build time via the `tpm2-nvpcr-base` meson setting.
   It currently defaults to a value the TCG has shown intent to assign to Linux, but this has not officially been done yet. [`systemd-pcrextend`][systemd-pcrextend] and its Varlink APIs have been extended to optionally measure into an NvPCR instead of a classic PCR.
 
 - A new service `systemd-pcrproduct.service` is added which is similar to `systemd-pcrmachine.service` but instead of the machine ID (i.e. /etc/machined-id) measures the product ID (as reported by SMBIOS or Devicetree).
-  It uses a new NvPCR called "hardware" for this.
+  It uses a new NvPCR called `hardware` for this.
 
 - [`systemd-pcrlock`][systemd-pcrlock] has been updated to generate CEL event log data covering NvPCRs too.
 
 ## systemd-analyze:
 
-- [`systemd-analyze`][systemd-analyze] gained a new verb "dlopen-metadata" which can show the dlopen() weak dependency metadata of an ELF binary that declares that.
+- [`systemd-analyze`][systemd-analyze] gained a new verb `dlopen-metadata` which can show the dlopen() weak dependency metadata of an ELF binary that declares that.
   *See also: [Lennart's explanation](posts/03-dlopen-metadata.md)*
 
-- A new verb "nvpcrs" has been added to [`systemd-analyze`][systemd-analyze], which lists NvPCRs with their names and values, similar to the existing "pcrs" operation which does the same for classic PCRs.
+- A new verb `nvpcrs` has been added to [`systemd-analyze`][systemd-analyze], which lists NvPCRs with their names and values, similar to the existing `pcrs` operation which does the same for classic PCRs.
   *See also: [Lennart's explanation](posts/10-analyze-nvpcrs.md)*
 
 ## systemd-run/run0:
@@ -294,7 +294,7 @@ title: systemd v259 Release Notes
 - [`run0`][run0] gained a new `--empower` switch.
   It will invoke a new session with elevated privileges – without switching to the root user.
   Specifically, it sets the full ambient capabilities mask (including CAP_SYS_ADMIN), which ensures that privileged system calls will typically be permitted.
-  Moreover, it adds the session processes to the new "empower" system group, which is respected by polkit and allows privileged access to most polkit actions.
+  Moreover, it adds the session processes to the new `empower` system group, which is respected by polkit and allows privileged access to most polkit actions.
   This provides a much less invasive way to acquire privileges, as it will not change $HOME or the UID and hence risk creation of files owned by the wrong UID in the user's home. (Note that `--empower` might not work in all cases, as many programs still do access checks purely based on the UID, without Linux process capabilities or polkit policies having any effect on them.)
   *See also: [Lennart's explanation](posts/04-run0-empower.md)*
 
@@ -314,10 +314,10 @@ title: systemd v259 Release Notes
 
 - [`systemd-sysctl`][systemd-sysctl] gained a new `--inline` switch, similar to the switch of the same name [`systemd-sysusers`][systemd-sysusers] already supports.
 
-- [`systemd-cryptsetup`][systemd-cryptsetup] has been updated to understand a new tpm2-measure-keyslot-nvpcr= option which takes an NvPCR name to measure information about the used LUKS keyslot into. [`systemd-gpt-auto-generator`][systemd-gpt-auto-generator] now uses this for a new "cryptsetup" NvPCR.
+- [`systemd-cryptsetup`][systemd-cryptsetup] has been updated to understand a new `tpm2-measure-keyslot-nvpcr=` option which takes an NvPCR name to measure information about the used LUKS keyslot into. [`systemd-gpt-auto-generator`][systemd-gpt-auto-generator] now uses this for a new `cryptsetup` NvPCR.
 
-- systemd will now ignore configuration file drop-ins suffixed with ".ignore" in most places, similar to how it already ignores files with suffixes such as ".rpmsave".
-  Unlike those suffixes, ".ignore" is package manager agnostic.
+- systemd will now ignore configuration file drop-ins suffixed with `.ignore` in most places, similar to how it already ignores files with suffixes such as `.rpmsave`.
+  Unlike those suffixes, `.ignore` is package manager agnostic.
 
 - [`systemd-modules-load`][systemd-modules-load] will now load configured kernel modules in parallel.
   *See also: [Lennart's explanation](posts/08-modules-load-parallel.md)*
@@ -333,7 +333,7 @@ title: systemd v259 Release Notes
 
 - system-alloc-{uid,gid}-min are now exported in systemd.pc.
 
-- Incomplete support for musl libc is now available by setting the "libc" meson option to "musl".
+- Incomplete support for musl libc is now available by setting the `libc` meson option to `musl`.
   Note that systemd compiled with musl has various limitations: since NSS or equivalent functionality is not available, nss-systemd, nss-resolve, DynamicUser=, [`systemd-homed`][systemd-homed], [`systemd-userdbd`][systemd-userdbd], the foreign UID ID, unprivileged [`systemd-nspawn`][systemd-nspawn], [`systemd-nsresourced`][systemd-nsresourced], and so on will not work.
   Also, the usual memory pressure behaviour of long-running systemd services has no effect on musl.
   We also implemented a bunch of shims and workarounds to support compiling and running with musl.
