@@ -4,13 +4,18 @@ title: "systemd-resolved hook interface"
 date: 2025-11-18
 ---
 
-It's that time again! The systemd v259 release is coming closer. Let's restart the "what's new" series of posts for this iteration! Hence:
+It's that time again!
+The systemd v259 release is coming closer.
+Let's restart the "what's new" series of posts for this iteration!
+Hence:
 
 1️⃣ Here's the 1st post highlighting key new features of the upcoming v259 release of systemd. [#systemd259](https://mastodon.social/tags/systemd259) [#systemd](https://mastodon.social/tags/systemd)
 
-For many usecases it's quite useful if local services can register additional hostnames for local resolution. For example, container and VMMs might want to register the IPs of locally running containers or VMs via a hostname, so that you can access them by name rather than by address.
+For many usecases it's quite useful if local services can register additional hostnames for local resolution.
+For example, container and VMMs might want to register the IPs of locally running containers or VMs via a hostname, so that you can access them by name rather than by address.
 
-With v259 we are making this easy: there's now a "hook" interface in systemd-resolved: any privileged local daemon may bind an AF_UNIX socket in /run/systemd/resolve.hook/, and implement a simple Varlink IPC interface on it. If they do so, systemd-resolved will query it for every single local name resolution request, and they can answer positively, negatively, or let the resolution request be processed by the usual DNS based logic.
+With v259 we are making this easy: there's now a "hook" interface in systemd-resolved: any privileged local daemon may bind an AF_UNIX socket in /run/systemd/resolve.hook/, and implement a simple Varlink IPC interface on it.
+If they do so, systemd-resolved will query it for every single local name resolution request, and they can answer positively, negatively, or let the resolution request be processed by the usual DNS based logic.
 
 If multiple hook services are in place, they are always queried in parallel, to reduce latencies (but if multiple return positively the service with the alphabetically first socket path wins).
 
@@ -20,9 +25,13 @@ First of all systemd-machined makes all local containers/VMs that registered the
 
 Secondly, systemd-networkd makes all hosts resolvable for which its internal DHCP server handed out leases.
 
-You might wonder: how does this relate to nss-mymachines? That NSS plugin did something very similar to the systemd-machined logic implemented now, however, it has one problem: it operates strictly and exclusively on the NSS level, but many programs nowadays bypass that and talk DNS directly with the configured servers. Since systemd-resolved registers itself as local DNS server in /etc/resolv.conf it means the new hook logic works for all types of lookups, regardless if they come via NSS, D-Bus, Varlink or the local DNS stub. I think in the longer run we should deprecate nss-mymachines.
+You might wonder: how does this relate to nss-mymachines?
+That NSS plugin did something very similar to the systemd-machined logic implemented now, however, it has one problem: it operates strictly and exclusively on the NSS level, but many programs nowadays bypass that and talk DNS directly with the configured servers.
+Since systemd-resolved registers itself as local DNS server in /etc/resolv.conf it means the new hook logic works for all types of lookups, regardless if they come via NSS, D-Bus, Varlink or the local DNS stub.
+I think in the longer run we should deprecate nss-mymachines.
 
-You might also wonder: sending every single lookup to all hooks might be quite expensive! As it turns out, the Varlink protocol spoken on the hook services is a bit smarter: it allows the hook service to install a filter on the requests it wants: restrict the hook to certain domains, or limits on the number of labels in the lookup.
+You might also wonder: sending every single lookup to all hooks might be quite expensive!
+As it turns out, the Varlink protocol spoken on the hook services is a bit smarter: it allows the hook service to install a filter on the requests it wants: restrict the hook to certain domains, or limits on the number of labels in the lookup.
 
 Note that this API is public, i.e. any service can register names this way, not just systemd-machined and systemd-networkd.
 
@@ -31,38 +40,53 @@ And that's it for the first episode.
 ---
 
 > **[@arianvp](https://functional.cafe/@arianvp)** Wait this solves the final use case of nscd for us in nixos I think?
->
-> Replace user lookup with the userdb multiplexer. Replace host lookup with resolved hooks??
+> Replace user lookup with the userdb multiplexer.
+> Replace host lookup with resolved hooks??
 
-Not following. I never understood your nscd usecase. Given that nscd is obsolete and glibc timeouts for it are extremly short (and followed by local fallback) it seems entirely pointless to ever use nscd.
+Not following.
+I never understood your nscd usecase.
+Given that nscd is obsolete and glibc timeouts for it are extremly short (and followed by local fallback) it seems entirely pointless to ever use nscd.
 
-Note this new hook stuff allows you to plug something *behind* the 4 APIs resolved accepts resolution requests on (NSS, D-Bus, Varlink, DNS_STUB). Not sure what NixOS thinks it needs to plug in there?
+Note this new hook stuff allows you to plug something *behind* the 4 APIs resolved accepts resolution requests on (NSS, D-Bus, Varlink, DNS_STUB).
+Not sure what NixOS thinks it needs to plug in there?
 
-> **[@arianvp](https://functional.cafe/@arianvp)** The point is. This hook stuff allows me to replace nscd with my own service that is responsible for loading all the NSS modules and exposes that as varlink to resolved and userdbd.
->
+> **[@arianvp](https://functional.cafe/@arianvp)** The point is.
+> This hook stuff allows me to replace nscd with my own service that is responsible for loading all the NSS modules and exposes that as varlink to resolved and userdbd.
 > That way I can make the NSS modules in question completely hidden outside of the daemon and guarantee they don't get dlopen() into random programs for which I'm not sure they are ABI compatible with the NSS modules in question.
 
-Well, I don't get it. How do you get your requests from NSS to resolved if you are allergic to use nss-resolve? You can use the DNS stub of course, but I'd not recommend that, since a lot of metadata gets lost along the way, and search domain logic then must be client side.
+Well, I don't get it.
+How do you get your requests from NSS to resolved if you are allergic to use nss-resolve?
+You can use the DNS stub of course, but I'd not recommend that, since a lot of metadata gets lost along the way, and search domain logic then must be client side.
 
-> **[@arianvp](https://functional.cafe/@arianvp)** The global /etc/nsswitch.conf will have nss-systemd and nss-resolve. And nothing else.
->
+> **[@arianvp](https://functional.cafe/@arianvp)** The global /etc/nsswitch.conf will have nss-systemd and nss-resolve.
+> And nothing else.
 > My little varlink daemon will have an /etc/nsswitch.conf containing all the other NSS modules in its mount namespace.
 
 Ah, ok, if you are ok with nss-resolve/nss-systemd then things are good, indeed.
 
 > **[@funkylab](https://mastodon.social/@funkylab)** (I think it's a bit of an odd choice to enforce alphabetic precedence there; a first served stays right seems to be more usual in name resolving circles?)
 
-Well, there might be conflicting records from different hook services. I wanted to give people a way to define an order of preference for that, simply by picking a different name.
+Well, there might be conflicting records from different hook services.
+I wanted to give people a way to define an order of preference for that, simply by picking a different name.
 
-The hook concept is quite powerful, it could not just be used for making additional names resolveable, it also can be used to make certain names unresolvable (i.e. something like a name-level firewall). But if you have both kinds in the mix it's essential you can run the firewall-style stuff before the other.
+The hook concept is quite powerful, it could not just be used for making additional names resolveable, it also can be used to make certain names unresolvable (i.e. something like a name-level firewall).
+But if you have both kinds in the mix it's essential you can run the firewall-style stuff before the other.
 
-> **[@funkylab](https://mastodon.social/@funkylab)** Hm, but that does mean that you need to wait at least until the alphabetically first service has replied, right? What's the potential for blocking the system there?
+> **[@funkylab](https://mastodon.social/@funkylab)** Hm, but that does mean that you need to wait at least until the alphabetically first service has replied, right?
+> What's the potential for blocking the system there?
 
-Yes, we need to wait for the alphabetically first service. We apply a timeout as well though, hence this should be quite robust, if hook services misbehave. And there's a ratelimit: if services fail too often, we don't ping them anymore for a while.
+Yes, we need to wait for the alphabetically first service.
+We apply a timeout as well though, hence this should be quite robust, if hook services misbehave.
+And there's a ratelimit: if services fail too often, we don't ping them anymore for a while.
 
-> **[@pemensik](https://fosstodon.org/@pemensik)** This is somehow weird design. Instead of answering every name, it should allow registration of localhost handled subdomains. Then every such subdomain should have defined service handling it's names. Just like forwarding common domain of libvirt network to it's Dnsmasq instance. I think your design to solve machine names registration is wrong this way.
+> **[@pemensik](https://fosstodon.org/@pemensik)** This is somehow weird design.
+> Instead of answering every name, it should allow registration of localhost handled subdomains.
+> Then every such subdomain should have defined service handling it's names.
+> Just like forwarding common domain of libvirt network to it's Dnsmasq instance.
+> I think your design to solve machine names registration is wrong this way.
 
-We already have a concept of "delegate" domains in resolved since v258, i.e. you can define domains that shall be forwarded to specific DNS servers. But that's a different usecase, as that's a DNS level thing.
+We already have a concept of "delegate" domains in resolved since v258, i.e. you can define domains that shall be forwarded to specific DNS servers.
+But that's a different usecase, as that's a DNS level thing.
 
 The new hook stuff sits very early in the pipeline, and allows much more powerful filtering, also covering reasonable resolution of single label names (i.e. have a container called "foobar" actually be resolveable as "foobar") and blocking of names (i.e. inhibit resolution of certain names before they reach IP networking).
 

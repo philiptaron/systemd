@@ -10,7 +10,9 @@ systemd-vmspawn is a small wrapper around qemu that provides various VM integrat
 
 With v259 it gained one additional little feature for integrating VMs better in the host:
 
-If you attach multiple disks to an vmspawn invocation via --extra-drive= then the "serial" field of the exposed disk will be initialized automatically to the specified filename of the disk on the host. This has the effect that a symlink for the device will appear in /dev/disk/by-id/… that is generated from the host side filename of the disk. And that's just so useful, because it essentially means the identifier for some disk on host and in the VM is the same (well, not literally, but closely related).
+If you attach multiple disks to an vmspawn invocation via --extra-drive= then the "serial" field of the exposed disk will be initialized automatically to the specified filename of the disk on the host.
+This has the effect that a symlink for the device will appear in /dev/disk/by-id/... that is generated from the host side filename of the disk.
+And that's just so useful, because it essentially means the identifier for some disk on host and in the VM is the same (well, not literally, but closely related).
 
 ---
 
