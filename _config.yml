@@ -17,4 +17,3 @@ exclude:
   - "*/release-notes-raw.md"
   - "*/posts/raw"
   - "*/posts/manifest.json"
-  - "*.json"
