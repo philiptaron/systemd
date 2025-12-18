@@ -27,7 +27,7 @@ As it turns out, the TPM 2.0 spec actually has kinda addressed the scarcity of P
 
 One can define additional objects in the TPM nowadays that behave like PCRs, but are implemented by "nvindexes", which is how TPM names little persistent memory registers it offers applications to allocate and store very short data in.
 
-With v259, the `systemd-tpm2-setup.service` early boot service can now allocate additional PCRs this way.
+With v259, the [`systemd-tpm2-setup.service`][systemd-tpm2-setup] early boot service can now allocate additional PCRs this way.
 We call them "NvPCRs" (which is a very confusing name, because "nv" stands for "non-volatile", but of course PCRs are very much volatile, they reset to zero on each boot; but TPM gods named the backing concepts nvindexes even with these semantics, and this naming spills into our naming).
 
 Setting up NvPCRs is not entirely trivial: nvindexes (unlike classic PCRs) can basically be removed by anyone with sufficient access to the TPM, and be recreated, at which point they can be reset.
@@ -41,7 +41,7 @@ With v259 the new NvPCRs are used to measure two new things: we measure the SMBI
 We soon want to extend that, and for example measure the root hash + sig of every single DDI activated on the system.
 With that we have a pretty complete trail of everything going on on the system.
 
-NvPCR measurements will show up in `systemd-pcrlock cel` now, btw.
+NvPCR measurements will show up in [`systemd-pcrlock`][systemd-pcrlock] `cel` now, btw.
 
 And that's all for now.
 
@@ -61,6 +61,11 @@ But the honest answer is, we need to be frugal still, we'll have to see how this
 Thank you, already got merged!
 
 ---
+
+## References
+
+[systemd-tpm2-setup]: https://www.freedesktop.org/software/systemd/man/259/systemd-tpm2-setup.html
+[systemd-pcrlock]: https://www.freedesktop.org/software/systemd/man/259/systemd-pcrlock.html
 
 ## Sources
 

@@ -8,7 +8,7 @@ date: 2025-11-20
 
 This one is quick and closely related to what I discussed in the previous installment:
 
-There's now a new verb `dlopen-metadata` in `systemd-analyze` that extracts the `dlopen()` metadata from an ELF file and displays it in tabular form.
+There's now a new verb `dlopen-metadata` in [`systemd-analyze`][systemd-analyze] that extracts the `dlopen()` metadata from an ELF file and displays it in tabular form.
 
 As an example, here's how its output looks like for `libsystemd-shared-259.so`, i.e. the shared library that contains much of systemd's code that is shared between all its many binaries:
 
@@ -34,6 +34,10 @@ It's a bit like with gstreamer or so, where you try to play a video file and don
 You get a soft failure too, not a hard one, and this requirement for all codecs is not ever expressed in rpm.
 
 ---
+
+## References
+
+[systemd-analyze]: https://www.freedesktop.org/software/systemd/man/259/systemd-analyze.html
 
 ## Sources
 

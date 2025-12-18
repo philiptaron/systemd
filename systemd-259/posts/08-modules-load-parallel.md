@@ -6,7 +6,7 @@ date: 2025-11-27
 
 8️⃣ Here's the 8th post highlighting key new features of the upcoming v259 release of systemd. [#systemd259](https://mastodon.social/tags/systemd259) [#systemd](https://mastodon.social/tags/systemd)
 
-`systemd-modules-load.service` is an early-boot service that loads a list of kernel modules into the kernel that is configured via `/etc/modules-load.d/` (and similar dirs under `/usr/` + `/run/` as usual).
+[`systemd-modules-load.service`][systemd-modules-load] is an early-boot service that loads a list of kernel modules into the kernel that is configured via `/etc/modules-load.d/` (and similar dirs under `/usr/` + `/run/` as usual).
 It's half a legacy feature, because nowadays kernel modules are generally auto-loaded based on "modalias" information they expose, which binds them to certain hardware vendor/product IDs, or to userspace API access (for kmods that implement subsystems rather than device drivers).
 However, it's still a popular interface, in particular for certain commercial offerings of... let's say... "questionable" engineering quality.
 
@@ -18,6 +18,10 @@ For example, in certain fixed-function usecases it might make sense to load modu
 Because of that I think this parallelization work has been worthwhile, even though I personally might not be too sympathetic to those commercial offerings I mentioned).
 
 ---
+
+## References
+
+[systemd-modules-load]: https://www.freedesktop.org/software/systemd/man/259/systemd-modules-load.html
 
 ## Sources
 

@@ -12,7 +12,7 @@ Sounds great?
 Well, it's not as great as it might sound to some. musl has quite some limitations compared to glibc: the primary one is that there's no Name Service Switch (NSS) support.
 That's the subsystem that allows systemd to make domain names, user names, groups names resolvable via `gethostbyname()`, `getaddrinfo()`, `getpwnam()`, `getgrnam()` and similar calls.
 
-And that in turn is used to make a good chunk of systemd's infrastructure work, for example `DynamicUser=1`, `systemd-resolved`, `systemd-homed`, `systemd-userdbd`, `systemd-nsresourced`, `nss-myhostname`, and so on.
+And that in turn is used to make a good chunk of systemd's infrastructure work, for example `DynamicUser=1`, [`systemd-resolved`][systemd-resolved], [`systemd-homed`][systemd-homed], [`systemd-userdbd`][systemd-userdbd], [`systemd-nsresourced`][systemd-nsresourced], [`nss-myhostname`][nss-myhostname], and so on.
 Hence, if you don't have NSS then all that is gone or half-broken.
 
 And there are other limitations: systemd will react to memory pressure by releasing memory that libc has acquired from the kernel but is no longer using back to the kernel.
@@ -50,6 +50,14 @@ Glibc has that.
 glibc calls `madvise` `MADV_DONTNEED` on the space it doesn't need.
 
 ---
+
+## References
+
+[systemd-resolved]: https://www.freedesktop.org/software/systemd/man/259/systemd-resolved.html
+[systemd-homed]: https://www.freedesktop.org/software/systemd/man/259/systemd-homed.html
+[systemd-userdbd]: https://www.freedesktop.org/software/systemd/man/259/systemd-userdbd.html
+[systemd-nsresourced]: https://www.freedesktop.org/software/systemd/man/259/systemd-nsresourced.html
+[nss-myhostname]: https://www.freedesktop.org/software/systemd/man/259/nss-myhostname.html
 
 ## Sources
 

@@ -6,7 +6,7 @@ date: 2025-12-05
 
 1️⃣2️⃣ Here's the 12th post highlighting key new features of the upcoming v259 release of systemd. [#systemd259](https://mastodon.social/tags/systemd259) [#systemd](https://mastodon.social/tags/systemd)
 
-`systemd-vmspawn` is a small wrapper around qemu that provides various VM integration points with systemd infrastructure, such as ready notification, credential passing, machined integration and so on.
+[`systemd-vmspawn`][systemd-vmspawn] is a small wrapper around qemu that provides various VM integration points with systemd infrastructure, such as ready notification, credential passing, machined integration and so on.
 
 With v259 it gained one additional little feature for integrating VMs better in the host:
 
@@ -15,6 +15,10 @@ This has the effect that a symlink for the device will appear in `/dev/disk/by-i
 And that's just so useful, because it essentially means the identifier for some disk on host and in the VM is the same (well, not literally, but closely related).
 
 ---
+
+## References
+
+[systemd-vmspawn]: https://www.freedesktop.org/software/systemd/man/259/systemd-vmspawn.html
 
 ## Sources
 

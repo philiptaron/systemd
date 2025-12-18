@@ -14,18 +14,18 @@ Hence:
 For many usecases it's quite useful if local services can register additional hostnames for local resolution.
 For example, container and VMMs might want to register the IPs of locally running containers or VMs via a hostname, so that you can access them by name rather than by address.
 
-With v259 we are making this easy: there's now a "hook" interface in `systemd-resolved`: any privileged local daemon may bind an `AF_UNIX` socket in `/run/systemd/resolve.hook/`, and implement a simple Varlink IPC interface on it.
+With v259 we are making this easy: there's now a "hook" interface in [`systemd-resolved`][systemd-resolved]: any privileged local daemon may bind an `AF_UNIX` socket in `/run/systemd/resolve.hook/`, and implement a simple Varlink IPC interface on it.
 If they do so, `systemd-resolved` will query it for every single local name resolution request, and they can answer positively, negatively, or let the resolution request be processed by the usual DNS based logic.
 
 If multiple hook services are in place, they are always queried in parallel, to reduce latencies (but if multiple return positively the service with the alphabetically first socket path wins).
 
 In systemd there are now two services which bind sockets there by default:
 
-First of all `systemd-machined` makes all local containers/VMs that registered their IP addresses with it resolvable.
+First of all [`systemd-machined`][systemd-machined] makes all local containers/VMs that registered their IP addresses with it resolvable.
 
-Secondly, `systemd-networkd` makes all hosts resolvable for which its internal DHCP server handed out leases.
+Secondly, [`systemd-networkd`][systemd-networkd] makes all hosts resolvable for which its internal DHCP server handed out leases.
 
-You might wonder: how does this relate to `nss-mymachines`?
+You might wonder: how does this relate to [`nss-mymachines`][nss-mymachines]?
 That NSS plugin did something very similar to the `systemd-machined` logic implemented now, however, it has one problem: it operates strictly and exclusively on the NSS level, but many programs nowadays bypass that and talk DNS directly with the configured servers.
 Since `systemd-resolved` registers itself as local DNS server in `/etc/resolv.conf` it means the new hook logic works for all types of lookups, regardless if they come via NSS, D-Bus, Varlink or the local DNS stub.
 I think in the longer run we should deprecate `nss-mymachines`.
@@ -55,10 +55,10 @@ Not sure what NixOS thinks it needs to plug in there?
 > That way I can make the NSS modules in question completely hidden outside of the daemon and guarantee they don't get `dlopen()` into random programs for which I'm not sure they are ABI compatible with the NSS modules in question.
 
 Well, I don't get it.
-How do you get your requests from NSS to resolved if you are allergic to use `nss-resolve`?
+How do you get your requests from NSS to resolved if you are allergic to use [`nss-resolve`][nss-resolve]?
 You can use the DNS stub of course, but I'd not recommend that, since a lot of metadata gets lost along the way, and search domain logic then must be client side.
 
-> **[@arianvp](https://functional.cafe/@arianvp)** The global `/etc/nsswitch.conf` will have `nss-systemd` and `nss-resolve`.
+> **[@arianvp](https://functional.cafe/@arianvp)** The global `/etc/nsswitch.conf` will have [`nss-systemd`][nss-systemd] and `nss-resolve`.
 > And nothing else.
 > My little varlink daemon will have an `/etc/nsswitch.conf` containing all the other NSS modules in its mount namespace.
 
@@ -91,6 +91,15 @@ But that's a different usecase, as that's a DNS level thing.
 The new hook stuff sits very early in the pipeline, and allows much more powerful filtering, also covering reasonable resolution of single label names (i.e. have a container called "foobar" actually be resolveable as "foobar") and blocking of names (i.e. inhibit resolution of certain names before they reach IP networking).
 
 ---
+
+## References
+
+[systemd-resolved]: https://www.freedesktop.org/software/systemd/man/259/systemd-resolved.html
+[systemd-machined]: https://www.freedesktop.org/software/systemd/man/259/systemd-machined.html
+[systemd-networkd]: https://www.freedesktop.org/software/systemd/man/259/systemd-networkd.html
+[nss-mymachines]: https://www.freedesktop.org/software/systemd/man/259/nss-mymachines.html
+[nss-resolve]: https://www.freedesktop.org/software/systemd/man/259/nss-resolve.html
+[nss-systemd]: https://www.freedesktop.org/software/systemd/man/259/nss-systemd.html
 
 ## Sources
 

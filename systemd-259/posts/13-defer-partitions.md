@@ -6,7 +6,7 @@ date: 2025-12-18
 
 1️⃣3️⃣ Here's the 13th post highlighting key new features of the recently released v259 release of systemd. [#systemd259](https://mastodon.social/tags/systemd259) [#systemd](https://mastodon.social/tags/systemd)
 
-In episode 7 and 11 of this series we already talked about `systemd-repart` a bit.
+In episode 7 and 11 of this series we already talked about [`systemd-repart`][systemd-repart] a bit.
 Here's another pair of features we added in 259: there are new switches `--defer-partitions-empty=` and `--defer-partitions-factory-reset=`.
 These take a boolean argument, and are closely related to the pre-existing `--defer-partitions=` switch.
 
@@ -26,6 +26,10 @@ The two new switches are nothing more than a shortcut to automatically defer par
 In 95% of all cases these two switches are what you want to specify for an installer, making it unnecessary to manually list all relevant partition types.
 
 ---
+
+## References
+
+[systemd-repart]: https://www.freedesktop.org/software/systemd/man/259/systemd-repart.html
 
 ## Sources
 

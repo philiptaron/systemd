@@ -6,7 +6,7 @@ date: 2025-11-26
 
 7️⃣ Here's the 7th post highlighting key new features of the upcoming v259 release of systemd. [#systemd259](https://mastodon.social/tags/systemd259) [#systemd](https://mastodon.social/tags/systemd)
 
-`systemd-repart` is systemd's dynamic, elastic image generation and repartitioning tool.
+[`systemd-repart`][systemd-repart] is systemd's dynamic, elastic image generation and repartitioning tool.
 It can either run "online" during early boot to create/encrypt root file systems or other partitions on the running system, or it can run "offline" to prepare images that can later be booted.
 
 With systemd v259 it gained one new trick:
@@ -20,6 +20,10 @@ You can also use it to figure out how large to allocate a disk image file before
 And that's all for today.
 
 ---
+
+## References
+
+[systemd-repart]: https://www.freedesktop.org/software/systemd/man/259/systemd-repart.html
 
 ## Sources
 
