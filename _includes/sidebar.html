@@ -2,29 +2,33 @@
     <nav class="site-nav">
         <h2><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
 
-        {% if page.url == "/" or page.url == "/index.html" %}
+        {% assign is_index = false %}
+        {% assign is_release = false %}
+        {% if page.url == "/" %}{% assign is_index = true %}{% endif %}
+        {% if page.url == "/index.html" %}{% assign is_index = true %}{% endif %}
+        {% if page.url contains "systemd-" %}{% assign is_release = true %}{% endif %}
+
+        {% if is_index %}
         <!-- Index page: show releases with section sublists -->
         <h3>Releases</h3>
         <ul class="toc-list">
-            {% for release in site.data.releases %}
+            {% for release_entry in site.data.releases %}
+            {% assign release = release_entry[1] %}
             <li>
-                <a href="{{ site.baseurl }}{{ release[1].path }}">{{ release[1].title }}</a>
+                <a href="{{ site.baseurl }}{{ release.path }}">{{ release.title }}</a>
                 <ul class="toc-sublist">
-                    {% for section in release[1].sections %}
-                    <li><a href="{{ site.baseurl }}{{ release[1].release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
+                    {% for section in release.sections %}
+                    <li><a href="{{ site.baseurl }}{{ release.release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
                     {% endfor %}
                 </ul>
             </li>
             {% endfor %}
         </ul>
 
-        {% elsif page.url contains "/systemd-" %}
+        {% elsif is_release %}
         <!-- Release page: show commentary + sections -->
-        {% assign release_path = page.url | split: "/" | slice: 1 %}
-        {% assign release_key = release_path[0] | replace: "systemd-", "v" %}
-        {% assign release = site.data.releases[release_key] %}
+        {% assign release = site.data.releases.v259 %}
 
-        {% if release %}
         <h3>Commentary</h3>
         <ul class="toc-list">
             {% for post in release.commentary %}
@@ -38,7 +42,6 @@
             <li><a href="{{ site.baseurl }}{{ release.release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
             {% endfor %}
         </ul>
-        {% endif %}
 
         {% else %}
         <!-- Fallback: simple navigation -->
