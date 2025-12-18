@@ -1,2 +1,2 @@
-description:  Set up the TPM2 Storage Root Key (SRK) at boot
+description:  Set up the TPM2 Storage Root Key (SRK) at boot
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-tpm2-setup.html

@@ -1,2 +1,2 @@
-description:  Add and remove kernel and initrd images to and from the boot partition
+description:  Add and remove kernel and initrd images to and from the boot partition
 url: https://www.freedesktop.org/software/systemd/man/258/kernel-install.html

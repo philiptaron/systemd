@@ -1,2 +1,2 @@
-description:  Automatically leave event loop on SIGINT and SIGTERM
+description:  Automatically leave event loop on SIGINT and SIGTERM
 url: https://www.freedesktop.org/software/systemd/man/258/sd_event_set_signal_exit.html

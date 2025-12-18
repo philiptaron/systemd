@@ -1,2 +1,2 @@
-description:  Add a filter to the device enumerator
+description:  Add a filter to the device enumerator
 url: https://www.freedesktop.org/software/systemd/man/258/sd_device_enumerator_add_match_property.html

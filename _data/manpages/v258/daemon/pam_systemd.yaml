@@ -1,2 +1,2 @@
-description:  Register user sessions in the systemd login manager
+description:  Register user sessions in the systemd login manager
 url: https://www.freedesktop.org/software/systemd/man/258/pam_systemd.html

@@ -1,2 +1,2 @@
-description:  Check whether the bus connection is open or ready
+description:  Check whether the bus connection is open or ready
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_is_ready.html

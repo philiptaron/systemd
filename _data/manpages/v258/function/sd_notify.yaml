@@ -1,2 +1,2 @@
-description:  Notify service manager about start-up completion and other service status changes
+description:  Notify service manager about start-up completion and other service status changes
 url: https://www.freedesktop.org/software/systemd/man/258/sd_notify.html

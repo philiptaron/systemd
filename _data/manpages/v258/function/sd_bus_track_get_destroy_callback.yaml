@@ -1,2 +1,2 @@
-description:  Define the callback function for resource cleanup
+description:  Define the callback function for resource cleanup
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_track_get_destroy_callback.html

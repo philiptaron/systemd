@@ -1,2 +1,2 @@
-description:  SSH client plugin for connecting to AF_VSOCK and AF_UNIX sockets
+description:  SSH client plugin for connecting to AF_VSOCK and AF_UNIX sockets
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-ssh-proxy.html

@@ -1,2 +1,2 @@
-description:  Create, acquire and release a udev context object
+description:  Create, acquire and release a udev context object
 url: https://www.freedesktop.org/software/systemd/man/258/udev_unref.html

@@ -1,2 +1,2 @@
-description:  Attach fields to a D-Bus message based on a type string
+description:  Attach fields to a D-Bus message based on a type string
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_append.html

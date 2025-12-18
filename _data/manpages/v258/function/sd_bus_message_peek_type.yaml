@@ -1,2 +1,2 @@
-description:  Read a sequence of values from a message
+description:  Read a sequence of values from a message
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_peek_type.html

@@ -1,2 +1,2 @@
-description:  Read data fields from the current journal entry
+description:  Read data fields from the current journal entry
 url: https://www.freedesktop.org/software/systemd/man/258/sd_journal_get_data_threshold.html

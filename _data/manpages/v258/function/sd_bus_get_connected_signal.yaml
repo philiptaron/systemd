@@ -1,2 +1,2 @@
-description:  Control emission of local connection establishment signal on bus connections
+description:  Control emission of local connection establishment signal on bus connections
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_get_connected_signal.html

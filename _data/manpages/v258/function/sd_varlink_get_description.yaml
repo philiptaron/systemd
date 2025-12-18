@@ -1,2 +1,2 @@
-description:  Set or query description of a Varlink connection object
+description:  Set or query description of a Varlink connection object
 url: https://www.freedesktop.org/software/systemd/man/258/sd_varlink_get_description.html

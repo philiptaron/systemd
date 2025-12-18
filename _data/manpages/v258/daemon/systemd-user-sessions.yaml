@@ -1,2 +1,2 @@
-description:  Permit user logins after boot, prohibit user logins at shutdown
+description:  Permit user logins after boot, prohibit user logins at shutdown
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-user-sessions.html

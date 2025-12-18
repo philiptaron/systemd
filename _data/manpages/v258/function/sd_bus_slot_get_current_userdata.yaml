@@ -1,2 +1,2 @@
-description:  Query information attached to a bus slot object
+description:  Query information attached to a bus slot object
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_slot_get_current_userdata.html

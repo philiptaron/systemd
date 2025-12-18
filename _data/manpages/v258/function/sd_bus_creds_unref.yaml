@@ -1,2 +1,2 @@
-description:  Retrieve credentials object for the specified PID
+description:  Retrieve credentials object for the specified PID
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_creds_unref.html

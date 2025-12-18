@@ -1,2 +1,2 @@
-description:  D-Bus interface to query and set logging configuration
+description:  D-Bus interface to query and set logging configuration
 url: https://www.freedesktop.org/software/systemd/man/258/org.freedesktop.LogControl1.html

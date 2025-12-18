@@ -1,2 +1,2 @@
-description:  Pull systemd-bless-boot.service into the initial boot transaction when boot counting is in effect
+description:  Pull systemd-bless-boot.service into the initial boot transaction when boot counting is in effect
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-bless-boot-generator.html

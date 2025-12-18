@@ -1,2 +1,2 @@
-description:  Add a node enumerator for a D-Bus object path prefix
+description:  Add a node enumerator for a D-Bus object path prefix
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_add_node_enumerator.html

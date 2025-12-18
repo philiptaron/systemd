@@ -1,2 +1,2 @@
-description:  Create a new hwdb object and create or destroy references to it
+description:  Create a new hwdb object and create or destroy references to it
 url: https://www.freedesktop.org/software/systemd/man/258/sd_hwdb_new.html

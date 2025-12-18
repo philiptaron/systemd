@@ -1,2 +1,2 @@
-description:  Load kernel modules at boot
+description:  Load kernel modules at boot
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-modules-load.html

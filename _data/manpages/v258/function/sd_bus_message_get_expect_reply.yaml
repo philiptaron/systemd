@@ -1,2 +1,2 @@
-description:  Set and query bus message metadata
+description:  Set and query bus message metadata
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_get_expect_reply.html

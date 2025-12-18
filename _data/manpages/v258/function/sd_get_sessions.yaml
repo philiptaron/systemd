@@ -1,2 +1,2 @@
-description:  Determine available seats, sessions, logged in users and virtual machines/containers
+description:  Determine available seats, sessions, logged in users and virtual machines/containers
 url: https://www.freedesktop.org/software/systemd/man/258/sd_get_sessions.html

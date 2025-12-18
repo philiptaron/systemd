@@ -1,2 +1,2 @@
-description:  Invoke a D-Bus method call
+description:  Invoke a D-Bus method call
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_call_async.html

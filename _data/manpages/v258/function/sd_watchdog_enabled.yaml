@@ -1,2 +1,2 @@
-description:  Check whether the service manager expects watchdog keep-alive notifications from a service
+description:  Check whether the service manager expects watchdog keep-alive notifications from a service
 url: https://www.freedesktop.org/software/systemd/man/258/sd_watchdog_enabled.html

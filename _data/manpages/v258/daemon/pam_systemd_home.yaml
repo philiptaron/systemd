@@ -1,2 +1,2 @@
-description:  Authenticate users and mount home directories via systemd-homed.service
+description:  Authenticate users and mount home directories via systemd-homed.service
 url: https://www.freedesktop.org/software/systemd/man/258/pam_systemd_home.html

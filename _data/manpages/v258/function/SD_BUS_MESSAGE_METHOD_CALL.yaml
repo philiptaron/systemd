@@ -1,2 +1,2 @@
-description:  Create a new bus message object and create or destroy references to it
+description:  Create a new bus message object and create or destroy references to it
 url: https://www.freedesktop.org/software/systemd/man/258/SD_BUS_MESSAGE_METHOD_CALL.html

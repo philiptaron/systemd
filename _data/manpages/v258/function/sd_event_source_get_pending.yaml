@@ -1,2 +1,2 @@
-description:  Determine pending state of event sources
+description:  Determine pending state of event sources
 url: https://www.freedesktop.org/software/systemd/man/258/sd_event_source_get_pending.html

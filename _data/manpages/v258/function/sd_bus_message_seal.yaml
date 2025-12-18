@@ -1,2 +1,2 @@
-description:  Prepare a D-Bus message for transmission
+description:  Prepare a D-Bus message for transmission
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_seal.html

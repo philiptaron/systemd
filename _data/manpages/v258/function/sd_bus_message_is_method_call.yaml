@@ -1,2 +1,2 @@
-description:  Query bus message addressing/credentials metadata
+description:  Query bus message addressing/credentials metadata
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_message_is_method_call.html

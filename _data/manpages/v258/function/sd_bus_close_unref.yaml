@@ -1,2 +1,2 @@
-description:  Create a new bus object and create or destroy references to it
+description:  Create a new bus object and create or destroy references to it
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_close_unref.html

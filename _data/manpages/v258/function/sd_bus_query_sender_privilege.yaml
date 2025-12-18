@@ -1,2 +1,2 @@
-description:  Query bus message sender credentials/privileges
+description:  Query bus message sender credentials/privileges
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_query_sender_privilege.html

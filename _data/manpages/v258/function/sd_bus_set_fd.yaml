@@ -1,2 +1,2 @@
-description:  Set the file descriptors to use for bus communication
+description:  Set the file descriptors to use for bus communication
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_set_fd.html

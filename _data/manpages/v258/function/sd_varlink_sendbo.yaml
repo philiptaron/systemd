@@ -1,2 +1,2 @@
-description:  Enqueues a Varlink method call, not expecting a reply
+description:  Enqueues a Varlink method call, not expecting a reply
 url: https://www.freedesktop.org/software/systemd/man/258/sd_varlink_sendbo.html

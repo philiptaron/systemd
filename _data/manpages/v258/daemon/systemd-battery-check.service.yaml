@@ -1,2 +1,2 @@
-description:  Check battery level whether there's enough charge, and power off if not
+description:  Check battery level whether there's enough charge, and power off if not
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-battery-check.service.html

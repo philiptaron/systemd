@@ -1,2 +1,2 @@
-description:  Create, acquire and release a udev device object
+description:  Create, acquire and release a udev device object
 url: https://www.freedesktop.org/software/systemd/man/258/udev_device_new_from_syspath.html

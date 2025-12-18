@@ -1,2 +1,2 @@
-description:  Wait until kernel time is synchronized
+description:  Wait until kernel time is synchronized
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-time-wait-sync.service.html

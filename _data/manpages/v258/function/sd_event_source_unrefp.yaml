@@ -1,2 +1,2 @@
-description:  Increase or decrease event source reference counters
+description:  Increase or decrease event source reference counters
 url: https://www.freedesktop.org/software/systemd/man/258/sd_event_source_unrefp.html

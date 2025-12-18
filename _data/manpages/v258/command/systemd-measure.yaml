@@ -1,2 +1,2 @@
-description:  Pre-calculate and sign expected TPM2 PCR 11 values for booted unified kernel images
+description:  Pre-calculate and sign expected TPM2 PCR 11 values for booted unified kernel images
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-measure.html

@@ -1,2 +1,2 @@
-description:  Compatibility generator and service to start /etc/rc.local during boot
+description:  Compatibility generator and service to start /etc/rc.local during boot
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-rc-local-generator.html

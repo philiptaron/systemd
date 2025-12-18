@@ -1,2 +1,2 @@
-description:  Control whether to close the bus connection during the event loop exit phase
+description:  Control whether to close the bus connection during the event loop exit phase
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_get_close_on_exit.html

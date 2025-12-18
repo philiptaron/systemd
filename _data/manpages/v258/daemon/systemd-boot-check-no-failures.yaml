@@ -1,2 +1,2 @@
-description:  verify that the system booted up cleanly
+description:  verify that the system booted up cleanly
 url: https://www.freedesktop.org/software/systemd/man/258/systemd-boot-check-no-failures.html

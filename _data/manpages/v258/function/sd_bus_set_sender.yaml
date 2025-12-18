@@ -1,2 +1,2 @@
-description:  Configure default sender for outgoing messages
+description:  Configure default sender for outgoing messages
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_set_sender.html

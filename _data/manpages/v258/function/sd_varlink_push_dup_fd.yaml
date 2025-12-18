@@ -1,2 +1,2 @@
-description:  Submit a file descriptor to send along with the next outgoing Varlink message
+description:  Submit a file descriptor to send along with the next outgoing Varlink message
 url: https://www.freedesktop.org/software/systemd/man/258/sd_varlink_push_dup_fd.html

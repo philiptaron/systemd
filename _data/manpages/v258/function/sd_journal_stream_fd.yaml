@@ -1,2 +1,2 @@
-description:  Create log stream file descriptor to the journal
+description:  Create log stream file descriptor to the journal
 url: https://www.freedesktop.org/software/systemd/man/258/sd_journal_stream_fd.html

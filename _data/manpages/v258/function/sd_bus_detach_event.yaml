@@ -1,2 +1,2 @@
-description:  Attach a bus connection object to an event loop
+description:  Attach a bus connection object to an event loop
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_detach_event.html

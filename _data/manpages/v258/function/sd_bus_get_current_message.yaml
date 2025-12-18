@@ -1,2 +1,2 @@
-description:  Query information of the callback a bus object is currently running
+description:  Query information of the callback a bus object is currently running
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_get_current_message.html

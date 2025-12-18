@@ -1,2 +1,2 @@
-description:  Monitor login sessions, seats, users and virtual machines/containers
+description:  Monitor login sessions, seats, users and virtual machines/containers
 url: https://www.freedesktop.org/software/systemd/man/258/sd_login_monitor_get_timeout.html

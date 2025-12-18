@@ -1,2 +1,2 @@
-description:  Control socket binding watching on bus connections
+description:  Control socket binding watching on bus connections
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_get_watch_bind.html

@@ -1,2 +1,2 @@
-description:  Retrieve a bus client's machine identity
+description:  Retrieve a bus client's machine identity
 url: https://www.freedesktop.org/software/systemd/man/258/sd_bus_get_name_machine_id.html
