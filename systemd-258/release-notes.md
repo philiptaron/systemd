@@ -7,13 +7,13 @@ title: systemd v258 Release Notes
 
 ## Incompatible changes:
 
-- Support for cgroup v1 ('legacy' and 'hybrid' hierarchies) has been removed. cgroup v2 ('unified' hierarchy) will always be mounted during system bootup and systemd-nspawn container initialization.
+- Support for cgroup v1 ('legacy' and 'hybrid' hierarchies) has been removed. cgroup v2 ('unified' hierarchy) will always be mounted during system bootup and [`systemd-nspawn`][systemd-nspawn] container initialization.
 
 - The minimum kernel baseline version has been bumped to v5.4 (released in 2019), with the recommended version now going up to v5.7. Consult the README file for a list of required kernel APIs.
 
 - The default access mode of tty/pts device nodes has been changed to 0600, which was 0620 in the older releases, due to general security concerns about terminals being written to by other users. To restore the old default access mode, use the '-Dtty-mode=0620' meson build option. (This effectively means "mesg n" is now the default, rather than "mesg y", see mesg(1) man page for help.)
 
-- ACLs for device nodes requested by "uaccess" udev tag are now always applied/updated by systemd-udevd through "uaccess" udev builtin, and systemd-logind no longer applies/updates ACLs but triggers "change" uevents to make systemd-udevd apply/update ACLs.
+- ACLs for device nodes requested by "uaccess" udev tag are now always applied/updated by [`systemd-udevd`][systemd-udevd] through "uaccess" udev builtin, and [`systemd-logind`][systemd-logind] no longer applies/updates ACLs but triggers "change" uevents to make systemd-udevd apply/update ACLs.
   Hence, the "uaccess" udev tag should be set not only on "add" action but also on "change" action, and it is highly recommended that the rule is applied all actions except for "remove" action.
   Recommended example:
 
@@ -23,19 +23,19 @@ title: systemd v258 Release Notes
 
       ACTION=="add", SUBSYSTEM=="hidraw", TAG+="uaccess"
 
-- systemd-run's --expand-environment= switch, which was disabled by default when combined with --scope, has been changed to be enabled by default. This brings cmdline expansion of transient scopes on par with services.
+- [`systemd-run`][systemd-run]'s --expand-environment= switch, which was disabled by default when combined with --scope, has been changed to be enabled by default. This brings cmdline expansion of transient scopes on par with services.
 
 - systemd-logind PAM sessions that previously were automatically determined to be of class "background", and which are owned by root or system accounts, will now automatically be set to class "background-light" instead. PAM sessions that previously were automatically determined to be of class "user", and which are owned by non-root system users, will now automatically be set to class "user-light" instead. This effectively means that cron jobs or FTP sessions (i.e. all PAM sessions that have no TTY assigned and neither are graphical) for system users no longer pull in a service manager by default. This behaviour can be changed by explicitly setting the session class (for example via the class= parameter to pam_systemd.so, or by setting the XDG_SESSION_CLASS environment variable as input for the service's PAM stack). This change does not affect graphical sessions, nor does it affect regular users. This is an incompatible change of sorts, since per-user services will typically not be available for such PAM sessions of system users.
 
-- systemd-udevd ignores OWNER=/GROUP= settings with a non-system user/group specified in udev rules files, to avoid device nodes being owned by a non-system user/group. It is recommended to check udev rules files with 'udevadm verify' and/or 'udevadm test' commands if the specified user/group in OWNER=/GROUP= are valid. Similarly, systemd-networkd refuses User=/Group= settings with a non-system user/group specified in .netdev files for Tun/Tap interfaces.
+- systemd-udevd ignores OWNER=/GROUP= settings with a non-system user/group specified in udev rules files, to avoid device nodes being owned by a non-system user/group. It is recommended to check udev rules files with '[`udevadm`][udevadm] verify' and/or 'udevadm test' commands if the specified user/group in OWNER=/GROUP= are valid. Similarly, [`systemd-networkd`][systemd-networkd] refuses User=/Group= settings with a non-system user/group specified in .netdev files for Tun/Tap interfaces.
 
-- systemd-cryptenroll, systemd-repart and systemd-creds no longer default to locking TPM2 enrollments to the current, literal value of PCR 7, i.e. the PCR the SecureBoot policy is measured into by the firmware. This change reflects the fact that nowadays SecureBoot policies are updated (at least) as frequently as firmware code (simply because SecureBoot policy updates are typically managed by fwupd these days). The new default PCR mask for new TPM2 enrollments is thus empty by default. It is recommended to use managed systemd-pcrlock policies for binding to PCR 7 instead (as well as combining such policies with signed policies for PCR 11). Or in other words, it's recommended to make more use of the logic behind the --tpm2-public-key=, --tpm2-public-key-pcrs= and --tpm2-pcrlock= switches of the mentioned tools in place of --tpm2-pcrs=.
+- [`systemd-cryptenroll`][systemd-cryptenroll], [`systemd-repart`][systemd-repart] and [`systemd-creds`][systemd-creds] no longer default to locking TPM2 enrollments to the current, literal value of PCR 7, i.e. the PCR the SecureBoot policy is measured into by the firmware. This change reflects the fact that nowadays SecureBoot policies are updated (at least) as frequently as firmware code (simply because SecureBoot policy updates are typically managed by fwupd these days). The new default PCR mask for new TPM2 enrollments is thus empty by default. It is recommended to use managed [`systemd-pcrlock`][systemd-pcrlock] policies for binding to PCR 7 instead (as well as combining such policies with signed policies for PCR 11). Or in other words, it's recommended to make more use of the logic behind the --tpm2-public-key=, --tpm2-public-key-pcrs= and --tpm2-pcrlock= switches of the mentioned tools in place of --tpm2-pcrs=.
 
 - Support for the SystemdOptions EFI variable has been removed.
 
 - Meson options '-Dsplit-usr=', '-Drootlibdir=', '-Drootprefix=' (deprecated in v255), '-Ddefault-hierarchy=' (deprecated in v256), and '-Dnscd=' (deprecated in v257) have been removed.
 
-- OpenSSL is now the only supported cryptography backend for systemd-resolved and systemd-importd, and support for gnutls and gcrypt has been removed. Hence, 'gnutls' setting for the '-Ddns-over-tls=' meson option has been deprecated. Also, the '-Dcryptolib=' meson option has been deprecated. They will be removed in a future release.
+- OpenSSL is now the only supported cryptography backend for [`systemd-resolved`][systemd-resolved] and [`systemd-importd`][systemd-importd], and support for gnutls and gcrypt has been removed. Hence, 'gnutls' setting for the '-Ddns-over-tls=' meson option has been deprecated. Also, the '-Dcryptolib=' meson option has been deprecated. They will be removed in a future release.
 
 - systemd-logind's session tracking, which used to be performed via a FIFO installed in the client, now uses PIDFDs. The file descriptor returned by CreateSession() and related calls is therefore unused. Moreover, the exit of the session leader process will immediately cause the session to be stopped.
 
@@ -54,7 +54,7 @@ title: systemd v258 Release Notes
 
 - Normally, per-user encrypted credentials are decrypted via the the systemd-creds.socket Varlink service, while the per-system ones are directly encrypted within the execution context of the intended service (which hence typically required access to /dev/tpmrm0). This has been changed: units that enable either PrivateDevices= or use DeviceAllow=/DevicePolicy= (and thus restrict access to device nodes) will now also make use of the systemd-creds.socket Varlink functionality, and will not attempt to decrypt the credentials in-process (and attempt to try to talk to the TPM for that). Previously, encrypted credentials for per-system services were incompatible with PrivateDevices= and resulted in automatic extension of the DeviceAllow= list. The latter behaviour has been removed.
 
-- The command 'journalctl --follow' now exits with success on SIGTERM/SIGINT and when the pipe it is writing to is disconnected.
+- The command '[`journalctl`][journalctl] --follow' now exits with success on SIGTERM/SIGINT and when the pipe it is writing to is disconnected.
 
 - Support for System V style system state control has been removed:
   - The /dev/initctl device node has been removed.
@@ -67,7 +67,7 @@ title: systemd v258 Release Notes
 
 - Support for traditional /forcequotacheck file to control execution mode of quotacheck on boot has been removed from systemd-quotacheck. To control the mode, please use the quotacheck.mode= kernel command line option of newly introduced quotacheck.mode credential.
 
-- systemd-stub v258 requires ukify v257.9 or v258 or newer when building a UKI. Due to an incompatible change necessary in order to fix a bug related to embedding a .sbat section larger than 512 bytes, ukify v257.8 or older will not be able to use systemd-stub v258 or newer.
+- [`systemd-stub`][systemd-stub] v258 requires ukify v257.9 or v258 or newer when building a UKI. Due to an incompatible change necessary in order to fix a bug related to embedding a .sbat section larger than 512 bytes, ukify v257.8 or older will not be able to use systemd-stub v258 or newer.
 
 ## Announcements of Future Feature Removals:
 
@@ -75,7 +75,7 @@ title: systemd v258 Release Notes
 
 - Support for the legacy /run/lock/ directory is deprecated and will be removed in v259. Any software that still needs access to this legacy directory is encouraged to ship their own tmpfiles.d configuration to set it up according to their needs. In general, services should store their lock files in RuntimeDirectory=/$RUNTIME_DIRECTORY, and software directly executed by users should use $XDG_RUNTIME_DIR. Software working with specific devices (e.g. serial port devices) should flock the device directly rather than creating a separate lock file.
 
-- Support for systemd-repart's FactoryReset EFI variable has been deprecated and support for it will be removed in v260. Use the newer, more generic FactoryResetRequest variable instead, which can be managed by "systemd-factory-reset request" and "systemd-factory-reset complete".
+- Support for systemd-repart's FactoryReset EFI variable has been deprecated and support for it will be removed in v260. Use the newer, more generic FactoryResetRequest variable instead, which can be managed by "[`systemd-factory-reset`][systemd-factory-reset] request" and "systemd-factory-reset complete".
 
 - The meson option '-Dintegration-tests=' has been deprecated, and will be removed in a future release.
 
@@ -118,7 +118,7 @@ title: systemd v258 Release Notes
 
 - Per-user quota is now enabled on /dev/shm/ and /tmp/ (the latter only if backed by tmpfs).
 
-- If PAMName= is used for a service and the PAM session prompts for a password, it will now be queried via the systemd-ask-password logic. Previously the prompt would simply be denied, typically causing the PAM session (and thus service activation) to fail. One effect of this change is that when lingering is enabled for a systemd-homed user the user's password will now be prompted at boot to unlock the user's home directory in order to be able to start the per-user service manager early, as requested.
+- If PAMName= is used for a service and the PAM session prompts for a password, it will now be queried via the [`systemd-ask-password`][systemd-ask-password] logic. Previously the prompt would simply be denied, typically causing the PAM session (and thus service activation) to fail. One effect of this change is that when lingering is enabled for a [`systemd-homed`][systemd-homed] user the user's password will now be prompted at boot to unlock the user's home directory in order to be able to start the per-user service manager early, as requested.
 
 - The $MAINPID and $MANAGERPID environment variables we pass to processes executed for service units are now paired with new environment variables $MAINPIDFDID and $MANAGERPIDFDID. These new environment variables contain the numeric inode ID of the pidfd for the relevant process. As these 64bit IDs are unique for all processes of a specific Linux boot they can be used to race-freely reference a process, unlike the PID which is subject to races by recycling.
 
@@ -140,7 +140,7 @@ title: systemd v258 Release Notes
 
 - Processes invoked via the .socket Accept=yes logic will now get an environment variable $SO_COOKIE that contains the Linux socket cookie (which otherwise can be acquired via getsockopt()) of the connection socket, formatted in decimal.
 
-- When a service's configuration is reloaded (via "systemctl reload" or an equivalent operation), any confext images for the services are also reloaded.
+- When a service's configuration is reloaded (via "[`systemctl`][systemctl] reload" or an equivalent operation), any confext images for the services are also reloaded.
 
 - A new RandomizedOffsetSec= setting has been added to .timer units which allows configured of a randomized but stable time offset for when the timer shall elapse.
 
@@ -164,9 +164,9 @@ title: systemd v258 Release Notes
   These allow an unprivileged container to use some BPF functionalities.
   See also <https://lwn.net/Articles/947173/>
 
-- New user manager services systemd-nspawn@.service and systemd-vmspawn@.service and a machines.target unit to manage them have been added.
+- New user manager services systemd-nspawn@.service and [`systemd-vmspawn`][systemd-vmspawn]@.service and a machines.target unit to manage them have been added.
 
-## systemd-journald & journal-remote:
+## [`systemd-journald`][systemd-journald] & journal-remote:
 
 - journalctl's --setup-keys command now supports JSON output.
 
@@ -180,7 +180,7 @@ title: systemd v258 Release Notes
 
 - Many of systemd-journald's Varlink calls (such as the aforementioned Synchronize()) are now available to unprivileged clients.
 
-## systemd-udevd & systemd-hwdb:
+## systemd-udevd & [`systemd-hwdb`][systemd-hwdb]:
 
 - A new udev property ID_NET_BRING_UP_BEFORE_JOINING_BRIDGE= is now supported that may be set on network interface devices (via hwdb), and tells systemd-networkd to bring the interface up before joining it to a bridge device.
 
@@ -248,7 +248,7 @@ title: systemd v258 Release Notes
 
 - The Local= setting in [Tunnel] section gained a new "dhcp_pd" value to allow setting the local address based on dhcp-pd addresses.
 
-## sd-varlink & sd-json:
+## [`sd-varlink`][sd-varlink] & [`sd-json`][sd-json]:
 
 - An API call sd_varlink_reset_fds() has been added that undoes the effect of sd_varlink_push_fd() (the API for submitting file descriptors to send along with a method call), without actually sending a Varlink message.
 
@@ -274,13 +274,13 @@ title: systemd v258 Release Notes
 
 - sd_varlink_idl_parse() and sd_varlink_interface_free() have been added to sd-varlink, which can be used to parse Varlink IDL data.
 
-## varlinkctl:
+## [`varlinkctl`][varlinkctl]:
 
 - varlinkctl gained a new --exec switch. When used a command line of a command to execute once a Varlink method call reply has been received may be specified. The command will receive the method call reply on standard input in JSON format, and any passed file descriptors via the $LISTEN_FDS protocol. This is useful for invoking method calls that return file descriptors from shell scripts.
 
 - varlinkctl gained a new --push-fd= switch which may be used to issue a Varlink method call and send along one or more file descriptors on transports that support it (i.e. AF_UNIX).
 
-## sd-device:
+## [`sd-device`][sd-device]:
 
 - A new API call sd_device_enumerator_add_all_parents() has been added that may be used to include all parent devices of otherwise matching devices in the enumeration.
 
@@ -302,17 +302,17 @@ title: systemd v258 Release Notes
 
 - The "Monitor" Varlink IPC API of systemd-resolved now gained support for a new SubscribeDNSConfiguration() call that enables subscription to any DNS configuration changes, as they happen.
 
-- systemd-networkd-wait-online gained a new --dns switch that ensures that not only network connectivity is available, but also DNS configuration is established in systemd-resolved, making use of the new, aforementioned Varlink interface.
+- [`systemd-networkd-wait-online`][systemd-networkd-wait-online] gained a new --dns switch that ensures that not only network connectivity is available, but also DNS configuration is established in systemd-resolved, making use of the new, aforementioned Varlink interface.
 
 - resolved.conf gained a new setting RefuseRecordTypes= which takes a list of RR types for which to refuse lookup attempts. This may be used to for example block A or AAAA lookups on IPv4- or IPv6-only hosts.
 
 - A new DNS "delegate zone" concept has been introduced, which are additional lookup scopes (on top of the existing per-interface and the one global scope so far supported in resolved), which carry one or more DNS server addresses and a DNS search/routing domain. It allows routing requests to specific domains to specific servers. Delegate zones can be configured via drop-ins below /etc/systemd/dns-delegate.d/*.dns-delegate.
 
-- "resolvectl query -t sshfp" will now decode the returned RR information, and show the cryptographic algorithms by name instead of number.
+- "[`resolvectl`][resolvectl] query -t sshfp" will now decode the returned RR information, and show the cryptographic algorithms by name instead of number.
 
 - The search domains hard cap has been bumped from 256 to 1024, in order to accommodate complex network setups.
 
-## systemd-hostnamed:
+## [`systemd-hostnamed`][systemd-hostnamed]:
 
 - The system hardware's serial number may now be read from DeviceTree too, in addition to the existing SMBIOS/DMI based logic.
 
@@ -320,7 +320,7 @@ title: systemd v258 Release Notes
 
 - hostnamed also exposes properties now for the image ID and image version (this is very useful on image-based systems).
 
-## systemd-stub, systemd-boot & bootctl:
+## systemd-stub, [`systemd-boot`][systemd-boot] & [`bootctl`][bootctl]:
 
 - UEFI firmware images may now be embedded in UKIs (in an ".efifw" PE section), for use in bring-your-own-firmware scenarios in Confidential Computing. The firmware is matched via CHIDs to the local invoking VM, in a fashion conceptually close to the DeviceTree selection already available since v257. If a suitable firmware image is found at boot, and the system's firmware version does not match it, the update is applied and the system is rebooted. If the firmware matches, boot proceeds as usual.
 
@@ -338,7 +338,7 @@ title: systemd v258 Release Notes
 
 - bootctl's --graceful is now implicitly enabled when running in a chroot, to ease integration in packaging scriptlets.
 
-- systemd-stub gained support for a couple of "extension" CHIDs, that are not part of the Microsoft's original spec, and which include EDID display identification information in the hash. This may be used to match Devicetree blobs in UKIs. "systemd-analyze chid" has been updated to support these extension CHIDs, too. (They are clearly marked as extensions CHIDs, to emphasize they are systemd's own invention, and not based on the Windows CHID spec.)
+- systemd-stub gained support for a couple of "extension" CHIDs, that are not part of the Microsoft's original spec, and which include EDID display identification information in the hash. This may be used to match Devicetree blobs in UKIs. "[`systemd-analyze`][systemd-analyze] chid" has been updated to support these extension CHIDs, too. (They are clearly marked as extensions CHIDs, to emphasize they are systemd's own invention, and not based on the Windows CHID spec.)
 
 - systemd-boot's loader.conf configuration file gained a new secure-boot-enroll-action setting which controls the action to take once automatic Secure Boot keys have been enrolled, i.e. whether to reboot or whether to shut down the system.
 
@@ -348,7 +348,7 @@ title: systemd v258 Release Notes
 
 - systemd-stub will now also load global sysexts and confexts from ESP/loader/extensions/*.{sysext,confext}.raw.
 
-## systemd-nsresourced & systemd-mountfsd:
+## [`systemd-nsresourced`][systemd-nsresourced] & [`systemd-mountfsd`][systemd-mountfsd]:
 
 - When a new user namespace is registered and a name for it must be supplied, this name may now optionally be mangled automatically so that it follows the naming rules for namespaces employed. This makes it easier to provide suitable identifiers to the service, without any client-side preparations or clean-ups, and thus ensures allocation of a userns can ultimately "just work".
 
@@ -394,7 +394,7 @@ title: systemd v258 Release Notes
 
 - A new --notify-ready= setting can be used to specify whether to expect a READY=1 notification from the guest.
 
-## systemd-machined:
+## [`systemd-machined`][systemd-machined]:
 
 - systemd-machined now provides a comprehensive Varlink IPC API.
 
@@ -404,7 +404,7 @@ title: systemd v258 Release Notes
 
 - systemd-machined now also tracks the "supervisor" process of a machine, i.e. the host process that manages the payload. This information is exposed through the Supervisor/SupervisorPIDFDId D-Bus properties and "supervisor"/supervisorProcessId" varlink properties.
 
-## systemd-measure, ukify, systemd-keyutil, systemd-sbsign:
+## [`systemd-measure`][systemd-measure], ukify, [`systemd-keyutil`][systemd-keyutil], [`systemd-sbsign`][systemd-sbsign]:
 
 - systemd-measure gained a new "policy-digest" verb. It's a lot like "sign" but instead of calculating the right TPM policy digest for a specific UKI to sign and then signing it, it leaves the latter step out. This is useful to implement offline signing of the policy digest of UKIS. ukify gained a --policy-digest option that exposes this logic.
 
@@ -426,19 +426,19 @@ title: systemd v258 Release Notes
 
 - A new service systemd-tpm2-clear.service has been introduced that can be used to request clearing of the local TPM on next reboot. It comes with a kernel command line option systemd.tpm2_allow_clear= that controls its effect. The unit is hooked into the generic factory-reset.target unit, so that it can do its thing when a factory reset is requested.
 
-- If systemd-pcrextend (i.e. the tool making the various userspace TPM PCR measurements) fails to do its thing, an immediate reboot is now triggered, ensuring that somehow making PCR extensions fails cannot be used to gain access to TPM objects to which access should have been blocked already via PCR measurements.
+- If [`systemd-pcrextend`][systemd-pcrextend] (i.e. the tool making the various userspace TPM PCR measurements) fails to do its thing, an immediate reboot is now triggered, ensuring that somehow making PCR extensions fails cannot be used to gain access to TPM objects to which access should have been blocked already via PCR measurements.
 
 - systemd-pcrlock gained a new "is-supported" verb that determines whether local TPM and system provide all necessary functionality for systemd-pcrlock to work. It does a superset of the checks "systemd-analyze has-tpm2" does, and additionally ensures that the TPM supports PolicyAuthorizeNV and SHA-256.
 
-## systemd-userdbd & systemd-homed:
+## [`systemd-userdbd`][systemd-userdbd] & systemd-homed:
 
-- User records now support a new field "aliases" that may list additional names the user record shall be accessible under. Any string listed in the "aliases" array may be used wherever and whenever the primary name may be used too, for example when logging in. systemd-homed and in particular homectl have been updated to support configuration of such alias names.
+- User records now support a new field "aliases" that may list additional names the user record shall be accessible under. Any string listed in the "aliases" array may be used wherever and whenever the primary name may be used too, for example when logging in. systemd-homed and in particular [`homectl`][homectl] have been updated to support configuration of such alias names.
 
 - If a user record has an initialized "realm" field, then the record may now be referenced via the primary user name or any alias name, suffixed with "@" and the realm, too.
 
 - User records gained new fields tmpLimit, tmpLimitScale, devShmLimit, devShmLimitScale which enforce quota on /tmp/ and /dev/shm/ at login time, either in absolute or in relative values. These values default to 80% for regular users, ensuring that a single user cannot easily DoS a local system by taking away all disk space in /tmp/. The homectl tool has been updated to make these new fields configurable.
 
-- The userdb Varlink interface has been extended to support server-side filtering by UID/GID min/max, fuzzy name matching and user disposition. Previously this was supported by the userdbctl client-side only. With this, userdb providers may now optionally implement this server-side too in order to optimize the lookups.
+- The userdb Varlink interface has been extended to support server-side filtering by UID/GID min/max, fuzzy name matching and user disposition. Previously this was supported by the [`userdbctl`][userdbctl] client-side only. With this, userdb providers may now optionally implement this server-side too in order to optimize the lookups.
 
 - User records now support a concept of home "areas", i.e. subdirectories of the primary $HOME directory that a user can log into. This is useful to maintain separate development environments or configuration contexts, but within the ownership of the same user. Support for this is implemented in systemd-homed, but is conceptually open to other backends, too.
 
@@ -492,7 +492,7 @@ which is configurable with homectl's --default-area= switch.
 
 - User/group records gained a new "uuid" field that may be used to place an identifying UUID in the record.
 
-## systemd-run and run0:
+## systemd-run and [`run0`][run0]:
 
 - run0 gained a new --lightweight= switch which controls whether to pull in a service manager for the target session (i.e. this ultimately chooses between the "user"/"user-early" session class on one hand or the "user-light"/"user-early-light" session class on the other, see above).
 
@@ -506,7 +506,7 @@ which is configurable with homectl's --default-area= switch.
 
 - run0 gained a new --via-shell switch that ensures any specified command is invoked via the target user's shell instead of directly.
 
-## DDI support & systemd-dissect:
+## DDI support & [`systemd-dissect`][systemd-dissect]:
 
 - systemd-dissect gained a new --loop-ref-auto switch which initializes the --look-ref= field from a suitable string derived from the DDI filename.
 
@@ -524,11 +524,11 @@ which is configurable with homectl's --default-area= switch.
 
 - When dissecting/mounting a DDI disk image, and no Verity root hash or signature is provided, suitable values are now automatically discovered from the image itself.
 
-- systemd-gpt-auto-generator now understands root=dissect and mount.usr=dissect as kernel command line options that explicitly request the full blown DDI dissector to be used to discover the root and /usr/ file system, including automatic Verity root hash and signature discovery, automatic handling of versioning, image policy enforcement and filtering and so on.
+- [`systemd-gpt-auto-generator`][systemd-gpt-auto-generator] now understands root=dissect and mount.usr=dissect as kernel command line options that explicitly request the full blown DDI dissector to be used to discover the root and /usr/ file system, including automatic Verity root hash and signature discovery, automatic handling of versioning, image policy enforcement and filtering and so on.
 
 - The DDI dissection logic now understands a concept of partition "filtering". A partition filter is simply a per-designator globbing pattern to match the partition labels against. This may be used support parallel installations of multiple operating systems on the same disk, where each OS names its partitions with a specific prefix or similar. systemd-dissect gained a new --image-filter= switch to configure this filter. The new "dissect_image" udev plugin and systemd-gpt-auto-generator now understand the new systemd.image_filter= kernel command line switch configuring this filter for the system.
 
-##      systemd-importd & importctl:
+##      systemd-importd & [`importctl`][importctl]:
 
 - systemd-pull/importctl now supports ASCII armored (*.asc) GPG signatures.
 
@@ -558,7 +558,7 @@ which is configurable with homectl's --default-area= switch.
 
 - A new target unit factory-reset-now.target has been added that executes an immediate factory reset. (Previously factory-reset.target existed already that requested it for next reboot).
 
-- A new kernel command line option systemd.factory_reset= has been added for explicitly requesting a factory reset. (Implemented via a new systemd-factory-reset-generator)
+- A new kernel command line option systemd.factory_reset= has been added for explicitly requesting a factory reset. (Implemented via a new [`systemd-factory-reset-generator`][systemd-factory-reset-generator])
 
 - A new document explaining the factory reset logic in detail has been added.
   It is available online here: <https://systemd.io/FACTORY_RESET>
@@ -577,7 +577,7 @@ which is configurable with homectl's --default-area= switch.
 
 - systemd-repart will now enforce a minimum size for ESP/XBOOTLDR partitions of 100M (on 512b sector drives) or 260M (on 4K sector drives), in accordance to the requirements for these kind of partitions.
 
-- The Format= setting in repart.d/ files gained support for a special value "empty". This is a shortcut to set up an empty partition and set the partition label to "_empty", and set the "NoAuto" GPT flag. The former is useful as systemd-sysupdate recognizes empty partitions that way, the latter is useful to ensure that the partition is not automatically made used of as is, on any OS that supports GPT.
+- The Format= setting in repart.d/ files gained support for a special value "empty". This is a shortcut to set up an empty partition and set the partition label to "_empty", and set the "NoAuto" GPT flag. The former is useful as [`systemd-sysupdate`][systemd-sysupdate] recognizes empty partitions that way, the latter is useful to ensure that the partition is not automatically made used of as is, on any OS that supports GPT.
 
 ##     systemd-analyze:
 
@@ -599,25 +599,25 @@ which is configurable with homectl's --default-area= switch.
 
 - New kernel command line parameters systemd.break= and rd.systemd.break= have been introduced that insert interactive (as in: shell prompt) "breakpoints" into the boot process at various locations, in order to simplify debugging. For now four breakpoints are defined: "pre-udev", "pre-basic", "pre-mount", "pre-switch-root". Similar functionality has previously existed in the Dracut initrd generator, but is generalized with this new concept, and extended to the post-switch-root boot phases.
 
-- The systemd-path tool now learnt new paths for the per-system and per-user credential store.
+- The [`systemd-path`][systemd-path] tool now learnt new paths for the per-system and per-user credential store.
 
-- A new tool systemd-pty-forward has been added that allocates a pseudo TTY ("PTY") and invokes a process on it, forwarding any output to the TTY it is invoked on. It can optionally apply background coloring and suchlike, and is mostly just a separate tool that makes the PTY forwarding logic used in systemd-nspawn, systemd-vmspawn, run0 available separately.
+- A new tool [`systemd-pty-forward`][systemd-pty-forward] has been added that allocates a pseudo TTY ("PTY") and invokes a process on it, forwarding any output to the TTY it is invoked on. It can optionally apply background coloring and suchlike, and is mostly just a separate tool that makes the PTY forwarding logic used in systemd-nspawn, systemd-vmspawn, run0 available separately.
 
-- systemd-oomd can now reload its configuration at runtime, following the usual protocols.
+- [`systemd-oomd`][systemd-oomd] can now reload its configuration at runtime, following the usual protocols.
 
 - systemd-detect & ConditionVirtualization= now recognize the "Arm Confidential Compute Architecture" (cca) confidential virtualization.
 
-- systemd-detect-virt now correctly distinguishes between bare-metal and virtualized machines in Google Compute Engine, and will not report the former as virtualized.
+- [`systemd-detect-virt`][systemd-detect-virt] now correctly distinguishes between bare-metal and virtualized machines in Google Compute Engine, and will not report the former as virtualized.
 
-- systemd-sysusers now generates Linux audit records when it adds system users.
+- [`systemd-sysusers`][systemd-sysusers] now generates Linux audit records when it adds system users.
 
-- systemd-firstboot's interactive prompts for locale or keymaps now support tab completion.
+- [`systemd-firstboot`][systemd-firstboot]'s interactive prompts for locale or keymaps now support tab completion.
 
-- systemd-mount gained support for a new --canonicalize= switch that may be used to turn off client-side path canonicalization before trying to unmount some path.
+- [`systemd-mount`][systemd-mount] gained support for a new --canonicalize= switch that may be used to turn off client-side path canonicalization before trying to unmount some path.
 
-- systemd-notify gained a new --fork switch which inverts the role that systemd-notify plays in the sd_notify() protocol: instead of sending out notification messages, it will listen for them, forking off a command that is expected to send them. Once READY=1 is received systemd-notify will exit, leaving the child running. This is useful for correctly forking off processes that implement the sd_notify() protocol from shell scripts.
+- [`systemd-notify`][systemd-notify] gained a new --fork switch which inverts the role that systemd-notify plays in the sd_notify() protocol: instead of sending out notification messages, it will listen for them, forking off a command that is expected to send them. Once READY=1 is received systemd-notify will exit, leaving the child running. This is useful for correctly forking off processes that implement the sd_notify() protocol from shell scripts.
 
-- systemd-fstab-generator now supports a root=bind:… syntax for creating bind mounts for the root file system.
+- [`systemd-fstab-generator`][systemd-fstab-generator] now supports a root=bind:… syntax for creating bind mounts for the root file system.
   This is useful for booting into tarballs downloaded at boot.
   As an example, consider a kernel command line like this:
 
@@ -638,7 +638,7 @@ which is configurable with homectl's --default-area= switch.
 
 - If PID 1 makes up a suitable $TERM for a TTY it activates a service on (in case there are no other hints on how to choose it) it will now also set $COLORTERM=truecolor. Moreover, if $COLORTERM or $NO_COLOR are set on the kernel cmdline we'll now import them into PID1's environment block, just like $TERM itself. Moreover, systemd-nspawn and run0 will now propagate $COLORTERM and $NO_COLOR from the calling to the target environment, if set, just like $TERM is already handled. Or to say this with different words: the triplet of $TERM, $COLORTERM, $NO_COLOR is now processed jointly and in similar ways, wherever appropriate.
 
-- systemd-update-done gained a new --root= switch to operate in "offline" mode on a specific file system tree.
+- [`systemd-update-done`][systemd-update-done] gained a new --root= switch to operate in "offline" mode on a specific file system tree.
 
 - A new template service systemd-validatefs@.service has been added that can validate usage of file systems. Specifically, it will look for certain extended attributes stored on the top-level directory inode of the mount, which may encode various constraints on use of the file system. For example, it may encode a directory path the file system must be mounted to, a GPT type UUID that must be used for the partition the file system is located in and more. This provides protection in case GPT auto-discovery is used to discover the mounts, but essential metadata outside of the file system itself has been tampered with. This operates under the assumption that the extended attributes on the root inode of the file system are protected by dm-verity or dm-crypt/dm-integrity, even if the GPT metadata has no equivalent cryptographic protection. If a file system carries these extended attributes but they do not match the current use and location of the file system an immediate reboot is triggered.
 
@@ -646,27 +646,27 @@ which is configurable with homectl's --default-area= switch.
 
 - systemd-fstab-auto-generator and systemd-gpt-auto-generator now understand root=off on the kernel command line which may be used to turn off any automatic or non-automatic mounting of the root file system. This is useful in scenarios where a boot process shall never transition from initrd context into host context.
 
-- systemd-ssh-proxy now supports an alternative syntax for connecting to SSH-over-AF_VSOCK, in order to support scp and rsync better: "scp foo.txt vsock%4711:" should work now. (The pre-existing syntax used "/" instead of "%" as separator, which is ambiguous in scp/rsync context even if not for ssh itself.)
+- [`systemd-ssh-proxy`][systemd-ssh-proxy] now supports an alternative syntax for connecting to SSH-over-AF_VSOCK, in order to support scp and rsync better: "scp foo.txt vsock%4711:" should work now. (The pre-existing syntax used "/" instead of "%" as separator, which is ambiguous in scp/rsync context even if not for ssh itself.)
 
 - "systemctl start" and related verbs now support a new --verbose mode. If specified the live log output of the units operated on is shown as long as the operation lasts.
 
-- sd-bus: a new API call sd_bus_message_dump_json() returns a JSON representation of a D-Bus message.
+- [`sd-bus`][sd-bus]: a new API call sd_bus_message_dump_json() returns a JSON representation of a D-Bus message.
 
-- sd-daemon: a new call sd_pidfd_get_inode_id() has been added for acquiring the unique inode ID of a pidfd, coupling the $MAINPIDFDID/$MANAGERPIDFDID and session/machine leader pidfd IDs exposed as described above.
+- [`sd-daemon`][sd-daemon]: a new call sd_pidfd_get_inode_id() has been added for acquiring the unique inode ID of a pidfd, coupling the $MAINPIDFDID/$MANAGERPIDFDID and session/machine leader pidfd IDs exposed as described above.
 
-- systemd-coredump will now attach a new COREDUMP_DUMPABLE= journal field to all coredumps indicating the "dumpable" per-process flag (as settable via PR_SET_DUMPABLE) at the moment the coredump took place. It will also add a new journal field COREDUMP_BY_PIDFD= that indicates whether the coredump was acquired via a stable pidfd to the process.
+- [`systemd-coredump`][systemd-coredump] will now attach a new COREDUMP_DUMPABLE= journal field to all coredumps indicating the "dumpable" per-process flag (as settable via PR_SET_DUMPABLE) at the moment the coredump took place. It will also add a new journal field COREDUMP_BY_PIDFD= that indicates whether the coredump was acquired via a stable pidfd to the process.
 
-- systemd-sysext (and portable services with sysexts applied) will now take the os-release "ID_LIKE=" field into account when validating that a sysext images is compatible with the underlying image. Previously it would only check "ID=".
+- [`systemd-sysext`][systemd-sysext] (and portable services with sysexts applied) will now take the os-release "ID_LIKE=" field into account when validating that a sysext images is compatible with the underlying image. Previously it would only check "ID=".
 
 - A new UID range has been defined for "greeters", i.e. graphical login prompt UIs that shall be security isolated from each other. This is supposed to be used by graphical display managers (specifically: gdm), to ensure that it is harder to exploit the UI sessions used to prompt the user for login credentials, in order to gain access to the prompts of other users.
 
-- systemd-socket-activate gained a new --now switch which ensures the specified binary is immediately invoked, and not delayed until a connection comes in.
+- [`systemd-socket-activate`][systemd-socket-activate] gained a new --now switch which ensures the specified binary is immediately invoked, and not delayed until a connection comes in.
 
-- systemd-ssh-generator will now generate the AF_VSOCK ssh listener .socket unit, so that a tiny new helper "systemd-ssh-issue" is invoked when the socket is bound, that generates a drop-in file /run/issue.d/50-ssh-vsock.issue that is shown by "login" and other subsystems at login time. The file reports the AF_VSOCK CID of the system, along with very brief information how to connect to the system via ssh-over-AF_VSOCK. Or in other words: if the system is booted up in an AF_VSOCK capable VM the console login screen shown once boot-up is complete will tell you how to connect to the system via SSH, if that's available.
+- [`systemd-ssh-generator`][systemd-ssh-generator] will now generate the AF_VSOCK ssh listener .socket unit, so that a tiny new helper "[`systemd-ssh-issue`][systemd-ssh-issue]" is invoked when the socket is bound, that generates a drop-in file /run/issue.d/50-ssh-vsock.issue that is shown by "login" and other subsystems at login time. The file reports the AF_VSOCK CID of the system, along with very brief information how to connect to the system via ssh-over-AF_VSOCK. Or in other words: if the system is booted up in an AF_VSOCK capable VM the console login screen shown once boot-up is complete will tell you how to connect to the system via SSH, if that's available.
 
-- systemd-fsck gained fsck.mode and fsck.repair credentials support to control the execution mode of fsck.
+- [`systemd-fsck`][systemd-fsck] gained fsck.mode and fsck.repair credentials support to control the execution mode of fsck.
 
-- systemd-quotacheck gained quotacheck.mode credential support to control the execution mode of quotacheck.
+- [`systemd-quotacheck`][systemd-quotacheck] gained quotacheck.mode credential support to control the execution mode of quotacheck.
 
 ## Contributors
 
@@ -740,3 +740,71 @@ tytan652, val4oss, ver4a, victor-ok, vlefebvre, wrvsrx, wtmpx,
 xinpeng wang, z z, Дамјан Георгиевски, наб, 铝箔, 김인수
 
 — Edinburgh, 2025/09/17
+
+[bootctl]: https://www.freedesktop.org/software/systemd/man/258/bootctl.html
+[homectl]: https://www.freedesktop.org/software/systemd/man/258/homectl.html
+[importctl]: https://www.freedesktop.org/software/systemd/man/258/importctl.html
+[journalctl]: https://www.freedesktop.org/software/systemd/man/258/journalctl.html
+[resolvectl]: https://www.freedesktop.org/software/systemd/man/258/resolvectl.html
+[run0]: https://www.freedesktop.org/software/systemd/man/258/run0.html
+[sd-bus]: https://www.freedesktop.org/software/systemd/man/258/sd-bus.html
+[sd-daemon]: https://www.freedesktop.org/software/systemd/man/258/sd-daemon.html
+[sd-device]: https://www.freedesktop.org/software/systemd/man/258/sd-device.html
+[sd-json]: https://www.freedesktop.org/software/systemd/man/258/sd-json.html
+[sd-varlink]: https://www.freedesktop.org/software/systemd/man/258/sd-varlink.html
+[systemctl]: https://www.freedesktop.org/software/systemd/man/258/systemctl.html
+[systemd-analyze]: https://www.freedesktop.org/software/systemd/man/258/systemd-analyze.html
+[systemd-ask-password]: https://www.freedesktop.org/software/systemd/man/258/systemd-ask-password.html
+[systemd-boot]: https://www.freedesktop.org/software/systemd/man/258/systemd-boot.html
+[systemd-coredump]: https://www.freedesktop.org/software/systemd/man/258/systemd-coredump.html
+[systemd-creds]: https://www.freedesktop.org/software/systemd/man/258/systemd-creds.html
+[systemd-cryptenroll]: https://www.freedesktop.org/software/systemd/man/258/systemd-cryptenroll.html
+[systemd-detect-virt]: https://www.freedesktop.org/software/systemd/man/258/systemd-detect-virt.html
+[systemd-dissect]: https://www.freedesktop.org/software/systemd/man/258/systemd-dissect.html
+[systemd-factory-reset]: https://www.freedesktop.org/software/systemd/man/258/systemd-factory-reset.html
+[systemd-factory-reset-generator]: https://www.freedesktop.org/software/systemd/man/258/systemd-factory-reset-generator.html
+[systemd-firstboot]: https://www.freedesktop.org/software/systemd/man/258/systemd-firstboot.html
+[systemd-fsck]: https://www.freedesktop.org/software/systemd/man/258/systemd-fsck.html
+[systemd-fstab-generator]: https://www.freedesktop.org/software/systemd/man/258/systemd-fstab-generator.html
+[systemd-gpt-auto-generator]: https://www.freedesktop.org/software/systemd/man/258/systemd-gpt-auto-generator.html
+[systemd-homed]: https://www.freedesktop.org/software/systemd/man/258/systemd-homed.html
+[systemd-hostnamed]: https://www.freedesktop.org/software/systemd/man/258/systemd-hostnamed.html
+[systemd-hwdb]: https://www.freedesktop.org/software/systemd/man/258/systemd-hwdb.html
+[systemd-importd]: https://www.freedesktop.org/software/systemd/man/258/systemd-importd.html
+[systemd-journald]: https://www.freedesktop.org/software/systemd/man/258/systemd-journald.html
+[systemd-keyutil]: https://www.freedesktop.org/software/systemd/man/258/systemd-keyutil.html
+[systemd-logind]: https://www.freedesktop.org/software/systemd/man/258/systemd-logind.html
+[systemd-machined]: https://www.freedesktop.org/software/systemd/man/258/systemd-machined.html
+[systemd-measure]: https://www.freedesktop.org/software/systemd/man/258/systemd-measure.html
+[systemd-mount]: https://www.freedesktop.org/software/systemd/man/258/systemd-mount.html
+[systemd-mountfsd]: https://www.freedesktop.org/software/systemd/man/258/systemd-mountfsd.html
+[systemd-networkd]: https://www.freedesktop.org/software/systemd/man/258/systemd-networkd.html
+[systemd-networkd-wait-online]: https://www.freedesktop.org/software/systemd/man/258/systemd-networkd-wait-online.html
+[systemd-notify]: https://www.freedesktop.org/software/systemd/man/258/systemd-notify.html
+[systemd-nspawn]: https://www.freedesktop.org/software/systemd/man/258/systemd-nspawn.html
+[systemd-nsresourced]: https://www.freedesktop.org/software/systemd/man/258/systemd-nsresourced.html
+[systemd-oomd]: https://www.freedesktop.org/software/systemd/man/258/systemd-oomd.html
+[systemd-path]: https://www.freedesktop.org/software/systemd/man/258/systemd-path.html
+[systemd-pcrextend]: https://www.freedesktop.org/software/systemd/man/258/systemd-pcrextend.html
+[systemd-pcrlock]: https://www.freedesktop.org/software/systemd/man/258/systemd-pcrlock.html
+[systemd-pty-forward]: https://www.freedesktop.org/software/systemd/man/258/systemd-pty-forward.html
+[systemd-quotacheck]: https://www.freedesktop.org/software/systemd/man/258/systemd-quotacheck.html
+[systemd-repart]: https://www.freedesktop.org/software/systemd/man/258/systemd-repart.html
+[systemd-resolved]: https://www.freedesktop.org/software/systemd/man/258/systemd-resolved.html
+[systemd-run]: https://www.freedesktop.org/software/systemd/man/258/systemd-run.html
+[systemd-sbsign]: https://www.freedesktop.org/software/systemd/man/258/systemd-sbsign.html
+[systemd-socket-activate]: https://www.freedesktop.org/software/systemd/man/258/systemd-socket-activate.html
+[systemd-ssh-generator]: https://www.freedesktop.org/software/systemd/man/258/systemd-ssh-generator.html
+[systemd-ssh-issue]: https://www.freedesktop.org/software/systemd/man/258/systemd-ssh-issue.html
+[systemd-ssh-proxy]: https://www.freedesktop.org/software/systemd/man/258/systemd-ssh-proxy.html
+[systemd-stub]: https://www.freedesktop.org/software/systemd/man/258/systemd-stub.html
+[systemd-sysext]: https://www.freedesktop.org/software/systemd/man/258/systemd-sysext.html
+[systemd-sysupdate]: https://www.freedesktop.org/software/systemd/man/258/systemd-sysupdate.html
+[systemd-sysusers]: https://www.freedesktop.org/software/systemd/man/258/systemd-sysusers.html
+[systemd-udevd]: https://www.freedesktop.org/software/systemd/man/258/systemd-udevd.html
+[systemd-update-done]: https://www.freedesktop.org/software/systemd/man/258/systemd-update-done.html
+[systemd-userdbd]: https://www.freedesktop.org/software/systemd/man/258/systemd-userdbd.html
+[systemd-vmspawn]: https://www.freedesktop.org/software/systemd/man/258/systemd-vmspawn.html
+[udevadm]: https://www.freedesktop.org/software/systemd/man/258/udevadm.html
+[userdbctl]: https://www.freedesktop.org/software/systemd/man/258/userdbctl.html
+[varlinkctl]: https://www.freedesktop.org/software/systemd/man/258/varlinkctl.html
