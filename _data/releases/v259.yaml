@@ -1,0 +1,92 @@
+version: v259
+title: systemd v259
+date: 2025-12-17
+path: /systemd-259/
+release_notes: /systemd-259/release-notes.html
+
+commentary:
+  - num: 1
+    title: resolved hooks
+    path: /systemd-259/posts/01-resolved-hooks.html
+  - num: 2
+    title: dlopen() dependencies
+    path: /systemd-259/posts/02-dlopen-dependencies.html
+  - num: 3
+    title: dlopen-metadata
+    path: /systemd-259/posts/03-dlopen-metadata.html
+  - num: 4
+    title: run0 --empower
+    path: /systemd-259/posts/04-run0-empower.html
+  - num: 5
+    title: vmspawn --bind-user
+    path: /systemd-259/posts/05-vmspawn-bind-user.html
+  - num: 6
+    title: musl libc
+    path: /systemd-259/posts/06-musl-libc.html
+  - num: 7
+    title: repart size calc
+    path: /systemd-259/posts/07-repart-size-calc.html
+  - num: 8
+    title: modules-load parallel
+    path: /systemd-259/posts/08-modules-load-parallel.html
+  - num: 9
+    title: TPM verified boot
+    path: /systemd-259/posts/09-tpm-verified-boot.html
+  - num: 10
+    title: analyze nvpcrs
+    path: /systemd-259/posts/10-analyze-nvpcrs.html
+  - num: 11
+    title: repart varlink
+    path: /systemd-259/posts/11-repart-varlink.html
+  - num: 12
+    title: vmspawn disk
+    path: /systemd-259/posts/12-vmspawn-disk.html
+  - num: 13
+    title: defer-partitions
+    path: /systemd-259/posts/13-defer-partitions.html
+
+sections:
+  - title: Announcements
+    anchor: announcements-of-future-feature-removals-and-incompatible-changes
+  - title: Feature Removals
+    anchor: feature-removals-and-incompatible-changes
+  - title: Service manager/PID1
+    anchor: service-managerpid1
+  - title: systemd-sysext/confext
+    anchor: systemd-sysextsystemd-confext
+  - title: systemd-vmspawn/nspawn
+    anchor: systemd-vmspawnsystemd-nspawn
+  - title: systemd-repart
+    anchor: systemd-repart
+  - title: systemd-udevd
+    anchor: systemd-udevd
+  - title: systemd-homed/homectl
+    anchor: systemd-homedhomectl
+  - title: systemd-boot/stub
+    anchor: systemd-bootsystemd-stub
+  - title: sd-varlink/varlinkctl
+    anchor: sd-varlinkvarlinkctl
+  - title: Shared library deps
+    anchor: shared-library-dependencies
+  - title: systemd-machined/importd
+    anchor: systemd-machinedsystemd-importd
+  - title: systemd-firstboot
+    anchor: systemd-firstboot
+  - title: systemd-creds
+    anchor: systemd-creds
+  - title: systemd-networkd
+    anchor: systemd-networkd
+  - title: systemd-resolved
+    anchor: systemd-resolved
+  - title: TPM2 infrastructure
+    anchor: tpm2-infrastructure
+  - title: systemd-analyze
+    anchor: systemd-analyze
+  - title: systemd-run/run0
+    anchor: systemd-runrun0
+  - title: sd-event
+    anchor: sd-event
+  - title: Other
+    anchor: other
+  - title: Contributors
+    anchor: contributors

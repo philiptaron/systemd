@@ -5,7 +5,7 @@
   --textcolor: #121212;
   --bgcolor: #fff;
   --highlight: #2749c9;
-  --sidebar-width: 16rem;
+  --sidebar-width: 18rem;
 
 }
 
@@ -84,17 +84,62 @@ body {
   color: var(--highlight);
 }
 
-.toc {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(128, 128, 128, 0.2);
+/* ------- Sidebar TOC ------- */
+
+.sidebar h3 {
+  font-size: 0.8em;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem 0;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.toc h3 {
-  font-size: 0.85em;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  opacity: 0.7;
+.sidebar h3:first-of-type {
+  margin-top: 0;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.toc-list > li {
+  margin-bottom: 0.25rem;
+}
+
+.toc-list a {
+  color: var(--textcolor);
+  opacity: 0.8;
+  display: block;
+  padding: 0.15rem 0;
+}
+
+.toc-list a:hover {
+  opacity: 1;
+  color: var(--highlight);
+  border-bottom: none;
+}
+
+.toc-sublist {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.25rem 0 0.5rem 0;
+  font-size: 0.9em;
+}
+
+.toc-sublist li {
+  margin-bottom: 0.15rem;
+}
+
+.toc-sublist a {
+  opacity: 0.6;
+}
+
+.toc-sublist a:hover {
+  opacity: 1;
 }
 
 /* ------- Main Content ------- */

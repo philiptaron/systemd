@@ -1,12 +1,48 @@
 <aside class="sidebar">
     <nav class="site-nav">
         <h2><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
+
+        {% if page.url == "/" or page.url == "/index.html" %}
+        <!-- Index page: show releases with section sublists -->
+        <h3>Releases</h3>
+        <ul class="toc-list">
+            {% for release in site.data.releases %}
+            <li>
+                <a href="{{ site.baseurl }}{{ release[1].path }}">{{ release[1].title }}</a>
+                <ul class="toc-sublist">
+                    {% for section in release[1].sections %}
+                    <li><a href="{{ site.baseurl }}{{ release[1].release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+
+        {% elsif page.url contains "/systemd-" %}
+        <!-- Release page: show commentary + sections -->
+        {% assign release_path = page.url | split: "/" | slice: 1 %}
+        {% assign release_key = release_path[0] | replace: "systemd-", "v" %}
+        {% assign release = site.data.releases[release_key] %}
+
+        {% if release %}
+        <h3>Commentary</h3>
+        <ul class="toc-list">
+            {% for post in release.commentary %}
+            <li><a href="{{ site.baseurl }}{{ post.path }}">{{ post.num }}. {{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h3>Sections</h3>
+        <ul class="toc-list">
+            {% for section in release.sections %}
+            <li><a href="{{ site.baseurl }}{{ release.release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% else %}
+        <!-- Fallback: simple navigation -->
         {% include navigation.html %}
+        {% endif %}
     </nav>
-    {% if page.toc %}
-    <nav class="toc">
-        <h3>On this page</h3>
-        {{ page.toc }}
-    </nav>
-    {% endif %}
 </aside>

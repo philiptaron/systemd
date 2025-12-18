@@ -1,5 +1,3 @@
-- title: Home
-  url: /
-
+# Fallback navigation (used when not on index or release pages)
 - title: systemd v259
   url: /systemd-259/
