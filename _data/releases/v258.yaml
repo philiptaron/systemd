@@ -170,59 +170,59 @@ commentary:
   title: eBPF delegation
   path: /systemd-258/posts/55-ebpf-delegation.html
 sections:
-- title: 'Incompatible changes:'
+- title: Incompatible changes
   anchor: incompatible-changes
-- title: Announcements of Futur...
+- title: Announcements
   anchor: announcements-of-future-feature-removals
-- title: 'Service manager/PID1:'
+- title: Service manager/PID1
   anchor: service-managerpid1
-- title: systemd-journald & jou...
+- title: systemd-journald
   anchor: systemd-journald-journal-remote
-- title: systemd-udevd & system...
+- title: systemd-udevd/hwdb
   anchor: systemd-udevd-systemd-hwdb
-- title: 'systemd-networkd:'
+- title: systemd-networkd
   anchor: systemd-networkd
-- title: 'sd-varlink & sd-json:'
+- title: sd-varlink/sd-json
   anchor: sd-varlink-sd-json
-- title: 'varlinkctl:'
+- title: varlinkctl
   anchor: varlinkctl
-- title: 'sd-device:'
+- title: sd-device
   anchor: sd-device
-- title: 'systemd-logind:'
+- title: systemd-logind
   anchor: systemd-logind
-- title: 'systemd-resolved:'
+- title: systemd-resolved
   anchor: systemd-resolved
-- title: 'systemd-hostnamed:'
+- title: systemd-hostnamed
   anchor: systemd-hostnamed
-- title: systemd-stub, systemd-...
+- title: systemd-stub/boot
   anchor: systemd-stub-systemd-boot-bootctl
-- title: systemd-nsresourced & ...
+- title: systemd-nsresourced
   anchor: systemd-nsresourced-systemd-mountfsd
-- title: 'systemd-nspawn:'
+- title: systemd-nspawn
   anchor: systemd-nspawn
-- title: 'systemd-vmspawn:'
+- title: systemd-vmspawn
   anchor: systemd-vmspawn
-- title: 'systemd-machined:'
+- title: systemd-machined
   anchor: systemd-machined
-- title: systemd-measure, ukify...
+- title: systemd-measure/ukify
   anchor: systemd-measure-ukify-systemd-keyutil-systemd-sbsign
-- title: 'TPM2:'
+- title: TPM2
   anchor: tpm2
-- title: systemd-userdbd & syst...
+- title: systemd-userdbd/homed
   anchor: systemd-userdbd-systemd-homed
-- title: 'systemd-run and run0:'
+- title: systemd-run/run0
   anchor: systemd-run-and-run0
-- title: DDI support & systemd-...
+- title: DDI/systemd-dissect
   anchor: ddi-support-systemd-dissect
-- title: systemd-importd & impo...
+- title: systemd-importd
   anchor: systemd-importd-importctl
-- title: 'Factory Reset:'
+- title: Factory Reset
   anchor: factory-reset
-- title: 'systemd-repart:'
+- title: systemd-repart
   anchor: systemd-repart
-- title: 'systemd-analyze:'
+- title: systemd-analyze
   anchor: systemd-analyze
-- title: 'Other:'
+- title: Other
   anchor: other
 - title: Contributors
   anchor: contributors
