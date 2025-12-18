@@ -1,0 +1,2 @@
+description: Enable event loop exit-on-idle support
+url: https://www.freedesktop.org/software/systemd/man/259/sd_event_get_exit_on_idle.html

@@ -1,0 +1,2 @@
+description: Create, reference, and release a device enumerator object
+url: https://www.freedesktop.org/software/systemd/man/259/sd_device_enumerator_unrefp.html

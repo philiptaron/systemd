@@ -1,0 +1,2 @@
+description: Generate network configuration from the kernel command line
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-network-generator.service.html

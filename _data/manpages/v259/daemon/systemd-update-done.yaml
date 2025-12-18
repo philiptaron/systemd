@@ -1,0 +1,2 @@
+description: Mark /etc/ and /var/ as fully updated
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-update-done.html

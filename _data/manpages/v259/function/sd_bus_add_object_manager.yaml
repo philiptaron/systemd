@@ -1,0 +1,2 @@
+description: Add a D-Bus object manager for a D-Bus object sub-tree
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_add_object_manager.html

@@ -1,0 +1,2 @@
+description: Register user sessions in the systemd login manager
+url: https://www.freedesktop.org/software/systemd/man/259/pam_systemd.html

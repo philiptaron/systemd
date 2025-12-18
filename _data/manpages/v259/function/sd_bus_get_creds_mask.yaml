@@ -1,0 +1,2 @@
+description: Control feature negotiation on bus connections
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_get_creds_mask.html

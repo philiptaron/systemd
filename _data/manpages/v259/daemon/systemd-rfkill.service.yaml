@@ -1,0 +1,2 @@
+description: Load and save the RF kill switch state at boot and change
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-rfkill.service.html

@@ -1,0 +1,2 @@
+description: Read data fields from the current journal entry
+url: https://www.freedesktop.org/software/systemd/man/259/sd_journal_enumerate_available_data.html

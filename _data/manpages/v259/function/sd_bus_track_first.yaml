@@ -1,0 +1,2 @@
+description: Add, remove and retrieve bus peers tracked in a bus peer tracking object
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_track_first.html

@@ -1,0 +1,2 @@
+description: Read timestamps from the current journal entry
+url: https://www.freedesktop.org/software/systemd/man/259/sd_journal_get_monotonic_usec.html

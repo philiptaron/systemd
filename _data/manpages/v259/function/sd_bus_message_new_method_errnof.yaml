@@ -1,0 +1,2 @@
+description: Create an error reply for a method call
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_message_new_method_errnof.html

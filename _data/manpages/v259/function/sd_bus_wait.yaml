@@ -1,0 +1,2 @@
+description: Wait for I/O on a bus connection
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_wait.html

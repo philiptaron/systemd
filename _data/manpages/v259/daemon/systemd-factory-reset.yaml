@@ -1,0 +1,3 @@
+description: Request or complete a factory reset operation, or query current factory
+  reset mode
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-factory-reset.html

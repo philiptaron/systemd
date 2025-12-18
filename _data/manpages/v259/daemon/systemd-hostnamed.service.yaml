@@ -1,0 +1,2 @@
+description: Daemon to control system hostname from programs
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-hostnamed.service.html

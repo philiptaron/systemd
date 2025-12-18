@@ -1,0 +1,3 @@
+description: Run programs in transient scope units, service units, or path-, socket-,
+  or timer-triggered service units
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-run.html

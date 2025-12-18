@@ -1,0 +1,2 @@
+description: Print log entries from the systemd journal
+url: https://www.freedesktop.org/software/systemd/man/259/journalctl.html

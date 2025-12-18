@@ -1,0 +1,2 @@
+description: Acquire the 64-bit inode ID of a PID file descriptor (PIDFD)
+url: https://www.freedesktop.org/software/systemd/man/259/sd_pidfd_get_inode_id.html

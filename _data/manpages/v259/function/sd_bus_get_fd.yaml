@@ -1,0 +1,3 @@
+description: Get the file descriptor, I/O events and timeout to wait for from a message
+  bus object
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_get_fd.html

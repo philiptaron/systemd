@@ -1,0 +1,2 @@
+description: Load and save the OS system random seed at boot and shutdown
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-random-seed.html

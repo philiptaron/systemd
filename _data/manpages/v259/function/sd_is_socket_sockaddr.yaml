@@ -1,0 +1,2 @@
+description: Check the type of a file descriptor
+url: https://www.freedesktop.org/software/systemd/man/259/sd_is_socket_sockaddr.html

@@ -1,0 +1,2 @@
+description: Determine state of a specific session
+url: https://www.freedesktop.org/software/systemd/man/259/sd_session_get_tty.html

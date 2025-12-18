@@ -1,0 +1,2 @@
+description: Retrieve or set device attributes
+url: https://www.freedesktop.org/software/systemd/man/259/udev_device_get_devlinks_list_entry.html

@@ -1,0 +1,2 @@
+description: Produce a string representation of a message for debugging purposes
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_message_dump_json.html

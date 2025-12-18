@@ -1,0 +1,3 @@
+description: Get cursor string for or test cursor string against the current journal
+  entry
+url: https://www.freedesktop.org/software/systemd/man/259/sd_journal_test_cursor.html

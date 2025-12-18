@@ -1,0 +1,2 @@
+description: Test whether the system is running the systemd init system
+url: https://www.freedesktop.org/software/systemd/man/259/sd_booted.html

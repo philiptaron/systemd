@@ -1,0 +1,2 @@
+description: Bidirectionally proxy local sockets to another (possibly remote) socket
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-socket-proxyd.html

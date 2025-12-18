@@ -1,0 +1,3 @@
+description: Generator for enabling a runtime debug shell and masking specific units
+  at boot
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-debug-generator.html

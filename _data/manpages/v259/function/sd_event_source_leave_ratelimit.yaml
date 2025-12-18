@@ -1,0 +1,2 @@
+description: Configure rate limiting on event sources
+url: https://www.freedesktop.org/software/systemd/man/259/sd_event_source_leave_ratelimit.html

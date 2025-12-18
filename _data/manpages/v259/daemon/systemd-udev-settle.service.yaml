@@ -1,0 +1,2 @@
+description: Wait for all pending udev events to be handled
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-udev-settle.service.html

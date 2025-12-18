@@ -1,0 +1,2 @@
+description: Control the exit behavior when the bus object disconnects
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_get_exit_on_disconnect.html

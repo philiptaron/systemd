@@ -1,0 +1,2 @@
+description: Obtain a file descriptor to poll for event loop events
+url: https://www.freedesktop.org/software/systemd/man/259/sd_event_get_fd.html

@@ -1,0 +1,2 @@
+description: Hostname resolution via systemd-resolved.service
+url: https://www.freedesktop.org/software/systemd/man/259/libnss_resolve.so.2.html

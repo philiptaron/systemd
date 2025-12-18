@@ -1,0 +1,2 @@
+description: Check for file descriptors passed by the system manager
+url: https://www.freedesktop.org/software/systemd/man/259/sd_listen_fds.html

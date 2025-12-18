@@ -1,0 +1,2 @@
+description: Set up the TPM2 Storage Root Key (SRK) and initialize NvPCRs at boot
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-tpm2-setup.html

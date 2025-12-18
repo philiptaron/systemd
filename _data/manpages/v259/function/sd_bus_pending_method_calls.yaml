@@ -1,0 +1,2 @@
+description: Return the number of currently pending, outgoing method calls
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_pending_method_calls.html

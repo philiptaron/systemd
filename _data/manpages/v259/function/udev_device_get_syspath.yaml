@@ -1,0 +1,2 @@
+description: Query device properties
+url: https://www.freedesktop.org/software/systemd/man/259/udev_device_get_syspath.html

@@ -1,0 +1,2 @@
+description: Query if a Varlink connection object is currently connected or idle
+url: https://www.freedesktop.org/software/systemd/man/259/sd_varlink_is_connected.html

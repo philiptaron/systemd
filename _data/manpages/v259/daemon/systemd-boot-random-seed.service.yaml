@@ -1,0 +1,2 @@
+description: Refresh boot loader random seed at boot
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-boot-random-seed.service.html

@@ -1,0 +1,2 @@
+description: Retrieve information about registered names on a bus
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_list_names.html

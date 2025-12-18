@@ -1,0 +1,3 @@
+description: Temporarily mute kernel log output and service manager status output
+  to the system console
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-mute-console.socket.html

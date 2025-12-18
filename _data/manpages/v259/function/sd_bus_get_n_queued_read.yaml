@@ -1,0 +1,3 @@
+description: Get the number of pending bus messages in the read and write queues of
+  a bus connection object
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_get_n_queued_read.html

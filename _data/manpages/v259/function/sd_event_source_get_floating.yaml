@@ -1,0 +1,2 @@
+description: Set or retrieve 'floating' state of event sources
+url: https://www.freedesktop.org/software/systemd/man/259/sd_event_source_get_floating.html

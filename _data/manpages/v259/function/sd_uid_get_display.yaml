@@ -1,0 +1,2 @@
+description: Determine login state of a specific Unix user ID
+url: https://www.freedesktop.org/software/systemd/man/259/sd_uid_get_display.html

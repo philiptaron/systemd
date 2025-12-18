@@ -1,0 +1,2 @@
+description: Allocate Varlink server object
+url: https://www.freedesktop.org/software/systemd/man/259/sd_varlink_server_new.html

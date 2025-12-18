@@ -1,0 +1,4 @@
+description: Generator for automatically discovering and mounting root, /home/ , /srv/
+  , /var/ and /var/tmp/ partitions, as well as discovering and enabling swap partitions,
+  based on GPT partition type GUIDs
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-gpt-auto-generator.html

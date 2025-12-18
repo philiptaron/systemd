@@ -1,0 +1,2 @@
+description: Define the callback function for resource cleanup
+url: https://www.freedesktop.org/software/systemd/man/259/sd_event_source_set_destroy_callback.html

@@ -1,0 +1,3 @@
+description: Measure boot phases, machine ID, product UUID and file system identity
+  into TPM PCRs and NvPCRs
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-pcrphase.service.html

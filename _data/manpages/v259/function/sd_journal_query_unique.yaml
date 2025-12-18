@@ -1,0 +1,2 @@
+description: Read unique data fields from the journal
+url: https://www.freedesktop.org/software/systemd/man/259/sd_journal_query_unique.html

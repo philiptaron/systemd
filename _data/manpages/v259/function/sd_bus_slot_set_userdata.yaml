@@ -1,0 +1,2 @@
+description: Set and query the value in the 'userdata' field
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_slot_set_userdata.html

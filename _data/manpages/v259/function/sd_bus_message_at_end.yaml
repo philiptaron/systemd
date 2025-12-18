@@ -1,0 +1,2 @@
+description: Check if a message has been fully read
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_message_at_end.html

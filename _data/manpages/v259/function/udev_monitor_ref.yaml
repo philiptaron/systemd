@@ -1,0 +1,2 @@
+description: Create, acquire and release a udev monitor object
+url: https://www.freedesktop.org/software/systemd/man/259/udev_monitor_ref.html

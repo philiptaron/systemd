@@ -1,0 +1,3 @@
+description: Generator for binding a socket-activated SSH server to local AF_VSOCK
+  and AF_UNIX sockets
+url: https://www.freedesktop.org/software/systemd/man/259/systemd-ssh-generator.html

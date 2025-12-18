@@ -1,0 +1,2 @@
+description: Add an 'inotify' file system inode event source to an event loop
+url: https://www.freedesktop.org/software/systemd/man/259/sd_event_add_inotify_fd.html

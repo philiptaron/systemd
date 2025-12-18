@@ -1,0 +1,2 @@
+description: Create or destroy references to a device object
+url: https://www.freedesktop.org/software/systemd/man/259/sd_device_unref.html

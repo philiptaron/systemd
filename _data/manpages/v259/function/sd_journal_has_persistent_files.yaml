@@ -1,0 +1,2 @@
+description: Query availability of runtime or persistent journal files
+url: https://www.freedesktop.org/software/systemd/man/259/sd_journal_has_persistent_files.html

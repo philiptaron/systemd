@@ -1,0 +1,2 @@
+description: Check if the message has specified type at the current location
+url: https://www.freedesktop.org/software/systemd/man/259/sd_bus_message_verify_type.html

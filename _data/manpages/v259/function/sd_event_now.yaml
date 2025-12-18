@@ -1,0 +1,2 @@
+description: Retrieve current event loop iteration timestamp
+url: https://www.freedesktop.org/software/systemd/man/259/sd_event_now.html

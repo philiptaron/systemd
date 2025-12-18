@@ -1,0 +1,2 @@
+description: Format or parse 128-bit IDs as strings
+url: https://www.freedesktop.org/software/systemd/man/259/SD_ID128_UUID_STRING_MAX.html
