@@ -22,8 +22,15 @@
 
         {% elsif is_release %}
         <!-- Release page: show commentary + sections -->
-        {% assign release = site.data.releases.v259 %}
+        <!-- Detect which release from URL -->
+        {% assign release = nil %}
+        {% if page.url contains "systemd-259" %}
+            {% assign release = site.data.releases.v259 %}
+        {% elsif page.url contains "systemd-258" %}
+            {% assign release = site.data.releases.v258 %}
+        {% endif %}
 
+        {% if release %}
         <h3>Commentary</h3>
         <ol class="toc-list">
             {% for post in release.commentary %}
@@ -37,6 +44,7 @@
             <li><a href="{{ site.baseurl }}{{ release.release_notes }}#{{ section.anchor }}">{{ section.title }}</a></li>
             {% endfor %}
         </ol>
+        {% endif %}
 
         {% else %}
         <!-- Fallback: simple navigation -->

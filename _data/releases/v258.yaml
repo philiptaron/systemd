@@ -1,0 +1,228 @@
+version: v258
+title: systemd v258
+date: '2025-09-17'
+path: /systemd-258/
+release_notes: /systemd-258/release-notes.html
+commentary:
+- num: 1
+  title: systemctl start verbose
+  path: /systemd-258/posts/01-systemctl-verbose.html
+- num: 2
+  title: systemd-homed areas
+  path: /systemd-258/posts/02-homed-areas.html
+- num: 3
+  title: systemd-resolved delegate zones
+  path: /systemd-258/posts/03-resolved-delegate.html
+- num: 4
+  title: Unprivileged containers with userns
+  path: /systemd-258/posts/04-credentials.html
+- num: 5
+  title: Hostname pattern matching
+  path: /systemd-258/posts/05-hostname-pattern.html
+- num: 6
+  title: /tmp/ security hardening
+  path: /systemd-258/posts/06-tmp-security.html
+- num: 7
+  title: Service workload management
+  path: /systemd-258/posts/07-service-workload.html
+- num: 8
+  title: ConditionHost matching enhancements
+  path: /systemd-258/posts/08-condition-host.html
+- num: 9
+  title: Terminal context sequences
+  path: /systemd-258/posts/09-terminal-context.html
+- num: 10
+  title: HTTP boot with systemd-boot
+  path: /systemd-258/posts/10-http-boot.html
+- num: 11
+  title: Boot Debug Breakpoints
+  path: /systemd-258/posts/11-boot-debug.html
+- num: 12
+  title: Factory reset support
+  path: /systemd-258/posts/12-factory-reset.html
+- num: 13
+  title: DNS monitoring and configuration subscriptions
+  path: /systemd-258/posts/13-dns-monitoring.html
+- num: 14
+  title: Stub credentials and boot entries
+  path: /systemd-258/posts/14-stub-credentials.html
+- num: 15
+  title: UKI Addons Support
+  path: /systemd-258/posts/15-uki-addons.html
+- num: 16
+  title: userdb aliases
+  path: /systemd-258/posts/16-userdb-aliases.html
+- num: 17
+  title: File system integrity checks
+  path: /systemd-258/posts/17-integrity-checks.html
+- num: 18
+  title: TPM policy signing
+  path: /systemd-258/posts/18-tpm-signing.html
+- num: 19
+  title: PAM service prompts
+  path: /systemd-258/posts/19-pam-prompts.html
+- num: 20
+  title: Graceful mount options
+  path: /systemd-258/posts/20-mount-options.html
+- num: 21
+  title: userdb drop-in directories
+  path: /systemd-258/posts/21-userdb-dropins.html
+- num: 22
+  title: systemd-repart image growth
+  path: /systemd-258/posts/22-repart-grow.html
+- num: 23
+  title: Service ready notification
+  path: /systemd-258/posts/23-terminal-features.html
+- num: 24
+  title: Terminal feature negotiation improvements
+  path: /systemd-258/posts/24-nspawn-notify.html
+- num: 25
+  title: systemd-nspawn Hotkeys
+  path: /systemd-258/posts/25-nspawn-hotkeys.html
+- num: 26
+  title: ExecStart pipe flag
+  path: /systemd-258/posts/26-execstart-pipe.html
+- num: 27
+  title: systemd-confext immutable configuration
+  path: /systemd-258/posts/27-confext-immutable.html
+- num: 28
+  title: userdb filtering improvements
+  path: /systemd-258/posts/28-userdb-filter.html
+- num: 29
+  title: Service disk quotas
+  path: /systemd-258/posts/29-sandboxing-quotas.html
+- num: 30
+  title: Service Sandbox Debugging
+  path: /systemd-258/posts/30-unit-shell.html
+- num: 31
+  title: SSH over AF_VSOCK
+  path: /systemd-258/posts/31-ssh-vsock.html
+- num: 32
+  title: systemd-repart fs-verity support
+  path: /systemd-258/posts/32-repart-fsverity.html
+- num: 33
+  title: Socket credentials
+  path: /systemd-258/posts/33-socket-credentials.html
+- num: 34
+  title: systemd-firstboot tab completion
+  path: /systemd-258/posts/34-firstboot-complete.html
+- num: 35
+  title: Stateless booting via rd.systemd.pull
+  path: /systemd-258/posts/35-pull-stateless.html
+- num: 36
+  title: Kernel module conditions
+  path: /systemd-258/posts/36-modprobe-conditions.html
+- num: 37
+  title: CHID lookup tool
+  path: /systemd-258/posts/37-chid-lookup.html
+- num: 38
+  title: systemd-homed signing keys
+  path: /systemd-258/posts/38-homed-signing.html
+- num: 39
+  title: DDI partition filtering
+  path: /systemd-258/posts/39-ddi-filter.html
+- num: 40
+  title: Android USB debugging support
+  path: /systemd-258/posts/40-android-usb.html
+- num: 41
+  title: vmspawn SMBIOS Type 11
+  path: /systemd-258/posts/41-vmspawn-smbios.html
+- num: 42
+  title: PID file descriptor identifiers
+  path: /systemd-258/posts/42-pidfd-identifiers.html
+- num: 43
+  title: RestartMode=debug for debug logging
+  path: /systemd-258/posts/43-restart-debug.html
+- num: 44
+  title: UKI HTTP boot
+  path: /systemd-258/posts/44-uki-http-boot.html
+- num: 45
+  title: cgroupv1 removal
+  path: /systemd-258/posts/45-cgroupv1-removal.html
+- num: 46
+  title: Protect Hostname Sandbox
+  path: /systemd-258/posts/46-protect-hostname.html
+- num: 47
+  title: homectl adopt and register
+  path: /systemd-258/posts/47-homectl-adopt.html
+- num: 48
+  title: systemd-machined Varlink APIs
+  path: /systemd-258/posts/48-machined-varlink.html
+- num: 49
+  title: Soft-reboot and sockets
+  path: /systemd-258/posts/49-soft-reboot-sockets.html
+- num: 50
+  title: User namespaces and cgroups
+  path: /systemd-258/posts/50-user-namespaces.html
+- num: 51
+  title: Varlink password agent interface
+  path: /systemd-258/posts/51-varlink-passwords.html
+- num: 52
+  title: PrivateUsers namespace sandboxing
+  path: /systemd-258/posts/52-privateusers.html
+- num: 53
+  title: User credentials and mount units
+  path: /systemd-258/posts/53-service-credentials.html
+- num: 54
+  title: DDI designators
+  path: /systemd-258/posts/54-ddi-designators.html
+- num: 55
+  title: eBPF delegation
+  path: /systemd-258/posts/55-ebpf-delegation.html
+sections:
+- title: 'Incompatible changes:'
+  anchor: incompatible-changes
+- title: Announcements of Future F...
+  anchor: announcements-of-future-feature-removals
+- title: 'Service manager/PID1:'
+  anchor: service-managerpid1
+- title: '[`systemd-journald`][syst...'
+  anchor: systemd-journaldsystemd-journald-journal-remote
+- title: systemd-udevd & [`systemd...
+  anchor: systemd-udevd-systemd-hwdbsystemd-hwdb
+- title: 'systemd-networkd:'
+  anchor: systemd-networkd
+- title: '[`sd-varlink`][sd-varlink...'
+  anchor: sd-varlinksd-varlink-sd-jsonsd-json
+- title: '[`varlinkctl`][varlinkctl...'
+  anchor: varlinkctlvarlinkctl
+- title: '[`sd-device`][sd-device]:'
+  anchor: sd-devicesd-device
+- title: 'systemd-logind:'
+  anchor: systemd-logind
+- title: 'systemd-resolved:'
+  anchor: systemd-resolved
+- title: '[`systemd-hostnamed`][sys...'
+  anchor: systemd-hostnamedsystemd-hostnamed
+- title: systemd-stub, [`systemd-b...
+  anchor: systemd-stub-systemd-bootsystemd-boot-bootctlbootctl
+- title: '[`systemd-nsresourced`][s...'
+  anchor: systemd-nsresourcedsystemd-nsresourced-systemd-mountfsdsystemd-mountfsd
+- title: 'systemd-nspawn:'
+  anchor: systemd-nspawn
+- title: 'systemd-vmspawn:'
+  anchor: systemd-vmspawn
+- title: '[`systemd-machined`][syst...'
+  anchor: systemd-machinedsystemd-machined
+- title: '[`systemd-measure`][syste...'
+  anchor: systemd-measuresystemd-measure-ukify-systemd-keyutilsystemd-keyutil-systemd-sbsignsystemd-sbsign
+- title: 'TPM2:'
+  anchor: tpm2
+- title: '[`systemd-userdbd`][syste...'
+  anchor: systemd-userdbdsystemd-userdbd-systemd-homed
+- title: systemd-run and [`run0`][...
+  anchor: systemd-run-and-run0run0
+- title: DDI support & [`systemd-d...
+  anchor: ddi-support-systemd-dissectsystemd-dissect
+- title: systemd-importd & [`impor...
+  anchor: systemd-importd-importctlimportctl
+- title: 'Factory Reset:'
+  anchor: factory-reset
+- title: 'systemd-repart:'
+  anchor: systemd-repart
+- title: 'systemd-analyze:'
+  anchor: systemd-analyze
+- title: 'Other:'
+  anchor: other
+- title: Contributors
+  anchor: contributors
