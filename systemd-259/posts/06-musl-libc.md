@@ -10,9 +10,9 @@ Here's a short one: systemd v259 will compile fine with musl libc, out of the bo
 
 Sounds great?
 Well, it's not as great as it might sound to some. musl has quite some limitations compared to glibc: the primary one is that there's no Name Service Switch (NSS) support.
-That's the subsystem that allows systemd to make domain names, user names, groups names resolvable via gethostbyname(), getaddrinfo(), getpwnam(), getgrnam() and similar calls.
+That's the subsystem that allows systemd to make domain names, user names, groups names resolvable via `gethostbyname()`, `getaddrinfo()`, `getpwnam()`, `getgrnam()` and similar calls.
 
-And that in turn is used to make a good chunk of systemd's infrastructure work, for example DynamicUser=1, systemd-resolved, systemd-homed, systemd-userdbd, systemd-nsresoured, nss-myhostname, and so on.
+And that in turn is used to make a good chunk of systemd's infrastructure work, for example `DynamicUser=1`, `systemd-resolved`, `systemd-homed`, `systemd-userdbd`, `systemd-nsresourced`, `nss-myhostname`, and so on.
 Hence, if you don't have NSS then all that is gone or half-broken.
 
 And there are other limitations: systemd will react to memory pressure by releasing memory that libc has acquired from the kernel but is no longer using back to the kernel.
@@ -22,7 +22,7 @@ But musl has no concept for this, hence the memory pressure operation is a NOP t
 And then of course, musl upstream is what one might describe as hostile towards systemd, and that alone is a good reason to not recommend its use for me.
 
 Hence, make of this what you want.
-But my recommendation continues to be: just use glibc, the pain and limitations musl brings are really not worth it. glibc has NSS, glibc has malloc_trim(), doesn't need tons of polyfills, and most of all glibc upstream folks are good to work with.
+But my recommendation continues to be: just use glibc, the pain and limitations musl brings are really not worth it. glibc has NSS, glibc has `malloc_trim()`, doesn't need tons of polyfills, and most of all glibc upstream folks are good to work with.
 
 ---
 
@@ -33,7 +33,7 @@ We like the pmos people.
 
 But a lot of other people asked for it too.
 
-> **[@Atemu](https://darmstadt.social/@Atemu)** Does musl's malloc even have the behaviour that glibc's does where it doesn't actually return free()'d memory to the kernel?
+> **[@Atemu](https://darmstadt.social/@Atemu)** Does musl's malloc even have the behaviour that glibc's does where it doesn't actually return `free()`'d memory to the kernel?
 > Because if not it'd be quite sensible for that to be a no-op.
 
 Well, that would mean they ask the kernel for memory piecemeal for every single page they need.
@@ -43,11 +43,11 @@ So malloc implementations generally allocate memory in larger chunks to make thi
 But if you do that you should really have a way to return unused pages of a chunk to the kernel under pressure.
 Glibc has that.
 
-> **[@valpackett](https://social.treehouse.systems/@valpackett)** I've heard that malloc_trim() only makes sense with glibc's old-fashioned heavily-sbrk()-using allocator, and not at all with fully mmap() based allocators.
+> **[@valpackett](https://social.treehouse.systems/@valpackett)** I've heard that `malloc_trim()` only makes sense with glibc's old-fashioned heavily-`sbrk()`-using allocator, and not at all with fully `mmap()` based allocators.
 > Is that not true?!
-> Does malloc_trim() actually do something with mmap()ed memory?
+> Does `malloc_trim()` actually do something with `mmap()`ed memory?
 
-glibc calls madvise MADV_DONTNEED on the space it doesn't need.
+glibc calls `madvise` `MADV_DONTNEED` on the space it doesn't need.
 
 ---
 

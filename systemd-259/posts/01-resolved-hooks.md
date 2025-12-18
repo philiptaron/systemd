@@ -14,55 +14,55 @@ Hence:
 For many usecases it's quite useful if local services can register additional hostnames for local resolution.
 For example, container and VMMs might want to register the IPs of locally running containers or VMs via a hostname, so that you can access them by name rather than by address.
 
-With v259 we are making this easy: there's now a "hook" interface in systemd-resolved: any privileged local daemon may bind an AF_UNIX socket in /run/systemd/resolve.hook/, and implement a simple Varlink IPC interface on it.
-If they do so, systemd-resolved will query it for every single local name resolution request, and they can answer positively, negatively, or let the resolution request be processed by the usual DNS based logic.
+With v259 we are making this easy: there's now a "hook" interface in `systemd-resolved`: any privileged local daemon may bind an `AF_UNIX` socket in `/run/systemd/resolve.hook/`, and implement a simple Varlink IPC interface on it.
+If they do so, `systemd-resolved` will query it for every single local name resolution request, and they can answer positively, negatively, or let the resolution request be processed by the usual DNS based logic.
 
 If multiple hook services are in place, they are always queried in parallel, to reduce latencies (but if multiple return positively the service with the alphabetically first socket path wins).
 
 In systemd there are now two services which bind sockets there by default:
 
-First of all systemd-machined makes all local containers/VMs that registered their IP addresses with it resolvable.
+First of all `systemd-machined` makes all local containers/VMs that registered their IP addresses with it resolvable.
 
-Secondly, systemd-networkd makes all hosts resolvable for which its internal DHCP server handed out leases.
+Secondly, `systemd-networkd` makes all hosts resolvable for which its internal DHCP server handed out leases.
 
-You might wonder: how does this relate to nss-mymachines?
-That NSS plugin did something very similar to the systemd-machined logic implemented now, however, it has one problem: it operates strictly and exclusively on the NSS level, but many programs nowadays bypass that and talk DNS directly with the configured servers.
-Since systemd-resolved registers itself as local DNS server in /etc/resolv.conf it means the new hook logic works for all types of lookups, regardless if they come via NSS, D-Bus, Varlink or the local DNS stub.
-I think in the longer run we should deprecate nss-mymachines.
+You might wonder: how does this relate to `nss-mymachines`?
+That NSS plugin did something very similar to the `systemd-machined` logic implemented now, however, it has one problem: it operates strictly and exclusively on the NSS level, but many programs nowadays bypass that and talk DNS directly with the configured servers.
+Since `systemd-resolved` registers itself as local DNS server in `/etc/resolv.conf` it means the new hook logic works for all types of lookups, regardless if they come via NSS, D-Bus, Varlink or the local DNS stub.
+I think in the longer run we should deprecate `nss-mymachines`.
 
 You might also wonder: sending every single lookup to all hooks might be quite expensive!
 As it turns out, the Varlink protocol spoken on the hook services is a bit smarter: it allows the hook service to install a filter on the requests it wants: restrict the hook to certain domains, or limits on the number of labels in the lookup.
 
-Note that this API is public, i.e. any service can register names this way, not just systemd-machined and systemd-networkd.
+Note that this API is public, i.e. any service can register names this way, not just `systemd-machined` and `systemd-networkd`.
 
 And that's it for the first episode.
 
 ---
 
-> **[@arianvp](https://functional.cafe/@arianvp)** Wait this solves the final use case of nscd for us in nixos I think?
+> **[@arianvp](https://functional.cafe/@arianvp)** Wait this solves the final use case of `nscd` for us in nixos I think?
 > Replace user lookup with the userdb multiplexer.
 > Replace host lookup with resolved hooks??
 
 Not following.
-I never understood your nscd usecase.
-Given that nscd is obsolete and glibc timeouts for it are extremly short (and followed by local fallback) it seems entirely pointless to ever use nscd.
+I never understood your `nscd` usecase.
+Given that `nscd` is obsolete and glibc timeouts for it are extremly short (and followed by local fallback) it seems entirely pointless to ever use `nscd`.
 
 Note this new hook stuff allows you to plug something *behind* the 4 APIs resolved accepts resolution requests on (NSS, D-Bus, Varlink, DNS_STUB).
 Not sure what NixOS thinks it needs to plug in there?
 
 > **[@arianvp](https://functional.cafe/@arianvp)** The point is.
-> This hook stuff allows me to replace nscd with my own service that is responsible for loading all the NSS modules and exposes that as varlink to resolved and userdbd.
-> That way I can make the NSS modules in question completely hidden outside of the daemon and guarantee they don't get dlopen() into random programs for which I'm not sure they are ABI compatible with the NSS modules in question.
+> This hook stuff allows me to replace `nscd` with my own service that is responsible for loading all the NSS modules and exposes that as varlink to resolved and userdbd.
+> That way I can make the NSS modules in question completely hidden outside of the daemon and guarantee they don't get `dlopen()` into random programs for which I'm not sure they are ABI compatible with the NSS modules in question.
 
 Well, I don't get it.
-How do you get your requests from NSS to resolved if you are allergic to use nss-resolve?
+How do you get your requests from NSS to resolved if you are allergic to use `nss-resolve`?
 You can use the DNS stub of course, but I'd not recommend that, since a lot of metadata gets lost along the way, and search domain logic then must be client side.
 
-> **[@arianvp](https://functional.cafe/@arianvp)** The global /etc/nsswitch.conf will have nss-systemd and nss-resolve.
+> **[@arianvp](https://functional.cafe/@arianvp)** The global `/etc/nsswitch.conf` will have `nss-systemd` and `nss-resolve`.
 > And nothing else.
-> My little varlink daemon will have an /etc/nsswitch.conf containing all the other NSS modules in its mount namespace.
+> My little varlink daemon will have an `/etc/nsswitch.conf` containing all the other NSS modules in its mount namespace.
 
-Ah, ok, if you are ok with nss-resolve/nss-systemd then things are good, indeed.
+Ah, ok, if you are ok with `nss-resolve`/`nss-systemd` then things are good, indeed.
 
 > **[@funkylab](https://mastodon.social/@funkylab)** (I think it's a bit of an odd choice to enforce alphabetic precedence there; a first served stays right seems to be more usual in name resolving circles?)
 
