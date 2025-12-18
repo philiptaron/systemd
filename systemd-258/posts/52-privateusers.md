@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PrivateUsers namespace sandboxing"
+title: "`PrivateUsers=` namespace sandboxing"
 date: 2025-09-10
 ---
 
@@ -8,7 +8,7 @@ Here's the 52nd post highlighting key new features of the upcoming v258 release 
 
 `PrivateUsers=` is one of the many sandboxing knobs in service unit files. It configures a minimal user namespace for the service code to run in. Previously you could set it to `self`, which would set up the user namespace mapping for the service to map the root user and the service's user to itself, and leave everything else unmapped.
 
-Setting the knob to `self` would somewhat disconnect the service from the host user table: all inodes, processes, and other objects it sees will be owned by itself, by root or by the `nobody` user (which is where unmapped users are mapped to).
+Setting the knob to `self` would somewhat disconnect the service from the host user table: all inodes, processes, and other objects it sees will be owned by itself, by `root`, or by the `nobody` user (which is where unmapped users are mapped to).
 
 In v257, the setting learned a new value `identity`. If used, the first 64K users plus the service's own user (if outside the 64K range) would be mapped, nothing else. In other words, the service would be limited to the 16-bit UID range.
 

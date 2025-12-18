@@ -10,19 +10,19 @@ date: 2025-08-19
 
 With v258 vmspawn gained a new `--smbios11=` switch. It's an easy way to add SMBIOS Type 11 vendor objects to the VM, or in other words:
 
-You can use to parameterize the VM in a nice way.
+You can use it to parameterize the VM in a nice way.
 
-For example, `systemd-boot` now takes the `io.systemd.boot-entries.extra` (see episode 14 of this series) SMBIOS Type #11 object for defining additional boot menu items. You can set these really nicely with the `--smbios11=` switch like so:
+For example, `systemd-boot` now takes the `io.systemd.boot.entries-extra` (see episode 14 of this series) SMBIOS Type 11 object for defining additional boot menu items. You can set these really nicely with the `--smbios11=` switch like so:
 
 ```
 --smbios11=io.systemd.boot.entries-extra:particleos-current.conf=$'title ParticleOS Current\nuki-url http://example.com/somedir/uki.efi'
 ```
 
-This adds a new boot entry, defining it to download the specified UKI via UEFI…HTTP boot and booting into it. An orchestrator could use this to generically install a boot menu item in all its VMs that help with recovery, reset or backup of its VMs or s a similar logic.
+This adds a new boot entry, defining it to download the specified UKI via UEFI…HTTP boot and booting into it. An orchestrator could use this to generically install a boot menu item in all its VMs that help with recovery, reset or backup of its VMs or similar logic.
 
-Note that you can also pass system credentials via SMBIOS Type 11 to a VM, hence ou could set those via `--smbios11=` too. But it's kinda pointless given that we have explicit `--set-credential=/--load-credential=` knobs for that, which are more powerful.
+Note that you can also pass system credentials via SMBIOS Type 11 to a VM, hence you could set those via `--smbios11=` too. But it's kinda pointless given that we have explicit `--set-credential=/--load-credential=` knobs for that, which are more powerful.
 
-We maintain a list of SMBIOS type 11 objects systemd cares for in a man page:
+We maintain a list of SMBIOS Type 11 objects systemd cares for in a man page:
 
 ---
 

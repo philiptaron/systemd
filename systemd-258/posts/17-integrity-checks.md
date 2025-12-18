@@ -22,11 +22,11 @@ For that we need two things:
 
 2. We need some code that looks at that metadata and compares it with how things have been mounted, and acts on it somehow.
 
-With v258 we did just that. The metadata of the intended use for file systems we decided to encode in a number of extended attributes on the root inode of the file system (`user.validatefs.*`). And there's a new mini service `systemd-validatefs@.service` that can check them, and validate them.
+With v258 we did just that. The metadata of the intended use for file systems we decided to encode in a number of extended attributes on the root inode of the file system (`user.validatefs.*`). And there's a new mini service `systemd-validatefs@.service` that can check and validate them.
 
 The xattrs encode the intended mount location for the file system, and they may also carry a copy of the GPT partition type UUID and the GPT partition label the file system is to be placed in.
 
-`systemd-repart` has been updated to generate these xattrs automatically and by default for all images it creates. Thus, any modern OS images built via mkosi/systemd-repart should get this protection for free.
+`systemd-repart` has been updated to generate these xattrs automatically and by default for all images it creates. Thus, any modern OS images built via `mkosi`/`systemd-repart` should get this protection for free.
 
 Effective result: if an attacker tries to manipulate the unprotected GPT metadata of such a locked down DDI, and boots it up, it will progress to some point: the file systems will be mounted, and then verified. At which time the manipulation will be detected, because the protected xattr data won't match the unprotected GPT data anymore, and an immediate reboot is issued.
 
@@ -44,7 +44,7 @@ The constraints are only enforced on mounts actually relevant for the system, i.
 
 > **On LVM compatibility:** LVM has no concept of cryptographic metadata integrity. Using LVM and building a modern, secure OS are not really compatible goals.
 
-> **On dm-integrity:** There's `dm-integrity` which you can either use together with `dm-crypt` or you can use standalone with an HMAC as hash function, in case you just want integrity tied to some secret, but are not interested in confidentiality. `dm-integrity` and `dm-crypt` are tightly integrated, making it relatively efficient to combine them.
+> **On `dm-integrity`:** There's `dm-integrity` which you can either use together with `dm-crypt` or you can use standalone with an HMAC as hash function, in case you just want integrity tied to some secret, but are not interested in confidentiality. `dm-integrity` and `dm-crypt` are tightly integrated, making it relatively efficient to combine them.
 
 ---
 

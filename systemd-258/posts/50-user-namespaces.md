@@ -4,13 +4,13 @@ title: "User namespaces and cgroups"
 date: 2025-09-02
 ---
 
-50️⃣ Here's the 50th post highlighting key new features of the upcoming v258 release of systemd. [#systemd258](https://mastodon.social/tags/systemd258) [#systemd](https://mastodon.social/tags/systemd)
+Here's the 50th post highlighting key new features of the upcoming v258 release of systemd. [#systemd258](https://mastodon.social/tags/systemd258) [#systemd](https://mastodon.social/tags/systemd)
 
 User namespaces are weird beasts: on one hand they are supposed to be something that you can acquire without privileges, but on the other hand if you want more than a single UID mapped into them, you need multiple UIDs, and that's a resource you cannot acquire without privs.
 
 To deal with that multiple systems have been devised.
 
-Traditionally there was the `subuid` concept, with the `newuidmap` tool that statically delegates a whole UID range to a user. What can I say, I seriously dislike the idea for a multitude of reasons (urks, suid! urks, persistent assignments! urks, writable `/etc/`! urks, need for propagation via ldap! urks urks urks...). To improve things systemd gained `systemd-nsresourced`, which hands out mappings *transiently* only.
+Traditionally there was the `subuid` concept, with the `newuidmap` tool that statically delegates a whole UID range to a user. What can I say, I seriously dislike the idea for a multitude of reasons (urks, `suid`! urks, persistent assignments! urks, writable `/etc/subuid`! urks, need for propagation via LDAP! urks urks urks...). To improve things systemd gained `systemd-nsresourced`, which hands out mappings *transiently* only.
 
 Regardless which mechanism you pick, it does create a weird situation: conceptually unpriv user objects (processes, files, cgroups, ...) are owned by UIDs that are under user control, but without this UID-UID ownership being directly known to the kernel. IOW: the only way to interact with those objects without privs is for the user to go through namespacing similar to how they were originally created. If user code tries to interact with them without going through userns, these objects will appear...
 
@@ -36,7 +36,7 @@ All of this is mostly transparent to services btw: if your code delegates a cgro
 
 That said, the D-Bus method call `RemoveSubgroupFromUnit()` that is behind this is actually available to clients too, which even allows just removing parts of a delegated subtree, instead of the whole thing.
 
-Moreover, there's a related call `KillUnitSubgroup()` will allows killing processes in a delegated cgroup subtree, too, for similar reasons and usecases.
+Moreover, there's a related call `KillUnitSubgroup()` which allows killing processes in a delegated cgroup subtree, too, for similar reasons and use cases.
 
 ---
 
@@ -55,11 +55,6 @@ Great to hear!
 No response yet from Lennart.
 
 ---
-
-[systemd-resolved]: https://www.freedesktop.org/software/systemd/man/258/systemd-resolved.html
-[systemd-machined]: https://www.freedesktop.org/software/systemd/man/258/systemd-machined.html
-[systemd-networkd]: https://www.freedesktop.org/software/systemd/man/258/systemd-networkd.html
-[systemd-nsresourced]: https://www.freedesktop.org/software/systemd/man/258/systemd-nsresourced.html
 
 ## Sources
 

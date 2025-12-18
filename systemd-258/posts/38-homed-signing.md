@@ -8,7 +8,7 @@ Here's the 38th post highlighting key new features of the upcoming v258 release 
 
 `systemd-homed` managed users/home directories are supposed to be self-contained and portable between systems: it's sufficient to move the home dir from one system to another to make the user available there, with all its data and metadata, ready for login.
 
-Except of course this is not quite true: there's an extra step involved for security reasons:
+Of course, this is not quite true: there's an extra step involved for security reasons:
 
 Every user record is cryptographically signed (asymmetrically), and if the target system does not recognize the (public) key it is signed with, it will ignore the home directory. This is done so that simply placing a foreign home dir on some target system doesn't magically give you access to the target system.
 
@@ -30,7 +30,7 @@ homectl get-signing-key local.public | ssh targetsystem homectl add-signing-key 
 
 This gets the public part of the local key pair, and installs it on a remote system, renaming it to "foobar" on the fly (because that target system of course already has a local key, which is distinct, and we don't want to override).
 
-And with that and user/home dir created locally will also be accepted on the specified target system for login.
+And with that, user/home directories created locally will also be accepted on the specified target system for login.
 
 **A more complex example:**
 
@@ -57,18 +57,15 @@ Or in other words: you can take your account/home dir "with you" onto a target s
 
 Let me emphasize one thing: even though this uses SMB/CIFS, it uses it in file sharing mode only, i.e. the source and the target system don't have to be in the same windows domain or anything like that, they don't have to share user records otherwise, and the only daemon that needs to run for this (beyond `homed`) is the samba service on the system that carries the original home dir.
 
-And yeah, I wished there was something simpler than CIFS/SMB for just sharing some directory across the network safely in a somewhat posixy kind of way, alas there really isn't anything I was aware of that wasn't awful.
+And yeah, I wished there was something simpler than CIFS/SMB for just sharing some directory across the network safely in a somewhat POSIX-like kind of way, alas there really isn't anything I was aware of that wasn't awful.
 
 (NFS is not a candidate, because it's requirements on syncing UIDs, which we really don't want here, we want to decide the UID to use for the fs share on the target system, not on the source)
 
 ---
 
-> **Note from Lennart on NFS alternatives:** Never played with that, but last time I looked NFS always needs some per-system uid translation daemon, which rules this out for this usecase. Also, NFS is not simpler than CIFS, quite the opposite, it's a monster.
+> **Note from Lennart on NFS alternatives:** Never played with that, but last time I looked NFS always needs some per-system uid translation daemon, which rules this out for this use case. Also, NFS is not simpler than CIFS, quite the opposite, it's a monster.
 
 ---
-
-[homectl]: https://www.freedesktop.org/software/systemd/man/258/homectl.html
-[systemd-homed]: https://www.freedesktop.org/software/systemd/man/258/systemd-homed.html
 
 ## Sources
 

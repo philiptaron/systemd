@@ -7,7 +7,7 @@ date: 2025-09-01
 49 Here's the 49th post highlighting key new features of the upcoming v258 release of systemd.
 [#systemd258](https://mastodon.social/tags/systemd258)
 
-One of the key features of systemd from day 1 on is socket activation, i.e. a mechanism where systemd binds sockets on behalf of services, watches them and only activates the services themselves later, possibly only at the moment they are actively used.
+One of the key features of systemd from day 1 on is socket activation, i.e., a mechanism where systemd binds sockets on behalf of services, watches them and only activates the services themselves later, possibly only at the moment they are actively used.
 
 This has various benefits, for example reduces ahead of time cost of running a large number of services (which improves boot times).
 
@@ -15,7 +15,7 @@ But one facet of it is particularly nice: it allows (mostly) getting rid of star
 
 …longer for the request to be fulfilled.
 
-systemd's own services are largely socket activated, in particular since we adopted `Varlink` (since Varlink services are built on listener sockets, unlike D-Bus services where both clients and providers of services connect to the central broker, and never listen on sockets on their own) for many of our services. And all those socket units typically don't carry any ordering deps hence.
+systemd's own services are largely socket activated, in particular since we adopted `Varlink` (since `Varlink` services are built on listener sockets, unlike `D-Bus` services where both clients and providers of services connect to the central broker, and never listen on sockets on their own) for many of our services. And all those socket units typically don't carry any ordering deps hence.
 
 Except of course, that things aren't *that* simple.
 
@@ -25,7 +25,7 @@ Socket activation works great of processes that actually are of the kind that bi
 
 Because of that systemd always followed a hybrid approach: for regular daemons socket activation is recommended, but we have dependencies too, to cover in particular the earlier boot phases, and the final shutdown phases.
 
-(Of course, quite unfortunately there are still too many 3rd party services that do not use socket activation and really should, but that's another story...)
+(Of course, quite unfortunately there are still too many 3rd party services that do not use socket activation and really should, but that's a different story.)
 
 With the advent of soft-reboots (remember: this kind of new-style userspace reboot, where systemd shuts down all of userspace again, then reexecs and starts up again, without actually rebooting the kernel) things become a bit more complex on the socket-activation vs. dependencies situation: one thing soft-reboot is supposed to allow is to exclude some select services from shutdown during soft-reboot in order to optimize grey-out times.
 
@@ -35,9 +35,7 @@ And that actually creates problems: what if a service tries to talk to some othe
 
 With v258 there are two new mechanisms to deal with this:
 
-First of all there is a new job mode. (Job modes you can use to tweak how systemd enqueues your unit start/stop/reload/… requests and the deps of it, …
-
-…you can control it via systemctl's `--job-mode=` switch for example). The new job mode is called "lenient". If used and the job you want to enqueue would in any way contradict what is already enqueued, then the operation will fail. It will never reverse any already enqueued job hence.
+First of all there is a new job mode. (Job modes let you tweak how systemd enqueues your unit start/stop/reload/… requests and the deps of it. You can control it via `systemctl`'s `--job-mode=` switch, for example.) The new job mode is called "lenient". If used and the job you want to enqueue would in any way contradict what is already enqueued, then the operation will fail. It will never reverse any already enqueued job hence.
 
 The other new mechanism is a setting in `.socket` files: `DeferTrigger=` can be used to potentially defer triggering of the associated service if its activation cannot be enqueued immediately due to conflicts.
 

@@ -4,7 +4,7 @@ title: "Service ready notification"
 date: 2025-06-27
 ---
 
-2️⃣3️⃣ Here's the 23rd post highlighting key new features of the upcoming v258 release of systemd. [#systemd258](https://mastodon.social/tags/systemd258)
+23 Here's the 23rd post highlighting key new features of the upcoming v258 release of systemd. [#systemd258](https://mastodon.social/tags/systemd258)
 
 One key aspect of service management is ready notification, i.e. a mechanism how a service that has started up can tell the service manager when its initialization is complete and when its functionality is available for other programs to access. The service manager uses this information to know when to start depending services, and similar.
 
@@ -20,7 +20,7 @@ The tool can be used to send compliant messages from shell scripts, so that serv
 
 You might wonder what this is good for? After all in a way, `systemd-notify` becomes a really dumb service manager of its own that way. So why?
 
-Our own usecase for this is mostly our testsuite for systemd. Many of our tests invoke some operation and at the same time watch via D-Bus, or Varlink, or the Journal or some other message stream the progress of said operation, looking for particular outputs.
+Our own use case for this is mostly our testsuite for systemd. Many of our tests invoke some operation and at the same time watch via D-Bus, or Varlink, or the Journal or some other message stream the progress of said operation, looking for particular outputs.
 
 Classic shell scripts make it easy to fork off processes in the background, and then controlling their lifetime, that's what shell job control is about after all.
 
@@ -30,7 +30,7 @@ Naively forking off `journalctl`, `busctl`, `varlinkctl` won't give you this kin
 
 `systemd-notify --fork` is here to improve things on this front. As it turns out since a while `journalctl`, `busctl`, `varlinkctl` will already send out `sd_notify()` `READY=1` messages once they have established their watches. By invoking these tools via `systemd-notify --fork`, we can easily fork off these tools in the bg, but still get the synchronization right, i.e. delay further execution of the shell script until the watches are properly established.
 
-To illustrate this. Naively, one could watch journal output in the bg via:
+To illustrate this, naively, one could watch journal output in the bg via:
 
 ```sh
 journalctl -f &
@@ -54,13 +54,13 @@ This will also fork off `journalctl`, but it will do this taking the ready notif
 
 Summary: this removes a major race *and* it's even one line shorter than the previous code. Yay!
 
-Oh, and yes, it would be great if shells would natively support such ready notifications, it's not rocket science after all, and I'd claim it's a pretty common problem when doing concurrent stuff in shell, in particular in test scripts. And the current hacky ways people use to work around this are sometimes hair raising.
+Oh, and yes, it would be great if shells would natively support such ready notifications. It's not rocket science, after all, and I'd claim it's a pretty common problem when doing concurrent stuff in shell, in particular in test scripts. The current hacky ways people use to work around this are sometimes hair-raising.
 
-And also, let me emphasize: `sd_notify()` is fantastic for services, but the concept is so simple and powerful, that it is also great for any other tool too. i.e. it's not just `journalctl`, `busctl`, `varlinkctl` that benefit from the concept, it's really any tool that can be somewhat long-running and has an initialization phase about whose completion the caller might want to know.
+And also, let me emphasize: `sd_notify()` is fantastic for services, but the concept is so simple and powerful that it is also great for any other tool too. That is, it's not just `journalctl`, `busctl`, `varlinkctl` that benefit from the concept, it's really any tool that can be somewhat long-running and has an initialization phase about whose completion the caller might want to know.
 
 ---
 
-> **[@ablu](https://mastodon.social/@ablu)** well sure, but it also does something very different... One spawns a full fledged service in containment and lifecycle tracking, the other just forks a process into the bg...
+> **[@ablu](https://mastodon.social/@ablu)** Well sure, but it also does something very different. One spawns a full-fledged service in containment and lifecycle tracking, the other just forks a process into the bg.
 
 That's right. The comparison might have been confusing because both concepts achieve a bit of readiness/syncing. But no doubt, they are different. What `systemd-notify` does is much lighter weight.
 

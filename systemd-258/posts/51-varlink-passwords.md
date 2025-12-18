@@ -4,7 +4,7 @@ title: "Varlink password agent interface"
 date: 2025-09-03
 ---
 
-For a long time systemd has supported the "ask-password" protocol that allows system components (i.e. non-interactive, low-level stuff) to query passwords and other secrets interactively, during boot and runtime. The original usecase was disk encryption: early during boot, in the initrd, we must query the user for a disk unlock passphrase, and only then can transition into the encrypted root file system.
+For a long time systemd has supported the "ask-password" protocol that allows system components (i.e. non-interactive, low-level stuff) to query passwords and other secrets interactively, during boot and runtime. The original use case was disk encryption: early during boot, in the initrd, we must query the user for a disk unlock passphrase, and only then can transition into the encrypted root file system.
 
 This protocol never relied on D-Bus, because D-Bus is a late boot thing, and not really usable for early boot stuff. The protocol is documented at [systemd.io/PASSWORD_AGENTS/](https://systemd.io/PASSWORD_AGENTS/), and is basically unmodified since day 1.
 

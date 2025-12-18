@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "cgroupv1 removal"
+title: "`cgroupv1` removal"
 date: 2025-08-25
 ---
 
@@ -14,7 +14,7 @@ If you are still stuck in `cgroupv1` land then v257 is the last release for you,
 
 This allowed us to remove a lot of code and simplify the logic of cgroup handling quite substantially. The removal is not 100% complete, at various places there are still some fragments of support lurking, but the key parts are all gone now.
 
-And if you still run software that doesn't do `cgroupv2`, then it's really time to get it updated.
+And if you still run software that doesn't support `cgroupv2`, then it's really time to get it updated.
 
 Good riddance, `cgroupv1`, it was a good time with you, as long as we didn't have something better!
 

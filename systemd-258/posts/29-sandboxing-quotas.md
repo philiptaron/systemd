@@ -4,13 +4,13 @@ title: "Service disk quotas"
 date: 2025-07-08
 ---
 
-Among (many) other things systemd's service manager is also a resource manager.
-It can assign CPU, IO, memory resources to services, measure their use, and apply live modifications to it.
+Among many other things, systemd's service manager is also a resource manager.
+It can assign CPU, IO, and memory resources to services, measure their use, and apply live modifications.
 
 There's one fundamental type of resource it so far didn't manage per-service however: disk space.
 With v258 we are changing that.
 
-As you might know systemd has supported per-unit `StateDirectory=`, `CacheDirectory=` and `LogsDirectory=` settings for a longer time, that define per-service directories that shall be created when the service is invoked and where the service can put its resources.
+As you might know, systemd has supported per-unit `StateDirectory=`, `CacheDirectory=`, and `LogsDirectory=` settings for a longer time, which define per-service directories that are created when the service is invoked and where the service can store its resources.
 
 So far, defining these directories was mostly about three things:
 
@@ -22,7 +22,7 @@ So far, defining these directories was mostly about three things:
 
 > **@alina** i do this with mount namespaces in the systemd nixos wrapper i wrote
 
-> **@balki** I enable CPU/IO/IP accounting. But there does not seem to be a way to read this information programmatically for integration with other tools. Only way seem to be to use `systemctl status | awk ...` which is not very robust.
+> **@balki** I enable CPU/IO/IP accounting. But there does not seem to be a way to read this information programmatically for integration with other tools. The only way seems to be to use `systemctl status | awk ...`, which is not very robust.
 
 ---
 

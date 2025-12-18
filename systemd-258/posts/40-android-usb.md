@@ -15,20 +15,20 @@ And that's already the whole post for today.
 > **GrapheneOS** asks about allowing raw USB device access for unprivileged users
 
 Classic Linux is a multi-user OS with security isolation between users.
-This means users should not be able to sniff on other user's keyboard or mouse input, or read raw data off block devices bypassing file access restrictions and so on.
+This means users should not be able to sniff on other users' keyboard or mouse input, or read raw data off block devices bypassing file access restrictions and so on.
 Because of all that we cannot just wildcard allow unprivileged users raw access to USB devices: we must enforce access restrictions.
 
-We can allow raw USB access to devices we can be reasonably sure about that cannot be used to bypass Linux access restrictions, sniff on other user's input or output.
+We can allow raw USB access to devices we can be reasonably sure about that cannot be used to bypass Linux access restrictions, sniff on other users' input or output.
 Flatpak folks are working on a portal to authorize raw USB access for devices, by the way, mimicking what Android has there a bit.
 But that's not for stuff like USB storage or input devices.
 
 > **Questions about device tagging and ADB detection**
 
-We do tag by device classes wherever possible, but certain kinds of hardware don't have nice device classes, which is where we go by VID/PID in `hwdb`.
+We do tag by device classes wherever possible, but certain kinds of hardware don't have nice device classes, which is where we go by `VID/PID` in `hwdb`.
 We try to be as coarse as possible but as precise as necessary.
 
-I mean, this was the fundamental issue with the Android ADB rules: there is no cleanly recognizable way to detect ADB, there is no clear device class, no spec.
-Existing projects hence maintained large lists of VID/PIDs.
+I mean, this was the fundamental issue with the Android `ADB` rules: there is no cleanly recognizable way to detect `ADB`, there is no clear device class, no spec.
+Existing projects hence maintained large lists of `VID/PID`s.
 The thing we settled on matches a bit more generically, but it's half ugly, because it's not dependent on anything specified, but just on what we have seen in real life.
 
 > **Discussion on allowlist vs denylist approach**

@@ -10,19 +10,19 @@ More recently added where controls that allow interactive shells that run in ter
 
 I think such integration between terminal emulators and the programs, sessions, and infrastructure that runs within them is truly useful, in order to enhance the user experience for an otherwise conceptually quite limited UI concept.
 
-With systemd v258 we added support for a new terminal control (people usually call these "ansi sequences", though a major part of the ones people actually use are definitely not an ANSI standard) that allows communicating a *lot* more meta information from terminal payload to terminal emulator: we came up with a new "ansi" sequence that can be used to define and maintain a stack of *contexts* that tell emulators about what is going on inside the terminal.
+With systemd v258 we added support for a new terminal control (people usually call these "ANSI sequences", though a major part of the ones people actually use are definitely not an ANSI standard) that allows communicating a *lot* more meta information from terminal payload to terminal emulator: we came up with a new ANSI sequence that can be used to define and maintain a stack of *contexts* that tell emulators about what is going on inside the terminal.
 
 What does "context" mean in the above? A context in this sense is basically the runtime of a specific program taking over the terminal's tty device. i.e. typically in a terminal emulator you start out with an interactive shell, that's already your first context.
 
-You then invoke some shell tool, let's say "ls". That's your second context. The tool then exits, now the second context is closed you are back at the first shell context. Now you ssh to some other host. That's a new second context. On that other host you invoke "run0" (or "sudo -s" if you must), that's a third context, from which you then invoke "echo", that's your fourth, and so on.
+You then invoke some shell tool, let's say `ls`. That's your second context. The tool then exits, now the second context is closed you are back at the first shell context. Now you `ssh` to some other host. That's a new second context. On that other host you invoke `run0` (or `sudo -s` if you must), that's a third context, from which you then invoke `echo`, that's your fourth, and so on.
 
 Each of these invoked tools might output a thing or two onto the terminal. Or, to turn this around: each character cell on your terminal that has been written to, conceptually can be associated with a context from which it was initialized.
 
-The new ansi sequence informs the terminal emulator about contexts as they are opened, or closed. And most importantly, the sequence allows attaching various bits of meta information to each context: which host they have been created by, what kind of context they are (i.e. shell, remote shell, privilege upgrade, and so on), which user ID they belong to, which service, which cgroup, which container, etc. Moreover, metadata can be updated for running contexts, and when closing them. For example when a program invoked from a shell starts among the metadata reported to the emulators is the command line invoked, but when the program ends the exit status of the command can be attached too.
+The new ANSI sequence informs the terminal emulator about contexts as they are opened, or closed. And most importantly, the sequence allows attaching various bits of meta information to each context: which host they have been created by, what kind of context they are (i.e. shell, remote shell, privilege upgrade, and so on), which user ID they belong to, which service, which cgroup, which container, etc. Moreover, metadata can be updated for running contexts, and when closing them. For example when a program invoked from a shell starts among the metadata reported to the emulators is the command line invoked, but when the program ends the exit status of the command can be attached too.
 
 What is this all good for? Well, that's ultimately up for the terminal emulator developers to decide. Here are some ideas though:
 
-1. The background of each context could be tinted based on the context type, (or maybe even using a hashed color of the target host or similar), highlighting output from privileged run0/sudo sessions or from remote sessions, to distinguishing their output visually from unpriv/local commands.
+1. The background of each context could be tinted based on the context type, (or maybe even using a hashed color of the target host or similar), highlighting output from privileged `run0`/`sudo` sessions or from remote sessions, to distinguishing their output visually from unpriv/local commands.
 
 2. Meta information could be made visible via a mouse-over tooltip showing the available metainformation.
 
@@ -40,7 +40,7 @@ Those are just some ideas: I am sure others can come up with a lot more.
 
 v258 will generate these context sequences at almost all places where that makes sense. (There's only omission: ssh remoting is not covered right now, because that's outside of our control).
 
-The specification for the new sequence you find here: [OSC-CONTEXT.md](https://github.com/systemd/systemd/blob/main/docs/OSC-CONTEXT.md)
+The specification for the new sequence you can find here: [OSC-CONTEXT.md](https://github.com/systemd/systemd/blob/main/docs/OSC-CONTEXT.md)
 
 And before you ask: no I am not aware of any existing terminal emulator that already makes use of all this information. This is after all an entirely new thing, invented and defined by the systemd project.
 

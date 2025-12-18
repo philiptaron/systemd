@@ -18,15 +18,15 @@ If you build your test images locally, this is all somewhat easy: you can just h
 
 But once you leave the sunny realms of your local development machine and try to build something deployable, you need to think about signing things properly, i.e. on proper build systems in a reasonably secure way.
 
-And that usually means hw backed signing, and in particular "offline" signing. i.e. you no longer just run the signing tool from your build script, but you just prep a request, submit it somewhere. Then you wait, typically even terminate your build for now. And then eventually you get the signature for your artifact back, and restart things again, now being able to combine your build artifacts with the freshly acquired signature, and glueing it all together.
+And that usually means hw backed signing, and in particular "offline" signing—i.e., you no longer just run the signing tool from your build script, but you just prep a request, submit it somewhere. Then you wait, typically even terminate your build for now. And then eventually you get the signature for your artifact back, and restart things again, now being able to combine your build artifacts with the freshly acquired signature, and glueing it all together.
 
-With systemd v258 there's now a lot of support for doing all this, in `systemd-sbsign` (which can do SecureBoot signing), in `systemd-measure` (which does the PCR signing), and in `systemd-repart` (which can do the Verity signing).
+With systemd v258 there's now a lot of support for doing all this in `systemd-sbsign` (which can do SecureBoot signing), `systemd-measure` (which does the PCR signing), and `systemd-repart` (which can do the Verity signing).
 
 And of course `mkosi` already supports all that too (I mean, the features in systemd were put together precisely to make `mkosi` be able to handle this, `mkosi` was the driver here).
 
 Net effect: OpenSUSE build system (OBS) natively supports building `mkosi` images already, and will properly offline sign all these artifacts.
 
-(in case you wonder, OBS supports opengpg signing build artifacts anyway, so number 4 of the list above is already dealt with too. Number 5 in the list is being worked on already).
+(In case you're wondering, OBS supports opengpg signing build artifacts anyway, so number 4 of the list above is already dealt with too. Number 5 in the list is being worked on already).
 
 What's the ultimate goal with all this? The goal is to make it easy to build modern, secure disk images easily: just fork the particleos git repo, build it on OBS and there you go, you have a robust, self-updating, properly signed operating system that checks all the boxes.
 
@@ -36,7 +36,7 @@ What's the ultimate goal with all this? The goal is to make it easy to build mod
 
 > **@alwayscurious** Can you use the TPM to protect against downgrade attacks, so that if the machine is booted with an older kernel, the keys are inaccessible?
 
-`systemd-pcrlock` is robust against downgrade attacks. It generates policies that only cover allowlisted releases and invalidates old policies.
+`systemd-pcrlock` is robust against downgrade attacks. It generates policies that only cover allowlisted releases and invalidates old ones.
 
 ---
 

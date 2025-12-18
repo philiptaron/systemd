@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "systemctl start verbose"
+title: "`systemctl start` verbose mode"
 date: 2025-05-21
 ---
 
@@ -29,19 +29,19 @@ But the other thing is that we must continue the log output until the start oper
 And only once that part is complete, `systemctl start -v` may exit.
 
 And the last part is the nasty bit: ensuring that all log messages enqueued at the moment the start operation completed are fully processed before we stop the log output.
-That's because journald takes log streams from a multitude of sources: classic syslog AF_UNIX, modern systemd AF_UNIX, stdout/stderr stream sockets, kernel kmsg and more.
+That's because journald takes log streams from a multitude of sources: classic `syslog` `AF_UNIX`, modern systemd `AF_UNIX`, `stdout/stderr` stream sockets, kernel `kmsg` and more.
 
 And for each of these inputs, journald needs to track synchronization requests so that we can properly report when all pending log messages up to a certain point are processed, but not more.
 And that's a bit messy, since each of these mechanisms have very different properties and functionalities.
 
-For example, for AF_UNIX datagram sockets, we can track the realtime timestamp of incoming messages, and wait until we processed all messages with a timestamp older than the service start completion.
+For example, for `AF_UNIX` datagram sockets, we can track the realtime timestamp of incoming messages, and wait until we processed all messages with a timestamp older than the service start completion.
 
-For AF_UNIX stream sockets, on the other hand, we don't have that.
+For `AF_UNIX` stream sockets, on the other hand, we don't have that.
 But we can track the number of pending readable bytes in the sockets at the moment that the service start completed, and process that many more bytes before being done with the logging.
 
-But then there's also AF_UNIX stream sockets that have just connected but have not been accepted yet.
-Turns out we can get statistics about that too via the obscure "sockdiag" Linux netlink protocol.
-For kernel kmsg, we have CLOCK_BOOTTIME timestamps, which we can use similar to the AF_UNIX datagram timestamps.
+But then there's also `AF_UNIX` stream sockets that have just connected but have not been accepted yet.
+Turns out we can get statistics about that too via the obscure `sockdiag` Linux netlink protocol.
+For kernel `kmsg`, we have `CLOCK_BOOTTIME` timestamps, which we can use similar to the `AF_UNIX` datagram timestamps.
 
 So yikes, to properly synchronize on log processing, we need 4 completely different mechanisms, and we have a lot of sockets to listen on.
 Uff!
@@ -56,9 +56,6 @@ Enjoy your new `systemctl start -v`!
 In the shell: `alias systemctl="systemctl -v"`
 
 ---
-
-[systemctl]: https://www.freedesktop.org/software/systemd/man/258/systemctl.html
-[journalctl]: https://www.freedesktop.org/software/systemd/man/258/journalctl.html
 
 ## Sources
 

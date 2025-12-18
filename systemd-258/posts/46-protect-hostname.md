@@ -8,9 +8,9 @@ Here's the 46th post highlighting key new features of the upcoming v258 release 
 
 The various `ProtectXYZ=` settings for service unit files allow locking services into sandboxes in a relatively fine grained fashion.
 
-The `ProtectHostname=yes` option is one of these options: it locks the service into a "uts" namespace (which is a Linux kernel construct that disconnects the system hostname the service uses from the hostname the rest of the system sees).
+The `ProtectHostname=yes` option is one of these options: it locks the service into a `uts` namespace (which is a Linux kernel construct that disconnects the system hostname the service uses from the hostname the rest of the system sees).
 
-It also enforces some "seccomp" based restrictions on the system calls to change the hostname. Altogether it is a simple way to "freeze" the hostname for a specific service, and ensure it cannot alter it itself (it might still do so indirectly, if it has suitable access to an IPC service doing it for it, for example `systemd-hostnamed`, hence is only part of the puzzle to lock things down, it's not a one-stop solution blocking hostname changes altogether).
+It also enforces some `seccomp` based restrictions on the system calls to change the hostname. Altogether it is a simple way to "freeze" the hostname for a specific service, and ensure it cannot alter it itself (it might still do so indirectly, if it has suitable access to an IPC service doing it for it, for example `systemd-hostnamed`, hence is only part of the puzzle to lock things down, it's not a one-stop solution blocking hostname changes altogether).
 
 With v258 we are extending the setting in two ways: so far the option was a boolean. Now it takes a third value: "private". If set to that, the hostname is disconnected as before, but hostname changes are not prohibited for the service – however they won't propagate to the system as a whole.
 
@@ -29,9 +29,6 @@ This will disconnect the hostname from the rest of the system, and set the hostn
 `ProtectHostname=yes:foobar` will do the job.
 
 ---
-
-[systemd-resolved]: https://www.freedesktop.org/software/systemd/man/258/systemd-resolved.html
-[systemd-hostnamed]: https://www.freedesktop.org/software/systemd/man/258/systemd-hostnamed.html
 
 ## Sources
 

@@ -4,7 +4,7 @@ title: "RestartMode=debug for debug logging"
 date: 2025-08-21
 ---
 
-4️⃣3️⃣ Here's the 43rd post highlighting key new features of the upcoming v258 release of systemd. [#systemd258](https://mastodon.social/tags/systemd258)
+43: Here's the 43rd post highlighting key new features of the upcoming v258 release of systemd. [#systemd258](https://mastodon.social/tags/systemd258)
 
 Back in v257 we added support for `RestartMode=debug`: if used and a service is automatically restarted due to `Restart=` a special environment variable `DEBUG_INVOCATION=1` is set for the new invocation. This is then supposed to enable special logic in the service code that generates additional debug logging and other behaviour.
 
@@ -24,7 +24,7 @@ I really hope to see similar logic added to the logging infra of the various pro
 
 > **[Fluchtkapsel](https://nerdculture.de/@fluchtkapsel)** Will this be triggered by `systemctl restart …` or when a service gets restarted automatically?
 
-only when restarted automatically.
+Only when restarted automatically.
 
 > **[Ruben Vermeersch](https://social.rocketeer.be/@ruben)** =restart or =debug?
 

@@ -14,7 +14,7 @@ With v258 we added one more such flag: `|` (i.e. the pipe symbol). If used, then
 
 What's this good for? Of course, you could use this for embedding shell scripts into the service file, but we are not sure that would be too wise (since which shell is used is configured in the user record, not in the service, i.e. you might end up writing a zsh script that will be interpreted by bash or similar).
 
-Our primary usecase for this is different hence: it's to make sure our sudo replacement `run0` is nicer to use: typically people expect that interactive `run0` switches to the target account's configured shell (instead of `/bin/sh`), and that's what this new flag allows us to do.
+Our primary use case for this is different hence: it's to make sure our `sudo` replacement `run0` is nicer to use: typically people expect that interactive `run0` switches to the target account's configured shell (instead of `/bin/sh`), and that's what this new flag allows us to do.
 
 ---
 
@@ -24,7 +24,7 @@ Sure, but not sure if you actually want to do that, see my comments about that.
 
 > **[@agowa338](https://chaos.social/@agowa338)** Well it for sure is better than fighting with having to nest escape syntax. Especially in regards to quotations... So removing one layer of escaping is definitely preferable. And which shell is used for a service account is also known. Sure it would be desirable if there was a separate switch for it, but it's also kinda not needed as at least at time of packaging it should be known in almost all cases anyway...
 
-You can use the `:` modifier to disable env var expansion. Very useful for manual `sh -c` lines. (You cannot disable specifier expansion though)
+You can use the `:` modifier to disable env var expansion. Very useful for manual `` `sh -c` `` lines. (You cannot disable specifier expansion though)
 
 > **[@agowa338](https://chaos.social/@agowa338)** I mainly referred to things like (pseudo code):
 >
