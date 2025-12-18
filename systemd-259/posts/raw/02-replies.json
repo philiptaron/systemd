@@ -1,0 +1,442 @@
+[
+  {
+    "id": "115576391668841942",
+    "created_at": "2025-11-19T12:36:19.000Z",
+    "in_reply_to_id": "115575314386754605",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://social.treehouse.systems/users/ska/statuses/115576391588611707",
+    "url": "https://social.treehouse.systems/@ska/115576391588611707",
+    "replies_count": 2,
+    "reblogs_count": 10,
+    "favourites_count": 0,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> Now that was a random shot I did not expect. So I had to read the whole thread, and it was <em>wild</em>.</p><p>So. First, let's straighten up the record.</p><p>s6's pid 1, s6-svscan, depends on <em>one</em> shared library in addition to libc... and that is <em>if</em> you choose to link it dynamically, which is not the default. This library is from the skalibs package, the general C programming library used by every skarnet.org binary. It is a sane dependency to a package coming from the same origin, an explicit design choice to factor a set of C routines outside of applications, because I hate code duplication across packages.</p><p>There are a couple binaries in the s6 package that indeed depend on three libraries: one from the s6 package itself, so, not a dependency; one from the <em>optional</em> execline package also coming from the same origin; and the third one is skalibs. That is all.</p><p>The fact that s6 binaries can be linked against shared libraries is a concession to practical use in distributions, which prefer to use shared libraries for obvious maintenance and security reasons. As an individual, I generally prefer static linking, and it would be interesting to compare how s6 fares against systemd when all the libraries are statically linked...</p><p>... but that's irrelevant, because that's clearly not the path systemd is taking - and now we get to the important part.</p><p>The entire point of your thread was to brag that <strong>you removed shared libraries from the ldd output by using dlopen() instead of having them linked at exec time</strong>. (So, obviously, no static linking of these libraries.)</p><p>Lennart, that is not how simplifying dependencies works. That is not how any of this works.</p><p>Cleaning up ldd output by calling <code>dlopen()</code> does not remove dependencies. It just makes them less visible.  <em>You still depend on the external package</em>, the difference is that</p><ul><li>you do not have the validation step at link time: less static analysis</li><li>at run time, if the dependency is missing, you don't fail at <code>execve()</code> time, but at <code>dlopen()</code> time, which means <em>later</em>.</li></ul><p>In other words, what you did <em>made systemd less reliable</em>, and more unpredictable. You removed opportunities to detect problems at link time, and you deferred the failure at run time; this goes against good engineering practices that say <em>the earlier you fail, the better</em>.</p><p>You did not remove the dependencies to pam, libselinux, tpm2-tss, lbacl, libblkid, libmount, libbpf, libcryptsetup, libaudit, libkmod, libpcre2, libp11-kit, libseccomp, liblzma, libzstd, liblz4. and more. <strong>You hid them.</strong></p><p>And then you call s6 a \"dependency hog\" because in the worst possible case, one s6 program has an ldd output with 3 shared libraries in addition to the libc. Dude. Come on.</p><p>I am starting to believe that you are ashamed of the amount of dependencies in systemd. Good - that would be a healthy emotional response. But then the healthy action to take isn't to hide the dependencies then take a shot at critics by saying LOOK THEY HAVE MORE DEPENDENCIES THAN WE DO NOW OMG. The healthy action to take would be to... actually work at making some of your dependencies optional, by identifying exactly in what circumstances a given dependency is used, deciding if there's a viable alternative in its absence, possibly writing workarounds or stubs, and adding compile-time configuration switches.</p><p>I have said it before and I'll say it again: I welcome technical design discussions. But... is it too much to ask that they be of a slightly higher level?</p>",
+    "reblog": null,
+    "account": {
+      "id": "109365216435343105",
+      "username": "ska",
+      "acct": "ska@treehouse.systems",
+      "display_name": "Laurent Bercot",
+      "locked": false,
+      "bot": false,
+      "discoverable": true,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-11-18T00:00:00.000Z",
+      "note": "<p>Grumpy Frenchman, C/Unix addict, author of s6 and other software at skarnet.org.</p><p>Good tech (so, probably not the tech you're thinking about), energy transition and climate change, leftist politics, psychology and self-improvement, pillow philosophy, songwriting and production, mechanisms of storytelling, video games as an art medium, shitposting.</p>",
+      "url": "https://social.treehouse.systems/@ska",
+      "uri": "https://social.treehouse.systems/users/ska",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/365/216/435/343/105/original/d13e5d4e4407165b.png",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/365/216/435/343/105/original/d13e5d4e4407165b.png",
+      "header": "https://files.mastodon.social/cache/accounts/headers/109/365/216/435/343/105/original/203a96902bcaa171.png",
+      "header_static": "https://files.mastodon.social/cache/accounts/headers/109/365/216/435/343/105/original/203a96902bcaa171.png",
+      "followers_count": 765,
+      "following_count": 46,
+      "statuses_count": 6564,
+      "last_status_at": "2025-12-18",
+      "hide_collections": false,
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Personal website",
+          "value": "<a href=\"https://skarnet.org\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">skarnet.org</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Business website",
+          "value": "<a href=\"https://skarnet.com\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">skarnet.com</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Twitter",
+          "value": "<a href=\"https://twitter.com/laurentbercot\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/laurentbercot</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Github",
+          "value": "<a href=\"https://github.com/skarnet\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">github.com/skarnet</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [
+      {
+        "id": "115576391634145230",
+        "type": "image",
+        "url": "https://files.mastodon.social/cache/media_attachments/files/115/576/391/634/145/230/original/6bc8fc21c3ef4f7a.jpg",
+        "preview_url": "https://files.mastodon.social/cache/media_attachments/files/115/576/391/634/145/230/small/6bc8fc21c3ef4f7a.jpg",
+        "remote_url": "https://cache.treehouse.systems/media_attachments/files/115/576/389/079/740/092/original/61bbd6c860781745.jpg",
+        "preview_remote_url": null,
+        "text_url": null,
+        "meta": {
+          "focus": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "original": {
+            "width": 470,
+            "height": 549,
+            "size": "470x549",
+            "aspect": 0.8561020036429873
+          },
+          "small": {
+            "width": 444,
+            "height": 519,
+            "size": "444x519",
+            "aspect": 0.8554913294797688
+          }
+        },
+        "description": "The Dependency Hog. It's very cute.",
+        "blurhash": "U5GHnz~B~m9bo|IpM{Ip~nIr9b^O#lbYxuS$"
+      }
+    ],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  {
+    "id": "115576454712141029",
+    "created_at": "2025-11-19T12:52:22.000Z",
+    "in_reply_to_id": "115575314386754605",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://fosstodon.org/users/pemensik/statuses/115576454684957376",
+    "url": "https://fosstodon.org/@pemensik/115576454684957376",
+    "replies_count": 1,
+    "reblogs_count": 0,
+    "favourites_count": 1,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> please stop hiding real dependencies of libsystemd. Instead split libsystemd into more libraries, with basic and more extensive dependencies. When people use it only for DBus interface, they should not load journal dependencies. Allow linking only to parts user needs. I want real dependencies visible in rpm generated packages. Those will become invisible, but might be required for some functionality. It moves burden to libsystemd users.</p>",
+    "reblog": null,
+    "account": {
+      "id": "109436187519821698",
+      "username": "pemensik",
+      "acct": "pemensik@fosstodon.org",
+      "display_name": "Petr Men\u0161\u00edk :fedora:",
+      "locked": false,
+      "bot": false,
+      "discoverable": true,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-11-30T00:00:00.000Z",
+      "note": "<p>DNS and Linux specialist, RHEL maintainer, Red Hatter</p>",
+      "url": "https://fosstodon.org/@pemensik",
+      "uri": "https://fosstodon.org/users/pemensik",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/436/187/519/821/698/original/b8012c192c41659d.jpg",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/436/187/519/821/698/original/b8012c192c41659d.jpg",
+      "header": "https://files.mastodon.social/cache/accounts/headers/109/436/187/519/821/698/original/6e962001fb6a846c.jpg",
+      "header_static": "https://files.mastodon.social/cache/accounts/headers/109/436/187/519/821/698/original/6e962001fb6a846c.jpg",
+      "followers_count": 97,
+      "following_count": 86,
+      "statuses_count": 1029,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "emojis": [
+        {
+          "shortcode": "fedora",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/024/637/original/cc41b6bb7be9d7c2.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/024/637/static/cc41b6bb7be9d7c2.png",
+          "visible_in_picker": true
+        }
+      ],
+      "fields": [
+        {
+          "name": "Twitter",
+          "value": "@pihhan",
+          "verified_at": null
+        },
+        {
+          "name": "GitHub",
+          "value": "<a href=\"https://GitHub.com/pemensik\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">GitHub.com/pemensik</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Fedora",
+          "value": "<a href=\"https://src.fedoraproject.org/user/pemensik\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">src.fedoraproject.org/user/pem</span><span class=\"invisible\">ensik</span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@pemensik\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pemensik</span></a></span>:fedora.im",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  {
+    "id": "115577378745315251",
+    "created_at": "2025-11-19T16:47:22.000Z",
+    "in_reply_to_id": "115577117761089722",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://fosstodon.org/users/pemensik/statuses/115577378711278260",
+    "url": "https://fosstodon.org/@pemensik/115577378711278260",
+    "replies_count": 1,
+    "reblogs_count": 0,
+    "favourites_count": 0,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> you can use static library internally to share common parts between your shared libraries. That way the code is shared and public shared libraries export only truly public symbols. But I think exporting public functions by publishing header files only for supported calls would be sufficient. In any case, how are dlopen deps handled at packaging level then?</p>",
+    "reblog": null,
+    "account": {
+      "id": "109436187519821698",
+      "username": "pemensik",
+      "acct": "pemensik@fosstodon.org",
+      "display_name": "Petr Men\u0161\u00edk :fedora:",
+      "locked": false,
+      "bot": false,
+      "discoverable": true,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-11-30T00:00:00.000Z",
+      "note": "<p>DNS and Linux specialist, RHEL maintainer, Red Hatter</p>",
+      "url": "https://fosstodon.org/@pemensik",
+      "uri": "https://fosstodon.org/users/pemensik",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/436/187/519/821/698/original/b8012c192c41659d.jpg",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/436/187/519/821/698/original/b8012c192c41659d.jpg",
+      "header": "https://files.mastodon.social/cache/accounts/headers/109/436/187/519/821/698/original/6e962001fb6a846c.jpg",
+      "header_static": "https://files.mastodon.social/cache/accounts/headers/109/436/187/519/821/698/original/6e962001fb6a846c.jpg",
+      "followers_count": 97,
+      "following_count": 86,
+      "statuses_count": 1029,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "emojis": [
+        {
+          "shortcode": "fedora",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/024/637/original/cc41b6bb7be9d7c2.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/024/637/static/cc41b6bb7be9d7c2.png",
+          "visible_in_picker": true
+        }
+      ],
+      "fields": [
+        {
+          "name": "Twitter",
+          "value": "@pihhan",
+          "verified_at": null
+        },
+        {
+          "name": "GitHub",
+          "value": "<a href=\"https://GitHub.com/pemensik\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">GitHub.com/pemensik</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Fedora",
+          "value": "<a href=\"https://src.fedoraproject.org/user/pemensik\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">src.fedoraproject.org/user/pem</span><span class=\"invisible\">ensik</span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@pemensik\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pemensik</span></a></span>:fedora.im",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  {
+    "id": "115576877666758107",
+    "created_at": "2025-11-19T14:39:56.000Z",
+    "in_reply_to_id": "115575271970490767",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://fosstodon.org/users/3v1n0/statuses/115576877613207093",
+    "url": "https://fosstodon.org/@3v1n0/115576877613207093",
+    "replies_count": 1,
+    "reblogs_count": 0,
+    "favourites_count": 2,
+    "quotes_count": 0,
+    "edited_at": "2025-11-19T14:41:16.000Z",
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> This is nice and with <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pwithnall\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pwithnall</span></a></span>, <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@ebassi\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>ebassi</span></a></span> and other GLib maintainers we're discussing (<a href=\"https://gitlab.gnome.org/GNOME/glib/-/issues/3831\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">gitlab.gnome.org/GNOME/glib/-/</span><span class=\"invisible\">issues/3831</span></a>) to follow this approach and drop libpcre2 direct dependency from GLib too.</p><p>And I'm thinking on doing something similar in libfprint too.</p><p>Now, I'm wondering, would be relevant to move <a href=\"https://github.com/systemd/systemd/blob/main/src/basic/dlfcn-util.h\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">github.com/systemd/systemd/blo</span><span class=\"invisible\">b/main/src/basic/dlfcn-util.h</span></a> and friends to a shared repository to be easy re-usable through a meson subproject in the various projects that would like to take a similar approach?</p>",
+    "reblog": null,
+    "account": {
+      "id": "110191690773867173",
+      "username": "3v1n0",
+      "acct": "3v1n0@fosstodon.org",
+      "display_name": "Marco Trevisan :ubuntu:",
+      "locked": false,
+      "bot": false,
+      "discoverable": true,
+      "indexable": true,
+      "group": false,
+      "created_at": "2023-04-12T00:00:00.000Z",
+      "note": "<p>Marco \u00abTrevi\u00f1o\u00bb Trevisan: an Opensource Developer, Free Software advocate, <span class=\"h-card\" translate=\"no\"><a href=\"https://ubuntu.social/@ubuntu\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>ubuntu</span></a></span> :ubuntu: member, <span class=\"h-card\" translate=\"no\"><a href=\"https://framapiaf.org/@debian\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>debian</span></a></span> :debian: maintainer, Canonical and <span class=\"h-card\" translate=\"no\"><a href=\"https://floss.social/@gnome\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>gnome</span></a></span> :gnome: Software Engineer for Ubuntu Desktop!</p>",
+      "url": "https://fosstodon.org/@3v1n0",
+      "uri": "https://fosstodon.org/users/3v1n0",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/110/191/690/773/867/173/original/9c82e6a705669b86.jpg",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/110/191/690/773/867/173/original/9c82e6a705669b86.jpg",
+      "header": "https://files.mastodon.social/cache/accounts/headers/110/191/690/773/867/173/original/72435290d6f72bee.jpg",
+      "header_static": "https://files.mastodon.social/cache/accounts/headers/110/191/690/773/867/173/original/72435290d6f72bee.jpg",
+      "followers_count": 301,
+      "following_count": 289,
+      "statuses_count": 269,
+      "last_status_at": "2025-12-18",
+      "hide_collections": false,
+      "emojis": [
+        {
+          "shortcode": "ubuntu",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/023/655/original/f38974148a186e06.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/023/655/static/f38974148a186e06.png",
+          "visible_in_picker": true
+        },
+        {
+          "shortcode": "debian",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/023/original/d4f3f88e97899190.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/026/023/static/d4f3f88e97899190.png",
+          "visible_in_picker": true
+        },
+        {
+          "shortcode": "gnome",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/958/original/8fd2a2a10752621c.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/033/958/static/8fd2a2a10752621c.png",
+          "visible_in_picker": true
+        }
+      ],
+      "fields": [
+        {
+          "name": "Website",
+          "value": "<a href=\"https://3v1n0.net\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">3v1n0.net</span><span class=\"invisible\"></span></a>",
+          "verified_at": "2025-12-18T07:45:36.105+00:00"
+        },
+        {
+          "name": "OpenPGP",
+          "value": "<a href=\"https://keyoxide.org/openpgp4fpr:D4C501DA48EB797A081750939449C2F50996635F\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">keyoxide.org/openpgp4fpr:D4C50</span><span class=\"invisible\">1DA48EB797A081750939449C2F50996635F</span></a>",
+          "verified_at": "2025-12-18T07:45:37.656+00:00"
+        },
+        {
+          "name": "GitHub",
+          "value": "<a href=\"https://github.com/3v1n0\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/3v1n0</span><span class=\"invisible\"></span></a>",
+          "verified_at": "2025-12-18T07:45:38.683+00:00"
+        },
+        {
+          "name": "Twitter Bridge (archive)",
+          "value": "<a href=\"https://fosstodon.org/@3v1n0@bird.makeup\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">fosstodon.org/@3v1n0@bird.make</span><span class=\"invisible\">up</span></a>",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      },
+      {
+        "id": "108250266651323248",
+        "username": "pwithnall",
+        "url": "https://mastodon.social/@pwithnall",
+        "acct": "pwithnall"
+      },
+      {
+        "id": "428614",
+        "username": "ebassi",
+        "url": "https://mastodon.social/@ebassi",
+        "acct": "ebassi"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": {
+      "url": "https://gitlab.gnome.org/GNOME/glib/-/issues/3831",
+      "title": "Consider moving libpcre2 dependency to dlopen() (#3831) \u00b7 Issues \u00b7 GNOME / GLib \u00b7 GitLab",
+      "description": "Inspired by what systemd does with rarely-used dependencies, I think it would be interesting to consider moving GLib\u2019s libpcre2 dependency out to...",
+      "language": "en",
+      "type": "link",
+      "author_name": "",
+      "author_url": "",
+      "provider_name": "GitLab",
+      "provider_url": "",
+      "html": "",
+      "width": 480,
+      "height": 480,
+      "image": "https://files.mastodon.social/cache/preview_cards/images/171/309/014/original/f92c77a07d941f7c.jpg",
+      "image_description": "",
+      "embed_url": "",
+      "blurhash": "UhS5FxR7t-nh.5w?i^aKT}S6Qmj[%Ln$XTbH",
+      "published_at": null,
+      "authors": []
+    },
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  }
+]

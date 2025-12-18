@@ -12,6 +12,8 @@ For this one I am simply going to top-post [@daandemeyer](https://mastodon.socia
 
 ---
 
+> **[@pemensik](https://fosstodon.org/@pemensik)** it seems potentially dangerous. Does it share configuration with sudo somehow? What users are allowed to use this in default configuration?
+
 **[@pemensik](https://fosstodon.org/@pemensik) [@daandemeyer](https://mastodon.social/@daandemeyer)** this leaves auth to pk, unifying auth at one place hence: pk. Regular users by default get to use it only after the usual pk auth query.
 
 ---

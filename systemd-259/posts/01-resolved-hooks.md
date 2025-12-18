@@ -30,19 +30,37 @@ And that's it for the first episode.
 
 ---
 
+> **[@arianvp](https://functional.cafe/@arianvp)** wait this solves the final use case of nscd for us in nixos I think?
+>
+> replace user lookup with the userdb multiplexer. Replace host lookup with resolved hooks??
+
 **[@arianvp](https://functional.cafe/@arianvp)** not following. I never understood your nscd usecase. Given that nscd is obsolete and glibc timeouts for it are extremly short (and followed by local fallback) it seems entirely pointless to ever use nscd.
 
 Note this new hook stuff allows you to plug something *behind* the 4 APIs resolved accepts resolution requests on (NSS, D-Bus, Varlink, DNS_STUB). Not sure what NixOS thinks it needs to plug in there?
 
+> **[@arianvp](https://functional.cafe/@arianvp)** the point is. This hook stuff allows me to replace nscd with my own service that is responsible for loading all the NSS modules and exposes that as varlink to resolved and userdbd.
+>
+> That way I can make the NSS modules in question completely hidden outside of the daemon and guarantee they don't get dlopen() into random programs for which I'm not sure they are ABI compatible with the NSS modules in question.
+
 **[@arianvp](https://functional.cafe/@arianvp)** well, i don't get it. how do you get your requests from NSS to resolved if you are allergic to use nss-resolve? you can use the DNS stub of course, but I'd not recommend that, since a lot of metadata gets lost along the way, and search domain logic then must be client side.
 
+> **[@arianvp](https://functional.cafe/@arianvp)** the global /etc/nsswitch.conf will have nss-systemd and nss-resolve. And nothing else.
+>
+> My little varlink daemon will have an /etc/nsswitch.conf containing all the other NSS modules in its mount namespace.
+
 **[@arianvp](https://functional.cafe/@arianvp)** ah, ok, if you are ok with nss-resolve/nss-systemd then things are good, indeed.
+
+> **[@funkylab](https://mastodon.social/@funkylab)** (I think it's a bit of an odd choice to enforce alphabetic precedence there; a first served stays right seems to be more usual in name resolving circles?)
 
 **[@funkylab](https://mastodon.social/@funkylab)** well, there might be conflicting records from different hook services. I wanted to give people a way to define an order of preference for that, simply by picking a different name.
 
 The hook concept is quite powerful, it could not just be used for making additional names resolveable, it also can be used to make certain names unresolvable (i.e. something like a name-level firewall). But if you have both kinds in the mix it's essential you can run the firewall-style stuff before the other.
 
+> **[@funkylab](https://mastodon.social/@funkylab)** hm, but that does mean that you need to wait at least until the alphabetically first service has replied, right? What's the potential for blocking the system there?
+
 **[@funkylab](https://mastodon.social/@funkylab)** yes, we need to wait for the alphabetically first service. we apply a timeout as well though, hence this should be quite robust, if hook services misbehave. And there's a ratelimit: if services fail too often, we don't ping them anymore for a while.
+
+> **[@pemensik](https://fosstodon.org/@pemensik)** this is somehow weird design. Instead of answering every name, it should allow registration of localhost handled subdomains. Then every such subdomain should have defined service handling it's names. Just like forwarding common domain of libvirt network to it's Dnsmasq instance. I think your design to solve machine names registration is wrong this way.
 
 **[@pemensik](https://fosstodon.org/@pemensik)** we already have a concept of "delegate" domains in resolved since v258, i.e. you can define domains that shall be forwarded to specific DNS servers. But that's a different usecase, as that's a DNS level thing.
 

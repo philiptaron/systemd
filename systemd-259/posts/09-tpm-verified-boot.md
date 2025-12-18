@@ -38,9 +38,13 @@ And that's all for now.
 
 ---
 
+> **[@raito](https://nixos.paris/@raito)** Do you know how many nvpcrs can we expect to use on a normal system in addition to those that systemd are going to produce?
+
 **[@raito](https://nixos.paris/@raito)** well, the pc profile says there should be 76 nvindexes allocatable. but it's not entirely clear how many of those shall be accessible in nvextend mode, and if you store very large data in other nvindexes then there might not be enough data for the nvpcrs anymore. That said, nvpcrs require no data storage, just metadata storage (since they reset to 0 on boot), and thus they should be very space efficient...
 
 But the honest answer is, we need to be frugal still, we'll have to see how this all collides with reality.
+
+> **[@tfld](https://tyrol.social/@tfld)** Oof, that table is unreadable in dark mode. I added a PR to fix that
 
 **[@tfld](https://tyrol.social/@tfld)** thank you, already got merged!
 

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "115610753473860143",
+    "created_at": "2025-11-25T14:15:00.619Z",
+    "in_reply_to_id": "115605598751722319",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "es",
+    "uri": "https://mastodon.social/users/jaminsamuel18/statuses/115610753473860143",
+    "url": "https://mastodon.social/@jaminsamuel18/115610753473860143",
+    "replies_count": 1,
+    "reblogs_count": 0,
+    "favourites_count": 0,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> I know this question isn&#39;t related to systemd-nspawn and vmpawn, but I&#39;m curious:</p><p>Is there a plan for systemd-sysupdate and incremental updates from one version to the next in GNOME OS?</p>",
+    "reblog": null,
+    "application": {
+      "name": "Web",
+      "website": null
+    },
+    "account": {
+      "id": "112758737395729484",
+      "username": "jaminsamuel18",
+      "acct": "jaminsamuel18",
+      "display_name": "Jamin Samuel",
+      "locked": false,
+      "bot": false,
+      "discoverable": null,
+      "indexable": false,
+      "group": false,
+      "created_at": "2024-07-09T00:00:00.000Z",
+      "note": "<p>\ud83e\uddec | Ciencia <br />\ud83d\udda5\ufe0f | Tecnolog\u00eda<br />\ud83d\udc27 | Linux <br />\ud83d\udc33 | Docker <br />\u26f4\ufe0f | Kubernetes<br />\ud83c\udf10 | OSI model</p>",
+      "url": "https://mastodon.social/@jaminsamuel18",
+      "uri": "https://mastodon.social/users/jaminsamuel18",
+      "avatar": "https://files.mastodon.social/accounts/avatars/112/758/737/395/729/484/original/673f146356623d60.jpg",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/112/758/737/395/729/484/original/673f146356623d60.jpg",
+      "header": "https://files.mastodon.social/accounts/headers/112/758/737/395/729/484/original/550b1836a34ed5e1.jpg",
+      "header_static": "https://files.mastodon.social/accounts/headers/112/758/737/395/729/484/original/550b1836a34ed5e1.jpg",
+      "followers_count": 5,
+      "following_count": 57,
+      "statuses_count": 234,
+      "last_status_at": "2025-12-18",
+      "hide_collections": null,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": []
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  }
+]

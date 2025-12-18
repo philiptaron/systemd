@@ -1,0 +1,471 @@
+[
+  {
+    "id": "115570189858855935",
+    "created_at": "2025-11-18T10:19:07.000Z",
+    "in_reply_to_id": "115570123490469021",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://functional.cafe/users/arianvp/statuses/115570189754362232",
+    "url": "https://functional.cafe/@arianvp/115570189754362232",
+    "replies_count": 3,
+    "reblogs_count": 1,
+    "favourites_count": 4,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> wait this solves the final use case of nscd for us in nixos I think?</p><p>replace user lookup with the userdb multiplexer. Replace host lookup with resolved hooks??</p>",
+    "reblog": null,
+    "account": {
+      "id": "268326",
+      "username": "arianvp",
+      "acct": "arianvp@functional.cafe",
+      "display_name": "Arian",
+      "locked": false,
+      "bot": false,
+      "discoverable": false,
+      "indexable": false,
+      "group": false,
+      "created_at": "2017-12-29T00:00:00.000Z",
+      "note": "<p>Functionele dingen</p>",
+      "url": "https://functional.cafe/@arianvp",
+      "uri": "https://functional.cafe/users/arianvp",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/000/268/326/original/87e6f92a768d3907.jpg",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/000/268/326/original/87e6f92a768d3907.jpg",
+      "header": "https://mastodon.social/headers/original/missing.png",
+      "header_static": "https://mastodon.social/headers/original/missing.png",
+      "followers_count": 715,
+      "following_count": 150,
+      "statuses_count": 1141,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Twitter",
+          "value": "<a href=\"https://twitter.com/ProgrammerDude\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/ProgrammerDude</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Github",
+          "value": "<a href=\"https://github.com/arianvp\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/arianvp</span><span class=\"invisible\"></span></a>",
+          "verified_at": "2025-12-17T22:02:01.239+00:00"
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  {
+    "id": "115570255560234890",
+    "created_at": "2025-11-18T10:35:50.000Z",
+    "in_reply_to_id": "115570243582532665",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://functional.cafe/users/arianvp/statuses/115570255506574341",
+    "url": "https://functional.cafe/@arianvp/115570255506574341",
+    "replies_count": 1,
+    "reblogs_count": 0,
+    "favourites_count": 0,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> the point is. This hook stuff allows me to replace nscd with my own service  that is responsible for loading all the NSS modules and exposes that as varlink to resolved and userdbd.</p><p>That way I can make the NSS modules in question completely hidden outside of the daemon and guarantee they don't get dlopen() into random programs for which I'm not sure they are ABI compatible with the NSS modules in question.</p>",
+    "reblog": null,
+    "account": {
+      "id": "268326",
+      "username": "arianvp",
+      "acct": "arianvp@functional.cafe",
+      "display_name": "Arian",
+      "locked": false,
+      "bot": false,
+      "discoverable": false,
+      "indexable": false,
+      "group": false,
+      "created_at": "2017-12-29T00:00:00.000Z",
+      "note": "<p>Functionele dingen</p>",
+      "url": "https://functional.cafe/@arianvp",
+      "uri": "https://functional.cafe/users/arianvp",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/000/268/326/original/87e6f92a768d3907.jpg",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/000/268/326/original/87e6f92a768d3907.jpg",
+      "header": "https://mastodon.social/headers/original/missing.png",
+      "header_static": "https://mastodon.social/headers/original/missing.png",
+      "followers_count": 715,
+      "following_count": 150,
+      "statuses_count": 1141,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Twitter",
+          "value": "<a href=\"https://twitter.com/ProgrammerDude\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/ProgrammerDude</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Github",
+          "value": "<a href=\"https://github.com/arianvp\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/arianvp</span><span class=\"invisible\"></span></a>",
+          "verified_at": "2025-12-17T22:02:01.239+00:00"
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  {
+    "id": "115570307042732568",
+    "created_at": "2025-11-18T10:48:55.000Z",
+    "in_reply_to_id": "115570290314839897",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://functional.cafe/users/arianvp/statuses/115570306925487174",
+    "url": "https://functional.cafe/@arianvp/115570306925487174",
+    "replies_count": 1,
+    "reblogs_count": 0,
+    "favourites_count": 0,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> the global /etc/nsswitch.conf will have nss-systemd and nss-resolve<br>And nothing else.</p><p>My little  varlink daemon will have an /etc/nsswitch.conf containing all the other NSS modules in its mount namespace.</p>",
+    "reblog": null,
+    "account": {
+      "id": "268326",
+      "username": "arianvp",
+      "acct": "arianvp@functional.cafe",
+      "display_name": "Arian",
+      "locked": false,
+      "bot": false,
+      "discoverable": false,
+      "indexable": false,
+      "group": false,
+      "created_at": "2017-12-29T00:00:00.000Z",
+      "note": "<p>Functionele dingen</p>",
+      "url": "https://functional.cafe/@arianvp",
+      "uri": "https://functional.cafe/users/arianvp",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/000/268/326/original/87e6f92a768d3907.jpg",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/000/268/326/original/87e6f92a768d3907.jpg",
+      "header": "https://mastodon.social/headers/original/missing.png",
+      "header_static": "https://mastodon.social/headers/original/missing.png",
+      "followers_count": 715,
+      "following_count": 150,
+      "statuses_count": 1141,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Twitter",
+          "value": "<a href=\"https://twitter.com/ProgrammerDude\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">twitter.com/ProgrammerDude</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Github",
+          "value": "<a href=\"https://github.com/arianvp\" target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">github.com/arianvp</span><span class=\"invisible\"></span></a>",
+          "verified_at": "2025-12-17T22:02:01.239+00:00"
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  {
+    "id": "115570260775627505",
+    "created_at": "2025-11-18T10:37:11.077Z",
+    "in_reply_to_id": "115570220443326155",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/funkylab/statuses/115570260775627505",
+    "url": "https://mastodon.social/@funkylab/115570260775627505",
+    "replies_count": 1,
+    "reblogs_count": 0,
+    "favourites_count": 0,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> (I think it&#39;s a bit of an odd choice to enforce alphabetic precedence there; a first served stays right seems to be more usual in name resolving circles?)</p>",
+    "reblog": null,
+    "application": {
+      "name": "Phanpy",
+      "website": "https://phanpy.social"
+    },
+    "account": {
+      "id": "108221365558429592",
+      "username": "funkylab",
+      "acct": "funkylab",
+      "display_name": "Marcus M\u00fcller",
+      "locked": false,
+      "bot": false,
+      "discoverable": true,
+      "indexable": true,
+      "group": false,
+      "created_at": "2022-04-30T00:00:00.000Z",
+      "note": "",
+      "url": "https://mastodon.social/@funkylab",
+      "uri": "https://mastodon.social/users/funkylab",
+      "avatar": "https://files.mastodon.social/accounts/avatars/108/221/365/558/429/592/original/19e93f082f378a6e.png",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/108/221/365/558/429/592/original/19e93f082f378a6e.png",
+      "header": "https://files.mastodon.social/accounts/headers/108/221/365/558/429/592/original/ef8174030fba41c0.png",
+      "header_static": "https://files.mastodon.social/accounts/headers/108/221/365/558/429/592/original/ef8174030fba41c0.png",
+      "followers_count": 565,
+      "following_count": 513,
+      "statuses_count": 6984,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": []
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  {
+    "id": "115570220443326155",
+    "created_at": "2025-11-18T10:26:55.656Z",
+    "in_reply_to_id": "115570114780614916",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://mastodon.social/users/funkylab/statuses/115570220443326155",
+    "url": "https://mastodon.social/@funkylab/115570220443326155",
+    "replies_count": 2,
+    "reblogs_count": 0,
+    "favourites_count": 0,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\">@<span>pid_eins</span></a></span> hm, but that does mean that you need to wait at least until the alphabetically first service has replied, right? What&#39;s the potential for blocking the system there?</p>",
+    "reblog": null,
+    "application": {
+      "name": "Phanpy",
+      "website": "https://phanpy.social"
+    },
+    "account": {
+      "id": "108221365558429592",
+      "username": "funkylab",
+      "acct": "funkylab",
+      "display_name": "Marcus M\u00fcller",
+      "locked": false,
+      "bot": false,
+      "discoverable": true,
+      "indexable": true,
+      "group": false,
+      "created_at": "2022-04-30T00:00:00.000Z",
+      "note": "",
+      "url": "https://mastodon.social/@funkylab",
+      "uri": "https://mastodon.social/users/funkylab",
+      "avatar": "https://files.mastodon.social/accounts/avatars/108/221/365/558/429/592/original/19e93f082f378a6e.png",
+      "avatar_static": "https://files.mastodon.social/accounts/avatars/108/221/365/558/429/592/original/19e93f082f378a6e.png",
+      "header": "https://files.mastodon.social/accounts/headers/108/221/365/558/429/592/original/ef8174030fba41c0.png",
+      "header_static": "https://files.mastodon.social/accounts/headers/108/221/365/558/429/592/original/ef8174030fba41c0.png",
+      "followers_count": 565,
+      "following_count": 513,
+      "statuses_count": 6984,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "noindex": false,
+      "emojis": [],
+      "roles": [],
+      "fields": []
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  },
+  {
+    "id": "115570370555718717",
+    "created_at": "2025-11-18T11:05:05.000Z",
+    "in_reply_to_id": "115570106480137615",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://fosstodon.org/users/pemensik/statuses/115570370529932379",
+    "url": "https://fosstodon.org/@pemensik/115570370529932379",
+    "replies_count": 1,
+    "reblogs_count": 0,
+    "favourites_count": 0,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> this is somehow weird design. Instead of answering every name, it should allow registration of localhost handled subdomains. Then every such subdomain should have defined service handling it's names. Just like forwarding common domain of libvirt network to it's Dnsmasq instance. I think your design to solve machine names registration is wrong this way.</p>",
+    "reblog": null,
+    "account": {
+      "id": "109436187519821698",
+      "username": "pemensik",
+      "acct": "pemensik@fosstodon.org",
+      "display_name": "Petr Men\u0161\u00edk :fedora:",
+      "locked": false,
+      "bot": false,
+      "discoverable": true,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-11-30T00:00:00.000Z",
+      "note": "<p>DNS and Linux specialist, RHEL maintainer, Red Hatter</p>",
+      "url": "https://fosstodon.org/@pemensik",
+      "uri": "https://fosstodon.org/users/pemensik",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/436/187/519/821/698/original/b8012c192c41659d.jpg",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/436/187/519/821/698/original/b8012c192c41659d.jpg",
+      "header": "https://files.mastodon.social/cache/accounts/headers/109/436/187/519/821/698/original/6e962001fb6a846c.jpg",
+      "header_static": "https://files.mastodon.social/cache/accounts/headers/109/436/187/519/821/698/original/6e962001fb6a846c.jpg",
+      "followers_count": 97,
+      "following_count": 86,
+      "statuses_count": 1029,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "emojis": [
+        {
+          "shortcode": "fedora",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/024/637/original/cc41b6bb7be9d7c2.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/024/637/static/cc41b6bb7be9d7c2.png",
+          "visible_in_picker": true
+        }
+      ],
+      "fields": [
+        {
+          "name": "Twitter",
+          "value": "@pihhan",
+          "verified_at": null
+        },
+        {
+          "name": "GitHub",
+          "value": "<a href=\"https://GitHub.com/pemensik\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">GitHub.com/pemensik</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Fedora",
+          "value": "<a href=\"https://src.fedoraproject.org/user/pemensik\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">src.fedoraproject.org/user/pem</span><span class=\"invisible\">ensik</span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@pemensik\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pemensik</span></a></span>:fedora.im",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  }
+]

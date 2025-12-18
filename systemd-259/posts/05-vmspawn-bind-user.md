@@ -18,6 +18,10 @@ And that's already it for today.
 
 ---
 
+> **[@jaminsamuel18](https://mastodon.social/@jaminsamuel18)** I know this question isn't related to systemd-nspawn and vmpawn, but I'm curious:
+>
+> Is there a plan for systemd-sysupdate and incremental updates from one version to the next in GNOME OS?
+
 **[@jaminsamuel18](https://mastodon.social/@jaminsamuel18)** yes there is. and it is being worked on right now.
 
 ---

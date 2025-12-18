@@ -1,0 +1,96 @@
+[
+  {
+    "id": "115581298368537778",
+    "created_at": "2025-11-20T09:24:10.000Z",
+    "in_reply_to_id": "115580885939157356",
+    "in_reply_to_account_id": "109248059314089584",
+    "sensitive": false,
+    "spoiler_text": "",
+    "visibility": "public",
+    "language": "en",
+    "uri": "https://fosstodon.org/users/pemensik/statuses/115581298335241276",
+    "url": "https://fosstodon.org/@pemensik/115581298335241276",
+    "replies_count": 2,
+    "reblogs_count": 0,
+    "favourites_count": 1,
+    "quotes_count": 0,
+    "edited_at": null,
+    "content": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@pid_eins\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pid_eins</span></a></span> yes. But I am more interested in how app linking to libsystemd will generate their mandatory requires. When it uses sd_dbus, what it requires? If calls sd_journal*, what then? This hiding makes all libraries used detection very hard.</p>",
+    "reblog": null,
+    "account": {
+      "id": "109436187519821698",
+      "username": "pemensik",
+      "acct": "pemensik@fosstodon.org",
+      "display_name": "Petr Men\u0161\u00edk :fedora:",
+      "locked": false,
+      "bot": false,
+      "discoverable": true,
+      "indexable": false,
+      "group": false,
+      "created_at": "2022-11-30T00:00:00.000Z",
+      "note": "<p>DNS and Linux specialist, RHEL maintainer, Red Hatter</p>",
+      "url": "https://fosstodon.org/@pemensik",
+      "uri": "https://fosstodon.org/users/pemensik",
+      "avatar": "https://files.mastodon.social/cache/accounts/avatars/109/436/187/519/821/698/original/b8012c192c41659d.jpg",
+      "avatar_static": "https://files.mastodon.social/cache/accounts/avatars/109/436/187/519/821/698/original/b8012c192c41659d.jpg",
+      "header": "https://files.mastodon.social/cache/accounts/headers/109/436/187/519/821/698/original/6e962001fb6a846c.jpg",
+      "header_static": "https://files.mastodon.social/cache/accounts/headers/109/436/187/519/821/698/original/6e962001fb6a846c.jpg",
+      "followers_count": 97,
+      "following_count": 86,
+      "statuses_count": 1029,
+      "last_status_at": "2025-12-17",
+      "hide_collections": false,
+      "emojis": [
+        {
+          "shortcode": "fedora",
+          "url": "https://files.mastodon.social/cache/custom_emojis/images/000/024/637/original/cc41b6bb7be9d7c2.png",
+          "static_url": "https://files.mastodon.social/cache/custom_emojis/images/000/024/637/static/cc41b6bb7be9d7c2.png",
+          "visible_in_picker": true
+        }
+      ],
+      "fields": [
+        {
+          "name": "Twitter",
+          "value": "@pihhan",
+          "verified_at": null
+        },
+        {
+          "name": "GitHub",
+          "value": "<a href=\"https://GitHub.com/pemensik\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"\">GitHub.com/pemensik</span><span class=\"invisible\"></span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Fedora",
+          "value": "<a href=\"https://src.fedoraproject.org/user/pemensik\" rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">src.fedoraproject.org/user/pem</span><span class=\"invisible\">ensik</span></a>",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "<span class=\"h-card\" translate=\"no\"><a href=\"https://fosstodon.org/@pemensik\" class=\"u-url mention\" rel=\"nofollow noopener\" target=\"_blank\">@<span>pemensik</span></a></span>:fedora.im",
+          "verified_at": null
+        }
+      ]
+    },
+    "media_attachments": [],
+    "mentions": [
+      {
+        "id": "109248059314089584",
+        "username": "pid_eins",
+        "url": "https://mastodon.social/@pid_eins",
+        "acct": "pid_eins"
+      }
+    ],
+    "tags": [],
+    "emojis": [],
+    "quote": null,
+    "card": null,
+    "poll": null,
+    "quote_approval": {
+      "automatic": [
+        "public"
+      ],
+      "manual": [],
+      "current_user": "denied"
+    }
+  }
+]
