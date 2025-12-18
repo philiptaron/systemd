@@ -35,8 +35,6 @@ You get a soft failure too, not a hard one, and this requirement for all codecs 
 
 ---
 
-## References
-
 [systemd-analyze]: https://www.freedesktop.org/software/systemd/man/259/systemd-analyze.html
 
 ## Sources

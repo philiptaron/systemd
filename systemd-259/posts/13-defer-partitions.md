@@ -27,8 +27,6 @@ In 95% of all cases these two switches are what you want to specify for an insta
 
 ---
 
-## References
-
 [systemd-repart]: https://www.freedesktop.org/software/systemd/man/259/systemd-repart.html
 
 ## Sources

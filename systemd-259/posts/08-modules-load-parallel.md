@@ -19,8 +19,6 @@ Because of that I think this parallelization work has been worthwhile, even thou
 
 ---
 
-## References
-
 [systemd-modules-load]: https://www.freedesktop.org/software/systemd/man/259/systemd-modules-load.html
 
 ## Sources

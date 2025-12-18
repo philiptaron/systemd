@@ -62,8 +62,6 @@ Thank you, already got merged!
 
 ---
 
-## References
-
 [systemd-tpm2-setup]: https://www.freedesktop.org/software/systemd/man/259/systemd-tpm2-setup.html
 [systemd-pcrlock]: https://www.freedesktop.org/software/systemd/man/259/systemd-pcrlock.html
 

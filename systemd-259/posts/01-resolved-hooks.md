@@ -92,8 +92,6 @@ The new hook stuff sits very early in the pipeline, and allows much more powerfu
 
 ---
 
-## References
-
 [systemd-resolved]: https://www.freedesktop.org/software/systemd/man/259/systemd-resolved.html
 [systemd-machined]: https://www.freedesktop.org/software/systemd/man/259/systemd-machined.html
 [systemd-networkd]: https://www.freedesktop.org/software/systemd/man/259/systemd-networkd.html

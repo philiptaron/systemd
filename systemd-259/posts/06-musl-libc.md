@@ -51,8 +51,6 @@ glibc calls `madvise` `MADV_DONTNEED` on the space it doesn't need.
 
 ---
 
-## References
-
 [systemd-resolved]: https://www.freedesktop.org/software/systemd/man/259/systemd-resolved.html
 [systemd-homed]: https://www.freedesktop.org/software/systemd/man/259/systemd-homed.html
 [systemd-userdbd]: https://www.freedesktop.org/software/systemd/man/259/systemd-userdbd.html

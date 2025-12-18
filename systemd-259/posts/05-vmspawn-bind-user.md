@@ -28,8 +28,6 @@ And it is being worked on right now.
 
 ---
 
-## References
-
 [systemd-nspawn]: https://www.freedesktop.org/software/systemd/man/259/systemd-nspawn.html
 [systemd-vmspawn]: https://www.freedesktop.org/software/systemd/man/259/systemd-vmspawn.html
 [systemd-sysupdate]: https://www.freedesktop.org/software/systemd/man/259/systemd-sysupdate.html

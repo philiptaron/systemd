@@ -11,8 +11,6 @@ This closely mirrors the existing `systemd-analyze pcrs` that shows you the curr
 
 ---
 
-## References
-
 [systemd-analyze]: https://www.freedesktop.org/software/systemd/man/259/systemd-analyze.html
 
 ## Sources

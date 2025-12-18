@@ -22,8 +22,6 @@ Regular users by default get to use it only after the usual pk auth query.
 
 ---
 
-## References
-
 [run0]: https://www.freedesktop.org/software/systemd/man/259/run0.html
 
 ## Sources

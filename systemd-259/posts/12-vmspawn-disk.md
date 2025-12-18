@@ -16,8 +16,6 @@ And that's just so useful, because it essentially means the identifier for some 
 
 ---
 
-## References
-
 [systemd-vmspawn]: https://www.freedesktop.org/software/systemd/man/259/systemd-vmspawn.html
 
 ## Sources

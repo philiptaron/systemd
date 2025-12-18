@@ -21,8 +21,6 @@ And that's all for today.
 
 ---
 
-## References
-
 [systemd-repart]: https://www.freedesktop.org/software/systemd/man/259/systemd-repart.html
 
 ## Sources

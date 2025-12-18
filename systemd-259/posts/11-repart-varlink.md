@@ -22,8 +22,6 @@ The Varlink interface can do a couple of more things, for example enumerate suit
 
 ---
 
-## References
-
 [systemd-repart]: https://www.freedesktop.org/software/systemd/man/259/systemd-repart.html
 [kernel-install]: https://www.freedesktop.org/software/systemd/man/259/kernel-install.html
 [bootctl]: https://www.freedesktop.org/software/systemd/man/259/bootctl.html
