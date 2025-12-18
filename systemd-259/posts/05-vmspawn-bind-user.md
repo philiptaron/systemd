@@ -1,8 +1,11 @@
-# v259 Feature Highlight #5
+---
+layout: post
+title: "systemd-vmspawn --bind-user="
+date: 2025-11-24
+source: https://mastodon.social/@pid_eins/115605598751722319
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-24 16:24 UTC
-**Original:** [https://mastodon.social/@pid_eins/115605598751722319](https://mastodon.social/@pid_eins/115605598751722319)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-24 16:24 UTC
 
 ---
 

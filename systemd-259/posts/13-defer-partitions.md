@@ -1,8 +1,11 @@
-# v259 Feature Highlight #13
+---
+layout: post
+title: "--defer-partitions switches"
+date: 2025-12-18
+source: https://mastodon.social/@pid_eins/115740831317295811
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-12-18 13:35 UTC
-**Original:** [https://mastodon.social/@pid_eins/115740831317295811](https://mastodon.social/@pid_eins/115740831317295811)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-12-18 13:35 UTC
 
 ---
 

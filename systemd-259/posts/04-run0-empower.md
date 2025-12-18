@@ -1,8 +1,11 @@
-# v259 Feature Highlight #4
+---
+layout: post
+title: "run0 --empower"
+date: 2025-11-21
+source: https://mastodon.social/@pid_eins/115586469819973533
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-21 07:19 UTC
-**Original:** [https://mastodon.social/@pid_eins/115586469819973533](https://mastodon.social/@pid_eins/115586469819973533)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-21 07:19 UTC
 
 ---
 

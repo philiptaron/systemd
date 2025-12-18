@@ -1,0 +1,12 @@
+<aside class="sidebar">
+    <nav class="site-nav">
+        <h2><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
+        {% include navigation.html %}
+    </nav>
+    {% if page.toc %}
+    <nav class="toc">
+        <h3>On this page</h3>
+        {{ page.toc }}
+    </nav>
+    {% endif %}
+</aside>

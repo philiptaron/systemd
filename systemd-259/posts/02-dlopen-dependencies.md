@@ -1,8 +1,11 @@
-# v259 Feature Highlight #2
+---
+layout: post
+title: "dlopen() weak dependencies"
+date: 2025-11-19
+source: https://mastodon.social/@pid_eins/115575271970490767
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-19 07:51 UTC
-**Original:** [https://mastodon.social/@pid_eins/115575271970490767](https://mastodon.social/@pid_eins/115575271970490767)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-19 07:51 UTC
 
 ---
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    <div class="layout">
+      {% include sidebar.html %}
+      <main>
+        {% if page.title %}
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% endif %}
+        {{ content }}
+      </main>
+    </div>
+  </body>
+</html>

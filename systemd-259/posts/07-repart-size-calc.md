@@ -1,8 +1,11 @@
-# v259 Feature Highlight #7
+---
+layout: post
+title: "systemd-repart size calculation"
+date: 2025-11-26
+source: https://mastodon.social/@pid_eins/115614881738923176
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-26 07:44 UTC
-**Original:** [https://mastodon.social/@pid_eins/115614881738923176](https://mastodon.social/@pid_eins/115614881738923176)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-26 07:44 UTC
 
 ---
 

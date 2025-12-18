@@ -1,8 +1,11 @@
-# v259 Feature Highlight #1
+---
+layout: post
+title: "systemd-resolved hook interface"
+date: 2025-11-18
+source: https://mastodon.social/@pid_eins/115570095861864513
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-18 09:55 UTC
-**Original:** [https://mastodon.social/@pid_eins/115570095861864513](https://mastodon.social/@pid_eins/115570095861864513)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-18 09:55 UTC
 
 ---
 

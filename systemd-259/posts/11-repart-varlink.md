@@ -1,8 +1,11 @@
-# v259 Feature Highlight #11
+---
+layout: post
+title: "Varlink IPC for systemd-repart"
+date: 2025-12-04
+source: https://mastodon.social/@pid_eins/115662198906484836
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-12-04 16:18 UTC
-**Original:** [https://mastodon.social/@pid_eins/115662198906484836](https://mastodon.social/@pid_eins/115662198906484836)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-12-04 16:18 UTC
 
 ---
 

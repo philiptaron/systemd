@@ -1,8 +1,11 @@
-# v259 Feature Highlight #12
+---
+layout: post
+title: "systemd-vmspawn disk integration"
+date: 2025-12-05
+source: https://mastodon.social/@pid_eins/115666147093865447
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-12-05 09:02 UTC
-**Original:** [https://mastodon.social/@pid_eins/115666147093865447](https://mastodon.social/@pid_eins/115666147093865447)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-12-05 09:02 UTC
 
 ---
 

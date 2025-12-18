@@ -1,8 +1,11 @@
-# v259 Feature Highlight #3
+---
+layout: post
+title: "systemd-analyze dlopen-metadata"
+date: 2025-11-20
+source: https://mastodon.social/@pid_eins/115580882123596509
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-20 07:38 UTC
-**Original:** [https://mastodon.social/@pid_eins/115580882123596509](https://mastodon.social/@pid_eins/115580882123596509)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-20 07:38 UTC
 
 ---
 

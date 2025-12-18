@@ -1,0 +1,328 @@
+* { margin: 0; padding: 0; box-sizing: border-box;
+
+  /* Color scheme */
+
+  --textcolor: #121212;
+  --bgcolor: #fff;
+  --highlight: #2749c9;
+  --sidebar-width: 16rem;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    --textcolor: #dadada;
+    --bgcolor: #141414;
+    --highlight: #ffc400;
+  }
+}
+
+body {
+  font-size: 18px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.45;
+  color: var(--textcolor);
+  background: var(--bgcolor);
+}
+
+@media only screen and (max-width: 680px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* ------- Two-Column Layout ------- */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ------- Sidebar ------- */
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  padding: 2rem 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.sidebar h2 {
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar h2 a {
+  color: var(--textcolor);
+}
+
+.sidebar h2 a:hover {
+  color: var(--highlight);
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.site-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.site-nav a {
+  color: var(--textcolor);
+  opacity: 0.8;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+  color: var(--highlight);
+}
+
+.toc {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.toc h3 {
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ------- Main Content ------- */
+
+main {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem 3rem 4rem 3rem;
+  max-width: 50rem;
+}
+
+.page-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* ------- Responsive: Collapse Sidebar ------- */
+
+@media only screen and (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    padding: 1.5rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+}
+
+/* ------- General ------- */
+
+a {
+  text-decoration: none;
+  color: var(--highlight);
+}
+
+a:hover {
+  border-bottom: 1px solid;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin: 1.6em 0 .6em 0;
+}
+
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.2em; }
+h3 { font-size: 1.1em; }
+h4 { font-size: 1em; }
+
+h1:first-child, h2:first-child {
+  margin-top: 0;
+}
+
+p, ul, ol, article {
+  max-width: 70ch;
+  margin-bottom: .6em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li::marker {
+  content: "\2022   ";
+}
+
+li {
+  margin-bottom: .2em;
+}
+
+ul, ol {
+  padding-left: 2ch;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+small {
+  font-size: .85em;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background: currentColor;
+  opacity: .1;
+  margin: 1.2em 0;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+abbr[title]:hover {
+  opacity: .7;
+  cursor: help;
+}
+
+blockquote {
+  padding-left: 2ch;
+  opacity: .7;
+  margin-bottom: .6em;
+  position: relative;
+}
+
+blockquote:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .3em;
+  bottom: .3em;
+  background: currentColor;
+  width: 2px;
+  opacity: .3;
+}
+
+img, svg, video, audio {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  fill: currentColor;
+}
+
+code, textarea {
+  font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
+  font-size: .9em;
+  opacity: .8;
+}
+
+a code {
+  opacity: 1;
+}
+
+pre, textarea {
+  font-size: .85em;
+  color: inherit;
+  line-height: inherit;
+  padding: .6em .9em;
+  margin: .8em 0 1em 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  white-space: pre;
+  overflow-x: auto;
+  border: 0;
+  border-radius: 4px;
+  background: rgba(128, 128, 128, .1);
+}
+
+/* ------- Figures ------- */
+
+figure {
+  margin: 2em 0 1.5em 0;
+}
+
+figure figcaption {
+  margin: 0.8em 0 0 0;
+  font-size: .85em;
+  opacity: .7;
+}
+
+/* ------- Post/Article styles ------- */
+
+article.post, article.page-content {
+  max-width: none;
+}
+
+.post-meta {
+  font-size: .9em;
+  opacity: .7;
+  margin-bottom: 1rem;
+}
+
+.post-source {
+  font-size: .85em;
+  margin-bottom: 1.5rem;
+}
+
+/* ------- External links ------- */
+
+a[href*="//"]:after {
+  font-weight: 300;
+  content: "\2197";
+  color: var(--textcolor);
+  opacity: .25;
+  margin-left: .1em;
+}
+
+a[href*="//"]:hover:after {
+  color: var(--highlight);
+  opacity: 1;
+}
+
+/* Don't show arrow for internal links that happen to have full URLs */
+a[href*="philiptaron.github.io"]:after,
+a[href*="systemd"]:after {
+  content: none;
+}
+
+/* ------- Print ------- */
+
+@media print {
+
+  .sidebar { display: none; }
+
+  .layout {
+    display: block;
+  }
+
+  main {
+    padding: 0;
+    max-width: none;
+  }
+
+  article, figure, img {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+}

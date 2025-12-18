@@ -1,3 +1,8 @@
+---
+layout: page
+title: systemd v259 Release Notes
+---
+
 # CHANGES WITH 259:
 
 ## Announcements of Future Feature Removals and Incompatible Changes:

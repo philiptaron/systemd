@@ -1,8 +1,7 @@
 ---
+layout: default
 title: systemd Release Notes Commentary
 ---
-
-# systemd Release Notes Commentary
 
 This site provides annotated release notes for systemd, with additional commentary and explanations from Lennart Poettering's Mastodon posts.
 

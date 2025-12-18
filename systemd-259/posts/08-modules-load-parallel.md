@@ -1,8 +1,11 @@
-# v259 Feature Highlight #8
+---
+layout: post
+title: "modules-load.d parallelization"
+date: 2025-11-27
+source: https://mastodon.social/@pid_eins/115620451885638963
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-27 07:21 UTC
-**Original:** [https://mastodon.social/@pid_eins/115620451885638963](https://mastodon.social/@pid_eins/115620451885638963)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-27 07:21 UTC
 
 ---
 

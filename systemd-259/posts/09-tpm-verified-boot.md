@@ -1,8 +1,11 @@
-# v259 Feature Highlight #9
+---
+layout: post
+title: "TPM and verified boot"
+date: 2025-11-28
+source: https://mastodon.social/@pid_eins/115627835871078915
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-28 14:39 UTC
-**Original:** [https://mastodon.social/@pid_eins/115627835871078915](https://mastodon.social/@pid_eins/115627835871078915)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-28 14:39 UTC
 
 ---
 

@@ -1,8 +1,11 @@
-# v259 Feature Highlight #6
+---
+layout: post
+title: "musl libc support"
+date: 2025-11-25
+source: https://mastodon.social/@pid_eins/115611051983920298
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-11-25 15:30 UTC
-**Original:** [https://mastodon.social/@pid_eins/115611051983920298](https://mastodon.social/@pid_eins/115611051983920298)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-11-25 15:30 UTC
 
 ---
 

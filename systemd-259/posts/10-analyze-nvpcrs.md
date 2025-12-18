@@ -1,8 +1,11 @@
-# v259 Feature Highlight #10
+---
+layout: post
+title: "systemd-analyze nvpcrs"
+date: 2025-12-01
+source: https://mastodon.social/@pid_eins/115646310576910417
+---
 
-**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins)
-**Posted:** 2025-12-01 20:57 UTC
-**Original:** [https://mastodon.social/@pid_eins/115646310576910417](https://mastodon.social/@pid_eins/115646310576910417)
+**Author:** [Lennart Poettering](https://mastodon.social/@pid_eins) | **Posted:** 2025-12-01 20:57 UTC
 
 ---
 
