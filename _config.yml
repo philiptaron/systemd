@@ -1,0 +1,20 @@
+title: systemd Release Notes Commentary
+description: Annotated release notes for systemd with additional commentary
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Build settings
+exclude:
+  - convert_posts.py
+  - TODO.md
+  - "*/release-notes-raw.md"
+  - "*/posts/raw"
+  - "*/posts/manifest.json"
+  - "*.json"
